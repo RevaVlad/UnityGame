@@ -35,17 +35,10 @@ public class HeroScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
-    }
-
-    private void Run()
-    {
-        /*
-        var direction = transform.right * Input.GetAxis("Horizontal");
-        transform.position =
-            Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
-        sprite.flipX = direction.x < 0.0f;
-        */
+        var position = transform.position;
+        position =
+            Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction, speed * Time.deltaTime);
+        transform.position = position;
     }
 
     public void OnJump()
@@ -64,5 +57,4 @@ public class HeroScript : MonoBehaviour
         var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f);
         isGrounded = collider.Length > 1;
     }
-    
 }
