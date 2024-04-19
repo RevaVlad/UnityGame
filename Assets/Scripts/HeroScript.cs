@@ -50,8 +50,8 @@ public class HeroScript : MonoBehaviour
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f);
-        isGrounded = collider.Length > 1;
+        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
+        isGrounded = collider.Length > 0;
     }
     
 }
