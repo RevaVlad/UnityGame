@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HeroScript : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class HeroScript : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    private PlayerControls _playerControls;
+    private Vector2 direction = new ();
+
+    private void Start()
+    {
+        _playerControls = new PlayerControls();
+    }
 
     private void Awake()
     {
@@ -19,39 +27,42 @@ public class HeroScript : MonoBehaviour
         rb.gravityScale = 1.1f;
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
+    
+    private void Update()
+    {
+        CheckGround();
+    }
 
     private void FixedUpdate()
     {
-        if (Input.GetButton("Horizontal"))
-            Run();
-        CheckGround();
-    }
-    
-    // Update is called once per frame
-    private void Update()
-    {
-        if (isGrounded && Input.GetButton("Jump"))
-            Jump();
+        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
     }
 
     private void Run()
     {
+        /*
         var direction = transform.right * Input.GetAxis("Horizontal");
         transform.position =
             Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
         sprite.flipX = direction.x < 0.0f;
+        */
     }
 
-    private void Jump()
+    public void OnJump()
     {
-        rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-        
+        if (isGrounded)
+            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    private void OnMove(InputValue inputValue)
+    {
+        direction = inputValue.Get<Vector2>();
     }
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
-        isGrounded = collider.Length > 0;
+        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+        isGrounded = collider.Length > 1;
     }
     
 }
