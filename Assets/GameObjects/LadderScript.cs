@@ -1,25 +1,31 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LadderScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private LadderScript connected = null;
+    [SerializeField] private LadderScript connected;
+    [SerializeField] private LadderScript permanentlyConnected;
+
+    private GetNearbyObjectsScript rightObjectsCollider;
+    private GetNearbyObjectsScript leftObjectsCollider;
+    
     private int _moveDirection = 0;
     private Coroutine _moveCoroutine = null;
     
     void Start()
     {
-        transform.SetParent(GameObject.Find("LaddersContainer").transform);
-    }
+        rightObjectsCollider = transform.Find("RightCollider").GetComponent<GetNearbyObjectsScript>();
+        leftObjectsCollider = transform.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>();
 
-    // Update is called once per frame
-    void Update()
-    {
+        if (GameObject.Find("LaddersContainer") is null)
+            new GameObject("LaddersContainer");
+        
+        transform.SetParent(permanentlyConnected is not null
+            ? permanentlyConnected.gameObject.transform
+            : GameObject.Find("LaddersContainer").transform);
     }
     
     internal void ConnectLadders(Collider2D other)
@@ -29,42 +35,68 @@ public class LadderScript : MonoBehaviour
         connected = otherTransform.GetComponent<LadderScript>();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Platforms"))
-            DestroyConnection();
-    }
-
     internal void DestroyConnection()
     {
-        transform.SetParent(GameObject.Find("LaddersContainer").transform);
+        Transform transform1;
+        (transform1 = transform).SetParent(GameObject.Find("LaddersContainer").transform);
         connected = null;
-        transform.position = new Vector3(math.round(transform.position.x), transform.position.y, 0);
+        transform.position = new Vector3(math.round(transform1.position.x), transform.position.y, 0);
     }
+
+    private void MoveNearbyObjects(bool right)
+    {
+        var laddersOnDirection =
+            ((right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects).Where(
+                obj => obj.layer == LayerMask.NameToLayer("Ladders"));
+        foreach (var ladder in laddersOnDirection)
+        {
+            if (right)
+                ladder.GetComponent<LadderScript>().MoveRight();
+            else
+                ladder.GetComponent<LadderScript>().MoveLeft();
+        }
+    }
+    
+    //private MoveConnectedObject()
 
     private IEnumerator MoveHorizontalCourutine(bool right)
     {
+        if (!CheckIfMoveIsPossible(right))
+        {
+            //DestroyConnection();
+            Debug.Log("Failed move");
+            yield break;
+        }
+
+        MoveNearbyObjects(right);
+        
         _moveDirection = (right) ? 1 : -1;
-        transform.position = new Vector3(math.round(transform.position.x), transform.position.y, 0);
-        var target = transform.position + new Vector3(_moveDirection, 0, 0);
+        var position = transform.position;
+        transform.position = new Vector3(math.round(position.x), position.y, 0);
+        var target = position + new Vector3(_moveDirection, 0, 0);
 
         var rb = GetComponent<Rigidbody2D>();
-        rb.mass = 1000;
-        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-
         while ((target.x - transform.position.x) * _moveDirection > 1e-4)
         {
-            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3), transform.position.y, 0);
-            rb.MovePosition(new Vector2(transform.position.x + _moveDirection * moveSpeed * Time.smoothDeltaTime, transform.position.y));
+            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3), position.y, 0);
+            rb.MovePosition(new Vector2(position.x + _moveDirection * moveSpeed * Time.smoothDeltaTime, position.y));
             yield return new WaitForFixedUpdate();
         }
         
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         transform.position = target;
         rb.MovePosition(target);
-        rb.mass = 1;
         _moveCoroutine = null;
-        _moveDirection = 0;
+    }
+
+    public bool CheckIfMoveIsPossible(bool right)
+    {
+        var objectsAtDirection = 
+            (right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects;
+        if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms")))
+            return false;
+
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders")).All(ladder =>
+            ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
 
     [ContextMenu("MoveRight")]
