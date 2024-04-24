@@ -42,9 +42,9 @@ public class HeroConnectWithLadders : MonoBehaviour
         {
             var direction = (int)inputValue.Get<float>();
             if (direction > 0)
-                this.transform.GetComponent<LadderScript>().MoveRight();
-            else
-                this.transform.GetComponent<LadderScript>().MoveLeft();
+                transform.GetComponent<LadderScript>().MoveRight();
+            if (direction < 0)
+                transform.GetComponent<LadderScript>().MoveLeft();
         }
     }
 

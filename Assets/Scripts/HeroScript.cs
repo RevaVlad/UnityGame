@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,7 +43,7 @@ public class HeroScript : MonoBehaviour
 
     public void OnJump()
     {
-        if (isGrounded)
+        if (isGrounded && !isPlayerOnLadder)
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
 
