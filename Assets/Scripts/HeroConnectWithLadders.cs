@@ -4,41 +4,37 @@ using UnityEngine.InputSystem;
 public class HeroConnectWithLadders : MonoBehaviour
 {
     private GameObject _player;
-    private bool _isPlayerWithLadder = false;
+    private bool _isPlayerConnectedToThisLadder = false;
     private PlayerControls _laddersControls;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         _laddersControls = new PlayerControls();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        CheckCollision();
-    }
-
     private void OnMergePlayerandLadder()
     {
+        CheckCollisionWithLadder();
         if (!_player) return;
-        if (!_isPlayerWithLadder)
+        if (!_isPlayerConnectedToThisLadder)
         {
-            _player.transform.SetParent(this.transform);
-            _isPlayerWithLadder = true;
+            _player.transform.SetParent(transform);
+            _isPlayerConnectedToThisLadder = true;
             _player.transform.GetComponent<HeroScript>().isPlayerOnLadder = true;
         }
         else
         {
             _player.transform.SetParent(null);
-            _isPlayerWithLadder = false;
+            _isPlayerConnectedToThisLadder = false;
             _player.transform.GetComponent<HeroScript>().isPlayerOnLadder = false;
+            _player = null;
         }
     }
 
     private void OnMoveLadder(InputValue inputValue)
     {
-        if (_isPlayerWithLadder)
+        if (_isPlayerConnectedToThisLadder)
         {
             var direction = (int)inputValue.Get<float>();
             if (direction > 0)
@@ -48,7 +44,7 @@ public class HeroConnectWithLadders : MonoBehaviour
         }
     }
 
-    private void CheckCollision()
+    private void CheckCollisionWithLadder()
     {
         var collider = Physics2D.OverlapCircleAll(transform.position, 0.25f, LayerMask.GetMask("Player"));
         if (collider.Length == 0)

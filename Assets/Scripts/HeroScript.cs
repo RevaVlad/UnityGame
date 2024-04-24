@@ -12,7 +12,7 @@ public class HeroScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private PlayerControls _playerControls;
-    public bool isPlayerOnLadder = false;
+    public bool isPlayerOnLadder;
     private Vector2 direction = new ();
 
     private void Start()
@@ -35,6 +35,8 @@ public class HeroScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isPlayerOnLadder)
+            return;
         var position = transform.position;
         position =
             Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction, speed * Time.deltaTime);
@@ -49,8 +51,7 @@ public class HeroScript : MonoBehaviour
 
     private void OnMove(InputValue inputValue)
     {
-        if (!isPlayerOnLadder)
-            direction = inputValue.Get<Vector2>();
+        direction = inputValue.Get<Vector2>();
     }
 
     private void CheckGround()
