@@ -12,12 +12,30 @@ public class HeroScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private PlayerControls _playerControls;
-    public bool isPlayerOnLadder;
+    private PlayerInput _playerInput;
     private Vector2 direction = new ();
+    
+    public bool isPlayerOnLadder;
+    private LadderScript heldLadder = null;
 
     private void Start()
     {
         _playerControls = new PlayerControls();
+    }
+
+    private void SwapInputMap()
+    {
+        if (_playerInput.actions.FindActionMap("BasicInput").enabled)
+        {
+            _playerInput.actions.FindActionMap("LadderInput").Enable();
+            _playerInput.actions.FindActionMap("BasicInput").Disable();
+        }
+        else
+        {
+            _playerInput.actions.FindActionMap("BasicInput").Enable();
+            _playerInput.actions.FindActionMap("LadderInput").Disable();
+        }
+            
     }
 
     private void Awake()
@@ -26,6 +44,10 @@ public class HeroScript : MonoBehaviour
         rb.mass = 20f;
         rb.gravityScale = 1.1f;
         sprite = GetComponentInChildren<SpriteRenderer>();
+        
+        _playerInput = GetComponent<PlayerInput>();
+        _playerInput.actions.FindActionMap("BasicInput").Enable();
+        _playerInput.actions.FindActionMap("LadderInput").Disable();
     }
     
     private void Update()
@@ -45,7 +67,7 @@ public class HeroScript : MonoBehaviour
 
     public void OnJump()
     {
-        if (isGrounded && !isPlayerOnLadder)
+        if (isGrounded)
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
 
@@ -58,5 +80,36 @@ public class HeroScript : MonoBehaviour
     {
         var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
         isGrounded = collider.Length > 0;
+    }
+    
+    private void OnTakeLadder()
+    {
+        if (TryGetLadder(out var ladder))
+        {
+            transform.SetParent(ladder.transform);
+            isPlayerOnLadder = true;
+            heldLadder = ladder;
+            SwapInputMap();
+        }
+    }
+
+    private void OnDropLadder()
+    {
+        SwapInputMap();
+        transform.SetParent(null);
+        isPlayerOnLadder = false;
+        heldLadder = null;
+    }
+
+    private void OnMoveRightWithLadder() => heldLadder.MoveRight();
+    private void OnMoveLeftWithLadder() => heldLadder.MoveLeft();
+
+    private bool TryGetLadder(out LadderScript ladder)
+    {
+        ladder = null;
+        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Ladders"));
+        if (collider.Length == 0) return false;
+        ladder = collider[0].gameObject.GetComponent<LadderScript>();
+        return true;
     }
 }

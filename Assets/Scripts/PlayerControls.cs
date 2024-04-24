@@ -44,6 +44,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TakeLadder"",
+                    ""type"": ""Button"",
+                    ""id"": ""809074a0-0f22-470b-a512-873b63d299f1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,6 +143,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2d84380-87ea-4ba3-9660-92d0bec2c23c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TakeLadder"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -142,101 +162,88 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""b202e925-72f2-416a-8dc5-038c66514777"",
             ""actions"": [
                 {
-                    ""name"": ""MergePlayerandLadder"",
+                    ""name"": ""DropLadder"",
                     ""type"": ""Button"",
-                    ""id"": ""d059b054-ffbd-4906-8eda-a2580d3e06ff"",
+                    ""id"": ""2d8192e6-754e-45ba-9398-5c5defab100a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MoveLadder"",
-                    ""type"": ""Value"",
-                    ""id"": ""47179053-bde0-4ff4-bb68-8812e7491917"",
-                    ""expectedControlType"": """",
+                    ""name"": ""MoveRightWithLadder"",
+                    ""type"": ""Button"",
+                    ""id"": ""27e46682-cdc2-436f-a321-54cca752ea34"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveLeftWithLadder"",
+                    ""type"": ""Button"",
+                    ""id"": ""04e8fb20-b352-49ed-bd12-79071f4d6000"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""7d4ceb76-5eb8-4c60-b4aa-e39d8e55cca6"",
+                    ""id"": ""3ecccdf8-53be-400c-a7b2-d0a5ace5e832"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MergePlayerandLadder"",
+                    ""action"": ""DropLadder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""AD KEYS"",
-                    ""id"": ""81dd25f1-a605-444b-bfdb-d3678e9d3cff"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveLadder"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Negative"",
-                    ""id"": ""d2530257-bc68-468c-8f37-77d48cb7a553"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveLadder"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Positive"",
-                    ""id"": ""8ff5863a-1325-4e4c-ac07-fb22c26dcecf"",
+                    ""name"": """",
+                    ""id"": ""f30eca3e-7645-425d-b2fb-9a4ec302a7b2"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveLadder"",
+                    ""action"": ""MoveRightWithLadder"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Arrow keys"",
-                    ""id"": ""a877197d-c580-4ab7-896c-dd0915a98bc9"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveLadder"",
-                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Negative"",
-                    ""id"": ""188d9f35-1c0e-49f3-8f46-0541d2ec199b"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveLadder"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Positive"",
-                    ""id"": ""e765289c-93c0-473d-afe1-239dae59618b"",
+                    ""name"": """",
+                    ""id"": ""f9f2ad05-e445-4aaa-be0f-233994bbf91c"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveLadder"",
+                    ""action"": ""MoveRightWithLadder"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c65da14-ce98-4ed2-8bbb-8a4351de25b6"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveLeftWithLadder"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""41fc2b4b-b30e-4817-8b9a-a37237226be3"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveLeftWithLadder"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -247,10 +254,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_BasicInput = asset.FindActionMap("BasicInput", throwIfNotFound: true);
         m_BasicInput_Jump = m_BasicInput.FindAction("Jump", throwIfNotFound: true);
         m_BasicInput_Move = m_BasicInput.FindAction("Move", throwIfNotFound: true);
+        m_BasicInput_TakeLadder = m_BasicInput.FindAction("TakeLadder", throwIfNotFound: true);
         // LadderInput
         m_LadderInput = asset.FindActionMap("LadderInput", throwIfNotFound: true);
-        m_LadderInput_MergePlayerandLadder = m_LadderInput.FindAction("MergePlayerandLadder", throwIfNotFound: true);
-        m_LadderInput_MoveLadder = m_LadderInput.FindAction("MoveLadder", throwIfNotFound: true);
+        m_LadderInput_DropLadder = m_LadderInput.FindAction("DropLadder", throwIfNotFound: true);
+        m_LadderInput_MoveRightWithLadder = m_LadderInput.FindAction("MoveRightWithLadder", throwIfNotFound: true);
+        m_LadderInput_MoveLeftWithLadder = m_LadderInput.FindAction("MoveLeftWithLadder", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -314,12 +323,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private List<IBasicInputActions> m_BasicInputActionsCallbackInterfaces = new List<IBasicInputActions>();
     private readonly InputAction m_BasicInput_Jump;
     private readonly InputAction m_BasicInput_Move;
+    private readonly InputAction m_BasicInput_TakeLadder;
     public struct BasicInputActions
     {
         private @PlayerControls m_Wrapper;
         public BasicInputActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_BasicInput_Jump;
         public InputAction @Move => m_Wrapper.m_BasicInput_Move;
+        public InputAction @TakeLadder => m_Wrapper.m_BasicInput_TakeLadder;
         public InputActionMap Get() { return m_Wrapper.m_BasicInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -335,6 +346,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @TakeLadder.started += instance.OnTakeLadder;
+            @TakeLadder.performed += instance.OnTakeLadder;
+            @TakeLadder.canceled += instance.OnTakeLadder;
         }
 
         private void UnregisterCallbacks(IBasicInputActions instance)
@@ -345,6 +359,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @TakeLadder.started -= instance.OnTakeLadder;
+            @TakeLadder.performed -= instance.OnTakeLadder;
+            @TakeLadder.canceled -= instance.OnTakeLadder;
         }
 
         public void RemoveCallbacks(IBasicInputActions instance)
@@ -366,14 +383,16 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // LadderInput
     private readonly InputActionMap m_LadderInput;
     private List<ILadderInputActions> m_LadderInputActionsCallbackInterfaces = new List<ILadderInputActions>();
-    private readonly InputAction m_LadderInput_MergePlayerandLadder;
-    private readonly InputAction m_LadderInput_MoveLadder;
+    private readonly InputAction m_LadderInput_DropLadder;
+    private readonly InputAction m_LadderInput_MoveRightWithLadder;
+    private readonly InputAction m_LadderInput_MoveLeftWithLadder;
     public struct LadderInputActions
     {
         private @PlayerControls m_Wrapper;
         public LadderInputActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MergePlayerandLadder => m_Wrapper.m_LadderInput_MergePlayerandLadder;
-        public InputAction @MoveLadder => m_Wrapper.m_LadderInput_MoveLadder;
+        public InputAction @DropLadder => m_Wrapper.m_LadderInput_DropLadder;
+        public InputAction @MoveRightWithLadder => m_Wrapper.m_LadderInput_MoveRightWithLadder;
+        public InputAction @MoveLeftWithLadder => m_Wrapper.m_LadderInput_MoveLeftWithLadder;
         public InputActionMap Get() { return m_Wrapper.m_LadderInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -383,22 +402,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_LadderInputActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_LadderInputActionsCallbackInterfaces.Add(instance);
-            @MergePlayerandLadder.started += instance.OnMergePlayerandLadder;
-            @MergePlayerandLadder.performed += instance.OnMergePlayerandLadder;
-            @MergePlayerandLadder.canceled += instance.OnMergePlayerandLadder;
-            @MoveLadder.started += instance.OnMoveLadder;
-            @MoveLadder.performed += instance.OnMoveLadder;
-            @MoveLadder.canceled += instance.OnMoveLadder;
+            @DropLadder.started += instance.OnDropLadder;
+            @DropLadder.performed += instance.OnDropLadder;
+            @DropLadder.canceled += instance.OnDropLadder;
+            @MoveRightWithLadder.started += instance.OnMoveRightWithLadder;
+            @MoveRightWithLadder.performed += instance.OnMoveRightWithLadder;
+            @MoveRightWithLadder.canceled += instance.OnMoveRightWithLadder;
+            @MoveLeftWithLadder.started += instance.OnMoveLeftWithLadder;
+            @MoveLeftWithLadder.performed += instance.OnMoveLeftWithLadder;
+            @MoveLeftWithLadder.canceled += instance.OnMoveLeftWithLadder;
         }
 
         private void UnregisterCallbacks(ILadderInputActions instance)
         {
-            @MergePlayerandLadder.started -= instance.OnMergePlayerandLadder;
-            @MergePlayerandLadder.performed -= instance.OnMergePlayerandLadder;
-            @MergePlayerandLadder.canceled -= instance.OnMergePlayerandLadder;
-            @MoveLadder.started -= instance.OnMoveLadder;
-            @MoveLadder.performed -= instance.OnMoveLadder;
-            @MoveLadder.canceled -= instance.OnMoveLadder;
+            @DropLadder.started -= instance.OnDropLadder;
+            @DropLadder.performed -= instance.OnDropLadder;
+            @DropLadder.canceled -= instance.OnDropLadder;
+            @MoveRightWithLadder.started -= instance.OnMoveRightWithLadder;
+            @MoveRightWithLadder.performed -= instance.OnMoveRightWithLadder;
+            @MoveRightWithLadder.canceled -= instance.OnMoveRightWithLadder;
+            @MoveLeftWithLadder.started -= instance.OnMoveLeftWithLadder;
+            @MoveLeftWithLadder.performed -= instance.OnMoveLeftWithLadder;
+            @MoveLeftWithLadder.canceled -= instance.OnMoveLeftWithLadder;
         }
 
         public void RemoveCallbacks(ILadderInputActions instance)
@@ -420,10 +445,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     {
         void OnJump(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnTakeLadder(InputAction.CallbackContext context);
     }
     public interface ILadderInputActions
     {
-        void OnMergePlayerandLadder(InputAction.CallbackContext context);
-        void OnMoveLadder(InputAction.CallbackContext context);
+        void OnDropLadder(InputAction.CallbackContext context);
+        void OnMoveRightWithLadder(InputAction.CallbackContext context);
+        void OnMoveLeftWithLadder(InputAction.CallbackContext context);
     }
 }
