@@ -1,12 +1,12 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class HeroScript : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speedMidAir;
+    [SerializeField] private float speedOnGround;
     [SerializeField] private float jumpForce;
-    
+
 
     private bool isGrounded;
 
@@ -14,8 +14,8 @@ public class HeroScript : MonoBehaviour
     private SpriteRenderer sprite;
     private PlayerControls _playerControls;
     private PlayerInput _playerInput;
-    private Vector2 direction = new ();
-    
+    private Vector2 direction = new();
+
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
 
@@ -36,7 +36,6 @@ public class HeroScript : MonoBehaviour
             _playerInput.actions.FindActionMap("BasicInput").Enable();
             _playerInput.actions.FindActionMap("LadderInput").Disable();
         }
-            
     }
 
     private void Awake()
@@ -45,12 +44,12 @@ public class HeroScript : MonoBehaviour
         rb.mass = 20f;
         rb.gravityScale = 1.1f;
         sprite = GetComponentInChildren<SpriteRenderer>();
-        
+
         _playerInput = GetComponent<PlayerInput>();
         _playerInput.actions.FindActionMap("BasicInput").Enable();
         _playerInput.actions.FindActionMap("LadderInput").Disable();
     }
-    
+
     private void Update()
     {
         CheckGround();
@@ -67,7 +66,8 @@ public class HeroScript : MonoBehaviour
         {
             var position = transform.position;
             position =
-                Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction, speed * Time.deltaTime);
+                Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction,
+                    (isGrounded ? speedOnGround : speedMidAir) * Time.deltaTime);
             transform.position = position;
         }
     }
@@ -88,7 +88,7 @@ public class HeroScript : MonoBehaviour
         var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
         isGrounded = collider.Length > 0;
     }
-    
+
     private void OnTakeLadder()
     {
         if (TryGetLadder(out var ladder))
@@ -121,7 +121,7 @@ public class HeroScript : MonoBehaviour
         ladder = collider[0].gameObject.GetComponent<LadderScript>();
         return true;
     }
-    
+
     /*
     private IEnumerator MoveToPoint(Vector3 point)
     {
