@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Platforms
+    uniqueID: 1961284623
+    locked: 0
+  - name: Ladders
+    uniqueID: 3461946839
+    locked: 0
+  - name: Player
+    uniqueID: 987674325
+    locked: 0

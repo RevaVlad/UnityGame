@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -58,11 +59,17 @@ public class HeroScript : MonoBehaviour
     private void FixedUpdate()
     {
         if (isPlayerOnLadder)
-            return;
-        var position = transform.position;
-        position =
-            Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction, speed * Time.deltaTime);
-        transform.position = position;
+        {
+            transform.position = Vector2.MoveTowards(transform.position,
+                new Vector2(heldLadder.transform.position.x, transform.position.y), 1.3f * Time.smoothDeltaTime);
+        }
+        else
+        {
+            var position = transform.position;
+            position =
+                Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction, speed * Time.deltaTime);
+            transform.position = position;
+        }
     }
 
     public void OnJump()
@@ -90,6 +97,8 @@ public class HeroScript : MonoBehaviour
             isPlayerOnLadder = true;
             heldLadder = ladder;
             SwapInputMap();
+
+            // StartCoroutine(MoveToPoint(ladder.transform.position));
         }
     }
 
@@ -112,4 +121,16 @@ public class HeroScript : MonoBehaviour
         ladder = collider[0].gameObject.GetComponent<LadderScript>();
         return true;
     }
+    
+    /*
+    private IEnumerator MoveToPoint(Vector3 point)
+    {
+        while ((transform.position - point).magnitude < 1e-3)
+        {
+            transform.position = Vector2.MoveTowards(transform.position,
+                point, 1.3f * Time.smoothDeltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+    }
+    */
 }

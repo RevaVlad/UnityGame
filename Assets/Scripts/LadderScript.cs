@@ -2,7 +2,6 @@ using System.Collections;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class LadderScript : MonoBehaviour
 {

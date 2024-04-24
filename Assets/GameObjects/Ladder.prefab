@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2122458170366914287}
-  - component: {fileID: 2812191060497501612}
   - component: {fileID: 1140211298967089185}
-  m_Layer: 3
+  - component: {fileID: 919271465935886569}
+  m_Layer: 0
   m_Name: ConnectionNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,18 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3854922427698957464}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2812191060497501612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007337302927039112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b765cc8cfe0e792498511208ae673184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!68 &1140211298967089185
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -86,6 +74,18 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &919271465935886569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007337302927039112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a8f416bbec7e540b6f463366492ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3675426154991993276
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5147774462196461998}
   - component: {fileID: 6185567673769546145}
   - component: {fileID: 1879108545158851817}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: RightCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,8 +252,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -833020457
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.47058827, g: 0.34901962, b: 0.04705883, a: 1}
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6586112488955295882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc9a6ea78adb6c14cb6ba4638e8be4b6, type: 3}
+  m_Script: {fileID: 11500000, guid: eb40fd130cf9af348b9f52ae307c43d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 5131963174326036027}
   - component: {fileID: 2175920989297064977}
   - component: {fileID: 9099748339071506986}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LeftCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
