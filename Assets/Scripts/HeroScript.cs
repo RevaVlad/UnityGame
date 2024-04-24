@@ -13,6 +13,7 @@ public class HeroScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private PlayerControls _playerControls;
+    public bool isPlayerOnLadder = false;
     private Vector2 direction = new ();
 
     private void Start()
@@ -49,12 +50,13 @@ public class HeroScript : MonoBehaviour
 
     private void OnMove(InputValue inputValue)
     {
-        direction = inputValue.Get<Vector2>();
+        if (!isPlayerOnLadder)
+            direction = inputValue.Get<Vector2>();
     }
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f);
-        isGrounded = collider.Length > 1;
+        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
+        isGrounded = collider.Length > 0;
     }
 }

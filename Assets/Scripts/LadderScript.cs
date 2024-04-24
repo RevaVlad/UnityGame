@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LadderScript : MonoBehaviour
 {
@@ -100,14 +101,14 @@ public class LadderScript : MonoBehaviour
     }
 
     [ContextMenu("MoveRight")]
-    private void MoveRight()
+    public void MoveRight()
     {
         if (_moveCoroutine is null)
             _moveCoroutine = StartCoroutine(MoveHorizontalCourutine(true));
     }
     
     [ContextMenu("MoveLeft")]
-    private void MoveLeft()
+    public void MoveLeft()
     {
         if (_moveCoroutine is null)
             _moveCoroutine = StartCoroutine(MoveHorizontalCourutine(false));

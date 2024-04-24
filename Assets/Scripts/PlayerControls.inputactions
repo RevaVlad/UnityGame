@@ -114,6 +114,109 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "LadderInput",
+            "id": "b202e925-72f2-416a-8dc5-038c66514777",
+            "actions": [
+                {
+                    "name": "MergePlayerandLadder",
+                    "type": "Button",
+                    "id": "d059b054-ffbd-4906-8eda-a2580d3e06ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MoveLadder",
+                    "type": "Value",
+                    "id": "47179053-bde0-4ff4-bb68-8812e7491917",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7d4ceb76-5eb8-4c60-b4aa-e39d8e55cca6",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MergePlayerandLadder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "AD KEYS",
+                    "id": "81dd25f1-a605-444b-bfdb-d3678e9d3cff",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLadder",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "d2530257-bc68-468c-8f37-77d48cb7a553",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLadder",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "8ff5863a-1325-4e4c-ac07-fb22c26dcecf",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLadder",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrow keys",
+                    "id": "a877197d-c580-4ab7-896c-dd0915a98bc9",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLadder",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Negative",
+                    "id": "188d9f35-1c0e-49f3-8f46-0541d2ec199b",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLadder",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "e765289c-93c0-473d-afe1-239dae59618b",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLadder",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
         }
     ],
     "controlSchemes": []
