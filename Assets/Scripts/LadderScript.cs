@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using Unity.Mathematics;
@@ -7,7 +8,7 @@ public class LadderScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private LadderScript connected;
-    [SerializeField] private LadderScript permanentlyConnected;
+    // [SerializeField] private LadderScript permanentlyConnected;
 
     private GetNearbyObjectsScript rightObjectsCollider;
     private GetNearbyObjectsScript leftObjectsCollider;
@@ -23,29 +24,22 @@ public class LadderScript : MonoBehaviour
         if (GameObject.Find("LaddersContainer") is null)
             new GameObject("LaddersContainer");
 
-        transform.SetParent(permanentlyConnected is not null
-            ? permanentlyConnected.gameObject.transform
-            : GameObject.Find("LaddersContainer").transform);
+        transform.SetParent(GameObject.Find("LaddersContainer").transform);
     }
 
     internal void ConnectLadders(Collider2D other)
     {
         var otherTransform = other.transform;
-        otherTransform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = false;
-        transform.SetParent(otherTransform);
         connected = otherTransform.GetComponent<LadderScript>();
     }
 
     internal void DestroyConnection()
     {
-        transform.SetParent(GameObject.Find("LaddersContainer").transform);
-        if (connected != null)
+        if (connected is not null)
         {
             connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
             connected = null;
         }
-
-        transform.position = new Vector3(math.round(transform.position.x), transform.position.y, 0);
     }
 
     private void MoveNearbyObjects(bool right)
@@ -62,8 +56,6 @@ public class LadderScript : MonoBehaviour
         }
     }
 
-    //private MoveConnectedObject()
-
     private IEnumerator MoveHorizontalCourutine(bool right)
     {
         if (!CheckIfMoveIsPossible(right))
@@ -72,8 +64,18 @@ public class LadderScript : MonoBehaviour
             Debug.Log("Failed move");
             yield break;
         }
-
+        
         MoveNearbyObjects(right);
+        if (connected is null || !connected.CheckIfMoveIsPossible(right))
+            DestroyConnection();
+        else
+        {
+            if (right)
+                connected.MoveRight();
+            else
+                connected.MoveLeft();
+        }
+            
 
         _moveDirection = (right) ? 1 : -1;
         var position = transform.position;
@@ -104,7 +106,7 @@ public class LadderScript : MonoBehaviour
         return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders")).All(ladder =>
             ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
-
+    
     [ContextMenu("MoveRight")]
     public void MoveRight()
     {
