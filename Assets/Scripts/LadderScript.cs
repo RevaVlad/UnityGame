@@ -11,10 +11,10 @@ public class LadderScript : MonoBehaviour
 
     private GetNearbyObjectsScript rightObjectsCollider;
     private GetNearbyObjectsScript leftObjectsCollider;
-    
+
     private int _moveDirection = 0;
     private Coroutine _moveCoroutine = null;
-    
+
     void Start()
     {
         rightObjectsCollider = transform.Find("RightCollider").GetComponent<GetNearbyObjectsScript>();
@@ -22,25 +22,30 @@ public class LadderScript : MonoBehaviour
 
         if (GameObject.Find("LaddersContainer") is null)
             new GameObject("LaddersContainer");
-        
+
         transform.SetParent(permanentlyConnected is not null
             ? permanentlyConnected.gameObject.transform
             : GameObject.Find("LaddersContainer").transform);
     }
-    
+
     internal void ConnectLadders(Collider2D other)
     {
         var otherTransform = other.transform;
+        otherTransform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = false;
         transform.SetParent(otherTransform);
         connected = otherTransform.GetComponent<LadderScript>();
     }
 
     internal void DestroyConnection()
     {
-        Transform transform1;
-        (transform1 = transform).SetParent(GameObject.Find("LaddersContainer").transform);
-        connected = null;
-        transform.position = new Vector3(math.round(transform1.position.x), transform.position.y, 0);
+        transform.SetParent(GameObject.Find("LaddersContainer").transform);
+        if (connected != null)
+        {
+            connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
+            connected = null;
+        }
+
+        transform.position = new Vector3(math.round(transform.position.x), transform.position.y, 0);
     }
 
     private void MoveNearbyObjects(bool right)
@@ -56,7 +61,7 @@ public class LadderScript : MonoBehaviour
                 ladder.GetComponent<LadderScript>().MoveLeft();
         }
     }
-    
+
     //private MoveConnectedObject()
 
     private IEnumerator MoveHorizontalCourutine(bool right)
@@ -69,7 +74,7 @@ public class LadderScript : MonoBehaviour
         }
 
         MoveNearbyObjects(right);
-        
+
         _moveDirection = (right) ? 1 : -1;
         var position = transform.position;
         transform.position = new Vector3(math.round(position.x), position.y, 0);
@@ -78,11 +83,12 @@ public class LadderScript : MonoBehaviour
         var rb = GetComponent<Rigidbody2D>();
         while ((target.x - transform.position.x) * _moveDirection > 1e-4)
         {
-            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3), position.y, 0);
+            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3),
+                position.y, 0);
             rb.MovePosition(new Vector2(position.x + _moveDirection * moveSpeed * Time.smoothDeltaTime, position.y));
             yield return new WaitForFixedUpdate();
         }
-        
+
         transform.position = target;
         rb.MovePosition(target);
         _moveCoroutine = null;
@@ -90,7 +96,7 @@ public class LadderScript : MonoBehaviour
 
     public bool CheckIfMoveIsPossible(bool right)
     {
-        var objectsAtDirection = 
+        var objectsAtDirection =
             (right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects;
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms")))
             return false;
@@ -105,7 +111,7 @@ public class LadderScript : MonoBehaviour
         if (_moveCoroutine is null)
             _moveCoroutine = StartCoroutine(MoveHorizontalCourutine(true));
     }
-    
+
     [ContextMenu("MoveLeft")]
     public void MoveLeft()
     {
