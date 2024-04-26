@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Exit can be blocked">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Added more pipe variants (basic pipes)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/LadderWithPlatform 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/LadderWithPlatform 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Pipe3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Pipe3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -135,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714159460845</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added more pipe variants (basic pipes)">
+      <option name="closed" value="true" />
+      <created>1714161946469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714161946469</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added more pipe variants (basic pipes)">
+      <option name="closed" value="true" />
+      <created>1714161959119</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714161959119</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reworked connections" />
     <MESSAGE value="Exit can be blocked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exit can be blocked" />
+    <MESSAGE value="Added more pipe variants (basic pipes)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more pipe variants (basic pipes)" />
   </component>
 </project>
