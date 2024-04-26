@@ -13,7 +13,7 @@ public class LadderScript : MonoBehaviour
     private GetNearbyObjectsScript rightObjectsCollider;
     private GetNearbyObjectsScript leftObjectsCollider;
 
-    private int _moveDirection = 0;
+    [SerializeField] private int _moveDirection = 0;
     private Coroutine _moveCoroutine = null;
 
     void Start()
@@ -61,7 +61,7 @@ public class LadderScript : MonoBehaviour
         if (!CheckIfMoveIsPossible(right))
         {
             //DestroyConnection();
-            Debug.Log("Failed move");
+            // Debug.Log("Failed move");
             yield break;
         }
         

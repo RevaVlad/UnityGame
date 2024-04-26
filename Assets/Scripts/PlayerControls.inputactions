@@ -149,6 +149,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "TravelThroughPipe",
+                    "type": "Button",
+                    "id": "70aeb293-cfb1-4b67-b80e-6eac12c55d0b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "MoveRightWithLadder",
                     "type": "Button",
                     "id": "27e46682-cdc2-436f-a321-54cca752ea34",
@@ -220,6 +229,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MoveLeftWithLadder",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42f9a80c-0f4a-435e-9a08-6edc58d0ac8c",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TravelThroughPipe",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

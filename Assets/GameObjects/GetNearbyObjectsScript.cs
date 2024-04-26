@@ -17,10 +17,7 @@ public class GetNearbyObjectsScript : MonoBehaviour
     {
         var gameObject = other.gameObject;
         if (layersToProcessInt.Contains(gameObject.layer))
-        {
             collidingObjects.Add(gameObject);
-            Debug.Log($"Added object: {gameObject.name}");
-        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

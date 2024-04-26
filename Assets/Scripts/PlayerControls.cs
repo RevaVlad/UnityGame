@@ -171,6 +171,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""TravelThroughPipe"",
+                    ""type"": ""Button"",
+                    ""id"": ""70aeb293-cfb1-4b67-b80e-6eac12c55d0b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""MoveRightWithLadder"",
                     ""type"": ""Button"",
                     ""id"": ""27e46682-cdc2-436f-a321-54cca752ea34"",
@@ -244,6 +253,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""MoveLeftWithLadder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42f9a80c-0f4a-435e-9a08-6edc58d0ac8c"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TravelThroughPipe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -258,6 +278,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // LadderInput
         m_LadderInput = asset.FindActionMap("LadderInput", throwIfNotFound: true);
         m_LadderInput_DropLadder = m_LadderInput.FindAction("DropLadder", throwIfNotFound: true);
+        m_LadderInput_TravelThroughPipe = m_LadderInput.FindAction("TravelThroughPipe", throwIfNotFound: true);
         m_LadderInput_MoveRightWithLadder = m_LadderInput.FindAction("MoveRightWithLadder", throwIfNotFound: true);
         m_LadderInput_MoveLeftWithLadder = m_LadderInput.FindAction("MoveLeftWithLadder", throwIfNotFound: true);
     }
@@ -384,6 +405,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_LadderInput;
     private List<ILadderInputActions> m_LadderInputActionsCallbackInterfaces = new List<ILadderInputActions>();
     private readonly InputAction m_LadderInput_DropLadder;
+    private readonly InputAction m_LadderInput_TravelThroughPipe;
     private readonly InputAction m_LadderInput_MoveRightWithLadder;
     private readonly InputAction m_LadderInput_MoveLeftWithLadder;
     public struct LadderInputActions
@@ -391,6 +413,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         private @PlayerControls m_Wrapper;
         public LadderInputActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @DropLadder => m_Wrapper.m_LadderInput_DropLadder;
+        public InputAction @TravelThroughPipe => m_Wrapper.m_LadderInput_TravelThroughPipe;
         public InputAction @MoveRightWithLadder => m_Wrapper.m_LadderInput_MoveRightWithLadder;
         public InputAction @MoveLeftWithLadder => m_Wrapper.m_LadderInput_MoveLeftWithLadder;
         public InputActionMap Get() { return m_Wrapper.m_LadderInput; }
@@ -405,6 +428,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @DropLadder.started += instance.OnDropLadder;
             @DropLadder.performed += instance.OnDropLadder;
             @DropLadder.canceled += instance.OnDropLadder;
+            @TravelThroughPipe.started += instance.OnTravelThroughPipe;
+            @TravelThroughPipe.performed += instance.OnTravelThroughPipe;
+            @TravelThroughPipe.canceled += instance.OnTravelThroughPipe;
             @MoveRightWithLadder.started += instance.OnMoveRightWithLadder;
             @MoveRightWithLadder.performed += instance.OnMoveRightWithLadder;
             @MoveRightWithLadder.canceled += instance.OnMoveRightWithLadder;
@@ -418,6 +444,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @DropLadder.started -= instance.OnDropLadder;
             @DropLadder.performed -= instance.OnDropLadder;
             @DropLadder.canceled -= instance.OnDropLadder;
+            @TravelThroughPipe.started -= instance.OnTravelThroughPipe;
+            @TravelThroughPipe.performed -= instance.OnTravelThroughPipe;
+            @TravelThroughPipe.canceled -= instance.OnTravelThroughPipe;
             @MoveRightWithLadder.started -= instance.OnMoveRightWithLadder;
             @MoveRightWithLadder.performed -= instance.OnMoveRightWithLadder;
             @MoveRightWithLadder.canceled -= instance.OnMoveRightWithLadder;
@@ -450,6 +479,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface ILadderInputActions
     {
         void OnDropLadder(InputAction.CallbackContext context);
+        void OnTravelThroughPipe(InputAction.CallbackContext context);
         void OnMoveRightWithLadder(InputAction.CallbackContext context);
         void OnMoveLeftWithLadder(InputAction.CallbackContext context);
     }

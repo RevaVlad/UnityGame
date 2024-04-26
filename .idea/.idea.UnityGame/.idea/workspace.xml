@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Reworked connections">
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/GetNearbyObjectsScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/GetNearbyObjectsScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/LadderWithPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/LadderWithPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RevaVlad&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d32db9f1-3199-4bab-a20a-f5034e8866b6" />
+        <option name="url" value="https://github.com/RevaVlad/UnityGame.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/LadderWithPlatform.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/LadderWithPlatform.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/sheme.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/ConnectionNodeScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/ProjectSettings/Physics2DSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2fdtjYlzBl2re9F4PrBZvwVDdZQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "playerPrototype",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\vladr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\vladr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\vladr\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Standalone Player.Start Unity">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Reworked connections">
+      <option name="closed" value="true" />
+      <created>1714061330653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714061330653</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Reworked connections" />
+      <created>1714142925231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714142925231</updated>
+      <workItem from="1714142929641" duration="2726000" />
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reworked connections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked connections" />
+  </component>
+</project>
