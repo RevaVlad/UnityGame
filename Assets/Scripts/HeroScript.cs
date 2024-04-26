@@ -116,7 +116,7 @@ public class HeroScript : MonoBehaviour
     private bool TryGetLadder(out LadderScript ladder)
     {
         ladder = null;
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Ladders"));
+        var collider = Physics2D.OverlapCircleAll(transform.position + new Vector3(0, 0.5f, 0), 0.2f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
         ladder = collider[0].gameObject.GetComponent<LadderScript>();
         return true;
