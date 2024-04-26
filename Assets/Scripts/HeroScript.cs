@@ -16,6 +16,8 @@ public class HeroScript : MonoBehaviour
     private PlayerInput _playerInput;
     private Vector2 direction = new();
 
+    [SerializeField] private float sizeY;
+    
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
 
@@ -48,6 +50,8 @@ public class HeroScript : MonoBehaviour
         _playerInput = GetComponent<PlayerInput>();
         _playerInput.actions.FindActionMap("BasicInput").Enable();
         _playerInput.actions.FindActionMap("LadderInput").Disable();
+
+        sizeY = GetComponent<Collider2D>().bounds.size.y;
     }
 
     private void Update()
@@ -83,6 +87,17 @@ public class HeroScript : MonoBehaviour
         direction = inputValue.Get<Vector2>();
     }
 
+    private void OnTravelThroughPipe()
+    {
+        var enter = heldLadder.transform.Find("EnterPoint");
+        var distance = (enter.position - (transform.position + new Vector3(0, sizeY / 2, 0)));
+        if (distance.magnitude < .1)
+        {
+            transform.position = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
+            OnDropLadder();
+        }
+    }
+
     private void CheckGround()
     {
         var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
@@ -116,7 +131,7 @@ public class HeroScript : MonoBehaviour
     private bool TryGetLadder(out LadderScript ladder)
     {
         ladder = null;
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Ladders"));
+        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y + sizeY / 2), 0.2f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
         ladder = collider[0].gameObject.GetComponent<LadderScript>();
         return true;
