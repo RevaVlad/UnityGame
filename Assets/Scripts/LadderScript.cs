@@ -100,7 +100,7 @@ public class LadderScript : MonoBehaviour
     {
         var objectsAtDirection =
             (right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects;
-        if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms")))
+        if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
         return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders")).All(ladder =>
