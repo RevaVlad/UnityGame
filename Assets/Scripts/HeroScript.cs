@@ -91,7 +91,7 @@ public class HeroScript : MonoBehaviour
     {
         var enter = heldLadder.transform.Find("EnterPoint");
         var distance = (enter.position - (transform.position + new Vector3(0, sizeY / 2, 0)));
-        if (distance.magnitude < .1)
+        if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())
         {
             transform.position = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
             OnDropLadder();

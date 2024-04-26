@@ -4,11 +4,11 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 
+[SelectionBase]
 public class LadderScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private LadderScript connected;
-    // [SerializeField] private LadderScript permanentlyConnected;
 
     private GetNearbyObjectsScript rightObjectsCollider;
     private GetNearbyObjectsScript leftObjectsCollider;
@@ -105,6 +105,12 @@ public class LadderScript : MonoBehaviour
 
         return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders")).All(ladder =>
             ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
+    }
+
+    public bool CheckIfExitAvailable()
+    {
+        var collider = Physics2D.OverlapCircleAll(transform.Find("ExitPoint").transform.position, 0.1f, LayerMask.GetMask("Platforms"));
+        return collider.Length == 0;
     }
     
     [ContextMenu("MoveRight")]
