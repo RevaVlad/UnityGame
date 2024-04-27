@@ -56,7 +56,7 @@ public class LadderScript : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveHorizontalCourutine(bool right)
+    private IEnumerator MoveHorizontalCoroutine(bool right)
     {
         if (!CheckIfMoveIsPossible(right))
         {
@@ -117,13 +117,13 @@ public class LadderScript : MonoBehaviour
     public void MoveRight()
     {
         if (_moveCoroutine is null)
-            _moveCoroutine = StartCoroutine(MoveHorizontalCourutine(true));
+            _moveCoroutine = StartCoroutine(MoveHorizontalCoroutine(true));
     }
 
     [ContextMenu("MoveLeft")]
     public void MoveLeft()
     {
         if (_moveCoroutine is null)
-            _moveCoroutine = StartCoroutine(MoveHorizontalCourutine(false));
+            _moveCoroutine = StartCoroutine(MoveHorizontalCoroutine(false));
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3386616417753548740
+--- !u!1001 &1228977059215779057
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543493654230059653, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2543493654230059653, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2543493654230059653, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2543493654230059653, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -58,7 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6786725958756290526, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
       propertyPath: m_Name
-      value: Slim Platform
+      value: Slim platform 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786725958756290526, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
+      propertyPath: m_TagString
+      value: SlimPlatform
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4390926057267975430, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
@@ -67,20 +71,20 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6786725958756290526, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 62236526568763365}
+      addedObject: {fileID: 5036839560012073823}
   m_SourcePrefab: {fileID: 100100000, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
---- !u!1 &8129251302193727514 stripped
+--- !u!1 &5701978597623753519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6786725958756290526, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}
-  m_PrefabInstance: {fileID: 3386616417753548740}
+  m_PrefabInstance: {fileID: 1228977059215779057}
   m_PrefabAsset: {fileID: 0}
---- !u!68 &62236526568763365
-EdgeCollider2D:
+--- !u!61 &5036839560012073823
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8129251302193727514}
+  m_GameObject: {fileID: 5701978597623753519}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -107,11 +111,15 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 0.1}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.45, y: 0}
-  - {x: 0.45, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0

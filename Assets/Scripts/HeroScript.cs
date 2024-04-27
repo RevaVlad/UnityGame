@@ -125,8 +125,17 @@ public class HeroScript : MonoBehaviour
         heldLadder = null;
     }
 
-    private void OnMoveRightWithLadder() => heldLadder.MoveRight();
-    private void OnMoveLeftWithLadder() => heldLadder.MoveLeft();
+    private void OnMoveRightWithLadder()
+    {
+        if (isGrounded)
+            heldLadder.MoveRight();
+    }
+
+    private void OnMoveLeftWithLadder()
+    {
+        if (isGrounded)
+            heldLadder.MoveLeft();
+    }
 
     private bool TryGetLadder(out LadderScript ladder)
     {
