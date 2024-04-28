@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,7 +18,7 @@ public class HeroScript : MonoBehaviour
     private Vector2 direction = new();
 
     [SerializeField] private float sizeY;
-    
+
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
 
@@ -63,8 +64,11 @@ public class HeroScript : MonoBehaviour
     {
         if (isPlayerOnLadder)
         {
+            var entryPosition = heldLadder.transform.Find("EnterPoint").position;
             transform.position = Vector2.MoveTowards(transform.position,
-                new Vector2(heldLadder.transform.position.x, transform.position.y), 1.3f * Time.smoothDeltaTime);
+                Math.Abs(entryPosition.y - transform.position.y - sizeY / 2) < 0.02f
+                    ? new Vector2(heldLadder.transform.position.x, transform.position.y)
+                    : new Vector2(heldLadder.transform.position.x, entryPosition.y), 1.3f * Time.smoothDeltaTime);
         }
         else
         {
@@ -140,7 +144,8 @@ public class HeroScript : MonoBehaviour
     private bool TryGetLadder(out LadderScript ladder)
     {
         ladder = null;
-        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y + sizeY / 2), 0.2f, LayerMask.GetMask("Ladders"));
+        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y + sizeY / 2),
+            0.2f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
         ladder = collider[0].gameObject.GetComponent<LadderScript>();
         return true;
