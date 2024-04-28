@@ -100,6 +100,9 @@ public class LadderScript : MonoBehaviour
     {
         var objectsAtDirection =
             (right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects;
+        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y - transform.localScale.y / 2), 0.2f, LayerMask.GetMask("Ladders"));
+        if (collider.Length == 0)
+            return false;
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
