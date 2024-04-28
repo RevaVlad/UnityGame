@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -64,11 +65,8 @@ public class HeroScript : MonoBehaviour
     {
         if (isPlayerOnLadder)
         {
-            var entryPosition = heldLadder.transform.Find("EnterPoint").position;
             transform.position = Vector2.MoveTowards(transform.position,
-                Math.Abs(entryPosition.y - transform.position.y - sizeY / 2) < 0.025f
-                    ? new Vector2(heldLadder.transform.position.x, transform.position.y)
-                    : new Vector2(heldLadder.transform.position.x, entryPosition.y), 1.3f * Time.smoothDeltaTime);
+                new Vector2(heldLadder.transform.position.x, transform.position.y), 1.3f * Time.smoothDeltaTime);
         }
         else
         {
@@ -93,12 +91,15 @@ public class HeroScript : MonoBehaviour
 
     private void OnTravelThroughPipe()
     {
-        var enter = heldLadder.transform.Find("EnterPoint");
-        var distance = (enter.position - (transform.position + new Vector3(0, sizeY / 2, 0)));
-        if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())
+        if (TryTravelThoughPipe())
         {
-            transform.position = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
-            OnDropLadder();
+            var enter = heldLadder.transform.Find("EnterPoint");
+            var distance = (enter.position - (transform.position + new Vector3(0, sizeY / 2, 0)));
+            if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())
+            {
+                transform.position = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
+                OnDropLadder();
+            }
         }
     }
 
@@ -149,6 +150,14 @@ public class HeroScript : MonoBehaviour
         if (collider.Length == 0) return false;
         ladder = collider[0].gameObject.GetComponent<LadderScript>();
         return true;
+    }
+
+    private bool TryTravelThoughPipe()
+    {
+        var colliderPosition = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
+        var collider = Physics2D.OverlapCircleAll(colliderPosition,
+            0.2f, LayerMask.GetMask("Platforms"));
+        return collider.Where(x => x.transform.name != "HiddenPlatform").ToArray().Length == 0;
     }
 
     /*
