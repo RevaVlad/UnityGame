@@ -66,7 +66,7 @@ public class HeroScript : MonoBehaviour
         {
             var entryPosition = heldLadder.transform.Find("EnterPoint").position;
             transform.position = Vector2.MoveTowards(transform.position,
-                Math.Abs(entryPosition.y - transform.position.y - sizeY / 2) < 0.02f
+                Math.Abs(entryPosition.y - transform.position.y - sizeY / 2) < 0.025f
                     ? new Vector2(heldLadder.transform.position.x, transform.position.y)
                     : new Vector2(heldLadder.transform.position.x, entryPosition.y), 1.3f * Time.smoothDeltaTime);
         }
