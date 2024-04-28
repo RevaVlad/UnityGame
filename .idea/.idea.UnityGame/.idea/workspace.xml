@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="bug fixes">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="level fixes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Slim platform 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Slim platform 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +44,25 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/GameObjects/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/GameObjects/Slim platform 1.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level3.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level3.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level4.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level4.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level6.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scenes/Level6.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Михаил/RiderProjects/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -214,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714281248976</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="level fixes">
+      <option name="closed" value="true" />
+      <created>1714287272402</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714287272402</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +268,7 @@
     <MESSAGE value="Added more pipe variants (basic pipes)" />
     <MESSAGE value="Added levels and slim platforms" />
     <MESSAGE value="bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
+    <MESSAGE value="level fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="level fixes" />
   </component>
 </project>

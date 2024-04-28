@@ -1,0 +1,139 @@
+Index: Assets/Scripts/HeroScript.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using UnityEngine;\r\nusing UnityEngine.InputSystem;\r\n\r\npublic class HeroScript : MonoBehaviour\r\n{\r\n    [SerializeField] private float speedMidAir;\r\n    [SerializeField] private float speedOnGround;\r\n    [SerializeField] private float jumpForce;\r\n\r\n\r\n    private bool isGrounded;\r\n\r\n    private Rigidbody2D rb;\r\n    private SpriteRenderer sprite;\r\n    private PlayerControls _playerControls;\r\n    private PlayerInput _playerInput;\r\n    private Vector2 direction = new();\r\n\r\n    [SerializeField] private float sizeY;\r\n    \r\n    public bool isPlayerOnLadder;\r\n    private LadderScript heldLadder = null;\r\n\r\n    private void Start()\r\n    {\r\n        _playerControls = new PlayerControls();\r\n    }\r\n\r\n    private void SwapInputMap()\r\n    {\r\n        if (_playerInput.actions.FindActionMap(\"BasicInput\").enabled)\r\n        {\r\n            _playerInput.actions.FindActionMap(\"LadderInput\").Enable();\r\n            _playerInput.actions.FindActionMap(\"BasicInput\").Disable();\r\n        }\r\n        else\r\n        {\r\n            _playerInput.actions.FindActionMap(\"BasicInput\").Enable();\r\n            _playerInput.actions.FindActionMap(\"LadderInput\").Disable();\r\n        }\r\n    }\r\n\r\n    private void Awake()\r\n    {\r\n        rb = GetComponent<Rigidbody2D>();\r\n        rb.mass = 20f;\r\n        rb.gravityScale = 1.1f;\r\n        sprite = GetComponentInChildren<SpriteRenderer>();\r\n\r\n        _playerInput = GetComponent<PlayerInput>();\r\n        _playerInput.actions.FindActionMap(\"BasicInput\").Enable();\r\n        _playerInput.actions.FindActionMap(\"LadderInput\").Disable();\r\n\r\n        sizeY = GetComponent<Collider2D>().bounds.size.y;\r\n    }\r\n\r\n    private void Update()\r\n    {\r\n        CheckGround();\r\n    }\r\n\r\n    private void FixedUpdate()\r\n    {\r\n        if (isPlayerOnLadder)\r\n        {\r\n            transform.position = Vector2.MoveTowards(transform.position,\r\n                new Vector2(heldLadder.transform.position.x, transform.position.y), 1.3f * Time.smoothDeltaTime);\r\n        }\r\n        else\r\n        {\r\n            var position = transform.position;\r\n            position =\r\n                Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction,\r\n                    (isGrounded ? speedOnGround : speedMidAir) * Time.deltaTime);\r\n            transform.position = position;\r\n        }\r\n    }\r\n\r\n    public void OnJump()\r\n    {\r\n        if (isGrounded)\r\n            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);\r\n    }\r\n\r\n    private void OnMove(InputValue inputValue)\r\n    {\r\n        direction = inputValue.Get<Vector2>();\r\n    }\r\n\r\n    private void OnTravelThroughPipe()\r\n    {\r\n        var enter = heldLadder.transform.Find(\"EnterPoint\");\r\n        var distance = (enter.position - (transform.position + new Vector3(0, sizeY / 2, 0)));\r\n        if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())\r\n        {\r\n            transform.position = heldLadder.transform.Find(\"ExitPoint\").position - new Vector3(0, sizeY / 2, 0);\r\n            OnDropLadder();\r\n        }\r\n    }\r\n\r\n    private void CheckGround()\r\n    {\r\n        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask(\"Platforms\"));\r\n        isGrounded = collider.Length > 0;\r\n    }\r\n\r\n    private void OnTakeLadder()\r\n    {\r\n        if (TryGetLadder(out var ladder))\r\n        {\r\n            transform.SetParent(ladder.transform);\r\n            isPlayerOnLadder = true;\r\n            heldLadder = ladder;\r\n            SwapInputMap();\r\n\r\n            // StartCoroutine(MoveToPoint(ladder.transform.position));\r\n        }\r\n    }\r\n\r\n    private void OnDropLadder()\r\n    {\r\n        SwapInputMap();\r\n        transform.SetParent(null);\r\n        isPlayerOnLadder = false;\r\n        heldLadder = null;\r\n    }\r\n\r\n    private void OnMoveRightWithLadder() => heldLadder.MoveRight();\r\n    private void OnMoveLeftWithLadder() => heldLadder.MoveLeft();\r\n\r\n    private bool TryGetLadder(out LadderScript ladder)\r\n    {\r\n        ladder = null;\r\n        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y + sizeY / 2), 0.2f, LayerMask.GetMask(\"Ladders\"));\r\n        if (collider.Length == 0) return false;\r\n        ladder = collider[0].gameObject.GetComponent<LadderScript>();\r\n        return true;\r\n    }\r\n\r\n    /*\r\n    private IEnumerator MoveToPoint(Vector3 point)\r\n    {\r\n        while ((transform.position - point).magnitude < 1e-3)\r\n        {\r\n            transform.position = Vector2.MoveTowards(transform.position,\r\n                point, 1.3f * Time.smoothDeltaTime);\r\n            yield return new WaitForFixedUpdate();\r\n        }\r\n    }\r\n    */\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/HeroScript.cs b/Assets/Scripts/HeroScript.cs
+--- a/Assets/Scripts/HeroScript.cs	(revision bc8fc54526c6aa3574639eaf9342468ca68727da)
++++ b/Assets/Scripts/HeroScript.cs	(date 1714234636295)
+@@ -84,6 +84,7 @@
+ 
+     private void OnMove(InputValue inputValue)
+     {
++        Debug.Log(1);
+         direction = inputValue.Get<Vector2>();
+     }
+ 
+Index: .idea/.idea.UnityGame/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3f4cd37a-e45d-49e8-94da-113dd1a63788\" name=\"Changes\" comment=\"Added levels and slim platforms\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;RevaVlad&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"d32db9f1-3199-4bab-a20a-f5034e8866b6\" />\r\n        <option name=\"url\" value=\"https://github.com/RevaVlad/UnityGame.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeVariants/Pipe1.prefab\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"false\" />\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fdtjYlzBl2re9F4PrBZvwVDdZQ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"Pipes\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"rider.external.source.directories\": [\r\n      \"C:\\\\Users\\\\vladr\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\DecompilerCache\",\r\n      \"C:\\\\Users\\\\vladr\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\SourcesCache\",\r\n      \"C:\\\\Users\\\\vladr\\\\AppData\\\\Local\\\\Symbols\\\\src\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Standalone Player.Start Unity\">\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"F:\\Programs\\unity\\2022.3.23f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath D:\\Challenge\\UnityGame -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"F:\\Programs\\unity\\2022.3.23f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath D:\\Challenge\\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"Reworked connections\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714061330653</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714061330653</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3f4cd37a-e45d-49e8-94da-113dd1a63788\" name=\"Changes\" comment=\"Reworked connections\" />\r\n      <created>1714142925231</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714142925231</updated>\r\n      <workItem from=\"1714142929641\" duration=\"2726000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Exit can be blocked\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714159460845</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714159460845</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added more pipe variants (basic pipes)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714161946469</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714161946469</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Added more pipe variants (basic pipes)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714161959119</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714161959119</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Added levels and slim platforms\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714167385881</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714167385881</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"false\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"Both\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Reworked connections\" />\r\n    <MESSAGE value=\"Exit can be blocked\" />\r\n    <MESSAGE value=\"Added more pipe variants (basic pipes)\" />\r\n    <MESSAGE value=\"Added levels and slim platforms\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added levels and slim platforms\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.UnityGame/.idea/workspace.xml b/.idea/.idea.UnityGame/.idea/workspace.xml
+--- a/.idea/.idea.UnityGame/.idea/workspace.xml	(revision bc8fc54526c6aa3574639eaf9342468ca68727da)
++++ b/.idea/.idea.UnityGame/.idea/workspace.xml	(date 1714278618467)
+@@ -4,7 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Added levels and slim platforms" />
++    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Added levels and slim platforms">
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_25_04_2024_16_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_25_04_2024_16_11__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2024_21_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2024_21_16__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -12,6 +18,7 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+   &quot;lastFilter&quot;: {
+@@ -40,6 +47,9 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="SWEA" />
++  </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 5
+ }</component>
+@@ -48,28 +58,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "Pipes",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Pipes&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "rider.external.source.directories": [
+-      "C:\\Users\\vladr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+-      "C:\\Users\\vladr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+-      "C:\\Users\\vladr\\AppData\\Local\\Symbols\\src"
++  &quot;keyToStringList&quot;: {
++    &quot;rider.external.source.directories&quot;: [
++      &quot;C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
++      &quot;C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
++      &quot;C:\\Users\\Михаил\\AppData\\Local\\Symbols\\src&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager" selected="Standalone Player.Start Unity">
+     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+-      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
++      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
+       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+       <option name="PASS_PARENT_ENVS" value="1" />
+@@ -77,7 +87,7 @@
+       <method v="2" />
+     </configuration>
+     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+-      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
++      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+       <option name="PASS_PARENT_ENVS" value="1" />
+@@ -122,6 +132,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1714142925231</updated>
+       <workItem from="1714142929641" duration="2726000" />
++      <workItem from="1714276535697" duration="644000" />
+     </task>
+     <task id="LOCAL-00002" summary="Exit can be blocked">
+       <option name="closed" value="true" />
+Index: ProjectSettings/ProjectVersion.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>m_EditorVersion: 2022.3.23f1\r\nm_EditorVersionWithRevision: 2022.3.23f1 (dbb3f7c5b5c6)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ProjectSettings/ProjectVersion.txt b/ProjectSettings/ProjectVersion.txt
+--- a/ProjectSettings/ProjectVersion.txt	(revision bc8fc54526c6aa3574639eaf9342468ca68727da)
++++ b/ProjectSettings/ProjectVersion.txt	(date 1714234636306)
+@@ -1,2 +1,2 @@
+-m_EditorVersion: 2022.3.23f1
+-m_EditorVersionWithRevision: 2022.3.23f1 (dbb3f7c5b5c6)
++m_EditorVersion: 2022.3.24f1
++m_EditorVersionWithRevision: 2022.3.24f1 (334eb2a0b267)
