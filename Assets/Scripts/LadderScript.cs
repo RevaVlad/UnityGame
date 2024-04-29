@@ -9,22 +9,32 @@ public class LadderScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private LadderScript connected;
+    [SerializeField] private int _moveDirection = 0;
+    [SerializeField] internal bool isFalling = true;
+    
+    public Transform EnterPosition { get; private set; }
 
     private GetNearbyObjectsScript rightObjectsCollider;
     private GetNearbyObjectsScript leftObjectsCollider;
-
-    [SerializeField] private int _moveDirection = 0;
     private Coroutine _moveCoroutine = null;
+    private Rigidbody2D rb;
+    
 
-    void Start()
+    private void Start()
     {
         rightObjectsCollider = transform.Find("RightCollider").GetComponent<GetNearbyObjectsScript>();
         leftObjectsCollider = transform.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>();
+        EnterPosition = transform.Find("EnterPoint").transform;
 
         if (GameObject.Find("LaddersContainer") is null)
             new GameObject("LaddersContainer");
 
         transform.SetParent(GameObject.Find("LaddersContainer").transform);
+    }
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
 
     internal void ConnectLadders(Collider2D other)
@@ -37,7 +47,7 @@ public class LadderScript : MonoBehaviour
     {
         if (connected is not null)
         {
-            connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
+            // connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
             connected = null;
         }
     }
@@ -79,7 +89,7 @@ public class LadderScript : MonoBehaviour
 
         _moveDirection = (right) ? 1 : -1;
         var position = transform.position;
-        transform.position = new Vector3(math.round(position.x), position.y, 0);
+        transform.position = new Vector3(math.round(position.x * 2) / 2f, position.y, 0);
         var target = position + new Vector3(_moveDirection, 0, 0);
 
         var rb = GetComponent<Rigidbody2D>();
@@ -128,5 +138,19 @@ public class LadderScript : MonoBehaviour
     {
         if (_moveCoroutine is null)
             _moveCoroutine = StartCoroutine(MoveHorizontalCoroutine(false));
+    }
+
+    internal void StopFall()
+    {
+        isFalling = false;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        transform.position = new Vector3(transform.position.x, math.round(transform.position.y * 2) / 2f);
+    }
+
+    internal void StartFall()
+    {
+        isFalling = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.WakeUp();
     }
 }

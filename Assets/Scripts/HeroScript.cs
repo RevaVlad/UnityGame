@@ -65,8 +65,12 @@ public class HeroScript : MonoBehaviour
     {
         if (isPlayerOnLadder)
         {
-            transform.position = Vector2.MoveTowards(transform.position,
-                new Vector2(heldLadder.transform.position.x, transform.position.y), 1.3f * Time.smoothDeltaTime);
+            var ladderEntryPoint = heldLadder.EnterPosition.position - new Vector3(0, sizeY / 2); // -sizeY / 2 потому что у Player origin сдвинут
+            var playerCenter = transform.position;
+            if ((playerCenter - ladderEntryPoint).magnitude > .05f)
+            {
+                transform.position = Vector2.MoveTowards(playerCenter, ladderEntryPoint, 1.3f * Time.smoothDeltaTime);
+            }
         }
         else
         {
@@ -105,7 +109,7 @@ public class HeroScript : MonoBehaviour
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms"));
+        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = collider.Length > 0;
     }
 
