@@ -53,6 +53,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RestartLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""9abe793e-3c83-4fb9-8011-89c8fa716ac8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -209,6 +218,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""TakeLadder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""736c17f1-0924-4d8d-b943-17f133d38d98"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -247,6 +267,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": ""MoveLeftWithLadder"",
                     ""type"": ""Button"",
                     ""id"": ""04e8fb20-b352-49ed-bd12-79071f4d6000"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RestartLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""9090f518-18d0-4e86-b7e2-33f670e7eab2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -363,6 +392,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""TravelThroughPipe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b6e1f119-e46f-4d4c-8d2e-03a2bf3f9749"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -374,12 +414,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_BasicInput_Jump = m_BasicInput.FindAction("Jump", throwIfNotFound: true);
         m_BasicInput_Move = m_BasicInput.FindAction("Move", throwIfNotFound: true);
         m_BasicInput_TakeLadder = m_BasicInput.FindAction("TakeLadder", throwIfNotFound: true);
+        m_BasicInput_RestartLevel = m_BasicInput.FindAction("RestartLevel", throwIfNotFound: true);
         // LadderInput
         m_LadderInput = asset.FindActionMap("LadderInput", throwIfNotFound: true);
         m_LadderInput_DropLadder = m_LadderInput.FindAction("DropLadder", throwIfNotFound: true);
         m_LadderInput_TravelThroughPipe = m_LadderInput.FindAction("TravelThroughPipe", throwIfNotFound: true);
         m_LadderInput_MoveRightWithLadder = m_LadderInput.FindAction("MoveRightWithLadder", throwIfNotFound: true);
         m_LadderInput_MoveLeftWithLadder = m_LadderInput.FindAction("MoveLeftWithLadder", throwIfNotFound: true);
+        m_LadderInput_RestartLevel = m_LadderInput.FindAction("RestartLevel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -444,6 +486,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_BasicInput_Jump;
     private readonly InputAction m_BasicInput_Move;
     private readonly InputAction m_BasicInput_TakeLadder;
+    private readonly InputAction m_BasicInput_RestartLevel;
     public struct BasicInputActions
     {
         private @PlayerControls m_Wrapper;
@@ -451,6 +494,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_BasicInput_Jump;
         public InputAction @Move => m_Wrapper.m_BasicInput_Move;
         public InputAction @TakeLadder => m_Wrapper.m_BasicInput_TakeLadder;
+        public InputAction @RestartLevel => m_Wrapper.m_BasicInput_RestartLevel;
         public InputActionMap Get() { return m_Wrapper.m_BasicInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -469,6 +513,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @TakeLadder.started += instance.OnTakeLadder;
             @TakeLadder.performed += instance.OnTakeLadder;
             @TakeLadder.canceled += instance.OnTakeLadder;
+            @RestartLevel.started += instance.OnRestartLevel;
+            @RestartLevel.performed += instance.OnRestartLevel;
+            @RestartLevel.canceled += instance.OnRestartLevel;
         }
 
         private void UnregisterCallbacks(IBasicInputActions instance)
@@ -482,6 +529,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @TakeLadder.started -= instance.OnTakeLadder;
             @TakeLadder.performed -= instance.OnTakeLadder;
             @TakeLadder.canceled -= instance.OnTakeLadder;
+            @RestartLevel.started -= instance.OnRestartLevel;
+            @RestartLevel.performed -= instance.OnRestartLevel;
+            @RestartLevel.canceled -= instance.OnRestartLevel;
         }
 
         public void RemoveCallbacks(IBasicInputActions instance)
@@ -507,6 +557,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_LadderInput_TravelThroughPipe;
     private readonly InputAction m_LadderInput_MoveRightWithLadder;
     private readonly InputAction m_LadderInput_MoveLeftWithLadder;
+    private readonly InputAction m_LadderInput_RestartLevel;
     public struct LadderInputActions
     {
         private @PlayerControls m_Wrapper;
@@ -515,6 +566,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @TravelThroughPipe => m_Wrapper.m_LadderInput_TravelThroughPipe;
         public InputAction @MoveRightWithLadder => m_Wrapper.m_LadderInput_MoveRightWithLadder;
         public InputAction @MoveLeftWithLadder => m_Wrapper.m_LadderInput_MoveLeftWithLadder;
+        public InputAction @RestartLevel => m_Wrapper.m_LadderInput_RestartLevel;
         public InputActionMap Get() { return m_Wrapper.m_LadderInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -536,6 +588,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MoveLeftWithLadder.started += instance.OnMoveLeftWithLadder;
             @MoveLeftWithLadder.performed += instance.OnMoveLeftWithLadder;
             @MoveLeftWithLadder.canceled += instance.OnMoveLeftWithLadder;
+            @RestartLevel.started += instance.OnRestartLevel;
+            @RestartLevel.performed += instance.OnRestartLevel;
+            @RestartLevel.canceled += instance.OnRestartLevel;
         }
 
         private void UnregisterCallbacks(ILadderInputActions instance)
@@ -552,6 +607,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @MoveLeftWithLadder.started -= instance.OnMoveLeftWithLadder;
             @MoveLeftWithLadder.performed -= instance.OnMoveLeftWithLadder;
             @MoveLeftWithLadder.canceled -= instance.OnMoveLeftWithLadder;
+            @RestartLevel.started -= instance.OnRestartLevel;
+            @RestartLevel.performed -= instance.OnRestartLevel;
+            @RestartLevel.canceled -= instance.OnRestartLevel;
         }
 
         public void RemoveCallbacks(ILadderInputActions instance)
@@ -574,6 +632,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnTakeLadder(InputAction.CallbackContext context);
+        void OnRestartLevel(InputAction.CallbackContext context);
     }
     public interface ILadderInputActions
     {
@@ -581,5 +640,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnTravelThroughPipe(InputAction.CallbackContext context);
         void OnMoveRightWithLadder(InputAction.CallbackContext context);
         void OnMoveLeftWithLadder(InputAction.CallbackContext context);
+        void OnRestartLevel(InputAction.CallbackContext context);
     }
 }
