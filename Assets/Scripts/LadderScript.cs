@@ -11,14 +11,14 @@ public class LadderScript : MonoBehaviour
     [SerializeField] private LadderScript connected;
     [SerializeField] private int _moveDirection = 0;
     [SerializeField] internal bool isFalling = true;
-    
+
     public Transform EnterPosition { get; private set; }
 
     private GetNearbyObjectsScript rightObjectsCollider;
     private GetNearbyObjectsScript leftObjectsCollider;
     private Coroutine _moveCoroutine = null;
     private Rigidbody2D rb;
-    
+
 
     private void Start()
     {
@@ -74,7 +74,7 @@ public class LadderScript : MonoBehaviour
             // Debug.Log("Failed move");
             yield break;
         }
-        
+
         MoveNearbyObjects(right);
         if (connected is null || !connected.CheckIfMoveIsPossible(right))
             DestroyConnection();
@@ -85,7 +85,7 @@ public class LadderScript : MonoBehaviour
             else
                 connected.MoveLeft();
         }
-            
+
 
         _moveDirection = (right) ? 1 : -1;
         var position = transform.position;
@@ -110,9 +110,17 @@ public class LadderScript : MonoBehaviour
     {
         var objectsAtDirection =
             (right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects;
-        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y - transform.localScale.y / 2), 0.2f, LayerMask.GetMask("Ladders"));
-        if (collider.Length == 0)
+        var collider = Physics2D.OverlapCircleAll(
+            new Vector2(transform.position.x, (transform.position.y - transform.localScale.y / 2) -1f), 0.3f,
+            LayerMask.GetMask("Ladders"));
+        
+        var platformsCollider = Physics2D.OverlapCircleAll(
+            new Vector2(EnterPosition.transform.position.x, EnterPosition.transform.position.y - 1f / 2), 0.3f,
+            LayerMask.GetMask("Platforms"));
+        var slimPlatforms = platformsCollider.Where(x => x.CompareTag("SlimPlatform")).ToArray();
+        if (slimPlatforms.Length != 0 && collider.Length != 0)
             return false;
+        
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
@@ -122,10 +130,11 @@ public class LadderScript : MonoBehaviour
 
     public bool CheckIfExitAvailable()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.Find("ExitPoint").transform.position, 0.1f, LayerMask.GetMask("Platforms"));
+        var collider = Physics2D.OverlapCircleAll(transform.Find("ExitPoint").transform.position, 0.1f,
+            LayerMask.GetMask("Platforms"));
         return collider.Length == 0;
     }
-    
+
     [ContextMenu("MoveRight")]
     public void MoveRight()
     {
