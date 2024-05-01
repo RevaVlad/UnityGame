@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "9abe793e-3c83-4fb9-8011-89c8fa716ac8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -187,6 +196,17 @@
                     "action": "TakeLadder",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "736c17f1-0924-4d8d-b943-17f133d38d98",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -225,6 +245,15 @@
                     "name": "MoveLeftWithLadder",
                     "type": "Button",
                     "id": "04e8fb20-b352-49ed-bd12-79071f4d6000",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "9090f518-18d0-4e86-b7e2-33f670e7eab2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -339,6 +368,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "TravelThroughPipe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6e1f119-e46f-4d4c-8d2e-03a2bf3f9749",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartLevel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
