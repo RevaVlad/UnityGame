@@ -457,6 +457,7 @@ MonoBehaviour:
   moveSpeed: 40
   connected: {fileID: 0}
   _moveDirection: 0
+  isFalling: 1
 --- !u!50 &7118752688493322217
 Rigidbody2D:
   serializedVersion: 4

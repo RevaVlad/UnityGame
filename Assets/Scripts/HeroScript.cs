@@ -16,12 +16,15 @@ public class HeroScript : MonoBehaviour
     private SpriteRenderer sprite;
     private PlayerControls _playerControls;
     private PlayerInput _playerInput;
-    private Vector2 direction = new();
+    private Vector2 direction;
 
     [SerializeField] private float sizeY;
 
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
+
+    private Animator anim;
+    private bool faceRight;
 
     private void Start()
     {
@@ -48,6 +51,7 @@ public class HeroScript : MonoBehaviour
         rb.mass = 20f;
         rb.gravityScale = 1.1f;
         sprite = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponent<Animator>();
 
         _playerInput = GetComponent<PlayerInput>();
         _playerInput.actions.FindActionMap("BasicInput").Enable();
@@ -91,6 +95,20 @@ public class HeroScript : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
         direction = inputValue.Get<Vector2>();
+        if (direction.magnitude > 0)
+        {
+            anim.SetFloat("moveX", speedOnGround);
+            ReflectForRun();
+        }
+        else 
+            anim.SetFloat("moveX", 0);
+    }
+
+    private void ReflectForRun()
+    {
+        if ((!(direction.x > 0) || !faceRight) && (!(direction.x < 0) || faceRight)) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
     }
 
     private void OnTravelThroughPipe()
@@ -104,13 +122,15 @@ public class HeroScript : MonoBehaviour
                 transform.position = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
                 OnDropLadder();
             }
+            anim.Play("PlayerPipeGo");
         }
     }
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
+        var collider = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, sizeY / 2, 0), 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = collider.Length > 0;
+        anim.SetBool("isGrounded", isGrounded);
     }
 
     private void OnTakeLadder()
@@ -138,12 +158,24 @@ public class HeroScript : MonoBehaviour
     {
         if (isGrounded)
             heldLadder.MoveRight();
+        if (faceRight)
+        {
+            transform.localScale *= new Vector2(-1, 1);
+            faceRight = !faceRight;
+        }
+        anim.Play("PlayerRun");
     }
 
     private void OnMoveLeftWithLadder()
     {
         if (isGrounded)
             heldLadder.MoveLeft();
+        if (!faceRight)
+        {
+            transform.localScale *= new Vector2(-1, 1);
+            faceRight = !faceRight;
+        }
+        anim.Play("PlayerRun");
     }
 
     private bool TryGetLadder(out LadderScript ladder)
