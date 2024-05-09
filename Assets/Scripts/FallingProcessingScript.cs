@@ -11,7 +11,7 @@ public class FallingProcessingScript : MonoBehaviour
         getObjectsScript.AddedObject.AddListener(OnAddingObject);
         getObjectsScript.DeletedObject.AddListener(OnDeletingObject);
         
-        parentScript = transform.parent.GetComponent<LadderScript>();
+        parentScript = PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>();
         parentScript.isFalling = true;
     }
 
