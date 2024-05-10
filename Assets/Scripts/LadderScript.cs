@@ -26,8 +26,9 @@ public class LadderScript : MonoBehaviour
     {
         connected = new List<LadderScript>();
         EnterPoint = transform.Find("EnterPoint");
-        rb = EnterPoint.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         
+        Debug.Log(transform.name);
         foreach (Transform child in transform.Find("Tiles"))
         {
             rightObjectsCollider.Add(child.Find("RightCollider").GetComponent<GetNearbyObjectsScript>());
@@ -42,16 +43,15 @@ public class LadderScript : MonoBehaviour
 
     internal void ConnectLadders(Transform other)
     {
-        connected.Add(other.GetComponent<LadderScript>());
+        var ladder = other.GetComponent<LadderScript>();
+        if (!connected.Contains(ladder))
+            connected.Add(other.GetComponent<LadderScript>());
     }
 
     internal void DestroyConnection(Transform other)
     {
-        if (connected is not null)
-        {
-            // connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
-            connected.Remove(other.GetComponent<LadderScript>());
-        }
+        // connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
+        connected.Remove(other.GetComponent<LadderScript>());
     }
 
     private List<GameObject> GetRightCollidingObjects() =>
@@ -64,7 +64,7 @@ public class LadderScript : MonoBehaviour
     {
         var laddersOnDirection =
             (right ? GetRightCollidingObjects() : GetLeftCollidingObjects()).Where(
-                obj => obj.layer == LayerMask.NameToLayer("Ladders")).Select(obj => obj.transform.parent);
+                obj => obj.layer == LayerMask.NameToLayer("Ladders")).Select(obj => PipeUtils.GetPipeRoot(obj.transform));
         
         foreach (var ladder in laddersOnDirection)
         {
@@ -83,9 +83,11 @@ public class LadderScript : MonoBehaviour
         }
 
         MoveNearbyObjects(right);
-        foreach (var connectedObject in connected)
+        var temp = connected.ToArray();
+        foreach (var connectedObject in temp)
         {
-            if (connected is null || !connectedObject.CheckIfMoveIsPossible(right))
+            if (connectedObject is null) continue;
+            if (!connectedObject.CheckIfMoveIsPossible(right))
                 DestroyConnection(connectedObject.transform);
             else
             {
@@ -96,22 +98,22 @@ public class LadderScript : MonoBehaviour
 
 
         _moveDirection = (right) ? 1 : -1;
-        var position = EnterPoint.position;
-        EnterPoint.position = new Vector3(math.round(position.x * 2) / 2f, position.y, 0);
+        var position = transform.position;
+        //transform.position = new Vector3(math.round(position.x * 2) / 2f, position.y, 0);
         var target = position + new Vector3(_moveDirection, 0, 0);
 
         rb.velocity = new Vector2(moveSpeed * _moveDirection, 0);
-        while ((target.x - EnterPoint.position.x) * _moveDirection > 1e-4)
+        while ((target.x - transform.position.x) * _moveDirection > 1e-4)
         {
-            EnterPoint.position = new Vector3(EnterPoint.position.x + (float)(moveSpeed * _moveDirection * 1e-3),
+            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3),
                 position.y, 0);
-            //rb.MovePosition(new Vector2(position.x + _moveDirection * moveSpeed * Time.smoothDeltaTime, position.y));
+            rb.MovePosition(new Vector2(position.x + _moveDirection * moveSpeed * Time.smoothDeltaTime, position.y));
             yield return new WaitForFixedUpdate();
         }
 
         rb.velocity = Vector2.zero;
 
-        EnterPoint.position = target;
+        transform.position = target;
         rb.MovePosition(target);
         _moveCoroutine = null;
     }
@@ -121,6 +123,7 @@ public class LadderScript : MonoBehaviour
         var objectsAtDirection =
             (right) ? GetRightCollidingObjects() : GetLeftCollidingObjects();
         
+        /*
         var collider = Physics2D.OverlapCircleAll(
             new Vector2(transform.position.x, (transform.position.y - transform.localScale.y / 2) -1f), 0.3f,
             LayerMask.GetMask("Ladders"));
@@ -133,11 +136,13 @@ public class LadderScript : MonoBehaviour
         if (slimPlatforms.Length != 0 && collider.Length != 0)
             return false;
         
+        */
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
-        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders")).All(ladder =>
-            ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
+            .Select(obj => PipeUtils.GetPipeRoot(obj.transform)).All(ladder =>
+                ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
 
     public bool CheckIfExitAvailable()
