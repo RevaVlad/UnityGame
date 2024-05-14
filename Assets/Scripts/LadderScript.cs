@@ -120,6 +120,7 @@ public class LadderScript : MonoBehaviour
 
     public bool CheckIfMoveIsPossible(bool right)
     {
+        Debug.Log("Checking");
         var objectsAtDirection =
             (right) ? GetRightCollidingObjects() : GetLeftCollidingObjects();
         
@@ -137,6 +138,11 @@ public class LadderScript : MonoBehaviour
             return false;
         
         */
+        foreach (var obj in objectsAtDirection)
+        {
+            Debug.Log($"{obj.name}: {obj.layer}");
+        }
+        
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
