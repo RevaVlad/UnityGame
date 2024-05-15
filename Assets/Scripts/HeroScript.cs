@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +10,13 @@ public class HeroScript : MonoBehaviour
     [SerializeField] private float speedOnGround;
     [SerializeField] private float jumpForce;
 
+    public PlayerRunData Data;
+    private bool faceRight;
+    private Animator anim;
+    private float LastOnGroundTime;
+    private bool IsJumping;
 
+    
     private bool isGrounded;
 
     private Rigidbody2D rb;
@@ -22,9 +29,6 @@ public class HeroScript : MonoBehaviour
 
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
-
-    private Animator anim;
-    private bool faceRight;
 
     private void Start()
     {
@@ -63,6 +67,7 @@ public class HeroScript : MonoBehaviour
     private void Update()
     {
         CheckGround();
+        LastOnGroundTime -= Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -78,18 +83,18 @@ public class HeroScript : MonoBehaviour
         }
         else
         {
-            var position = transform.position;
-            position =
-                Vector2.MoveTowards(position, new Vector2(position.x, position.y) + direction,
-                    (isGrounded ? speedOnGround : speedMidAir) * Time.deltaTime);
-            transform.position = position;
+            Run();
         }
     }
 
     public void OnJump()
     {
         if (isGrounded)
+        {
+            if (rb.velocity.magnitude > 0)
+                rb.AddForce((faceRight ? 1f : -1f) * Vector2.right * 40f, ForceMode2D.Impulse);
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 
     private void OnMove(InputValue inputValue)
@@ -97,11 +102,33 @@ public class HeroScript : MonoBehaviour
         direction = inputValue.Get<Vector2>();
         if (direction.magnitude > 0)
         {
+            Run();
             anim.SetFloat("moveX", speedOnGround);
             ReflectForRun();
         }
         else 
             anim.SetFloat("moveX", 0);
+    }
+
+    private void Run()
+    {
+        var targetSpeed = direction.x * Data.runMaxSpeed;
+		float accelRate;
+        
+		if (LastOnGroundTime > 0)
+			accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount : Data.runDeccelAmount;
+		else
+			accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount * Data.accelInAir : Data.runDeccelAmount * Data.deccelInAir;
+        
+		if(Data.doConserveMomentum && Mathf.Abs(rb.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(rb.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
+			accelRate = 0; 
+        
+		var speedDif = targetSpeed - rb.velocity.x;
+
+		var movement = speedDif * accelRate;
+        
+		rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
+        
     }
 
     private void ReflectForRun()
@@ -130,6 +157,8 @@ public class HeroScript : MonoBehaviour
     {
         var collider = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, sizeY / 2, 0), 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = collider.Length > 0;
+        if (isGrounded)
+            LastOnGroundTime = 0.1f;
         anim.SetBool("isGrounded", isGrounded);
     }
 
@@ -167,7 +196,6 @@ public class HeroScript : MonoBehaviour
     }
 
     private void OnMoveLeftWithLadder()
-    //test
     {
         if (isGrounded)
             heldLadder.MoveLeft();

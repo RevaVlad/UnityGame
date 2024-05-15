@@ -124,6 +124,7 @@ MonoBehaviour:
   speedMidAir: 1.3
   speedOnGround: 2.8
   jumpForce: 100
+  Data: {fileID: 11400000, guid: 482643206e9b599498ad5e1e3810112f, type: 2}
   sizeY: 0
   isPlayerOnLadder: 0
 --- !u!114 &2910502451395155975
@@ -235,9 +236,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 987674325
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1192509739, guid: 7cf1abf0075e43d468d01e6fbf0de6eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
