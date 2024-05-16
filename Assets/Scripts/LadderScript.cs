@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 [SelectionBase]
@@ -28,7 +29,6 @@ public class LadderScript : MonoBehaviour
         EnterPoint = transform.Find("EnterPoint");
         rb = GetComponent<Rigidbody2D>();
         
-        Debug.Log(transform.name);
         foreach (Transform child in transform.Find("Tiles"))
         {
             rightObjectsCollider.Add(child.Find("RightCollider").GetComponent<GetNearbyObjectsScript>());
@@ -68,38 +68,27 @@ public class LadderScript : MonoBehaviour
         
         foreach (var ladder in laddersOnDirection)
         {
-            if (right) ladder.GetComponent<LadderScript>().MoveRight();
-            else ladder.GetComponent<LadderScript>().MoveLeft();
+            var script = ladder.GetComponent<LadderScript>();
+            if (connected.Contains(script)) continue;
+            if (right) script.MoveRight();
+            else script.MoveLeft();
         }
     }
 
     private IEnumerator MoveHorizontalCoroutine(bool right)
     {
-        if (!CheckIfMoveIsPossible(right))
+        if (_moveDirection != 0 || !CheckIfMoveIsPossible(right))
         {
-            //DestroyConnection();
-            Debug.Log("Failed move");
+            // Debug.Log("Failed move");
             yield break;
         }
+        
+        _moveDirection = (right) ? 1 : -1;
 
         MoveNearbyObjects(right);
-        var temp = connected.ToArray();
-        foreach (var connectedObject in temp)
-        {
-            if (connectedObject is null) continue;
-            if (!connectedObject.CheckIfMoveIsPossible(right))
-                DestroyConnection(connectedObject.transform);
-            else
-            {
-                if (right) connectedObject.MoveRight();
-                else connectedObject.MoveLeft();
-            }
-        }
+        MoveConnected(right);
 
-
-        _moveDirection = (right) ? 1 : -1;
         var position = transform.position;
-        //transform.position = new Vector3(math.round(position.x * 2) / 2f, position.y, 0);
         var target = position + new Vector3(_moveDirection, 0, 0);
 
         rb.velocity = new Vector2(moveSpeed * _moveDirection, 0);
@@ -113,35 +102,32 @@ public class LadderScript : MonoBehaviour
 
         rb.velocity = Vector2.zero;
 
+        _moveDirection = 0;
         transform.position = target;
         rb.MovePosition(target);
         _moveCoroutine = null;
     }
 
+    private void MoveConnected(bool right)
+    {
+        var temp = connected.ToArray();
+        foreach (var connectedObject in temp)
+        {
+            if (connectedObject is null) continue;
+            if (!connectedObject.CheckIfMoveIsPossible(right)) {}
+            //DestroyConnection(connectedObject.transform);
+            else
+            {
+                if (right) connectedObject.MoveRight();
+                else connectedObject.MoveLeft();
+            }
+        }
+    }
+
     public bool CheckIfMoveIsPossible(bool right)
     {
-        Debug.Log("Checking");
         var objectsAtDirection =
             (right) ? GetRightCollidingObjects() : GetLeftCollidingObjects();
-        
-        /*
-        var collider = Physics2D.OverlapCircleAll(
-            new Vector2(transform.position.x, (transform.position.y - transform.localScale.y / 2) -1f), 0.3f,
-            LayerMask.GetMask("Ladders"));
-        
-        var platformsCollider = Physics2D.OverlapCircleAll(
-            new Vector2(EnterPoint.position.x, EnterPoint.position.y - 1f / 2), 0.3f,
-            LayerMask.GetMask("Platforms"));
-        
-        var slimPlatforms = platformsCollider.Where(x => x.CompareTag("SlimPlatform")).ToArray();
-        if (slimPlatforms.Length != 0 && collider.Length != 0)
-            return false;
-        
-        */
-        foreach (var obj in objectsAtDirection)
-        {
-            Debug.Log($"{obj.name}: {obj.layer}");
-        }
         
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
