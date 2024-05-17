@@ -74,7 +74,7 @@ public class HeroScript : MonoBehaviour
     {
         if (isPlayerOnLadder)
         {
-            var ladderEntryPoint = heldLadder.EnterPosition.position - new Vector3(0, sizeY / 2); // -sizeY / 2 потому что у Player origin сдвинут
+            var ladderEntryPoint = heldLadder.EnterPoint.position - new Vector3(0, sizeY / 2); // -sizeY / 2 потому что у Player origin сдвинут
             var playerCenter = transform.position;
             if ((playerCenter - ladderEntryPoint).magnitude > .05f)
             {
@@ -166,7 +166,7 @@ public class HeroScript : MonoBehaviour
     {
         if (TryGetLadder(out var ladder))
         {
-            transform.SetParent(ladder.transform);
+            transform.SetParent(ladder.EnterPoint);
             isPlayerOnLadder = true;
             heldLadder = ladder;
             SwapInputMap();
@@ -213,7 +213,7 @@ public class HeroScript : MonoBehaviour
         var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y + sizeY / 2),
             0.2f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
-        ladder = collider[0].gameObject.GetComponent<LadderScript>();
+        ladder = PipeUtils.GetPipeRoot(collider[0].transform).GetComponent<LadderScript>();
         return true;
     }
 

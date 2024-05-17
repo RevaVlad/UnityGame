@@ -9,19 +9,23 @@ public class ConnectionNodeScript : MonoBehaviour
         isTriggerWithSlimPlatform = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("SlimPlatform"))
-            isTriggerWithSlimPlatform = true;
+        //if (other.gameObject.CompareTag("SlimPlatform"))
+        //    isTriggerWithSlimPlatform = true;
         if (!isTriggerWithSlimPlatform && other.gameObject.layer == LayerMask.NameToLayer("Ladders"))
-            transform.parent.GetComponent<LadderScript>().ConnectLadders(other);
+        {
+            PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>().ConnectLadders(PipeUtils.GetPipeRoot(other.transform));
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("SlimPlatform"))
-            isTriggerWithSlimPlatform = false;
+        //if (other.gameObject.CompareTag("SlimPlatform"))
+        //    isTriggerWithSlimPlatform = false;
         if (other.gameObject.layer == LayerMask.NameToLayer("Ladders"))
-            transform.parent.GetComponent<LadderScript>().DestroyConnection();
+        {
+            PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>().DestroyConnection(PipeUtils.GetPipeRoot(other.transform));
+        }
     }
 }

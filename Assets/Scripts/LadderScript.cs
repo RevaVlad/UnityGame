@@ -1,30 +1,39 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 [SelectionBase]
 public class LadderScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private LadderScript connected;
+    [SerializeField] private List<LadderScript> connected;
     [SerializeField] private int _moveDirection = 0;
     [SerializeField] internal bool isFalling = true;
 
-    public Transform EnterPosition { get; private set; }
+    public Transform EnterPoint { get; private set; }
 
-    private GetNearbyObjectsScript rightObjectsCollider;
-    private GetNearbyObjectsScript leftObjectsCollider;
+    private List<GetNearbyObjectsScript> rightObjectsCollider = new ();
+    private List<GetNearbyObjectsScript> leftObjectsCollider = new ();
     private Coroutine _moveCoroutine = null;
     private Rigidbody2D rb;
 
 
     private void Start()
     {
-        rightObjectsCollider = transform.Find("RightCollider").GetComponent<GetNearbyObjectsScript>();
-        leftObjectsCollider = transform.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>();
-        EnterPosition = transform.Find("EnterPoint").transform;
+        connected = new List<LadderScript>();
+        EnterPoint = transform.Find("EnterPoint");
+        rb = GetComponent<Rigidbody2D>();
+        
+        foreach (Transform child in transform.Find("Tiles"))
+        {
+            rightObjectsCollider.Add(child.Find("RightCollider").GetComponent<GetNearbyObjectsScript>());
+            leftObjectsCollider.Add(child.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>());
+        }
 
         if (GameObject.Find("LaddersContainer") is null)
             new GameObject("LaddersContainer");
@@ -32,67 +41,57 @@ public class LadderScript : MonoBehaviour
         transform.SetParent(GameObject.Find("LaddersContainer").transform);
     }
 
-    private void Awake()
+    internal void ConnectLadders(Transform other)
     {
-        rb = GetComponent<Rigidbody2D>();
+        var ladder = other.GetComponent<LadderScript>();
+        if (!connected.Contains(ladder))
+            connected.Add(other.GetComponent<LadderScript>());
     }
 
-    internal void ConnectLadders(Collider2D other)
+    internal void DestroyConnection(Transform other)
     {
-        var otherTransform = other.transform;
-        connected = otherTransform.GetComponent<LadderScript>();
+        // connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
+        connected.Remove(other.GetComponent<LadderScript>());
     }
 
-    internal void DestroyConnection()
-    {
-        if (connected is not null)
-        {
-            // connected.gameObject.transform.Find("HiddenPlatform").GetComponent<BoxCollider2D>().enabled = true;
-            connected = null;
-        }
-    }
+    private List<GameObject> GetRightCollidingObjects() =>
+        rightObjectsCollider.SelectMany(collider => collider.collidingObjects).ToList();
+    
+    private List<GameObject> GetLeftCollidingObjects() =>
+        leftObjectsCollider.SelectMany(collider => collider.collidingObjects).ToList();
 
     private void MoveNearbyObjects(bool right)
     {
         var laddersOnDirection =
-            ((right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects).Where(
-                obj => obj.layer == LayerMask.NameToLayer("Ladders"));
+            (right ? GetRightCollidingObjects() : GetLeftCollidingObjects()).Where(
+                obj => obj.layer == LayerMask.NameToLayer("Ladders")).Select(obj => PipeUtils.GetPipeRoot(obj.transform));
+        
         foreach (var ladder in laddersOnDirection)
         {
-            if (right)
-                ladder.GetComponent<LadderScript>().MoveRight();
-            else
-                ladder.GetComponent<LadderScript>().MoveLeft();
+            var script = ladder.GetComponent<LadderScript>();
+            if (connected.Contains(script)) continue;
+            if (right) script.MoveRight();
+            else script.MoveLeft();
         }
     }
 
     private IEnumerator MoveHorizontalCoroutine(bool right)
     {
-        if (!CheckIfMoveIsPossible(right))
+        if (_moveDirection != 0 || !CheckIfMoveIsPossible(right))
         {
-            //DestroyConnection();
             // Debug.Log("Failed move");
             yield break;
         }
+        
+        _moveDirection = (right) ? 1 : -1;
 
         MoveNearbyObjects(right);
-        if (connected is null || !connected.CheckIfMoveIsPossible(right))
-            DestroyConnection();
-        else
-        {
-            if (right)
-                connected.MoveRight();
-            else
-                connected.MoveLeft();
-        }
+        MoveConnected(right);
 
-
-        _moveDirection = (right) ? 1 : -1;
         var position = transform.position;
-        transform.position = new Vector3(math.round(position.x * 2) / 2f, position.y, 0);
         var target = position + new Vector3(_moveDirection, 0, 0);
 
-        var rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(moveSpeed * _moveDirection, 0);
         while ((target.x - transform.position.x) * _moveDirection > 1e-4)
         {
             transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3),
@@ -101,31 +100,41 @@ public class LadderScript : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
+        rb.velocity = Vector2.zero;
+
+        _moveDirection = 0;
         transform.position = target;
         rb.MovePosition(target);
         _moveCoroutine = null;
     }
 
+    private void MoveConnected(bool right)
+    {
+        var temp = connected.ToArray();
+        foreach (var connectedObject in temp)
+        {
+            if (connectedObject is null) continue;
+            if (!connectedObject.CheckIfMoveIsPossible(right)) {}
+            //DestroyConnection(connectedObject.transform);
+            else
+            {
+                if (right) connectedObject.MoveRight();
+                else connectedObject.MoveLeft();
+            }
+        }
+    }
+
     public bool CheckIfMoveIsPossible(bool right)
     {
         var objectsAtDirection =
-            (right) ? rightObjectsCollider.collidingObjects : leftObjectsCollider.collidingObjects;
-        var collider = Physics2D.OverlapCircleAll(
-            new Vector2(transform.position.x, (transform.position.y - transform.localScale.y / 2) -1f), 0.3f,
-            LayerMask.GetMask("Ladders"));
-        
-        var platformsCollider = Physics2D.OverlapCircleAll(
-            new Vector2(EnterPosition.transform.position.x, EnterPosition.transform.position.y - 1f / 2), 0.3f,
-            LayerMask.GetMask("Platforms"));
-        var slimPlatforms = platformsCollider.Where(x => x.CompareTag("SlimPlatform")).ToArray();
-        if (slimPlatforms.Length != 0 && collider.Length != 0)
-            return false;
+            (right) ? GetRightCollidingObjects() : GetLeftCollidingObjects();
         
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
-        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders")).All(ladder =>
-            ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
+            .Select(obj => PipeUtils.GetPipeRoot(obj.transform)).All(ladder =>
+                ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
 
     public bool CheckIfExitAvailable()
