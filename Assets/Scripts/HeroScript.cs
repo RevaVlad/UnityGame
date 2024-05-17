@@ -6,11 +6,10 @@ using UnityEngine.InputSystem;
 
 public class HeroScript : MonoBehaviour
 {
-    [SerializeField] private float speedMidAir;
-    [SerializeField] private float speedOnGround;
     [SerializeField] private float jumpForce;
 
     public PlayerRunData Data;
+    
     private bool faceRight;
     private Animator anim;
     private float LastOnGroundTime;
@@ -52,8 +51,6 @@ public class HeroScript : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.mass = 20f;
-        rb.gravityScale = 1.1f;
         sprite = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
@@ -66,8 +63,8 @@ public class HeroScript : MonoBehaviour
 
     private void Update()
     {
+        LastOnGroundTime += Time.deltaTime;
         CheckGround();
-        LastOnGroundTime -= Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -77,17 +74,19 @@ public class HeroScript : MonoBehaviour
             var ladderEntryPoint = heldLadder.EnterPoint.position;
             var playerCenter = transform.position;
             if ((playerCenter - ladderEntryPoint).magnitude > .01f)
-                transform.position = Vector2.MoveTowards(playerCenter, ladderEntryPoint + new Vector3(0, -.5f + sizeY / 2), 2f * Time.smoothDeltaTime);
+                transform.position = Vector2.MoveTowards(playerCenter, 
+                    ladderEntryPoint + new Vector3(0, -.5f + sizeY / 2), 5f * Time.smoothDeltaTime);
         }
         else
         {
             Run();
+            ApplyFriction();
         }
     }
 
     public void OnJump()
     {
-        if (isGrounded)
+        if (LastOnGroundTime < 1e-2)
         {
             if (rb.velocity.magnitude > 0)
                 rb.AddForce((faceRight ? 1f : -1f) * Vector2.right * 40f, ForceMode2D.Impulse);
@@ -100,9 +99,9 @@ public class HeroScript : MonoBehaviour
         direction = inputValue.Get<Vector2>();
         if (direction.magnitude > 0)
         {
-            Run();
-            anim.SetFloat("moveX", speedOnGround);
-            ReflectForRun();
+            //Run();
+            anim.SetFloat("moveX", Data.animationSpeed);
+            AdjustSprite();
         }
         else 
             anim.SetFloat("moveX", 0);
@@ -111,63 +110,58 @@ public class HeroScript : MonoBehaviour
     private void Run()
     {
         var targetSpeed = direction.x * Data.runMaxSpeed;
-		float accelRate;
-        
-		if (LastOnGroundTime > 0)
-			accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount : Data.runDeccelAmount;
-		else
-			accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount * Data.accelInAir : Data.runDeccelAmount * Data.deccelInAir;
-        
-		if(Data.doConserveMomentum && Mathf.Abs(rb.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(rb.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
-			accelRate = 0; 
         
 		var speedDif = targetSpeed - rb.velocity.x;
 
-		var movement = speedDif * accelRate;
-        
-		rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
-        
+        // decide which acceleration is used
+        var currentAcceleration = !isGrounded
+            ? (direction.x != 0 ? Data.airAcceleration : Data.airDecceleration)
+            : (direction.x != 0 ? Data.acceleration : Data.decceleration);
+
+        /*
+		if(Data.doConserveMomentum && Mathf.Abs(rb.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(rb.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
+			accelRate = 0; 
+        */
+
+		rb.AddForce(Vector2.right * (currentAcceleration * speedDif));
     }
 
-    private void ReflectForRun()
+    private void ApplyFriction()
+    {
+        if (isGrounded && Mathf.Abs(direction.x) < 1e-2f) // if grounded and tries to stop
+        {
+            var amount = Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(Data.frictionAmount));
+            // var amount = Data.frictionAmount;
+            rb.AddForce(Vector2.right * (-Mathf.Sign(rb.velocity.x) * amount), ForceMode2D.Impulse);
+        }
+    }
+
+    private void AdjustSprite()
     {
         if ((!(direction.x > 0) || !faceRight) && (!(direction.x < 0) || faceRight)) return;
         transform.localScale *= new Vector2(-1, 1);
         faceRight = !faceRight;
     }
 
-    private void OnTravelThroughPipe()
-    {
-        var enter = heldLadder.transform.Find("EnterPoint");
-        var distance = (enter.position - transform.position);
-        if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())
-        {
-            transform.position = heldLadder.transform.Find("ExitPoint").position;
-            OnDropLadder();
-        }
-        anim.Play("PlayerPipeGo");
-    }
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position - new Vector3(0 , sizeY / 2), 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
+        var collider = Physics2D.OverlapCircleAll(transform.position - Vector3.up * sizeY,
+            0.05f, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = collider.Length > 0;
         if (isGrounded)
-            LastOnGroundTime = 0.1f;
+            LastOnGroundTime = 0;
         anim.SetBool("isGrounded", isGrounded);
     }
 
+    #region LaddersControls
     private void OnTakeLadder()
     {
-        if (TryGetLadder(out var ladder))
-        {
-            transform.SetParent(ladder.transform);
-            isPlayerOnLadder = true;
-            heldLadder = ladder;
-            SwapInputMap();
-
-            // StartCoroutine(MoveToPoint(ladder.transform.position));
-        }
+        if (!TryGetLadder(out var ladder)) return;
+        transform.SetParent(ladder.transform);
+        isPlayerOnLadder = true;
+        heldLadder = ladder;
+        SwapInputMap();
     }
 
     private void OnDropLadder()
@@ -201,6 +195,18 @@ public class HeroScript : MonoBehaviour
         }
         anim.Play("PlayerRun");
     }
+    
+    private void OnTravelThroughPipe()
+    {
+        var enter = heldLadder.transform.Find("EnterPoint");
+        var distance = (enter.position - transform.position);
+        if (distance.magnitude < .2 && heldLadder.CheckIfExitAvailable())
+        {
+            transform.position = heldLadder.transform.Find("ExitPoint").position;
+            OnDropLadder();
+        }
+        anim.Play("PlayerPipeGo");
+    }
 
     private bool TryGetLadder(out LadderScript ladder)
     {
@@ -211,6 +217,7 @@ public class HeroScript : MonoBehaviour
         ladder = PipeUtils.GetPipeRoot(collider[0].transform).GetComponent<LadderScript>();
         return true;
     }
+    #endregion
 
     /*
     private IEnumerator MoveToPoint(Vector3 point)
