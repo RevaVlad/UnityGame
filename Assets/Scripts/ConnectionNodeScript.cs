@@ -14,9 +14,7 @@ public class ConnectionNodeScript : MonoBehaviour
         //if (other.gameObject.CompareTag("SlimPlatform"))
         //    isTriggerWithSlimPlatform = true;
         if (!isTriggerWithSlimPlatform && other.gameObject.layer == LayerMask.NameToLayer("Ladders"))
-        {
             PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>().ConnectLadders(PipeUtils.GetPipeRoot(other.transform));
-        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

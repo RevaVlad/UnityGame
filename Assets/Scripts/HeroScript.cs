@@ -74,12 +74,10 @@ public class HeroScript : MonoBehaviour
     {
         if (isPlayerOnLadder)
         {
-            var ladderEntryPoint = heldLadder.EnterPoint.position - new Vector3(0, sizeY / 2); // -sizeY / 2 потому что у Player origin сдвинут
+            var ladderEntryPoint = heldLadder.EnterPoint.position;
             var playerCenter = transform.position;
-            if ((playerCenter - ladderEntryPoint).magnitude > .05f)
-            {
-                transform.position = Vector2.MoveTowards(playerCenter, ladderEntryPoint, 1.3f * Time.smoothDeltaTime);
-            }
+            if ((playerCenter - ladderEntryPoint).magnitude > .01f)
+                transform.position = Vector2.MoveTowards(playerCenter, ladderEntryPoint + new Vector3(0, -.5f + sizeY / 2), 2f * Time.smoothDeltaTime);
         }
         else
         {
@@ -140,22 +138,19 @@ public class HeroScript : MonoBehaviour
 
     private void OnTravelThroughPipe()
     {
-        if (TryTravelThoughPipe())
+        var enter = heldLadder.transform.Find("EnterPoint");
+        var distance = (enter.position - transform.position);
+        if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())
         {
-            var enter = heldLadder.transform.Find("EnterPoint");
-            var distance = (enter.position - (transform.position + new Vector3(0, sizeY / 2, 0)));
-            if (distance.magnitude < .1 && heldLadder.CheckIfExitAvailable())
-            {
-                transform.position = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
-                OnDropLadder();
-            }
-            anim.Play("PlayerPipeGo");
+            transform.position = heldLadder.transform.Find("ExitPoint").position;
+            OnDropLadder();
         }
+        anim.Play("PlayerPipeGo");
     }
 
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, sizeY / 2, 0), 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
+        var collider = Physics2D.OverlapCircleAll(transform.position - new Vector3(0 , sizeY / 2), 0.2f, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = collider.Length > 0;
         if (isGrounded)
             LastOnGroundTime = 0.1f;
@@ -166,7 +161,7 @@ public class HeroScript : MonoBehaviour
     {
         if (TryGetLadder(out var ladder))
         {
-            transform.SetParent(ladder.EnterPoint);
+            transform.SetParent(ladder.transform);
             isPlayerOnLadder = true;
             heldLadder = ladder;
             SwapInputMap();
@@ -210,19 +205,11 @@ public class HeroScript : MonoBehaviour
     private bool TryGetLadder(out LadderScript ladder)
     {
         ladder = null;
-        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y + sizeY / 2),
+        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y),
             0.2f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
         ladder = PipeUtils.GetPipeRoot(collider[0].transform).GetComponent<LadderScript>();
         return true;
-    }
-
-    private bool TryTravelThoughPipe()
-    {
-        var colliderPosition = heldLadder.transform.Find("ExitPoint").position - new Vector3(0, sizeY / 2, 0);
-        var collider = Physics2D.OverlapCircleAll(colliderPosition,
-            0.2f, LayerMask.GetMask("Platforms"));
-        return collider.Where(x => x.transform.name != "HiddenPlatform").ToArray().Length == 0;
     }
 
     /*
