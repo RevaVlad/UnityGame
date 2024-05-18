@@ -838,6 +838,10 @@ PrefabInstance:
       value: 0.00462541
       objectReference: {fileID: 0}
     - target: {fileID: 2655026129264813417, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655026129264813417, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
@@ -964,7 +968,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5921602135724034575, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2006261438}
+      addedObject: {fileID: 2006261446}
   m_SourcePrefab: {fileID: 100100000, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
 --- !u!1001 &1489596352
 PrefabInstance:
@@ -1096,8 +1100,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5921602135724034575, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
   m_PrefabInstance: {fileID: 1399020341}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &2006261438
-CircleCollider2D:
+--- !u!70 &2006261446
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1128,9 +1132,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019061565, y: -0.21671407}
-  serializedVersion: 2
-  m_Radius: 0.28699017
+  m_Offset: {x: -0.003306738, y: -0.0033066955}
+  m_Size: {x: 0.5757266, y: 0.99338686}
+  m_Direction: 0
 --- !u!4 &2072121430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2543493654230059653, guid: fd2a6cc39d790ef4584e1215a25e2a7b, type: 3}

@@ -17,7 +17,6 @@ MonoBehaviour:
   frictionAmount: 0.8
   acceleration: 64.8
   decceleration: 94.3
-  momentumLossAtJump: 60.6
   airAccelerationRation: 0.3
   airDeccelerationRation: 0.7
   airAcceleration: 19.440002
@@ -26,3 +25,4 @@ MonoBehaviour:
   coyoteTime: 0.12
   bufferTime: 0.04
   jumpCutMultiplier: 8
+  momentumLossAtJump: 60
