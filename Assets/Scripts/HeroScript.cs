@@ -6,17 +6,15 @@ using UnityEngine.InputSystem;
 
 public class HeroScript : MonoBehaviour
 {
-    [SerializeField] private float jumpForce;
-
     public PlayerRunData Data;
     
     private bool faceRight;
     private Animator anim;
-    private float LastOnGroundTime;
-    private bool IsJumping;
-
+    [SerializeField]private float timePassedSinceOnGround;
+    [SerializeField]private float timePassedSinceJump;
     
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
+    private bool isJumping = true;
 
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
@@ -58,12 +56,13 @@ public class HeroScript : MonoBehaviour
         _playerInput.actions.FindActionMap("BasicInput").Enable();
         _playerInput.actions.FindActionMap("LadderInput").Disable();
 
-        sizeY = GetComponent<Collider2D>().bounds.size.y;
+        sizeY = transform.localScale.y;
     }
 
     private void Update()
     {
-        LastOnGroundTime += Time.deltaTime;
+        timePassedSinceOnGround += Time.deltaTime;
+        timePassedSinceJump += Time.deltaTime;
         CheckGround();
     }
 
@@ -79,18 +78,46 @@ public class HeroScript : MonoBehaviour
         }
         else
         {
+            CheckJumpBuffer();
             Run();
             ApplyFriction();
         }
     }
 
-    public void OnJump()
+    public void OnJumpStart()
     {
-        if (LastOnGroundTime < 1e-2)
+        if (!isJumping)
+            timePassedSinceJump = 0;
+    }
+
+    public void OnJumpEnd()
+    {
+        Debug.Log("JumpEnd");
+        JumpCut();
+    } 
+
+    private void Jump()
+    {
+        if (rb.velocity.magnitude > 0)
+            rb.AddRelativeForce(Vector2.right * (- rb.velocity.x * rb.mass * Data.momentumLossAtJump), ForceMode2D.Force);
+        isJumping = true;
+        rb.AddForce(transform.up * (Data.jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
+    }
+
+    private void JumpCut()
+    {
+        if (rb.velocity.y > 0 && isJumping)
         {
-            if (rb.velocity.magnitude > 0)
-                rb.AddForce((faceRight ? 1f : -1f) * Vector2.right * 40f, ForceMode2D.Impulse);
-            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.down * rb.velocity.y * Data.jumpCutMultiplier, ForceMode2D.Impulse);
+        }
+    }
+
+    private void CheckJumpBuffer()
+    {
+        if (timePassedSinceOnGround < Data.coyoteTime && timePassedSinceJump < Data.bufferTime && !isJumping)
+        {
+            Debug.Log("Jump");
+            Jump();
         }
     }
 
@@ -143,14 +170,16 @@ public class HeroScript : MonoBehaviour
         faceRight = !faceRight;
     }
 
-
     private void CheckGround()
     {
         var collider = Physics2D.OverlapCircleAll(transform.position - Vector3.up * sizeY,
-            0.05f, LayerMask.GetMask("Platforms", "Ladders"));
+            0.01f, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = collider.Length > 0;
         if (isGrounded)
-            LastOnGroundTime = 0;
+        {
+            timePassedSinceOnGround = 0;
+            if (timePassedSinceJump > .5) isJumping = false;
+        }
         anim.SetBool("isGrounded", isGrounded);
     }
 
