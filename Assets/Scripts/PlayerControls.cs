@@ -28,12 +28,21 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""5f38aa19-3ba5-4028-b697-f4d5ab8c21d1"",
             ""actions"": [
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""JumpStart"",
                     ""type"": ""Button"",
                     ""id"": ""d29b7e06-b1bc-4081-b1b5-d8e36ddfa9a7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""JumpEnd"",
+                    ""type"": ""Button"",
+                    ""id"": ""530d4508-364e-440e-bb7d-2a77130129ff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -72,7 +81,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""action"": ""JumpStart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -83,7 +92,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""action"": ""JumpStart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -94,7 +103,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""action"": ""JumpStart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -227,6 +236,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3085643d-4cd3-4f64-8453-189d4019d07e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpEnd"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b382f77-bdb5-4660-bba1-6abeb8020c2f"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpEnd"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d0c5782-6ec4-4e71-8de9-4c25ca78519b"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpEnd"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -411,7 +453,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 }");
         // BasicInput
         m_BasicInput = asset.FindActionMap("BasicInput", throwIfNotFound: true);
-        m_BasicInput_Jump = m_BasicInput.FindAction("Jump", throwIfNotFound: true);
+        m_BasicInput_JumpStart = m_BasicInput.FindAction("JumpStart", throwIfNotFound: true);
+        m_BasicInput_JumpEnd = m_BasicInput.FindAction("JumpEnd", throwIfNotFound: true);
         m_BasicInput_Move = m_BasicInput.FindAction("Move", throwIfNotFound: true);
         m_BasicInput_TakeLadder = m_BasicInput.FindAction("TakeLadder", throwIfNotFound: true);
         m_BasicInput_RestartLevel = m_BasicInput.FindAction("RestartLevel", throwIfNotFound: true);
@@ -483,7 +526,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // BasicInput
     private readonly InputActionMap m_BasicInput;
     private List<IBasicInputActions> m_BasicInputActionsCallbackInterfaces = new List<IBasicInputActions>();
-    private readonly InputAction m_BasicInput_Jump;
+    private readonly InputAction m_BasicInput_JumpStart;
+    private readonly InputAction m_BasicInput_JumpEnd;
     private readonly InputAction m_BasicInput_Move;
     private readonly InputAction m_BasicInput_TakeLadder;
     private readonly InputAction m_BasicInput_RestartLevel;
@@ -491,7 +535,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     {
         private @PlayerControls m_Wrapper;
         public BasicInputActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Jump => m_Wrapper.m_BasicInput_Jump;
+        public InputAction @JumpStart => m_Wrapper.m_BasicInput_JumpStart;
+        public InputAction @JumpEnd => m_Wrapper.m_BasicInput_JumpEnd;
         public InputAction @Move => m_Wrapper.m_BasicInput_Move;
         public InputAction @TakeLadder => m_Wrapper.m_BasicInput_TakeLadder;
         public InputAction @RestartLevel => m_Wrapper.m_BasicInput_RestartLevel;
@@ -504,9 +549,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_BasicInputActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_BasicInputActionsCallbackInterfaces.Add(instance);
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
+            @JumpStart.started += instance.OnJumpStart;
+            @JumpStart.performed += instance.OnJumpStart;
+            @JumpStart.canceled += instance.OnJumpStart;
+            @JumpEnd.started += instance.OnJumpEnd;
+            @JumpEnd.performed += instance.OnJumpEnd;
+            @JumpEnd.canceled += instance.OnJumpEnd;
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
@@ -520,9 +568,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IBasicInputActions instance)
         {
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
+            @JumpStart.started -= instance.OnJumpStart;
+            @JumpStart.performed -= instance.OnJumpStart;
+            @JumpStart.canceled -= instance.OnJumpStart;
+            @JumpEnd.started -= instance.OnJumpEnd;
+            @JumpEnd.performed -= instance.OnJumpEnd;
+            @JumpEnd.canceled -= instance.OnJumpEnd;
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
@@ -629,7 +680,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public LadderInputActions @LadderInput => new LadderInputActions(this);
     public interface IBasicInputActions
     {
-        void OnJump(InputAction.CallbackContext context);
+        void OnJumpStart(InputAction.CallbackContext context);
+        void OnJumpEnd(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnTakeLadder(InputAction.CallbackContext context);
         void OnRestartLevel(InputAction.CallbackContext context);

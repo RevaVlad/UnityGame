@@ -12,11 +12,17 @@ public class PlayerRunData : ScriptableObject
     public float decceleration; //Actual force (multiplied with speedDiff) applied to the player .
     
     [Space(10)]
-    [Range(0.01f, 1)] public float airAccelerationRation; //Multipliers applied to acceleration rate when airborne.
-    [Range(0.01f, 1)] public float airDeccelerationRation;
+    public float airAccelerationRation; //Multipliers applied to acceleration rate when airborne.
+    public float airDeccelerationRation;
     [HideInInspector] public float airAcceleration;
     [HideInInspector] public float airDecceleration;
-    public bool doConserveMomentum;
+
+    [Header("Jump")] 
+    public float jumpForce;
+    public float coyoteTime;
+    public float bufferTime;
+    public float jumpCutMultiplier;
+    public float momentumLossAtJump;
 
     private void OnValidate()
     {
