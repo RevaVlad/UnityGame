@@ -28,7 +28,7 @@ public class HeroScript : MonoBehaviour
 
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
-    private Coroutine autoMove = null;
+    private Coroutine moveToLadderCenter = null;
 
     private void Start()
     {
@@ -198,7 +198,7 @@ public class HeroScript : MonoBehaviour
         isPlayerOnLadder = true;
         heldLadder = ladder;
         rb.simulated = false;
-        autoMove = StartCoroutine(MoveToPoint(ladder.transform, 100f, new Vector3()));
+        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 10f, new Vector3(0, sizeY / 2 - .52f)));
         SwapInputMap();
     }
 
@@ -209,10 +209,10 @@ public class HeroScript : MonoBehaviour
         isPlayerOnLadder = false;
         heldLadder = null;
         rb.simulated = true;
-        if (autoMove != null)
+        if (moveToLadderCenter != null)
         {
-            StopCoroutine(autoMove);
-            autoMove = null;
+            StopCoroutine(moveToLadderCenter);
+            moveToLadderCenter = null;
         }
     }
 
@@ -256,7 +256,7 @@ public class HeroScript : MonoBehaviour
     {
         ladder = null;
         var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y),
-            0.001f, LayerMask.GetMask("Ladders"));
+            0.01f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
         ladder = PipeUtils.GetPipeRoot(collider[0].transform).GetComponent<LadderScript>();
         return true;
@@ -268,7 +268,7 @@ public class HeroScript : MonoBehaviour
         while ((transform.position - target.position).magnitude > 1e-3)
         {
             transform.position = Vector2.MoveTowards(transform.position,
-                target.position + targetOffset, 1.3f * Time.smoothDeltaTime);
+                target.position + targetOffset, speed * Time.smoothDeltaTime);
             yield return new WaitForFixedUpdate();
         }
     }
