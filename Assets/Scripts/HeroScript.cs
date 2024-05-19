@@ -182,12 +182,12 @@ public class HeroScript : MonoBehaviour
     private Collider2D[] results = new Collider2D[1];
     private void CheckGround()
     {
-        var size = Physics2D.OverlapCircleNonAlloc(transform.position - Vector3.up * sizeY / 2, 0.01f, results, LayerMask.GetMask("Platforms", "Ladders"));
+        var size = Physics2D.OverlapCircleNonAlloc(transform.position - Vector3.up * sizeY / 2, sizeX * .3f, results, LayerMask.GetMask("Platforms", "Ladders"));
         isGrounded = size > 0;
         if (isGrounded)
         {
             timePassedSinceOnGround = 0;
-            if (timePassedSinceJump > .5) isJumping = false;
+            if (timePassedSinceJump > .2) isJumping = false;
         }
         anim.SetBool("isGrounded", isGrounded);
     }
@@ -202,7 +202,7 @@ public class HeroScript : MonoBehaviour
         isPlayerOnLadder = true;
         heldLadder = ladder;
         rb.simulated = false;
-        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 10f, new Vector3(0, sizeY / 2 - .52f)));
+        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f)));
         SwapInputMap();
     }
 

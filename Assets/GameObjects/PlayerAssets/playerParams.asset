@@ -22,7 +22,7 @@ MonoBehaviour:
   airAcceleration: 19.440002
   airDecceleration: 94.3
   jumpForce: 120
-  coyoteTime: 0.1
+  coyoteTime: 0.12
   bufferTime: 0.2
   jumpCutMultiplier: 8
   momentumLossAtJump: 40

@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="bug fix">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Player no longer appears in air">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/EnterUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/EnterUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/LeftDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/LeftDown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/LeftRight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/LeftRight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/RightUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/RightUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpDown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpExit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpExit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/playerParams.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/playerParams.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LaddersPlayground.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LaddersPlayground.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +59,7 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -189,6 +203,7 @@
       <workItem from="1716021661127" duration="3382000" />
       <workItem from="1716040588171" duration="281000" />
       <workItem from="1716101828590" duration="11261000" />
+      <workItem from="1716132186320" duration="1347000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -374,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716123021087</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Player no longer appears in air">
+      <option name="closed" value="true" />
+      <created>1716123332055</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716123332055</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,6 +452,7 @@
     <MESSAGE value="Small bug fix + pipes sprites fix" />
     <MESSAGE value="Slim platforms remake (gonna delete/remake level 3)" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="Player no longer appears in air" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player no longer appears in air" />
   </component>
 </project>
