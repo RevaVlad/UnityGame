@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Small bug fix + pipes sprites fix">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Slim platforms remake (gonna delete/remake level 3)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/EnterUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/EnterUp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/LeftDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/LeftDown.prefab" afterDir="false" />
@@ -12,10 +12,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/RightUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/RightUp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpDown.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpExit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/UpExit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Slim platform 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Slim platform 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +188,7 @@
       <workItem from="1715885429807" duration="232000" />
       <workItem from="1716021661127" duration="3382000" />
       <workItem from="1716040588171" duration="281000" />
-      <workItem from="1716101828590" duration="8165000" />
+      <workItem from="1716101828590" duration="11261000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -353,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716106741993</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Slim platforms remake (gonna delete/remake level 3)">
+      <option name="closed" value="true" />
+      <created>1716116786367</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716116786367</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +411,7 @@
     <MESSAGE value="Coyote time and jump cut, working properly" />
     <MESSAGE value="player fixes" />
     <MESSAGE value="Small bug fix + pipes sprites fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small bug fix + pipes sprites fix" />
+    <MESSAGE value="Slim platforms remake (gonna delete/remake level 3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slim platforms remake (gonna delete/remake level 3)" />
   </component>
 </project>

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -27,6 +28,7 @@ public class HeroScript : MonoBehaviour
 
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
+    private Coroutine autoMove = null;
 
     private void Start()
     {
@@ -74,11 +76,12 @@ public class HeroScript : MonoBehaviour
     {
         if (isPlayerOnLadder)
         {
+            /*
             var ladderEntryPoint = heldLadder.EnterPoint.position;
             var playerCenter = transform.position;
-            if ((playerCenter - ladderEntryPoint).magnitude > .01f)
-                transform.position = Vector2.MoveTowards(playerCenter, 
-                    ladderEntryPoint + new Vector3(0, -.5f + sizeY / 2), 5f * Time.smoothDeltaTime);
+            transform.position = Vector2.MoveTowards(playerCenter,
+                ladderEntryPoint, 100000f * Time.smoothDeltaTime);
+            */
         }
         else
         {
@@ -186,12 +189,16 @@ public class HeroScript : MonoBehaviour
     }
 
     #region LaddersControls
+    
     private void OnTakeLadder()
     {
         if (!TryGetLadder(out var ladder)) return;
+        
         transform.SetParent(ladder.transform);
         isPlayerOnLadder = true;
         heldLadder = ladder;
+        rb.simulated = false;
+        autoMove = StartCoroutine(MoveToPoint(ladder.transform, 100f, new Vector3()));
         SwapInputMap();
     }
 
@@ -201,6 +208,12 @@ public class HeroScript : MonoBehaviour
         transform.SetParent(null);
         isPlayerOnLadder = false;
         heldLadder = null;
+        rb.simulated = true;
+        if (autoMove != null)
+        {
+            StopCoroutine(autoMove);
+            autoMove = null;
+        }
     }
 
     private void OnMoveRightWithLadder()
@@ -250,15 +263,13 @@ public class HeroScript : MonoBehaviour
     }
     #endregion
 
-    /*
-    private IEnumerator MoveToPoint(Vector3 point)
+    private IEnumerator MoveToPoint(Transform target, float speed, Vector3 targetOffset)
     {
-        while ((transform.position - point).magnitude < 1e-3)
+        while ((transform.position - target.position).magnitude > 1e-3)
         {
             transform.position = Vector2.MoveTowards(transform.position,
-                point, 1.3f * Time.smoothDeltaTime);
+                target.position + targetOffset, 1.3f * Time.smoothDeltaTime);
             yield return new WaitForFixedUpdate();
         }
     }
-    */
 }

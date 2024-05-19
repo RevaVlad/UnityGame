@@ -117,9 +117,25 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1371020592871902895, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
+      propertyPath: m_Points.Array.data[0].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371020592871902895, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1690510943403667287, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690510943403667287, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
+      propertyPath: m_Points.Array.data[0].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690510943403667287, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2261448979408508881, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: layersToProcess.Array.size
