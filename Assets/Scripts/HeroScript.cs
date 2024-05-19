@@ -23,6 +23,7 @@ public class HeroScript : MonoBehaviour
     private Vector2 direction;
 
     [SerializeField] private float sizeY;
+    [SerializeField] private float sizeX;
 
     public bool isPlayerOnLadder;
     private LadderScript heldLadder = null;
@@ -56,13 +57,17 @@ public class HeroScript : MonoBehaviour
         _playerInput.actions.FindActionMap("BasicInput").Enable();
         _playerInput.actions.FindActionMap("LadderInput").Disable();
 
-        sizeY = transform.localScale.y;
+        var bounds = GetComponent<CapsuleCollider2D>().bounds;
+        (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
     }
 
     private void Update()
     {
         timePassedSinceOnGround += Time.deltaTime;
         timePassedSinceJump += Time.deltaTime;
+
+        rb.gravityScale = (rb.velocity.y < 0) ? Data.gravityScaleWhenFalling : Data.normalGravityScale;
+                
         CheckGround();
     }
 
@@ -92,7 +97,6 @@ public class HeroScript : MonoBehaviour
 
     public void OnJumpEnd()
     {
-        Debug.Log("JumpEnd");
         JumpCut();
     } 
 
@@ -116,7 +120,6 @@ public class HeroScript : MonoBehaviour
     {
         if (timePassedSinceOnGround < Data.coyoteTime && timePassedSinceJump < Data.bufferTime && !isJumping)
         {
-            Debug.Log("Jump");
             Jump();
         }
     }
@@ -170,11 +173,11 @@ public class HeroScript : MonoBehaviour
         faceRight = !faceRight;
     }
 
+    private Collider2D[] results = new Collider2D[1];
     private void CheckGround()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position - Vector3.up * sizeY,
-            0.01f, LayerMask.GetMask("Platforms", "Ladders"));
-        isGrounded = collider.Length > 0;
+        var size = Physics2D.OverlapCircleNonAlloc(transform.position - Vector3.up * sizeY / 2, 0.01f, results, LayerMask.GetMask("Platforms", "Ladders"));
+        isGrounded = size > 0;
         if (isGrounded)
         {
             timePassedSinceOnGround = 0;
@@ -241,7 +244,7 @@ public class HeroScript : MonoBehaviour
     {
         ladder = null;
         var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y),
-            0.2f, LayerMask.GetMask("Ladders"));
+            0.001f, LayerMask.GetMask("Ladders"));
         if (collider.Length == 0) return false;
         ladder = PipeUtils.GetPipeRoot(collider[0].transform).GetComponent<LadderScript>();
         return true;

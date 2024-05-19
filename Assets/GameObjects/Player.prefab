@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5307652389320563900}
-  - component: {fileID: 2606279678829325815}
   - component: {fileID: 2655026129264813417}
   - component: {fileID: 7353345500033946278}
   - component: {fileID: 2910502451395155975}
   - component: {fileID: 2754906138893503330}
   - component: {fileID: 8995099221270733545}
   - component: {fileID: 7038761771217100583}
+  - component: {fileID: 4826970683907849151}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -32,57 +32,12 @@ Transform:
   m_GameObject: {fileID: 5921602135724034575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0, z: 0}
-  m_LocalScale: {x: 2.0837, y: 1.668, z: 1}
+  m_LocalPosition: {x: -1, y: -0.5, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2606279678829325815
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5921602135724034575}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: ed711999868f9184e884a6c3e095a146, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0047336817, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 1}
-    newSize: {x: 0.18, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.3}
-  m_EdgeRadius: 0
 --- !u!50 &2655026129264813417
 Rigidbody2D:
   serializedVersion: 4
@@ -98,7 +53,7 @@ Rigidbody2D:
   m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -108,7 +63,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7353345500033946278
 MonoBehaviour:
@@ -122,11 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e058c12b6fe514a870eac2b4af85e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMidAir: 1.3
-  speedOnGround: 2.8
-  jumpForce: 100
   Data: {fileID: 11400000, guid: 482643206e9b599498ad5e1e3810112f, type: 2}
+  timePassedSinceOnGround: 0
+  timePassedSinceJump: 0
+  isGrounded: 0
   sizeY: 0
+  sizeX: 0
   isPlayerOnLadder: 0
 --- !u!114 &2910502451395155975
 MonoBehaviour:
@@ -141,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: a8525f28faee4a84e994448b6322913a, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 1
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -173,6 +129,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b3500d7e-4290-4c69-9a29-e106663aa735
     m_ActionName: BasicInput/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 809074a0-0f22-470b-a512-873b63d299f1
+    m_ActionName: BasicInput/TakeLadder[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9abe793e-3c83-4fb9-8011-89c8fa716ac8
+    m_ActionName: BasicInput/RestartLevel[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2d8192e6-754e-45ba-9398-5c5defab100a
+    m_ActionName: LadderInput/DropLadder[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70aeb293-cfb1-4b67-b80e-6eac12c55d0b
+    m_ActionName: LadderInput/TravelThroughPipe[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 27e46682-cdc2-436f-a321-54cca752ea34
+    m_ActionName: LadderInput/MoveRightWithLadder[/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 04e8fb20-b352-49ed-bd12-79071f4d6000
+    m_ActionName: LadderInput/MoveLeftWithLadder[/Keyboard/a,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9090f518-18d0-4e86-b7e2-33f670e7eab2
+    m_ActionName: LadderInput/RestartLevel[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: BasicInput
@@ -264,3 +248,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &4826970683907849151
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921602135724034575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: ed711999868f9184e884a6c3e095a146, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003306738, y: -0.0033066955}
+  m_Size: {x: 0.5757266, y: 0.99338686}
+  m_Direction: 0

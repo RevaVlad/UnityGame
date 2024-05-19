@@ -23,6 +23,8 @@ public class PlayerRunData : ScriptableObject
     public float bufferTime;
     public float jumpCutMultiplier;
     public float momentumLossAtJump;
+    public float gravityScaleWhenFalling;
+    public float normalGravityScale;
 
     private void OnValidate()
     {
