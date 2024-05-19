@@ -126,6 +126,7 @@ public class LadderScript : MonoBehaviour
 
     public bool CheckIfMoveIsPossible(bool right)
     {
+        if (isFalling) return false;
         var objectsAtDirection =
             (right) ? GetRightCollidingObjects() : GetLeftCollidingObjects();
         

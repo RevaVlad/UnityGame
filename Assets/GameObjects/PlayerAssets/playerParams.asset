@@ -18,11 +18,13 @@ MonoBehaviour:
   acceleration: 64.8
   decceleration: 94.3
   airAccelerationRation: 0.3
-  airDeccelerationRation: 0.7
+  airDeccelerationRation: 1
   airAcceleration: 19.440002
-  airDecceleration: 66.01
+  airDecceleration: 94.3
   jumpForce: 120
-  coyoteTime: 0.12
-  bufferTime: 0.06
+  coyoteTime: 0.1
+  bufferTime: 0.2
   jumpCutMultiplier: 8
-  momentumLossAtJump: 30
+  momentumLossAtJump: 40
+  gravityScaleWhenFalling: 3.4
+  normalGravityScale: 1.5

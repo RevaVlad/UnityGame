@@ -67,7 +67,6 @@ public class HeroScript : MonoBehaviour
         timePassedSinceJump += Time.deltaTime;
 
         rb.gravityScale = (rb.velocity.y < 0) ? Data.gravityScaleWhenFalling : Data.normalGravityScale;
-                
         CheckGround();
     }
 
