@@ -91,6 +91,7 @@ public class HeroScript : MonoBehaviour
         }
     }
 
+    #region Jump
     public void OnJumpStart()
     {
         if (!isJumping)
@@ -125,7 +126,9 @@ public class HeroScript : MonoBehaviour
             Jump();
         }
     }
+    #endregion
 
+    #region Run
     private void OnMove(InputValue inputValue)
     {
         direction = inputValue.Get<Vector2>();
@@ -174,6 +177,7 @@ public class HeroScript : MonoBehaviour
         transform.localScale *= new Vector2(-1, 1);
         faceRight = !faceRight;
     }
+    #endregion
 
     private Collider2D[] results = new Collider2D[1];
     private void CheckGround()
@@ -246,7 +250,7 @@ public class HeroScript : MonoBehaviour
         var distance = (enter.position - transform.position);
         if (distance.magnitude < .2 && heldLadder.CheckIfExitAvailable())
         {
-            transform.position = heldLadder.transform.Find("ExitPoint").position;
+            transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;
             OnDropLadder();
         }
         anim.Play("PlayerPipeGo");
