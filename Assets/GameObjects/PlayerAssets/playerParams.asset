@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: playerParams
   m_EditorClassIdentifier: 
   runMaxSpeed: 5.5
-  animationSpeed: 1.5
+  animationSpeed: 2
   frictionAmount: 0.8
   acceleration: 64.8
   decceleration: 94.3
@@ -26,5 +26,5 @@ MonoBehaviour:
   bufferTime: 0.2
   jumpCutMultiplier: 8
   momentumLossAtJump: 40
-  gravityScaleWhenFalling: 3.4
+  gravityScaleWhenFalling: 3
   normalGravityScale: 1.5
