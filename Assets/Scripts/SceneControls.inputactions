@@ -1,0 +1,34 @@
+{
+    "name": "SceneControls",
+    "maps": [
+        {
+            "name": "Control",
+            "id": "4aa5c4c9-f83f-4b5f-957c-e0b394dff755",
+            "actions": [
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "69c4304b-339a-4e2d-8cfc-533b00fe473e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b28fb35c-3eba-4b47-affe-7d2a995a2a09",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private int totalLevelCount = 6;
 
     private void Update()
@@ -17,7 +18,7 @@ public class SceneManager : MonoBehaviour
 
     private void CheckFinishAndLoadNextLevel()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.position,
+        var collider = Physics2D.OverlapCircleAll(player.transform.position,
             0.2f, LayerMask.GetMask("Finish"));
         if (collider.Length == 0)
             return;
