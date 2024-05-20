@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="objectSnapshot class added">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="methods for snapshots ready">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControls 1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -196,7 +199,7 @@
       <workItem from="1716198341081" duration="5639000" />
       <workItem from="1716205664112" duration="566000" />
       <workItem from="1716209174238" duration="1944000" />
-      <workItem from="1716221523575" duration="5643000" />
+      <workItem from="1716221523575" duration="6366000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -414,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716223331316</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="methods for snapshots ready">
+      <option name="closed" value="true" />
+      <created>1716227407638</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1716227407638</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added more pipe variants (basic pipes)" />
     <MESSAGE value="Added levels and slim platforms" />
     <MESSAGE value="bug fixes" />
     <MESSAGE value="level fixes" />
@@ -472,6 +482,7 @@
     <MESSAGE value="Quick fix" />
     <MESSAGE value="fix sceneManager" />
     <MESSAGE value="objectSnapshot class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="objectSnapshot class added" />
+    <MESSAGE value="methods for snapshots ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="methods for snapshots ready" />
   </component>
 </project>

@@ -35,6 +35,15 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RestoreSnapshot"",
+                    ""type"": ""Button"",
+                    ""id"": ""28a31aba-261e-46fe-a1d8-a24bb2d8acd6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
                     ""action"": ""RestartLevel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81b4947d-8911-483f-8ee8-441e9a26c820"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RestoreSnapshot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
         // Control
         m_Control = asset.FindActionMap("Control", throwIfNotFound: true);
         m_Control_RestartLevel = m_Control.FindAction("RestartLevel", throwIfNotFound: true);
+        m_Control_RestoreSnapshot = m_Control.FindAction("RestoreSnapshot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +140,13 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Control;
     private List<IControlActions> m_ControlActionsCallbackInterfaces = new List<IControlActions>();
     private readonly InputAction m_Control_RestartLevel;
+    private readonly InputAction m_Control_RestoreSnapshot;
     public struct ControlActions
     {
         private @SceneControls m_Wrapper;
         public ControlActions(@SceneControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @RestartLevel => m_Wrapper.m_Control_RestartLevel;
+        public InputAction @RestoreSnapshot => m_Wrapper.m_Control_RestoreSnapshot;
         public InputActionMap Get() { return m_Wrapper.m_Control; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +159,9 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
             @RestartLevel.started += instance.OnRestartLevel;
             @RestartLevel.performed += instance.OnRestartLevel;
             @RestartLevel.canceled += instance.OnRestartLevel;
+            @RestoreSnapshot.started += instance.OnRestoreSnapshot;
+            @RestoreSnapshot.performed += instance.OnRestoreSnapshot;
+            @RestoreSnapshot.canceled += instance.OnRestoreSnapshot;
         }
 
         private void UnregisterCallbacks(IControlActions instance)
@@ -143,6 +169,9 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
             @RestartLevel.started -= instance.OnRestartLevel;
             @RestartLevel.performed -= instance.OnRestartLevel;
             @RestartLevel.canceled -= instance.OnRestartLevel;
+            @RestoreSnapshot.started -= instance.OnRestoreSnapshot;
+            @RestoreSnapshot.performed -= instance.OnRestoreSnapshot;
+            @RestoreSnapshot.canceled -= instance.OnRestoreSnapshot;
         }
 
         public void RemoveCallbacks(IControlActions instance)
@@ -163,5 +192,6 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
     public interface IControlActions
     {
         void OnRestartLevel(InputAction.CallbackContext context);
+        void OnRestoreSnapshot(InputAction.CallbackContext context);
     }
 }

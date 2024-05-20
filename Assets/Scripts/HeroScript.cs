@@ -215,7 +215,7 @@ public class HeroScript : MonoBehaviour
         SwapInputMap();
     }
 
-    private void OnDropLadder()
+    public void OnDropLadder()
     {
         SwapInputMap();
         transform.SetParent(null);

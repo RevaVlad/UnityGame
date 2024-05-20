@@ -32,19 +32,10 @@ public class SceneManager : MonoBehaviour
             sceneSnapshot.Add(new ObjectSnapshot(obj, new Vector3(position.x, position.y)));
         }
 
-        var playerObj = GameObject.Find("Player");
-        var playerPosition = playerObj.transform.position;
-        sceneSnapshot.Add(new ObjectSnapshot(playerObj,
+        var playerPosition = player.transform.position;
+        sceneSnapshot.Add(new ObjectSnapshot(player,
             new Vector3(playerPosition.x, playerPosition.y)));
         sceneSnapshots.Push(sceneSnapshot);
-    }
-
-    private void RestorePreviousSnapshot()
-    {
-        if (!sceneSnapshots.TryPop(out var snapshot))
-            return;
-        foreach (var objSnap in snapshot)
-            objSnap.GameObject.transform.position = objSnap.Position;
     }
 
     private void Update()
@@ -56,6 +47,17 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
             .buildIndex);
+    }
+
+    private void OnRestoreSnapshot()
+    {
+        if (!sceneSnapshots.TryPop(out var snapshot))
+            return;
+        foreach (var objSnap in snapshot)
+            objSnap.GameObject.transform.position = objSnap.Position;
+        var playerScript = player.GetComponent<HeroScript>();
+        if (playerScript.isPlayerOnLadder)
+            playerScript.OnDropLadder();
     }
 
     private void CheckFinishAndLoadNextLevel()
