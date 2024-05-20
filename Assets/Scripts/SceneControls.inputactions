@@ -1,0 +1,54 @@
+{
+    "name": "SceneControls",
+    "maps": [
+        {
+            "name": "Control",
+            "id": "4aa5c4c9-f83f-4b5f-957c-e0b394dff755",
+            "actions": [
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "69c4304b-339a-4e2d-8cfc-533b00fe473e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RestoreSnapshot",
+                    "type": "Button",
+                    "id": "28a31aba-261e-46fe-a1d8-a24bb2d8acd6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b28fb35c-3eba-4b47-affe-7d2a995a2a09",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81b4947d-8911-483f-8ee8-441e9a26c820",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestoreSnapshot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
