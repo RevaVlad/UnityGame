@@ -19,6 +19,7 @@ public class LadderScript : MonoBehaviour
 
     private List<GetNearbyObjectsScript> rightObjectsCollider = new ();
     private List<GetNearbyObjectsScript> leftObjectsCollider = new ();
+    private List<FallingProcessingScript> downObjectsColliders = new ();
     private Coroutine _moveCoroutine = null;
     private Rigidbody2D rb;
 
@@ -33,6 +34,7 @@ public class LadderScript : MonoBehaviour
         {
             rightObjectsCollider.Add(child.Find("RightCollider").GetComponent<GetNearbyObjectsScript>());
             leftObjectsCollider.Add(child.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>());
+            downObjectsColliders.Add(child.Find("DownCollider").GetComponent<FallingProcessingScript>());
         }
 
         if (GameObject.Find("LaddersContainer") is null)
@@ -166,10 +168,19 @@ public class LadderScript : MonoBehaviour
         transform.position = new Vector3(transform.position.x, math.round(transform.position.y * 2) / 2f);
     }
 
-    internal void StartFall()
+    internal void TryStartFall()
     {
+        if (downObjectsColliders.Select(script => script.currentlyStopping).Sum() > 0) return;
         isFalling = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.WakeUp();
+    }
+
+    public string[] GetBases()
+    {
+        var possibleBase = downObjectsColliders.Where(script => script.currentlyStopping > 0).Select(script => script.transform.parent).ToArray();
+        var min = possibleBase.Min(obj => obj.position.y);
+        var bases = possibleBase.Where(obj => Math.Abs(obj.position.y - min) < .5).Select(obj => obj.name).ToArray();
+        return bases;
     }
 }

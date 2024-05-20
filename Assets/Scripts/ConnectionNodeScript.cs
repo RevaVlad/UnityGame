@@ -1,29 +1,26 @@
+using System.Linq;
 using UnityEngine;
 
 public class ConnectionNodeScript : MonoBehaviour
 {
-    private bool isTriggerWithSlimPlatform;
-
-    private void Start()
-    {
-        isTriggerWithSlimPlatform = false;
-    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        //if (other.gameObject.CompareTag("SlimPlatform"))
-        //    isTriggerWithSlimPlatform = true;
-        if (!isTriggerWithSlimPlatform && other.gameObject.layer == LayerMask.NameToLayer("Ladders"))
-            PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>().ConnectLadders(PipeUtils.GetPipeRoot(other.transform));
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ladders"))
+        {
+            var thisRoot = PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>();
+            var root = PipeUtils.GetPipeRoot(other.transform).GetComponent<LadderScript>();
+            if (!root.GetBases().Contains(other.transform.name)) return;
+            thisRoot.ConnectLadders(root.transform);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        //if (other.gameObject.CompareTag("SlimPlatform"))
-        //    isTriggerWithSlimPlatform = false;
         if (other.gameObject.layer == LayerMask.NameToLayer("Ladders"))
         {
-            PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>().DestroyConnection(PipeUtils.GetPipeRoot(other.transform));
+            var root = PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>();
+            root.DestroyConnection(PipeUtils.GetPipeRoot(other.transform));
         }
     }
 }
