@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491619187d4cb95439df2d3221849f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentlyStopping: 0
 --- !u!68 &7615052264186615646
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 6130195368674252111, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1581346722, guid: 82cb2c50a36d0654ba7e1ef0a2a9add9, type: 3}
+      objectReference: {fileID: -557130360, guid: 42a35dd8a592b9140b6ffdd7f60bbb73, type: 3}
     - target: {fileID: 7118752688493322217, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_Constraints
       value: 7
