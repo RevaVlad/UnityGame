@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix, new pipe variants">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Quick fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +36,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeTiles/LeftDown.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeTiles/RightUp.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" root0="FORCE_HIGHLIGHTING" />
@@ -185,7 +182,8 @@
       <workItem from="1716040588171" duration="281000" />
       <workItem from="1716101828590" duration="11261000" />
       <workItem from="1716132186320" duration="1347000" />
-      <workItem from="1716198341081" duration="5549000" />
+      <workItem from="1716198341081" duration="5639000" />
+      <workItem from="1716205664112" duration="566000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -387,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716203791400</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Quick fix">
+      <option name="closed" value="true" />
+      <created>1716204407323</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1716204407323</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +450,7 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="Player no longer appears in air" />
     <MESSAGE value="Bug fix, new pipe variants" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix, new pipe variants" />
+    <MESSAGE value="Quick fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick fix" />
   </component>
 </project>

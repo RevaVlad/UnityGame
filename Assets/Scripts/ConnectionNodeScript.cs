@@ -10,8 +10,10 @@ public class ConnectionNodeScript : MonoBehaviour
         {
             var thisRoot = PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>();
             var root = PipeUtils.GetPipeRoot(other.transform).GetComponent<LadderScript>();
-            if (!root.GetBases().Contains(other.transform.name)) return;
-            thisRoot.ConnectLadders(root.transform);
+            if (!root.GetBases().Contains(other.transform.name))
+                thisRoot.DestroyConnection(root.transform);
+            else
+                thisRoot.ConnectLadders(root.transform);
         }
     }
 
