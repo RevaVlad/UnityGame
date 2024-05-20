@@ -217,6 +217,8 @@ public class HeroScript : MonoBehaviour
 
     public void OnDropLadder()
     {
+        if (!isPlayerOnLadder)
+            return;
         SwapInputMap();
         transform.SetParent(null);
         isPlayerOnLadder = false;

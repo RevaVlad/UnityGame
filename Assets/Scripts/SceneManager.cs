@@ -56,9 +56,17 @@ public class SceneManager : MonoBehaviour
         foreach (var objSnap in snapshot)
             objSnap.GameObject.transform.position = objSnap.Position;
         var playerScript = player.GetComponent<HeroScript>();
-        if (playerScript.isPlayerOnLadder)
-            playerScript.OnDropLadder();
+        playerScript.OnDropLadder();
     }
+
+    public static void SaveCurrentLevelNumber()
+    {
+        PlayerPrefs.SetInt("currentLevel", GetCurrentSceneNumber(GetCurrentSceneName()));
+    }
+
+    private static int GetCurrentSceneNumber(string sceneName) => int.Parse(sceneName.Split("Level")[1]);
+
+    private static string GetCurrentSceneName() => UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
     private void CheckFinishAndLoadNextLevel()
     {
@@ -66,8 +74,7 @@ public class SceneManager : MonoBehaviour
             0.2f, LayerMask.GetMask("Finish"));
         if (collider.Length == 0)
             return;
-        var currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        var currentLevelNumber = int.Parse(currentSceneName.Split("Level")[1]);
+        var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
         if (currentLevelNumber < totalLevelCount)
             UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{currentLevelNumber + 1}");
     }
