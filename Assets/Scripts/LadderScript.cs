@@ -6,13 +6,14 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [SelectionBase]
 public class LadderScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private List<LadderScript> connected;
-    [SerializeField] private int _moveDirection = 0;
+    [SerializeField] public int moveDirection = 0;
     [SerializeField] internal bool isFalling = true;
 
     public Transform EnterPoint { get; private set; }
@@ -79,32 +80,32 @@ public class LadderScript : MonoBehaviour
 
     private IEnumerator MoveHorizontalCoroutine(bool right)
     {
-        if (_moveDirection != 0 || !CheckIfMoveIsPossible(right))
+        if (moveDirection != 0 || !CheckIfMoveIsPossible(right))
         {
             // Debug.Log("Failed move");
             yield break;
         }
         
-        _moveDirection = (right) ? 1 : -1;
+        moveDirection = (right) ? 1 : -1;
 
         MoveNearbyObjects(right);
         MoveConnected(right);
 
         var position = transform.position;
-        var target = position + new Vector3(_moveDirection, 0, 0);
+        var target = position + new Vector3(moveDirection, 0, 0);
 
-        rb.velocity = new Vector2(moveSpeed * _moveDirection, 0);
-        while ((target.x - transform.position.x) * _moveDirection > 1e-4)
+        rb.velocity = new Vector2(moveSpeed * moveDirection, 0);
+        while ((target.x - transform.position.x) * moveDirection > 1e-4)
         {
-            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * _moveDirection * 1e-3),
+            transform.position = new Vector3(transform.position.x + (float)(moveSpeed * moveDirection * 1e-3),
                 position.y, 0);
-            rb.MovePosition(new Vector2(position.x + _moveDirection * moveSpeed * Time.smoothDeltaTime, position.y));
+            rb.MovePosition(new Vector2(position.x + moveDirection * moveSpeed * Time.smoothDeltaTime, position.y));
             yield return new WaitForFixedUpdate();
         }
 
         rb.velocity = Vector2.zero;
 
-        _moveDirection = 0;
+        moveDirection = 0;
         transform.position = target;
         rb.MovePosition(target);
         _moveCoroutine = null;
