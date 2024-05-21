@@ -21,15 +21,12 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private int totalLevelCount = 6;
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
-    
-    public static SceneManager Instance;
-    public static PlayerInput PlayerInput;
-    
+    public PlayerInput PlayerInput { get; private set; }
     public bool MenuOpenInput { get; private set; }
     public bool MenuCloseInput { get; private set; }
 
-    private InputAction _menuOpenAction;
-    private InputAction _menuCloseAction;
+    private InputAction menuOpenAction;
+    private InputAction menuCloseAction;
 
     public void CreateObjectsSnapshot()
     {
@@ -48,21 +45,19 @@ public class SceneManager : MonoBehaviour
             new Vector3(playerPosition.x, playerPosition.y)));
         _sceneSnapshots.Push(sceneSnapshot);
     }
-    
+
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
         PlayerInput = GetComponent<PlayerInput>();
-        _menuOpenAction = PlayerInput.actions["MenuOpen"];
-        _menuCloseAction = PlayerInput.actions["MenuClose"];
+        menuOpenAction = PlayerInput.actions["MenuOpen"];
+        menuCloseAction = PlayerInput.actions["MenuClose"];
     }
 
     private void Update()
     {
         CheckFinishAndLoadNextLevel();
-        MenuOpenInput = _menuOpenAction.WasPressedThisFrame();
-        MenuCloseInput = _menuCloseAction.WasPressedThisFrame();
+        MenuOpenInput = menuOpenAction.WasPressedThisFrame();
+        MenuCloseInput = menuCloseAction.WasPressedThisFrame();
     }
 
     private void OnRestartLevel()
