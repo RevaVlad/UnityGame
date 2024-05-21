@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ObjectSnapshot
 {
@@ -18,11 +20,20 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private int totalLevelCount = 6;
 
-    private readonly Stack<List<ObjectSnapshot>> sceneSnapshots = new();
+    private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
+    
+    public static SceneManager Instance;
+    public static PlayerInput PlayerInput;
+    
+    public bool MenuOpenInput { get; private set; }
+    public bool MenuCloseInput { get; private set; }
+
+    private InputAction _menuOpenAction;
+    private InputAction _menuCloseAction;
 
     public void CreateObjectsSnapshot()
     {
-        if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
+        if (_sceneSnapshots.Count == 100) _sceneSnapshots.Clear();
         var sceneSnapshot = new List<ObjectSnapshot>();
         var laddersContainer = GameObject.Find("LaddersContainer").transform;
         for (var i = 0; i < laddersContainer.childCount; i++)
@@ -35,12 +46,23 @@ public class SceneManager : MonoBehaviour
         var playerPosition = player.transform.position;
         sceneSnapshot.Add(new ObjectSnapshot(player,
             new Vector3(playerPosition.x, playerPosition.y)));
-        sceneSnapshots.Push(sceneSnapshot);
+        _sceneSnapshots.Push(sceneSnapshot);
+    }
+    
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        PlayerInput = GetComponent<PlayerInput>();
+        _menuOpenAction = PlayerInput.actions["MenuOpen"];
+        _menuCloseAction = PlayerInput.actions["MenuClose"];
     }
 
     private void Update()
     {
         CheckFinishAndLoadNextLevel();
+        MenuOpenInput = _menuOpenAction.WasPressedThisFrame();
+        MenuCloseInput = _menuCloseAction.WasPressedThisFrame();
     }
 
     private void OnRestartLevel()
@@ -51,7 +73,7 @@ public class SceneManager : MonoBehaviour
 
     private void OnRestoreSnapshot()
     {
-        if (!sceneSnapshots.TryPop(out var snapshot))
+        if (!_sceneSnapshots.TryPop(out var snapshot))
             return;
         foreach (var objSnap in snapshot)
             objSnap.GameObject.transform.position = objSnap.Position;
