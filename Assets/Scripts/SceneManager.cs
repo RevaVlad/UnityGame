@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -60,7 +59,7 @@ public class SceneManager : MonoBehaviour
         MenuCloseInput = menuCloseAction.WasPressedThisFrame();
     }
 
-    private void OnRestartLevel()
+    public void OnRestartLevel()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
             .buildIndex);

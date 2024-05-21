@@ -125,8 +125,7 @@ namespace UI
         public void OnRestartPress()
         {
             UnPause();
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
-                .buildIndex);
+            sceneManager.OnRestartLevel();
         }
 
         #endregion
