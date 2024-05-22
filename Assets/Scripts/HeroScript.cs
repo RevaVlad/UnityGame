@@ -116,7 +116,7 @@ public class HeroScript : MonoBehaviour
             rb.AddRelativeForce(Vector2.right * (-rb.velocity.x * rb.mass * Data.momentumLossAtJump),
                 ForceMode2D.Force);
         isJumping = true;
-        //SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
+        SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
         rb.AddForce(transform.up * (Data.jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
     }
 
@@ -268,7 +268,7 @@ public class HeroScript : MonoBehaviour
     {
         var enter = heldLadder.transform.Find("EnterPoint");
         var distance = (enter.position - transform.position);
-        //SoundFXManager.instance.PlaySoundFXClip(pipeSound, transform, 1f);
+        SoundFXManager.instance.PlaySoundFXClip(pipeSound, transform, 1f);
         if (distance.magnitude < .2 && heldLadder.moveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
             transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;

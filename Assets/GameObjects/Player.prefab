@@ -83,6 +83,10 @@ MonoBehaviour:
   sizeY: 0
   sizeX: 0
   isPlayerOnLadder: 0
+  jumpSound:
+  - {fileID: 8300000, guid: ff34bdd23eb5cbd44aa2fb779ce5c805, type: 3}
+  pipeSound:
+  - {fileID: 8300000, guid: ded0e996dfffee04fb0c0c6e9958e0fa, type: 3}
 --- !u!114 &2910502451395155975
 MonoBehaviour:
   m_ObjectHideFlags: 0

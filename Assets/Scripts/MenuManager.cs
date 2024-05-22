@@ -22,12 +22,13 @@ public class MenuManager : MonoBehaviour
 
     [Header("Player")] [SerializeField] private GameObject player;
     [Header("Scene")] [SerializeField] private GameObject scene;
-    
+
     private PlayerInput _playerInput;
     private PlayerInput _sceneInput;
     private InputSystemUIInputModule _uiInput;
 
     private bool _isPaused;
+    private InputActionMap previousActionMap;
 
     private void Start()
     {
@@ -35,18 +36,17 @@ public class MenuManager : MonoBehaviour
         _playerInput = player.transform.GetComponent<PlayerInput>();
         _uiInput = GetComponentInChildren<InputSystemUIInputModule>();
         _uiInput.actionsAsset.Disable();
-        
+
         _mainMenuCanvas.SetActive(false);
         _settingsMenuCanvas.SetActive(false);
         _settingsVolumeCanvas.SetActive(false);
-     }
-    
+    }
+
 
     private void Update()
     {
-        if (_sceneInput.currentActionMap.FindAction("MenuOpen").triggered) 
+        if (_sceneInput.currentActionMap.FindAction("MenuOpen").triggered)
         {
-            
             if (!_isPaused)
                 Pause();
         }
@@ -62,9 +62,12 @@ public class MenuManager : MonoBehaviour
     private void Pause()
     {
         _isPaused = true;
-        Time.timeScale = 0f;
         _sceneInput.DeactivateInput();
-        _playerInput.DeactivateInput();
+        previousActionMap = _playerInput.actions.FindActionMap(_playerInput.actions.FindActionMap("BasicInput").enabled
+            ? "BasicInput"
+            : "LadderInput");
+        _playerInput.actions.FindActionMap("LadderInput").Disable();
+        _playerInput.actions.FindActionMap("BasicInput").Disable();
         _uiInput.actionsAsset.Enable();
         OpenMainMenu();
     }
@@ -72,9 +75,18 @@ public class MenuManager : MonoBehaviour
     private void UnPause()
     {
         _isPaused = false;
-        Time.timeScale = 1f;
         _sceneInput.ActivateInput();
-        _playerInput.ActivateInput();
+        if (previousActionMap == _playerInput.actions.FindActionMap("BasicInput"))
+        {
+            _playerInput.actions.FindActionMap("LadderInput").Disable();
+            _playerInput.actions.FindActionMap("BasicInput").Enable();
+        }
+        else
+        {
+            _playerInput.actions.FindActionMap("BasicInput").Disable();
+            _playerInput.actions.FindActionMap("LadderInput").Enable();
+        }
+        
         _uiInput.actionsAsset.Disable();
         CloseAllMenus();
     }
