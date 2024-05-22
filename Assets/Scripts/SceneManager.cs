@@ -21,8 +21,6 @@ public class SceneManager : MonoBehaviour
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
     public PlayerInput PlayerInput { get; private set; }
-    public bool MenuOpenInput { get; private set; }
-    public bool MenuCloseInput { get; private set; }
 
     private InputAction menuOpenAction;
     private InputAction menuCloseAction;
@@ -48,15 +46,11 @@ public class SceneManager : MonoBehaviour
     private void Awake()
     {
         PlayerInput = GetComponent<PlayerInput>();
-        menuOpenAction = PlayerInput.actions["MenuOpen"];
-        menuCloseAction = PlayerInput.actions["MenuClose"];
     }
 
     private void Update()
     {
         CheckFinishAndLoadNextLevel();
-        MenuOpenInput = menuOpenAction.WasPressedThisFrame();
-        MenuCloseInput = menuCloseAction.WasPressedThisFrame();
     }
 
     public void OnRestartLevel()

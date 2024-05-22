@@ -1,6 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 
 public class MenuManager : MonoBehaviour
@@ -18,31 +21,36 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _settingsVolumeFirst;
 
     [Header("Player")] [SerializeField] private GameObject player;
-
-    private InputActionAsset sceneInput;
-    private PlayerInput playerInput;
-    private SceneManager sceneManager;
+    [Header("Scene")] [SerializeField] private GameObject scene;
+    
+    private PlayerInput _playerInput;
+    private PlayerInput _sceneInput;
+    private InputSystemUIInputModule _uiInput;
 
     private bool _isPaused;
 
     private void Start()
     {
-        sceneManager = GameObject.Find("SceneManager").transform.GetComponent<SceneManager>();
-        sceneInput = sceneManager.PlayerInput.actions;
-        playerInput = player.transform.GetComponent<PlayerInput>();
+        _sceneInput = scene.transform.GetComponent<PlayerInput>();
+        _playerInput = player.transform.GetComponent<PlayerInput>();
+        _uiInput = GetComponentInChildren<InputSystemUIInputModule>();
+        _uiInput.actionsAsset.Disable();
+        
         _mainMenuCanvas.SetActive(false);
         _settingsMenuCanvas.SetActive(false);
         _settingsVolumeCanvas.SetActive(false);
-    }
+     }
+    
 
     private void Update()
     {
-        if (sceneManager.MenuOpenInput)
+        if (_sceneInput.currentActionMap.FindAction("MenuOpen").triggered) 
         {
+            
             if (!_isPaused)
                 Pause();
         }
-        else if (sceneManager.MenuCloseInput)
+        else if (_uiInput.actionsAsset.FindActionMap("UI").FindAction("MenuClose").triggered)
         {
             if (_isPaused)
                 UnPause();
@@ -55,9 +63,9 @@ public class MenuManager : MonoBehaviour
     {
         _isPaused = true;
         Time.timeScale = 0f;
-        sceneInput.FindActionMap("Control").Disable();
-        sceneInput.FindActionMap("UI").Enable();
-        playerInput.DeactivateInput();
+        _sceneInput.DeactivateInput();
+        _playerInput.DeactivateInput();
+        _uiInput.actionsAsset.Enable();
         OpenMainMenu();
     }
 
@@ -65,9 +73,9 @@ public class MenuManager : MonoBehaviour
     {
         _isPaused = false;
         Time.timeScale = 1f;
-        sceneInput.FindActionMap("UI").Disable();
-        sceneInput.FindActionMap("Control").Enable();
-        playerInput.ActivateInput();
+        _sceneInput.ActivateInput();
+        _playerInput.ActivateInput();
+        _uiInput.actionsAsset.Disable();
         CloseAllMenus();
     }
 
@@ -87,6 +95,7 @@ public class MenuManager : MonoBehaviour
     {
         _mainMenuCanvas.SetActive(false);
         _settingsMenuCanvas.SetActive(false);
+        _settingsVolumeCanvas.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
     }
 
@@ -124,7 +133,8 @@ public class MenuManager : MonoBehaviour
     public void OnRestartPress()
     {
         UnPause();
-        sceneManager.OnRestartLevel();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
+            .buildIndex);
     }
 
     #endregion
