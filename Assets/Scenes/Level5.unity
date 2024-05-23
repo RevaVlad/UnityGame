@@ -1537,6 +1537,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
+--- !u!114 &345517351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9157827009775015882, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
+  m_PrefabInstance: {fileID: 345517350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &345517352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2567489177782320451, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
+  m_PrefabInstance: {fileID: 345517350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &345517353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6979405398189109809, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
+  m_PrefabInstance: {fileID: 345517350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &616408441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2058,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7962545790992937665, guid: 7d3561ef3c0428244ad0358544d636e5, type: 3}
+      propertyPath: fxSlider
+      value: 
+      objectReference: {fileID: 345517352}
+    - target: {fileID: 7962545790992937665, guid: 7d3561ef3c0428244ad0358544d636e5, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 345517351}
+    - target: {fileID: 7962545790992937665, guid: 7d3561ef3c0428244ad0358544d636e5, type: 3}
+      propertyPath: masterSlider
+      value: 
+      objectReference: {fileID: 345517353}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
