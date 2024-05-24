@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ObjectSnapshot
 {
@@ -21,9 +22,7 @@ public class SceneManager : MonoBehaviour
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
     public PlayerInput PlayerInput { get; private set; }
-
-    private InputAction menuOpenAction;
-    private InputAction menuCloseAction;
+    
 
     public void CreateObjectsSnapshot()
     {
@@ -38,8 +37,7 @@ public class SceneManager : MonoBehaviour
         }
 
         var playerPosition = player.transform.position;
-        sceneSnapshot.Add(new ObjectSnapshot(player,
-            new Vector3(playerPosition.x, playerPosition.y)));
+        sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));
         _sceneSnapshots.Push(sceneSnapshot);
     }
 
@@ -47,6 +45,7 @@ public class SceneManager : MonoBehaviour
     {
         PlayerInput = GetComponent<PlayerInput>();
     }
+    
 
     private void Update()
     {
@@ -55,8 +54,7 @@ public class SceneManager : MonoBehaviour
 
     public void OnRestartLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
-            .buildIndex);
+        LoadLastLevel();
     }
 
     private void OnRestoreSnapshot()
@@ -69,23 +67,39 @@ public class SceneManager : MonoBehaviour
         playerScript.OnDropLadder();
     }
 
-    public static void SaveCurrentLevelNumber()
+    private void SaveCurrentLevelNumber(int levelNumber)
     {
-        PlayerPrefs.SetInt("currentLevel", GetCurrentSceneNumber(GetCurrentSceneName()));
+        PlayerPrefs.SetInt("currentLevel", levelNumber);
     }
 
-    private static int GetCurrentSceneNumber(string sceneName) => int.Parse(sceneName.Split("Level")[1]);
+    private static int GetCurrentSceneNumber(string sceneName)
+    {
+        return int.Parse(sceneName.Split("Level")[1]);
+    }
 
-    private static string GetCurrentSceneName() => UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+    private static string GetCurrentSceneName()
+    {
+        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+    }
 
     private void CheckFinishAndLoadNextLevel()
     {
-        var collider = Physics2D.OverlapCircleAll(player.transform.position,
-            0.2f, LayerMask.GetMask("Finish"));
+        var collider = Physics2D.OverlapCircleAll(player.transform.position, 0.2f, LayerMask.GetMask("Finish"));
         if (collider.Length == 0)
             return;
+
         var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
         if (currentLevelNumber < totalLevelCount)
+        {
+            SaveCurrentLevelNumber(currentLevelNumber + 1);
             UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{currentLevelNumber + 1}");
+        }
+    }
+
+    private void LoadLastLevel()
+    {
+        var lastLevel = PlayerPrefs.GetInt("currentLevel", 1);
+        SaveCurrentLevelNumber(lastLevel);
+        UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{lastLevel}");
     }
 }
