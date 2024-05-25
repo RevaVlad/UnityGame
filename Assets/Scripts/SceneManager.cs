@@ -91,6 +91,7 @@ public class SceneManager : MonoBehaviour
         var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
         if (currentLevelNumber >= totalLevelCount) return;
         SaveCurrentLevelNumber(currentLevelNumber + 1);
+        LoadLastLevel();
     }
 
     private static void LoadLastLevel()
