@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class ObjectSnapshot
 {
@@ -21,8 +24,13 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private int totalLevelCount = 6;
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
-    public PlayerInput PlayerInput { get; private set; }
     
+    public PlayerInput PlayerInput { get; private set; }
+    private SceneTransition animatorManager;
+
+    private Animator restartLevelAnimator;
+    private Animator nextLevelAnimator;
+
 
     public void CreateObjectsSnapshot()
     {
@@ -44,8 +52,11 @@ public class SceneManager : MonoBehaviour
     private void Awake()
     {
         PlayerInput = GetComponent<PlayerInput>();
+        restartLevelAnimator = GameObject.Find("Panel").GetComponent<Animator>();
+        nextLevelAnimator = GameObject.Find("Image").GetComponent<Animator>();
+        restartLevelAnimator.enabled = true;
     }
-    
+
 
     private void Update()
     {
@@ -67,7 +78,7 @@ public class SceneManager : MonoBehaviour
         playerScript.OnDropLadder();
     }
 
-    private void SaveCurrentLevelNumber(int levelNumber)
+    private static void SaveCurrentLevelNumber(int levelNumber)
     {
         PlayerPrefs.SetInt("currentLevel", levelNumber);
     }
@@ -89,14 +100,13 @@ public class SceneManager : MonoBehaviour
             return;
 
         var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
-        if (currentLevelNumber < totalLevelCount)
-        {
-            SaveCurrentLevelNumber(currentLevelNumber + 1);
-            UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{currentLevelNumber + 1}");
-        }
+        if (currentLevelNumber >= totalLevelCount) return;
+        SaveCurrentLevelNumber(currentLevelNumber + 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{currentLevelNumber + 1}");
+        //StartCoroutine(SceneTransition.StartAnimation(animatorManager.NextLevelAnimator));
     }
 
-    private void LoadLastLevel()
+    private static void LoadLastLevel()
     {
         var lastLevel = PlayerPrefs.GetInt("currentLevel", 1);
         SaveCurrentLevelNumber(lastLevel);
