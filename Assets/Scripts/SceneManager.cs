@@ -1,11 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using Debug = UnityEngine.Debug;
 
 public class ObjectSnapshot
 {
@@ -28,9 +23,6 @@ public class SceneManager : MonoBehaviour
 
     public PlayerInput PlayerInput { get; private set; }
 
-    private Animator restartLevelAnimator;
-    private Animator nextLevelAnimator;
-
 
     public void CreateObjectsSnapshot()
     {
@@ -52,9 +44,7 @@ public class SceneManager : MonoBehaviour
     private void Awake()
     {
         PlayerInput = GetComponent<PlayerInput>();
-        restartLevelAnimator = GameObject.Find("RestartLevelAnim").GetComponent<Animator>();
-        nextLevelAnimator = GameObject.Find("LoadNextLevelAnim").GetComponent<Animator>();
-        restartLevelAnimator.enabled = true;
+        GameObject.Find("loadLevel").GetComponent<Animator>().enabled = true;
     }
 
     private void Update()
@@ -101,9 +91,6 @@ public class SceneManager : MonoBehaviour
         var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
         if (currentLevelNumber >= totalLevelCount) return;
         SaveCurrentLevelNumber(currentLevelNumber + 1);
-        UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{currentLevelNumber + 1}");
-        nextLevelAnimator.enabled = true;
-        //StartCoroutine(SceneTransition.StartAnimation(animatorManager.NextLevelAnimator));
     }
 
     private static void LoadLastLevel()
