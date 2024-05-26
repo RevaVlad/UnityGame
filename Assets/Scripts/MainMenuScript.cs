@@ -4,16 +4,16 @@ using UnityEngine.InputSystem.UI;
 
 public class MainMenuScript : MonoBehaviour
 {
-    private InputSystemUIInputModule _uiInput;
-    [SerializeField] private GameObject newGameButton;
+    private InputSystemUIInputModule uiInput;
     private void Start()
     {
-        _uiInput = GetComponentInChildren<InputSystemUIInputModule>();
-        EventSystem.current.SetSelectedGameObject(newGameButton);
+        uiInput = GetComponentInChildren<InputSystemUIInputModule>();
+        if (!PlayerPrefs.HasKey("currentLevel"))
+            GameObject.Find("ContinueButton").SetActive(false);
     }
-    
-    void Update()
+
+    public void OnContinueGame()
     {
-        
+        SceneManager.LoadLastLevel();
     }
 }
