@@ -21,6 +21,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private int totalLevelCount = 6;
     [SerializeField] private GameObject flashingImage;
+    [SerializeField] private AudioClip[] rollbackSound;
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
     private GameObject blurManager;
@@ -28,6 +29,7 @@ public class SceneManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput sceneInput;
 
+    private readonly List<AudioSource> pausedAudioSources = new();
 
     public void CreateObjectsSnapshot()
     {
@@ -80,6 +82,10 @@ public class SceneManager : MonoBehaviour
     {
         flashingImage.SetActive(true);
         var flashCoroutine = StartCoroutine(FlashImage());
+        
+        PauseAllSounds();
+        
+        SoundFXManager.instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
         yield return StartCoroutine(BlurEffect(true));
 
         foreach (var objSnap in snapshot)
@@ -92,9 +98,29 @@ public class SceneManager : MonoBehaviour
         sceneInput.ActivateInput();
 
         yield return StartCoroutine(BlurEffect(false));
+        
+        ResumeAllSounds();
 
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
+    }
+
+    private void PauseAllSounds()
+    {
+        var allAudioSources = FindObjectsOfType<AudioSource>();
+        foreach (var audioSource in allAudioSources)
+        {
+            if (!audioSource.isPlaying) continue;
+            audioSource.Pause();
+            pausedAudioSources.Add(audioSource);
+        }
+    }
+
+    private void ResumeAllSounds()
+    {
+        foreach (var audioSource in pausedAudioSources)
+            audioSource.UnPause();
+        pausedAudioSources.Clear();
     }
 
     private IEnumerator BlurEffect(bool apply)
