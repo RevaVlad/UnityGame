@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="some new sounds added for player">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="menu sounds added">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Control.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Control.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI control.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI control.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,8 @@
     <setting file="mock://C:/UnityGame/Assets/GameObjects/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,7 +53,6 @@
     <setting file="mock://C:/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuSoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
@@ -210,7 +209,7 @@
       <workItem from="1716484978459" duration="627000" />
       <workItem from="1716487606713" duration="2176000" />
       <workItem from="1716707431922" duration="1847000" />
-      <workItem from="1716719417098" duration="10929000" />
+      <workItem from="1716719417098" duration="12793000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -500,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716737649565</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="menu sounds added">
+      <option name="closed" value="true" />
+      <created>1716745704638</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716745704638</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Started working on tile based pipes (need to fix &quot;Fixed Joint&quot; bug" />
     <MESSAGE value="Tiled pipes (bug with connection near wall)" />
     <MESSAGE value="Ground tiles" />
     <MESSAGE value="Remade levels and some fixes" />
@@ -546,6 +552,7 @@
     <MESSAGE value="prefabs added" />
     <MESSAGE value="camera shake added to all levels, some fixes and prefabs changes" />
     <MESSAGE value="some new sounds added for player" />
-    <option name="LAST_COMMIT_MESSAGE" value="some new sounds added for player" />
+    <MESSAGE value="menu sounds added" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu sounds added" />
   </component>
 </project>
