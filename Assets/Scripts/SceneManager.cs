@@ -20,12 +20,12 @@ public class ObjectSnapshot
 
 public class SceneManager : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    private GameObject player;
     [SerializeField] private int totalLevelCount = 6;
-    [SerializeField] private GameObject flashingImage;
+    private GameObject flashingImage;
     [SerializeField] private AudioClip[] rollbackSound;
 
-    private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
+    private readonly Stack<List<ObjectSnapshot>> sceneSnapshots = new();
     private GameObject blurManager;
 
     private PlayerInput playerInput;
@@ -35,7 +35,7 @@ public class SceneManager : MonoBehaviour
 
     public void CreateObjectsSnapshot()
     {
-        if (_sceneSnapshots.Count == 100) _sceneSnapshots.Clear();
+        if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
         var sceneSnapshot = new List<ObjectSnapshot>();
         var laddersContainer = GameObject.Find("LaddersContainer").transform;
         for (var i = 0; i < laddersContainer.childCount; i++)
@@ -47,16 +47,18 @@ public class SceneManager : MonoBehaviour
 
         var playerPosition = player.transform.position;
         sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));
-        _sceneSnapshots.Push(sceneSnapshot);
+        sceneSnapshots.Push(sceneSnapshot);
     }
 
     private void Awake()
     {
-        playerInput = GameObject.Find("Player").GetComponent<PlayerInput>();
+        player = GameObject.Find("Player");
+        playerInput = player.GetComponent<PlayerInput>();
         sceneInput = GetComponent<PlayerInput>();
         GameObject.Find("loadLevel").GetComponent<Animator>().enabled = true;
         blurManager = GameObject.Find("BlurManager");
         blurManager.SetActive(false);
+        flashingImage = gameObject.transform.Find("rollback").gameObject;
         flashingImage.SetActive(false);
     }
 
@@ -72,7 +74,7 @@ public class SceneManager : MonoBehaviour
 
     private void OnRestoreSnapshot()
     {
-        if (!_sceneSnapshots.TryPop(out var snapshot))
+        if (!sceneSnapshots.TryPop(out var snapshot))
             return;
         sceneInput.DeactivateInput();
         playerInput.actions.FindActionMap("LadderInput").Disable();
