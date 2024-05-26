@@ -1,6 +1,10 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 public class ObjectSnapshot
 {
@@ -20,8 +24,9 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private int totalLevelCount = 6;
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
+    private GameObject blurManager;
 
-    public PlayerInput PlayerInput { get; private set; }
+    private PlayerInput playerInput;
 
 
     public void CreateObjectsSnapshot()
@@ -43,8 +48,10 @@ public class SceneManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponent<PlayerInput>();
         GameObject.Find("loadLevel").GetComponent<Animator>().enabled = true;
+        blurManager = GameObject.Find("BlurManager");
+        blurManager.SetActive(false);
     }
 
     private void Update()
@@ -61,11 +68,42 @@ public class SceneManager : MonoBehaviour
     {
         if (!_sceneSnapshots.TryPop(out var snapshot))
             return;
+        StartCoroutine(RestoreSnapshotAnimation(snapshot));
+    }
+
+    private IEnumerator RestoreSnapshotAnimation(List<ObjectSnapshot> snapshot)
+    {
+        yield return StartCoroutine(BlurEffect(true));
+
         foreach (var objSnap in snapshot)
             objSnap.GameObject.transform.position = objSnap.Position;
+
         var playerScript = player.GetComponent<HeroScript>();
         playerScript.OnDropLadder();
+
+        yield return StartCoroutine(BlurEffect(false));
     }
+
+    private IEnumerator BlurEffect(bool apply)
+    {
+        if (apply)
+            blurManager.SetActive(true);
+
+        var blurManagerVolume = blurManager.GetComponent<Volume>();
+        if (!blurManagerVolume.profile.TryGet(out UnityEngine.Rendering.Universal.DepthOfField depthOfField))
+            yield break;
+
+        var blurStep = apply ? 7f : -7f;
+        for (var i = 0; i < 20; i++)
+        {
+            depthOfField.focalLength.value += blurStep;
+            yield return new WaitForSeconds(0.04f);
+        }
+
+        if (!apply)
+            blurManager.SetActive(false);
+    }
+
 
     private static void SaveCurrentLevelNumber(int levelNumber)
     {
