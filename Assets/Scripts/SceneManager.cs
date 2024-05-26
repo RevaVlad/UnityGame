@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -118,7 +120,7 @@ public class SceneManager : MonoBehaviour
 
     private void ResumeAllSounds()
     {
-        foreach (var audioSource in pausedAudioSources)
+        foreach (var audioSource in pausedAudioSources.Where(audioSource => !audioSource.IsDestroyed()))
             audioSource.UnPause();
         pausedAudioSources.Clear();
     }
