@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="blur effect added on restore">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="playerInput and sceneInput disactivate added">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/loadLevelAnimation/Panel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/loadLevelAnimation/Panel.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BLUR.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BLUR.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +209,7 @@
       <workItem from="1716387717106" duration="7006000" />
       <workItem from="1716484978459" duration="627000" />
       <workItem from="1716487606713" duration="2176000" />
-      <workItem from="1716706456605" duration="4163000" />
+      <workItem from="1716706456605" duration="6271000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -496,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716709437281</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="playerInput and sceneInput disactivate added">
+      <option name="closed" value="true" />
+      <created>1716710822478</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716710822478</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +528,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ladders connection between slimPlatforms fixex, camera angle changes" />
     <MESSAGE value="Started working on tile based pipes (need to fix &quot;Fixed Joint&quot; bug" />
     <MESSAGE value="Tiled pipes (bug with connection near wall)" />
     <MESSAGE value="Ground tiles" />
@@ -542,6 +552,7 @@
     <MESSAGE value="some fixes" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="blur effect added on restore" />
-    <option name="LAST_COMMIT_MESSAGE" value="blur effect added on restore" />
+    <MESSAGE value="playerInput and sceneInput disactivate added" />
+    <option name="LAST_COMMIT_MESSAGE" value="playerInput and sceneInput disactivate added" />
   </component>
 </project>

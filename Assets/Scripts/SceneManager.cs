@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.PostProcessing;
 
 public class ObjectSnapshot
 {
@@ -22,6 +20,7 @@ public class SceneManager : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private int totalLevelCount = 6;
+    [SerializeField] private GameObject flashingImage;
 
     private readonly Stack<List<ObjectSnapshot>> _sceneSnapshots = new();
     private GameObject blurManager;
@@ -54,6 +53,7 @@ public class SceneManager : MonoBehaviour
         GameObject.Find("loadLevel").GetComponent<Animator>().enabled = true;
         blurManager = GameObject.Find("BlurManager");
         blurManager.SetActive(false);
+        flashingImage.SetActive(false);
     }
 
     private void Update()
@@ -72,12 +72,14 @@ public class SceneManager : MonoBehaviour
             return;
         sceneInput.DeactivateInput();
         playerInput.actions.FindActionMap("LadderInput").Disable();
-        playerInput.actions.FindActionMap("BasicInput").Disable();       
+        playerInput.actions.FindActionMap("BasicInput").Disable();
         StartCoroutine(RestoreSnapshotAnimation(snapshot));
     }
 
     private IEnumerator RestoreSnapshotAnimation(List<ObjectSnapshot> snapshot)
     {
+        flashingImage.SetActive(true);
+        var flashCoroutine = StartCoroutine(FlashImage());
         yield return StartCoroutine(BlurEffect(true));
 
         foreach (var objSnap in snapshot)
@@ -85,10 +87,14 @@ public class SceneManager : MonoBehaviour
 
         var playerScript = player.GetComponent<HeroScript>();
         playerScript.OnDropLadder();
-        
+
         playerInput.actions.FindActionMap("BasicInput").Enable();
         sceneInput.ActivateInput();
+
         yield return StartCoroutine(BlurEffect(false));
+
+        StopCoroutine(flashCoroutine);
+        flashingImage.SetActive(false);
     }
 
     private IEnumerator BlurEffect(bool apply)
@@ -111,6 +117,14 @@ public class SceneManager : MonoBehaviour
             blurManager.SetActive(false);
     }
 
+    private IEnumerator FlashImage()
+    {
+        while (true)
+        {
+            flashingImage.SetActive(!flashingImage.activeSelf);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
 
     private static void SaveCurrentLevelNumber(int levelNumber)
     {
