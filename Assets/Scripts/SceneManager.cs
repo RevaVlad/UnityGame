@@ -27,6 +27,7 @@ public class SceneManager : MonoBehaviour
     private GameObject blurManager;
 
     private PlayerInput playerInput;
+    private PlayerInput sceneInput;
 
 
     public void CreateObjectsSnapshot()
@@ -48,7 +49,8 @@ public class SceneManager : MonoBehaviour
 
     private void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = GameObject.Find("Player").GetComponent<PlayerInput>();
+        sceneInput = GetComponent<PlayerInput>();
         GameObject.Find("loadLevel").GetComponent<Animator>().enabled = true;
         blurManager = GameObject.Find("BlurManager");
         blurManager.SetActive(false);
@@ -68,6 +70,9 @@ public class SceneManager : MonoBehaviour
     {
         if (!_sceneSnapshots.TryPop(out var snapshot))
             return;
+        sceneInput.DeactivateInput();
+        playerInput.actions.FindActionMap("LadderInput").Disable();
+        playerInput.actions.FindActionMap("BasicInput").Disable();       
         StartCoroutine(RestoreSnapshotAnimation(snapshot));
     }
 
@@ -80,7 +85,9 @@ public class SceneManager : MonoBehaviour
 
         var playerScript = player.GetComponent<HeroScript>();
         playerScript.OnDropLadder();
-
+        
+        playerInput.actions.FindActionMap("BasicInput").Enable();
+        sceneInput.ActivateInput();
         yield return StartCoroutine(BlurEffect(false));
     }
 
