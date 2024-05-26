@@ -1931,6 +1931,14 @@ PrefabInstance:
       propertyPath: flashingImage
       value: 
       objectReference: {fileID: 1491905854}
+    - target: {fileID: 1832186746363311806, guid: 82d06b18a2551f84f95d39a8ab4a9917, type: 3}
+      propertyPath: rollbackSound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832186746363311806, guid: 82d06b18a2551f84f95d39a8ab4a9917, type: 3}
+      propertyPath: rollbackSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 875f3524aee60124abd0a35172328545, type: 3}
     - target: {fileID: 2254984834341425095, guid: 82d06b18a2551f84f95d39a8ab4a9917, type: 3}
       propertyPath: m_Name
       value: SceneManager
