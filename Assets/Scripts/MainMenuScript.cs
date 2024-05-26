@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem.UI;
 
 public class MainMenuScript : MonoBehaviour
 {
-    private InputSystemUIInputModule uiInput;
+    [SerializeField] private GameObject mainMenuCanvas;
+    [SerializeField] private GameObject volumeSettingsCanvas;
+
+    [SerializeField] private GameObject mainMenuFirst;
+    [SerializeField] private GameObject volumeSettingsFirst;
 
     private void Start()
     {
-        uiInput = GetComponentInChildren<InputSystemUIInputModule>();
         if (!PlayerPrefs.HasKey("currentLevel"))
             GameObject.Find("ContinueButton").SetActive(false);
     }
@@ -23,6 +25,38 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.SaveLevelNumber(1);
         OnContinueGame();
     }
-    
-    
+
+
+    private void OpenMainMenu()
+    {
+        mainMenuCanvas.SetActive(true);
+        volumeSettingsCanvas.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(mainMenuFirst);
+    }
+
+    private void OpenVolumeSettingsMenu()
+    {
+        volumeSettingsCanvas.SetActive(true);
+        mainMenuCanvas.SetActive(false);
+
+        EventSystem.current.SetSelectedGameObject(volumeSettingsFirst);
+    }
+
+
+    public void OnSettingsPress()
+    {
+        OpenVolumeSettingsMenu();
+    }
+
+    public void OnExitPress()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
+    }
+
+
+    public void OnVolumeMenuBackPress()
+    {
+        OpenMainMenu();
+    }
 }

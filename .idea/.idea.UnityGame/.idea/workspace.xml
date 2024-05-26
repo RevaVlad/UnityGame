@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="starting to add main menu logic">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="some additions">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ab/2766bc6f/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d6/76e600dd/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scenes/Main menu.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scenes/Main menu.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -214,7 +216,7 @@
       <workItem from="1716484978459" duration="627000" />
       <workItem from="1716487606713" duration="2176000" />
       <workItem from="1716706456605" duration="10352000" />
-      <workItem from="1716736287517" duration="7497000" />
+      <workItem from="1716736287517" duration="11196000" />
     </task>
     <task id="LOCAL-00002" summary="Exit can be blocked">
       <option name="closed" value="true" />
@@ -592,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716753014401</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="some additions">
+      <option name="closed" value="true" />
+      <created>1716753309044</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1716753309044</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +623,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Player no longer appears in air" />
     <MESSAGE value="Bug fix, new pipe variants" />
     <MESSAGE value="Quick fix" />
     <MESSAGE value="fix sceneManager" />
@@ -638,6 +647,7 @@
     <MESSAGE value="back to main menu button added" />
     <MESSAGE value="active buttons added" />
     <MESSAGE value="starting to add main menu logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting to add main menu logic" />
+    <MESSAGE value="some additions" />
+    <option name="LAST_COMMIT_MESSAGE" value="some additions" />
   </component>
 </project>
