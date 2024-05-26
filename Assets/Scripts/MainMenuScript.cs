@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.UI;
 public class MainMenuScript : MonoBehaviour
 {
     private InputSystemUIInputModule uiInput;
+
     private void Start()
     {
         uiInput = GetComponentInChildren<InputSystemUIInputModule>();
@@ -16,4 +17,12 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadLastLevel();
     }
+
+    public void OnNewGame()
+    {
+        SceneManager.SaveLevelNumber(1);
+        OnContinueGame();
+    }
+    
+    
 }

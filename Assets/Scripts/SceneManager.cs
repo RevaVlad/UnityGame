@@ -156,7 +156,7 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    private static void SaveCurrentLevelNumber(int levelNumber)
+    public static void SaveLevelNumber(int levelNumber)
     {
         PlayerPrefs.SetInt("currentLevel", levelNumber);
     }
@@ -179,14 +179,14 @@ public class SceneManager : MonoBehaviour
 
         var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
         if (currentLevelNumber >= totalLevelCount) return;
-        SaveCurrentLevelNumber(currentLevelNumber + 1);
+        SaveLevelNumber(currentLevelNumber + 1);
         LoadLastLevel();
     }
 
     public static void LoadLastLevel()
     {
         var lastLevel = PlayerPrefs.GetInt("currentLevel", 1);
-        SaveCurrentLevelNumber(lastLevel);
+        SaveLevelNumber(lastLevel);
         UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{lastLevel}");
     }
 }
