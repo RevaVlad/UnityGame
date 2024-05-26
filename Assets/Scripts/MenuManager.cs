@@ -20,9 +20,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _settingsMenuFirst;
     [SerializeField] private GameObject _settingsVolumeFirst;
 
-    [Header("Player")] [SerializeField] private GameObject player;
-    [Header("Scene")] [SerializeField] private GameObject scene;
-
     private PlayerInput _playerInput;
     private PlayerInput _sceneInput;
     private InputSystemUIInputModule _uiInput;
@@ -32,8 +29,8 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        _sceneInput = scene.transform.GetComponent<PlayerInput>();
-        _playerInput = player.transform.GetComponent<PlayerInput>();
+        _sceneInput = GameObject.Find("SceneManager").transform.GetComponent<PlayerInput>();
+        _playerInput = GameObject.Find("Player").transform.GetComponent<PlayerInput>();
         _uiInput = GetComponentInChildren<InputSystemUIInputModule>();
         _uiInput.actionsAsset.Disable();
 
@@ -86,7 +83,7 @@ public class MenuManager : MonoBehaviour
             _playerInput.actions.FindActionMap("BasicInput").Disable();
             _playerInput.actions.FindActionMap("LadderInput").Enable();
         }
-        
+
         _uiInput.actionsAsset.Disable();
         CloseAllMenus();
     }
