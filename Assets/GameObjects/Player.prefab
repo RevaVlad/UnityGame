@@ -86,8 +86,11 @@ MonoBehaviour:
   isPlayerOnLadder: 0
   jumpSound:
   - {fileID: 8300000, guid: ff34bdd23eb5cbd44aa2fb779ce5c805, type: 3}
+  - {fileID: 8300000, guid: 1f95b5ce6e089a444a97241786c815cf, type: 3}
+  - {fileID: 8300000, guid: ff34bdd23eb5cbd44aa2fb779ce5c805, type: 3}
   pipeSound:
   - {fileID: 8300000, guid: ded0e996dfffee04fb0c0c6e9958e0fa, type: 3}
+  - {fileID: 8300000, guid: 33d0cf9f9cb020a47b9241ee1ba54e76, type: 3}
   shakeManager: {fileID: 0}
 --- !u!114 &2910502451395155975
 MonoBehaviour:

@@ -1898,6 +1898,10 @@ PrefabInstance:
       propertyPath: shakeManager
       value: 
       objectReference: {fileID: 1748005310}
+    - target: {fileID: 7353345500033946278, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
+      propertyPath: jumpSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 27c7079f9aa4feb41b32faf0b9f829ae, type: 3}
     - target: {fileID: 7477778009936461060, guid: 9804d15014e8c744eba9f5f9c6f026d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.004
