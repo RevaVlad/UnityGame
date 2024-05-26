@@ -575,7 +575,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3547394517699822913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8351322857211354212}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OnExitPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1996998635100986409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,8 +1987,6 @@ MonoBehaviour:
   _mainMenuFirst: {fileID: 2238891373900208548}
   _settingsMenuFirst: {fileID: 3521824096067464932}
   _settingsVolumeFirst: {fileID: 5184620104294273952}
-  player: {fileID: 0}
-  scene: {fileID: 0}
 --- !u!1 &5184620104294273952
 GameObject:
   m_ObjectHideFlags: 0

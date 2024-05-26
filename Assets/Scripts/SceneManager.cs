@@ -183,7 +183,7 @@ public class SceneManager : MonoBehaviour
         LoadLastLevel();
     }
 
-    private static void LoadLastLevel()
+    public static void LoadLastLevel()
     {
         var lastLevel = PlayerPrefs.GetInt("currentLevel", 1);
         SaveCurrentLevelNumber(lastLevel);

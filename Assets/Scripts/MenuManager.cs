@@ -142,8 +142,12 @@ public class MenuManager : MonoBehaviour
     public void OnRestartPress()
     {
         UnPause();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene()
-            .buildIndex);
+        SceneManager.LoadLastLevel();
+    }
+
+    public void OnExitPress()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
     }
 
     #endregion
