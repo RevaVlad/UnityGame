@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084479209650161608, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3084479209650161608, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -503,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4423316161727437977, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: field of view
-      value: 47
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 4906714855751679421, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_Name
@@ -1508,7 +1508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630979184452102168, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3630979184452102168, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1544,7 +1544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7237910483024488669, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 47
+      value: 44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
