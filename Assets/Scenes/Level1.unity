@@ -441,10 +441,6 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 873831485}
-    - target: {fileID: 2567489177782320451, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFXVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 3332732936527424999, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5439723
@@ -493,26 +489,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 873831485}
-    - target: {fileID: 6979405398189109809, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMasterVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 8351322857211354212, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
-      propertyPath: scene
-      value: 
-      objectReference: {fileID: 717063489928893672}
-    - target: {fileID: 8351322857211354212, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1619987376}
     - target: {fileID: 9157827009775015882, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 873831485}
-    - target: {fileID: 9157827009775015882, guid: 5b32ceb12f037f24e91391c380e6f31d, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMusicVolume
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1573,11 +1553,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
---- !u!1 &717063489928893672 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5731672873971646541, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
-  m_PrefabInstance: {fileID: 4458107969717550274}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1935919075538427669
 PrefabInstance:
   m_ObjectHideFlags: 0

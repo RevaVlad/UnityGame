@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class MainMenuScript : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject volumeSettingsCanvas;
@@ -26,37 +25,18 @@ public class MainMenuScript : MonoBehaviour
         OnContinueGame();
     }
 
-
-    private void OpenMainMenu()
-    {
-        mainMenuCanvas.SetActive(true);
-        volumeSettingsCanvas.SetActive(false);
-
-        EventSystem.current.SetSelectedGameObject(mainMenuFirst);
-    }
-
-    private void OpenVolumeSettingsMenu()
-    {
-        volumeSettingsCanvas.SetActive(true);
-        mainMenuCanvas.SetActive(false);
-
-        EventSystem.current.SetSelectedGameObject(volumeSettingsFirst);
-    }
-
-
     public void OnSettingsPress()
     {
-        OpenVolumeSettingsMenu();
+        MenusController.SwitchMenu(mainMenuCanvas, volumeSettingsCanvas, volumeSettingsFirst);
     }
 
-    public void OnExitPress()
+    public void OnReturnOnMainMenuPress()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
     }
 
-
     public void OnVolumeMenuBackPress()
     {
-        OpenMainMenu();
+        MenusController.SwitchMenu(volumeSettingsCanvas, mainMenuCanvas, mainMenuFirst);
     }
 }

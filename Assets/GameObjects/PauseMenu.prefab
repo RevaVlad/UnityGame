@@ -1981,12 +1981,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c0a9ada5a440b48999b0270bf20263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainMenuCanvas: {fileID: 6504509745273776218}
-  _settingsMenuCanvas: {fileID: 737662216156981101}
-  _settingsVolumeCanvas: {fileID: 8501172547229922406}
-  _mainMenuFirst: {fileID: 2238891373900208548}
-  _settingsMenuFirst: {fileID: 3521824096067464932}
-  _settingsVolumeFirst: {fileID: 5184620104294273952}
+  mainMenuCanvas: {fileID: 6504509745273776218}
+  settingsMenuCanvas: {fileID: 737662216156981101}
+  settingsVolumeCanvas: {fileID: 8501172547229922406}
+  mainMenuFirst: {fileID: 2238891373900208548}
+  settingsMenuFirst: {fileID: 2116805605524692162}
+  settingsVolumeFirst: {fileID: 5184620104294273952}
 --- !u!1 &5184620104294273952
 GameObject:
   m_ObjectHideFlags: 0
