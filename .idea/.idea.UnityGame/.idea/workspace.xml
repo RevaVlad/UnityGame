@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="level 2 more fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_25_05_2024_17_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_20_30__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_20_41__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2024_23_15__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_0_04__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="level 5 fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_25_05_2024_17_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_25_05_2024_17_42__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_20_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_20_05_2024_20_30__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_20_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_20_41__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2024_23_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_23_05_2024_23_15__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_0_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_0_04__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
@@ -45,6 +45,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level3.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level4.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level4.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -207,38 +211,6 @@
       <workItem from="1716706456605" duration="10352000" />
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
-    </task>
-    <task id="LOCAL-00007" summary="level fixes">
-      <option name="closed" value="true" />
-      <created>1714287272402</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1714287272402</updated>
-    </task>
-    <task id="LOCAL-00008" summary="pipes changes in levels">
-      <option name="closed" value="true" />
-      <created>1714296786300</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1714296786300</updated>
-    </task>
-    <task id="LOCAL-00009" summary="new logic for moving with ladders">
-      <option name="closed" value="true" />
-      <created>1714297544516</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1714297544516</updated>
-    </task>
-    <task id="LOCAL-00010" summary="prefab changes">
-      <option name="closed" value="true" />
-      <created>1714309362054</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1714309362054</updated>
     </task>
     <task id="LOCAL-00011" summary="travel by pipes changes">
       <option name="closed" value="true" />
@@ -600,7 +572,39 @@
       <option name="project" value="LOCAL" />
       <updated>1716831828681</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="level 3 fixes">
+      <option name="closed" value="true" />
+      <created>1716832397481</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1716832397481</updated>
+    </task>
+    <task id="LOCAL-00057" summary="level 4 fixes">
+      <option name="closed" value="true" />
+      <created>1716832880943</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1716832880943</updated>
+    </task>
+    <task id="LOCAL-00058" summary="level 4 more fixes">
+      <option name="closed" value="true" />
+      <created>1716832942550</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1716832942550</updated>
+    </task>
+    <task id="LOCAL-00059" summary="level 5 fixes">
+      <option name="closed" value="true" />
+      <created>1716833946152</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1716833946153</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,10 +625,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="snapshot feature ready" />
-    <MESSAGE value="merge of sound and bug fixes" />
-    <MESSAGE value="pause menu, volume sliders added," />
-    <MESSAGE value="почти поднял прод" />
     <MESSAGE value="поднял прод спустя день, ура" />
     <MESSAGE value="restart animation finished" />
     <MESSAGE value="some fixes" />
@@ -646,6 +646,10 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="level 2 fixes" />
     <MESSAGE value="level 2 more fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="level 2 more fixes" />
+    <MESSAGE value="level 3 fixes" />
+    <MESSAGE value="level 4 fixes" />
+    <MESSAGE value="level 4 more fixes" />
+    <MESSAGE value="level 5 fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="level 5 fixes" />
   </component>
 </project>
