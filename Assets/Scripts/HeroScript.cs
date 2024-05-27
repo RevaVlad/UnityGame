@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -35,6 +36,8 @@ public class HeroScript : MonoBehaviour
     [SerializeField] private AudioClip[] jumpSound;
     [SerializeField] private AudioClip[] pipeSound;
     #endregion
+
+    [SerializeField] private GameObject shakeManager;
 
     private void Start()
     {
@@ -269,6 +272,7 @@ public class HeroScript : MonoBehaviour
         var enter = heldLadder.transform.Find("EnterPoint");
         var distance = (enter.position - transform.position);
         SoundFXManager.instance.PlaySoundFXClip(pipeSound, transform, 1f);
+        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.moveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
             transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;

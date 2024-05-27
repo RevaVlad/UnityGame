@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2754906138893503330}
   - component: {fileID: 7038761771217100583}
   - component: {fileID: 4826970683907849151}
+  - component: {fileID: 9101841592551925866}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -85,8 +86,12 @@ MonoBehaviour:
   isPlayerOnLadder: 0
   jumpSound:
   - {fileID: 8300000, guid: ff34bdd23eb5cbd44aa2fb779ce5c805, type: 3}
+  - {fileID: 8300000, guid: 1f95b5ce6e089a444a97241786c815cf, type: 3}
+  - {fileID: 8300000, guid: ff34bdd23eb5cbd44aa2fb779ce5c805, type: 3}
   pipeSound:
   - {fileID: 8300000, guid: ded0e996dfffee04fb0c0c6e9958e0fa, type: 3}
+  - {fileID: 8300000, guid: 33d0cf9f9cb020a47b9241ee1ba54e76, type: 3}
+  shakeManager: {fileID: 0}
 --- !u!114 &2910502451395155975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +278,63 @@ CapsuleCollider2D:
   m_Offset: {x: -0.003306738, y: -0.0033066955}
   m_Size: {x: 0.5757266, y: 0.99338686}
   m_Direction: 0
+--- !u!114 &9101841592551925866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921602135724034575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd438dd108a0f284aa931a2da434f1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 4
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.5
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0.1, y: -0.1, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_IgnoreTag: 
+  m_UseImpactDirection: 0
+  m_ScaleImpactWithMass: 0
+  m_ScaleImpactWithSpeed: 0
