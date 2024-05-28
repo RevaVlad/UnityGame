@@ -99,7 +99,6 @@ public class SceneManager : MonoBehaviour
         playerScript.OnDropLadder();
 
         playerInput.actions.FindActionMap("BasicInput").Enable();
-        sceneInput.ActivateInput();
 
         yield return StartCoroutine(BlurEffect(false));
         
@@ -107,6 +106,8 @@ public class SceneManager : MonoBehaviour
 
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
+        
+        sceneInput.ActivateInput();
     }
 
     private void PauseAllSounds()

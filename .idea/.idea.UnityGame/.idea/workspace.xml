@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="level 5 fixes">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControls.inputactions" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="keyboard fixes">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +204,6 @@
       <workItem from="1716706456605" duration="10352000" />
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
-    </task>
-    <task id="LOCAL-00011" summary="travel by pipes changes">
-      <option name="closed" value="true" />
-      <created>1714311728790</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1714311728790</updated>
     </task>
     <task id="LOCAL-00012" summary="Y axes snapping and colliders tweaks">
       <option name="closed" value="true" />
@@ -598,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716833946153</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="keyboard fixes">
+      <option name="closed" value="true" />
+      <created>1716920038390</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1716920038390</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,7 +650,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="поднял прод спустя день, ура" />
     <MESSAGE value="restart animation finished" />
     <MESSAGE value="some fixes" />
     <MESSAGE value="blur effect added on restore" />
@@ -676,6 +674,7 @@
     <MESSAGE value="level 4 fixes" />
     <MESSAGE value="level 4 more fixes" />
     <MESSAGE value="level 5 fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="level 5 fixes" />
+    <MESSAGE value="keyboard fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="keyboard fixes" />
   </component>
 </project>
