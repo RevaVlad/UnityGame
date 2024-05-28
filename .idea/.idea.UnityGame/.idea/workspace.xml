@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="level 5 fixes">
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/wallTiles.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Source/wallTiles.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControls.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -607,11 +608,43 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Pipes" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Pipes" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
