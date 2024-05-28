@@ -171,7 +171,7 @@ public class LadderScript : MonoBehaviour
 
     internal void TryStartFall()
     {
-        if (downObjectsColliders.Select(script => script.currentlyStopping).Sum() > 0) return;
+        if (downObjectsColliders.Select(script => script.CurrentlyStopping).Sum() > 0) return;
         isFalling = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.WakeUp();
@@ -179,7 +179,7 @@ public class LadderScript : MonoBehaviour
 
     public string[] GetBases()
     {
-        var possibleBase = downObjectsColliders.Where(script => script.currentlyStopping > 0).Select(script => script.transform.parent).ToArray();
+        var possibleBase = downObjectsColliders.Where(script => script.CurrentlyStopping > 0).Select(script => script.transform.parent).ToArray();
         var min = possibleBase.Min(obj => obj.position.y);
         var bases = possibleBase.Where(obj => Math.Abs(obj.position.y - min) < .5).Select(obj => obj.name).ToArray();
         return bases;

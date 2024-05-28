@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="keyboard fixes">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="blur fixed">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraShakeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraShakeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +208,6 @@
       <workItem from="1716706456605" duration="10352000" />
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
-    </task>
-    <task id="LOCAL-00012" summary="Y axes snapping and colliders tweaks">
-      <option name="closed" value="true" />
-      <created>1714403270027</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1714403270027</updated>
     </task>
     <task id="LOCAL-00013" summary="Started working on tile based pipes (need to fix &quot;Fixed Joint&quot; bug">
       <option name="closed" value="true" />
@@ -597,7 +593,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716920038390</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="blur fixed">
+      <option name="closed" value="true" />
+      <created>1716920555332</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1716920555332</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +654,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="restart animation finished" />
     <MESSAGE value="some fixes" />
     <MESSAGE value="blur effect added on restore" />
     <MESSAGE value="playerInput and sceneInput disactivate added" />
@@ -675,6 +678,7 @@
     <MESSAGE value="level 4 more fixes" />
     <MESSAGE value="level 5 fixes" />
     <MESSAGE value="keyboard fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="keyboard fixes" />
+    <MESSAGE value="blur fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="blur fixed" />
   </component>
 </project>
