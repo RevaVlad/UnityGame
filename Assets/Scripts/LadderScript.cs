@@ -58,10 +58,10 @@ public class LadderScript : MonoBehaviour
     }
 
     private List<GameObject> GetRightCollidingObjects() =>
-        rightObjectsCollider.SelectMany(collider => collider.collidingObjects).ToList();
+        rightObjectsCollider.SelectMany(collider => collider.CollidingObjects).ToList();
     
     private List<GameObject> GetLeftCollidingObjects() =>
-        leftObjectsCollider.SelectMany(collider => collider.collidingObjects).ToList();
+        leftObjectsCollider.SelectMany(collider => collider.CollidingObjects).ToList();
 
     private void MoveNearbyObjects(bool right)
     {
