@@ -6,17 +6,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class ObjectSnapshot
-{
-    public GameObject GameObject { get; }
-    public Vector3 Position { get; }
-
-    public ObjectSnapshot(GameObject gameObject, Vector3 position)
-    {
-        GameObject = gameObject;
-        Position = position;
-    }
-}
 
 public class SceneManager : MonoBehaviour
 {
@@ -83,7 +72,7 @@ public class SceneManager : MonoBehaviour
 
         PauseAllSounds();
 
-        SoundFXManager.instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
+        SoundFXManager.Instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
         yield return StartCoroutine(BlurEffect(true));
 
         foreach (var objSnap in snapshot)

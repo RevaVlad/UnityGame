@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="PlayerRunData.cs style fix">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="SceneManager.cs style fix">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectSnapshot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +78,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PlayerRunData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -226,15 +231,7 @@
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
       <workItem from="1716955775418" duration="711000" />
-      <workItem from="1717008872076" duration="6103000" />
-    </task>
-    <task id="LOCAL-00021" summary="Small bug fix + pipes sprites fix">
-      <option name="closed" value="true" />
-      <created>1716106741992</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1716106741993</updated>
+      <workItem from="1717008872076" duration="6425000" />
     </task>
     <task id="LOCAL-00022" summary="Slim platforms remake (gonna delete/remake level 3)">
       <option name="closed" value="true" />
@@ -620,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717014873580</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="SceneManager.cs style fix">
+      <option name="closed" value="true" />
+      <created>1717015148033</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1717015148033</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main menu start" />
     <MESSAGE value="back to main menu button added" />
     <MESSAGE value="active buttons added" />
     <MESSAGE value="starting to add main menu logic" />
@@ -698,6 +702,7 @@
     <MESSAGE value="PauseManager.cs style fix" />
     <MESSAGE value="PipeUtils.cs style fix" />
     <MESSAGE value="PlayerRunData.cs style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlayerRunData.cs style fix" />
+    <MESSAGE value="SceneManager.cs style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="SceneManager.cs style fix" />
   </component>
 </project>

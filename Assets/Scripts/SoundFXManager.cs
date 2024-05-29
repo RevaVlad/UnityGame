@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class SoundFXManager : MonoBehaviour
 {
-    public static SoundFXManager instance;
+    public static SoundFXManager Instance;
 
     [SerializeField] private AudioSource soundFXObject;
 
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
+        if (Instance == null)
+            Instance = this;
     }
 
     public void PlaySoundFXClip(AudioClip[] clips, Transform spawnTransform, float volume)
