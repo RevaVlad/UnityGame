@@ -70,7 +70,7 @@ public class HeroScript : MonoBehaviour
         timePassedSinceOnGround += Time.deltaTime;
         timePassedSinceJump += Time.deltaTime;
 
-        rb.gravityScale = (rb.velocity.y < 0) ? data.gravityScaleWhenFalling : data.normalGravityScale;
+        rb.gravityScale = rb.velocity.y < 0 ? data.gravityScaleWhenFalling : data.normalGravityScale;
         CheckGround();
     }
 
@@ -137,8 +137,10 @@ public class HeroScript : MonoBehaviour
         var speedDif = targetSpeed - rb.velocity.x;
 
         var currentAcceleration = !isGrounded
-            ? (direction.x != 0 ? data.airAcceleration : data.airDecceleration)
-            : (direction.x != 0 ? data.acceleration : data.decceleration);
+            ? direction.x != 0 ? data.airAcceleration : data.airDecceleration
+            : direction.x != 0
+                ? data.acceleration
+                : data.decceleration;
 
         rb.AddForce(Vector2.right * (currentAcceleration * speedDif));
     }
@@ -232,10 +234,10 @@ public class HeroScript : MonoBehaviour
     {
         var enter = heldLadder.transform.Find("EnterPoint");
         var gameObjectTransform = transform;
-        var distance = (enter.position - gameObjectTransform.position);
+        var distance = enter.position - gameObjectTransform.position;
         SoundFXManager.instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
         shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
-        if (distance.magnitude < .2 && heldLadder.moveDirection == 0 && heldLadder.CheckIfExitAvailable())
+        if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
             transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;
             OnDropLadder();

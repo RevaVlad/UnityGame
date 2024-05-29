@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="GetNearbyObjectsScript.cs style fix">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_23_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_23_14__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_23_35_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_21_05_2024_23_35__Changes_.xml" beforeDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="HeroScript.cs style fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +49,23 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9f/57c03411/WaitForEndOfFrame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ab/2766bc6f/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d6/76e600dd/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/CameraScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -216,15 +223,7 @@
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
       <workItem from="1716955775418" duration="711000" />
-      <workItem from="1717008872076" duration="1710000" />
-    </task>
-    <task id="LOCAL-00015" summary="New pipe example">
-      <option name="closed" value="true" />
-      <created>1715325545590</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1715325545590</updated>
+      <workItem from="1717008872076" duration="5047000" />
     </task>
     <task id="LOCAL-00016" summary="New pipe example">
       <option name="closed" value="true" />
@@ -610,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716923679467</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="HeroScript.cs style fix">
+      <option name="closed" value="true" />
+      <created>1717010806418</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1717010806419</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +670,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="playerInput and sceneInput disactivate added" />
     <MESSAGE value="добавлено мигание" />
     <MESSAGE value="add sound for rollback" />
     <MESSAGE value="fix" />
@@ -688,6 +694,7 @@
     <MESSAGE value="blur fixed" />
     <MESSAGE value="FallingProcessingScript.cs style fix" />
     <MESSAGE value="GetNearbyObjectsScript.cs style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="GetNearbyObjectsScript.cs style fix" />
+    <MESSAGE value="HeroScript.cs style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeroScript.cs style fix" />
   </component>
 </project>
