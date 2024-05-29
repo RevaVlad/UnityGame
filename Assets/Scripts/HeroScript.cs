@@ -1,15 +1,11 @@
-using System;
 using System.Collections;
-using System.Linq;
 using Cinemachine;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class HeroScript : MonoBehaviour
 {
-    public PlayerRunData Data;
+    public PlayerRunData data;
 
     private bool faceRight;
     private Animator anim;
@@ -20,53 +16,50 @@ public class HeroScript : MonoBehaviour
     private bool isJumping = true;
 
     private Rigidbody2D rb;
-    private SpriteRenderer sprite;
-    private PlayerControls _playerControls;
-    private PlayerInput _playerInput;
+    private PlayerInput playerInput;
     private Vector2 direction;
 
     [SerializeField] private float sizeY;
     [SerializeField] private float sizeX;
 
-    public bool isPlayerOnLadder;
-    private LadderScript heldLadder = null;
-    private Coroutine moveToLadderCenter = null;
-    
+    private bool isPlayerOnLadder;
+    private LadderScript heldLadder;
+    private Coroutine moveToLadderCenter;
+    private readonly Collider2D[] results = new Collider2D[1];
+
     # region Sounds
+
     [SerializeField] private AudioClip[] jumpSound;
     [SerializeField] private AudioClip[] pipeSound;
+
     #endregion
 
     [SerializeField] private GameObject shakeManager;
-
-    private void Start()
-    {
-        _playerControls = new PlayerControls();
-    }
+    private static readonly int MoveX = Animator.StringToHash("moveX");
+    private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
 
     private void SwapInputMap()
     {
-        if (_playerInput.actions.FindActionMap("BasicInput").enabled)
+        if (playerInput.actions.FindActionMap("BasicInput").enabled)
         {
-            _playerInput.actions.FindActionMap("LadderInput").Enable();
-            _playerInput.actions.FindActionMap("BasicInput").Disable();
+            playerInput.actions.FindActionMap("LadderInput").Enable();
+            playerInput.actions.FindActionMap("BasicInput").Disable();
         }
         else
         {
-            _playerInput.actions.FindActionMap("BasicInput").Enable();
-            _playerInput.actions.FindActionMap("LadderInput").Disable();
+            playerInput.actions.FindActionMap("BasicInput").Enable();
+            playerInput.actions.FindActionMap("LadderInput").Disable();
         }
     }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
-        _playerInput = GetComponent<PlayerInput>();
-        _playerInput.actions.FindActionMap("BasicInput").Enable();
-        _playerInput.actions.FindActionMap("LadderInput").Disable();
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.actions.FindActionMap("BasicInput").Enable();
+        playerInput.actions.FindActionMap("LadderInput").Disable();
 
         var bounds = GetComponent<CapsuleCollider2D>().bounds;
         (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
@@ -77,27 +70,17 @@ public class HeroScript : MonoBehaviour
         timePassedSinceOnGround += Time.deltaTime;
         timePassedSinceJump += Time.deltaTime;
 
-        rb.gravityScale = (rb.velocity.y < 0) ? Data.gravityScaleWhenFalling : Data.normalGravityScale;
+        rb.gravityScale = (rb.velocity.y < 0) ? data.gravityScaleWhenFalling : data.normalGravityScale;
         CheckGround();
     }
 
     private void FixedUpdate()
     {
         if (isPlayerOnLadder)
-        {
-            /*
-            var ladderEntryPoint = heldLadder.EnterPoint.position;
-            var playerCenter = transform.position;
-            transform.position = Vector2.MoveTowards(playerCenter,
-                ladderEntryPoint, 100000f * Time.smoothDeltaTime);
-            */
-        }
-        else
-        {
-            CheckJumpBuffer();
-            Run();
-            ApplyFriction();
-        }
+            return;
+        CheckJumpBuffer();
+        Run();
+        ApplyFriction();
     }
 
     #region Jump
@@ -108,35 +91,28 @@ public class HeroScript : MonoBehaviour
             timePassedSinceJump = 0;
     }
 
-    public void OnJumpEnd()
-    {
-        JumpCut();
-    }
+    public void OnJumpEnd() => JumpCut();
 
     private void Jump()
     {
         if (rb.velocity.magnitude > 0)
-            rb.AddRelativeForce(Vector2.right * (-rb.velocity.x * rb.mass * Data.momentumLossAtJump),
+            rb.AddRelativeForce(Vector2.right * (-rb.velocity.x * rb.mass * data.momentumLossAtJump),
                 ForceMode2D.Force);
         isJumping = true;
         SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
-        rb.AddForce(transform.up * (Data.jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
+        rb.AddForce(transform.up * (data.jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
     }
 
     private void JumpCut()
     {
         if (rb.velocity.y > 0 && isJumping)
-        {
-            rb.AddForce(Vector2.down * rb.velocity.y * Data.jumpCutMultiplier, ForceMode2D.Impulse);
-        }
+            rb.AddForce(Vector2.down * rb.velocity.y * data.jumpCutMultiplier, ForceMode2D.Impulse);
     }
 
     private void CheckJumpBuffer()
     {
-        if (timePassedSinceOnGround < Data.coyoteTime && timePassedSinceJump < Data.bufferTime && !isJumping)
-        {
+        if (timePassedSinceOnGround < data.coyoteTime && timePassedSinceJump < data.bufferTime && !isJumping)
             Jump();
-        }
     }
 
     #endregion
@@ -148,41 +124,30 @@ public class HeroScript : MonoBehaviour
         direction = inputValue.Get<Vector2>();
         if (direction.magnitude > 0)
         {
-            //Run();
-            anim.SetFloat("moveX", Data.animationSpeed);
+            anim.SetFloat(MoveX, data.animationSpeed);
             AdjustSprite();
         }
         else
-            anim.SetFloat("moveX", 0);
+            anim.SetFloat(MoveX, 0);
     }
 
     private void Run()
     {
-        var targetSpeed = direction.x * Data.runMaxSpeed;
-
+        var targetSpeed = direction.x * data.runMaxSpeed;
         var speedDif = targetSpeed - rb.velocity.x;
 
-        // decide which acceleration is used
         var currentAcceleration = !isGrounded
-            ? (direction.x != 0 ? Data.airAcceleration : Data.airDecceleration)
-            : (direction.x != 0 ? Data.acceleration : Data.decceleration);
-
-        /*
-        if(Data.doConserveMomentum && Mathf.Abs(rb.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(rb.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
-            accelRate = 0;
-        */
+            ? (direction.x != 0 ? data.airAcceleration : data.airDecceleration)
+            : (direction.x != 0 ? data.acceleration : data.decceleration);
 
         rb.AddForce(Vector2.right * (currentAcceleration * speedDif));
     }
 
     private void ApplyFriction()
     {
-        if (isGrounded && Mathf.Abs(direction.x) < 1e-2f) // if grounded and tries to stop
-        {
-            var amount = Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(Data.frictionAmount));
-            // var amount = Data.frictionAmount;
-            rb.AddForce(Vector2.right * (-Mathf.Sign(rb.velocity.x) * amount), ForceMode2D.Impulse);
-        }
+        if (!isGrounded || !(Mathf.Abs(direction.x) < 1e-2f)) return;
+        var amount = Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(data.frictionAmount));
+        rb.AddForce(Vector2.right * (-Mathf.Sign(rb.velocity.x) * amount), ForceMode2D.Impulse);
     }
 
     private void AdjustSprite()
@@ -193,8 +158,6 @@ public class HeroScript : MonoBehaviour
     }
 
     #endregion
-
-    private Collider2D[] results = new Collider2D[1];
 
     private void CheckGround()
     {
@@ -207,7 +170,7 @@ public class HeroScript : MonoBehaviour
             if (timePassedSinceJump > .2) isJumping = false;
         }
 
-        anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool(IsGrounded, isGrounded);
     }
 
     #region LaddersControls
@@ -234,11 +197,9 @@ public class HeroScript : MonoBehaviour
         isPlayerOnLadder = false;
         heldLadder = null;
         rb.simulated = true;
-        if (moveToLadderCenter != null)
-        {
-            StopCoroutine(moveToLadderCenter);
-            moveToLadderCenter = null;
-        }
+        if (moveToLadderCenter == null) return;
+        StopCoroutine(moveToLadderCenter);
+        moveToLadderCenter = null;
     }
 
     private void OnMoveRightWithLadder()
@@ -270,8 +231,9 @@ public class HeroScript : MonoBehaviour
     private void OnTravelThroughPipe()
     {
         var enter = heldLadder.transform.Find("EnterPoint");
-        var distance = (enter.position - transform.position);
-        SoundFXManager.instance.PlaySoundFXClip(pipeSound, transform, 1f);
+        var gameObjectTransform = transform;
+        var distance = (enter.position - gameObjectTransform.position);
+        SoundFXManager.instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
         shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.moveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
@@ -285,10 +247,11 @@ public class HeroScript : MonoBehaviour
     private bool TryGetLadder(out LadderScript ladder)
     {
         ladder = null;
-        var collider = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y),
+        var position = transform.position;
+        var collidedObj = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y),
             0.01f, LayerMask.GetMask("Ladders"));
-        if (collider.Length == 0) return false;
-        ladder = PipeUtils.GetPipeRoot(collider[0].transform).GetComponent<LadderScript>();
+        if (collidedObj.Length == 0) return false;
+        ladder = PipeUtils.GetPipeRoot(collidedObj[0].transform).GetComponent<LadderScript>();
         return true;
     }
 
