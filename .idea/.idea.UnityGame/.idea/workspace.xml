@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="MainMenuManager.cs style fix">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="PipeUtils.cs style fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +67,8 @@
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/MainMenuManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PauseManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PipeUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -223,23 +223,7 @@
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
       <workItem from="1716955775418" duration="711000" />
-      <workItem from="1717008872076" duration="5378000" />
-    </task>
-    <task id="LOCAL-00018" summary="Fixed random stops on ground, added run values">
-      <option name="closed" value="true" />
-      <created>1715982687585</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1715982687585</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Coyote time and jump cut, working properly">
-      <option name="closed" value="true" />
-      <created>1716024382336</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1716024382336</updated>
+      <workItem from="1717008872076" duration="5698000" />
     </task>
     <task id="LOCAL-00020" summary="player fixes">
       <option name="closed" value="true" />
@@ -617,7 +601,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717014199927</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="PauseManager.cs style fix">
+      <option name="closed" value="true" />
+      <created>1717014351096</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1717014351097</updated>
+    </task>
+    <task id="LOCAL-00068" summary="PipeUtils.cs style fix">
+      <option name="closed" value="true" />
+      <created>1717014459565</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1717014459565</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,8 +670,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix" />
-    <MESSAGE value="add some prefab and style fix" />
     <MESSAGE value="style fix and level2 fix" />
     <MESSAGE value="main menu start" />
     <MESSAGE value="back to main menu button added" />
@@ -695,6 +693,8 @@
     <MESSAGE value="HeroScript.cs style fix" />
     <MESSAGE value="LadderScript.cs style fix" />
     <MESSAGE value="MainMenuManager.cs style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainMenuManager.cs style fix" />
+    <MESSAGE value="PauseManager.cs style fix" />
+    <MESSAGE value="PipeUtils.cs style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="PipeUtils.cs style fix" />
   </component>
 </project>
