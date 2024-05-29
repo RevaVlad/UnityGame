@@ -70,7 +70,7 @@ public partial class @SceneControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""81b4947d-8911-483f-8ee8-441e9a26c820"",
-                    ""path"": ""<Keyboard>/shift"",
+                    ""path"": ""<Keyboard>/ctrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

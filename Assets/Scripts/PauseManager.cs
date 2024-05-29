@@ -69,15 +69,10 @@ public class PauseManager : MonoBehaviour
         MenusController.CloseAllMenus(mainMenuCanvas, settingsMenuCanvas, settingsVolumeCanvas);
     }
 
-    public void OnSettingsPress()
-    {
+    public void OnSettingsPress() =>
         MenusController.SwitchMenu(mainMenuCanvas, settingsMenuCanvas, settingsMenuFirst);
-    }
 
-    public void OnResumePress()
-    {
-        UnPause();
-    }
+    public void OnResumePress() => UnPause();
 
     public void OnRestartPress()
     {
@@ -85,23 +80,13 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadLastLevel();
     }
 
-    public void OnExitPress()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
-    }
+    public void OnExitPress() => UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
 
-    public void OnSettingsBackPress()
-    {
-        MenusController.SwitchMenu(settingsMenuCanvas, mainMenuCanvas, mainMenuFirst);
-    }
+    public void OnSettingsBackPress() => MenusController.SwitchMenu(settingsMenuCanvas, mainMenuCanvas, mainMenuFirst);
 
-    public void OnSettingsGoToVolumePress()
-    {
+    public void OnSettingsGoToVolumePress() =>
         MenusController.SwitchMenu(settingsMenuCanvas, settingsVolumeCanvas, settingsVolumeFirst);
-    }
 
-    public void OnVolumeMenuBackPress()
-    {
+    public void OnVolumeMenuBackPress() =>
         MenusController.SwitchMenu(settingsVolumeCanvas, settingsMenuCanvas, settingsMenuFirst);
-    }
 }

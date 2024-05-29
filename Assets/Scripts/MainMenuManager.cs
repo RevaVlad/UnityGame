@@ -14,10 +14,7 @@ public class MainMenuManager : MonoBehaviour
             GameObject.Find("ContinueButton").SetActive(false);
     }
 
-    public void OnContinueGame()
-    {
-        SceneManager.LoadLastLevel();
-    }
+    public void OnContinueGame() => SceneManager.LoadLastLevel();
 
     public void OnNewGame()
     {
@@ -25,18 +22,11 @@ public class MainMenuManager : MonoBehaviour
         OnContinueGame();
     }
 
-    public void OnSettingsPress()
-    {
+    public void OnSettingsPress() =>
         MenusController.SwitchMenu(mainMenuCanvas, volumeSettingsCanvas, volumeSettingsFirst);
-    }
 
-    public void OnReturnOnMainMenuPress()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
-    }
+    public void OnReturnOnMainMenuPress() => UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
 
-    public void OnVolumeMenuBackPress()
-    {
+    public void OnVolumeMenuBackPress() =>
         MenusController.SwitchMenu(volumeSettingsCanvas, mainMenuCanvas, mainMenuFirst);
-    }
 }

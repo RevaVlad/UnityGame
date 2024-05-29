@@ -6,17 +6,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class ObjectSnapshot
-{
-    public GameObject GameObject { get; }
-    public Vector3 Position { get; }
-
-    public ObjectSnapshot(GameObject gameObject, Vector3 position)
-    {
-        GameObject = gameObject;
-        Position = position;
-    }
-}
 
 public class SceneManager : MonoBehaviour
 {
@@ -62,15 +51,9 @@ public class SceneManager : MonoBehaviour
         flashingImage.SetActive(false);
     }
 
-    private void Update()
-    {
-        CheckFinishAndLoadNextLevel();
-    }
+    private void Update() => CheckFinishAndLoadNextLevel();
 
-    public void OnRestartLevel()
-    {
-        LoadLastLevel();
-    }
+    public void OnRestartLevel() => LoadLastLevel();
 
     private void OnRestoreSnapshot()
     {
@@ -86,10 +69,10 @@ public class SceneManager : MonoBehaviour
     {
         flashingImage.SetActive(true);
         var flashCoroutine = StartCoroutine(FlashImage());
-        
+
         PauseAllSounds();
-        
-        SoundFXManager.instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
+
+        SoundFXManager.Instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
         yield return StartCoroutine(BlurEffect(true));
 
         foreach (var objSnap in snapshot)
@@ -99,14 +82,13 @@ public class SceneManager : MonoBehaviour
         playerScript.OnDropLadder();
 
         playerInput.actions.FindActionMap("BasicInput").Enable();
-        sceneInput.ActivateInput();
 
         yield return StartCoroutine(BlurEffect(false));
-        
-        ResumeAllSounds();
 
+        ResumeAllSounds();
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
+        sceneInput.ActivateInput();
     }
 
     private void PauseAllSounds()
@@ -156,20 +138,11 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    public static void SaveLevelNumber(int levelNumber)
-    {
-        PlayerPrefs.SetInt("currentLevel", levelNumber);
-    }
+    public static void SaveLevelNumber(int levelNumber) => PlayerPrefs.SetInt("currentLevel", levelNumber);
 
-    private static int GetCurrentSceneNumber(string sceneName)
-    {
-        return int.Parse(sceneName.Split("Level")[1]);
-    }
+    private static int GetCurrentSceneNumber(string sceneName) => int.Parse(sceneName.Split("Level")[1]);
 
-    private static string GetCurrentSceneName()
-    {
-        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-    }
+    private static string GetCurrentSceneName() => UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
     private void CheckFinishAndLoadNextLevel()
     {

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PipeUtils
+public static class PipeUtils
 {
     public static Transform GetPipeRoot(Transform obj)
     {
@@ -10,6 +10,7 @@ public class PipeUtils
             if (obj is null) throw new FormatException("Not a pipe");
             obj = obj.parent;
         }
+
         return obj;
     }
 }

@@ -1,24 +1,21 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Player Run Data")] //Create a new playerData object by right clicking in the Project Menu then Create/Player/Player Data and drag onto the player
+[CreateAssetMenu(menuName = "Player Run Data")]
 public class PlayerRunData : ScriptableObject
 {
-    [Header("Run")]
-    public float runMaxSpeed; // Target speed we want the player to reach.
+    [Header("Run")] public float runMaxSpeed;
 
     public float animationSpeed;
     public float frictionAmount;
-    public float acceleration; // The actual force (multiplied with speedDiff) applied to the player.
-    public float decceleration; //Actual force (multiplied with speedDiff) applied to the player .
-    
-    [Space(10)]
-    public float airAccelerationRation; //Multipliers applied to acceleration rate when airborne.
+    public float acceleration;
+    public float decceleration;
+
+    [Space(10)] public float airAccelerationRation;
     public float airDeccelerationRation;
     [HideInInspector] public float airAcceleration;
     [HideInInspector] public float airDecceleration;
 
-    [Header("Jump")] 
-    public float jumpForce;
+    [Header("Jump")] public float jumpForce;
     public float coyoteTime;
     public float bufferTime;
     public float jumpCutMultiplier;

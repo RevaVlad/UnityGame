@@ -77,13 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e058c12b6fe514a870eac2b4af85e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 482643206e9b599498ad5e1e3810112f, type: 2}
+  data: {fileID: 11400000, guid: 482643206e9b599498ad5e1e3810112f, type: 2}
   timePassedSinceOnGround: 0
   timePassedSinceJump: 0
   isGrounded: 0
   sizeY: 0
   sizeX: 0
-  isPlayerOnLadder: 0
   jumpSound:
   - {fileID: 8300000, guid: ff34bdd23eb5cbd44aa2fb779ce5c805, type: 3}
   - {fileID: 8300000, guid: 1f95b5ce6e089a444a97241786c815cf, type: 3}
