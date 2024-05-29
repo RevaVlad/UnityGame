@@ -62,15 +62,9 @@ public class SceneManager : MonoBehaviour
         flashingImage.SetActive(false);
     }
 
-    private void Update()
-    {
-        CheckFinishAndLoadNextLevel();
-    }
+    private void Update() => CheckFinishAndLoadNextLevel();
 
-    public void OnRestartLevel()
-    {
-        LoadLastLevel();
-    }
+    public void OnRestartLevel() => LoadLastLevel();
 
     private void OnRestoreSnapshot()
     {
@@ -86,9 +80,9 @@ public class SceneManager : MonoBehaviour
     {
         flashingImage.SetActive(true);
         var flashCoroutine = StartCoroutine(FlashImage());
-        
+
         PauseAllSounds();
-        
+
         SoundFXManager.instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
         yield return StartCoroutine(BlurEffect(true));
 
@@ -101,12 +95,10 @@ public class SceneManager : MonoBehaviour
         playerInput.actions.FindActionMap("BasicInput").Enable();
 
         yield return StartCoroutine(BlurEffect(false));
-        
-        ResumeAllSounds();
 
+        ResumeAllSounds();
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
-        
         sceneInput.ActivateInput();
     }
 
@@ -157,20 +149,11 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    public static void SaveLevelNumber(int levelNumber)
-    {
-        PlayerPrefs.SetInt("currentLevel", levelNumber);
-    }
+    public static void SaveLevelNumber(int levelNumber) => PlayerPrefs.SetInt("currentLevel", levelNumber);
 
-    private static int GetCurrentSceneNumber(string sceneName)
-    {
-        return int.Parse(sceneName.Split("Level")[1]);
-    }
+    private static int GetCurrentSceneNumber(string sceneName) => int.Parse(sceneName.Split("Level")[1]);
 
-    private static string GetCurrentSceneName()
-    {
-        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-    }
+    private static string GetCurrentSceneName() => UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
     private void CheckFinishAndLoadNextLevel()
     {
