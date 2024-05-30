@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="SceneManager.cs style fix" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="SoundMixerManager.cs style fix">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/trainLevelAssets/Keyboard Black (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/trainLevelAssets/Keyboard Black (2).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Control.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Control.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI control.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI control.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +43,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/212694b2570944cdacf7aae5a98a556920a00/d7/dc94d149/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/ff/ce45c758/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a8e6a1dbefe4d238877afbceaa951631744c0/42/360cda47/VisualElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,6 +83,7 @@
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PlayerRunData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/SoundMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -226,15 +236,8 @@
       <workItem from="1716736287517" duration="11593000" />
       <workItem from="1716819384684" duration="3625000" />
       <workItem from="1716955775418" duration="711000" />
-      <workItem from="1717008872076" duration="6767000" />
-    </task>
-    <task id="LOCAL-00023" summary="bug fix">
-      <option name="closed" value="true" />
-      <created>1716123000055</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1716123000055</updated>
+      <workItem from="1717008872076" duration="8418000" />
+      <workItem from="1717070099221" duration="411000" />
     </task>
     <task id="LOCAL-00024" summary="bug fix">
       <option name="closed" value="true" />
@@ -620,7 +623,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717015544355</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="SoundMixerManager.cs style fix">
+      <option name="closed" value="true" />
+      <created>1717015751303</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1717015751303</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +684,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="back to main menu button added" />
     <MESSAGE value="active buttons added" />
     <MESSAGE value="starting to add main menu logic" />
     <MESSAGE value="some additions" />
@@ -698,6 +708,7 @@
     <MESSAGE value="PipeUtils.cs style fix" />
     <MESSAGE value="PlayerRunData.cs style fix" />
     <MESSAGE value="SceneManager.cs style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="SceneManager.cs style fix" />
+    <MESSAGE value="SoundMixerManager.cs style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="SoundMixerManager.cs style fix" />
   </component>
 </project>
