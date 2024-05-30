@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="SoundMixerManager.cs style fix">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/trainLevelAssets/Keyboard Black (2).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/trainLevelAssets/Keyboard Black (2).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Control.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Control.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.inputactions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI control.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI control.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="UIControl.cs style fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="PlayerFixes" />
+        <entry key="$PROJECT_DIR$" value="Pipes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,40 +46,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9f/57c03411/WaitForEndOfFrame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ab/2766bc6f/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d6/76e600dd/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/MainMenuManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PauseManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PipeUtils.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/PlayerRunData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/SoundMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/GameObjects/trainLevelAssets/Keyboard Black (2).png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.11/Editor/Drawing/MaterialGraphEditWindow.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -105,29 +66,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Pipes&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\grigo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\grigo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\grigo\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\grigo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\grigo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\grigo\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
@@ -237,15 +198,7 @@
       <workItem from="1716819384684" duration="3625000" />
       <workItem from="1716955775418" duration="711000" />
       <workItem from="1717008872076" duration="8418000" />
-      <workItem from="1717070099221" duration="411000" />
-    </task>
-    <task id="LOCAL-00024" summary="bug fix">
-      <option name="closed" value="true" />
-      <created>1716123021087</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1716123021087</updated>
+      <workItem from="1717070099221" duration="1031000" />
     </task>
     <task id="LOCAL-00025" summary="Player no longer appears in air">
       <option name="closed" value="true" />
@@ -631,7 +584,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717015751303</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="UIControl.cs style fix">
+      <option name="closed" value="true" />
+      <created>1717070553801</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1717070553801</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,7 +645,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="active buttons added" />
     <MESSAGE value="starting to add main menu logic" />
     <MESSAGE value="some additions" />
     <MESSAGE value="continue creating main menu" />
@@ -709,6 +669,7 @@
     <MESSAGE value="PlayerRunData.cs style fix" />
     <MESSAGE value="SceneManager.cs style fix" />
     <MESSAGE value="SoundMixerManager.cs style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="SoundMixerManager.cs style fix" />
+    <MESSAGE value="UIControl.cs style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="UIControl.cs style fix" />
   </component>
 </project>
