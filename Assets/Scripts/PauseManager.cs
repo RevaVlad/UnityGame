@@ -6,11 +6,9 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject settingsMenuCanvas;
-    [SerializeField] private GameObject settingsVolumeCanvas;
 
     [SerializeField] private GameObject mainMenuFirst;
     [SerializeField] private GameObject settingsMenuFirst;
-    [SerializeField] private GameObject settingsVolumeFirst;
 
     private PlayerInput playerInput;
     private PlayerInput sceneInput;
@@ -26,7 +24,7 @@ public class PauseManager : MonoBehaviour
         uiInput = GetComponentInChildren<InputSystemUIInputModule>();
         uiInput.actionsAsset.Disable();
 
-        MenusController.CloseAllMenus(mainMenuCanvas, settingsMenuCanvas, settingsVolumeCanvas);
+        MenusController.CloseAllMenus(mainMenuCanvas, settingsMenuCanvas);
     }
 
     private void Update()
@@ -66,11 +64,14 @@ public class PauseManager : MonoBehaviour
         }
 
         uiInput.actionsAsset.Disable();
-        MenusController.CloseAllMenus(mainMenuCanvas, settingsMenuCanvas, settingsVolumeCanvas);
+        MenusController.CloseAllMenus(mainMenuCanvas, settingsMenuCanvas);
     }
 
     public void OnSettingsPress() =>
         MenusController.SwitchMenu(mainMenuCanvas, settingsMenuCanvas, settingsMenuFirst);
+
+    public void OnSettingsBackPress() =>
+        MenusController.SwitchMenu(settingsMenuCanvas, mainMenuCanvas, mainMenuFirst);
 
     public void OnResumePress() => UnPause();
 
@@ -81,12 +82,4 @@ public class PauseManager : MonoBehaviour
     }
 
     public void OnExitPress() => UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
-
-    public void OnSettingsBackPress() => MenusController.SwitchMenu(settingsMenuCanvas, mainMenuCanvas, mainMenuFirst);
-
-    public void OnSettingsGoToVolumePress() =>
-        MenusController.SwitchMenu(settingsMenuCanvas, settingsVolumeCanvas, settingsVolumeFirst);
-
-    public void OnVolumeMenuBackPress() =>
-        MenusController.SwitchMenu(settingsVolumeCanvas, settingsMenuCanvas, settingsMenuFirst);
 }
