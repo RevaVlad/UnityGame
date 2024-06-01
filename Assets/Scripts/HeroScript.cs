@@ -211,23 +211,18 @@ public class HeroScript : MonoBehaviour
     {
         if (isGrounded)
             heldLadder.MoveRight();
-        if (faceRight)
-        {
-            transform.localScale *= new Vector2(-1, 1);
-            faceRight = !faceRight;
-        }
-        
+        if (!faceRight) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
     }
 
     private void OnMoveLeftWithLadder()
     {
         if (isGrounded)
             heldLadder.MoveLeft();
-        if (!faceRight)
-        {
-            transform.localScale *= new Vector2(-1, 1);
-            faceRight = !faceRight;
-        }
+        if (faceRight) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
     }
 
     private void OnTravelThroughPipe()
@@ -235,13 +230,11 @@ public class HeroScript : MonoBehaviour
         var enter = heldLadder.transform.Find(Utils.PipeEnterPointName);
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
-        if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
-        {
-            SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
-            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
-            transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
-            OnDropLadder();
-        }
+        if (!(distance.magnitude < .2) || heldLadder.MoveDirection != 0 || !heldLadder.CheckIfExitAvailable()) return;
+        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
+        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
+        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - sizeY / 2 * Vector3.up;
+        OnDropLadder();
     }
 
     private bool TryGetLadder(out LadderScript ladder)
