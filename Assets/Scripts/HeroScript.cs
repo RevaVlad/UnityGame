@@ -1,6 +1,5 @@
 using System.Collections;
 using Cinemachine;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -40,7 +39,7 @@ public class HeroScript : MonoBehaviour
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
     private static readonly int IsWithPipe = Animator.StringToHash("isWithPipe");
     private static readonly int GoThrowPipe = Animator.StringToHash("goThrowPipes");
-    private SpriteRenderer _spriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
     private void SwapInputMap()
     {
@@ -64,7 +63,7 @@ public class HeroScript : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindActionMap("BasicInput").Enable();
         playerInput.actions.FindActionMap("LadderInput").Disable();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         var bounds = GetComponent<CapsuleCollider2D>().bounds;
         (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
@@ -242,22 +241,26 @@ public class HeroScript : MonoBehaviour
     {
         playerInput.actions.FindActionMap("LadderInput").Disable();
         anim.SetBool(GoThrowPipe, true);
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName("goIntoPipe") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-        
+        yield return new WaitUntil(() =>
+            anim.GetCurrentAnimatorStateInfo(0).IsName("goIntoPipe") &&
+            anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
+
         SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
         shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         anim.SetBool(GoThrowPipe, false);
         transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
         OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Disable();
-        yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerGoOut") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-        
+        yield return new WaitUntil(() =>
+            anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerGoOut") &&
+            anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
+
         playerInput.actions.FindActionMap("BasicInput").Enable();
     }
 
     private void SwitchTransparency()
     {
-        _spriteRenderer.enabled = _spriteRenderer.enabled != true;
+        spriteRenderer.enabled = spriteRenderer.enabled != true;
     }
 
     private bool TryGetLadder(out LadderScript ladder)
