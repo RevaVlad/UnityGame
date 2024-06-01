@@ -18,7 +18,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnNewGame()
     {
-        SceneManager.SaveLevelNumber(1);
+        SceneManager.SaveLevelNumber(0);
         OnContinueGame();
     }
 
