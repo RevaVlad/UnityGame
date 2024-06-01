@@ -242,8 +242,6 @@ public class HeroScript : MonoBehaviour
             transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
             OnDropLadder();
         }
-
-        anim.Play("PlayerGoOut");
     }
 
     private bool TryGetLadder(out LadderScript ladder)
