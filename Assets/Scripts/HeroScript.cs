@@ -216,8 +216,7 @@ public class HeroScript : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
-
-        anim.Play("PlayerRun");
+        
     }
 
     private void OnMoveLeftWithLadder()
@@ -229,8 +228,6 @@ public class HeroScript : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
-
-        anim.Play("PlayerRun");
     }
 
     private void OnTravelThroughPipe()
@@ -238,10 +235,10 @@ public class HeroScript : MonoBehaviour
         var enter = heldLadder.transform.Find(Utils.PipeEnterPointName);
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
-        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
-        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
+            SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
+            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
             transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
             OnDropLadder();
         }
