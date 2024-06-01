@@ -137,7 +137,7 @@ public class HeroScript : MonoBehaviour
         var speedDif = targetSpeed - rb.velocity.x;
 
         var currentAcceleration = !isGrounded
-            ? direction.x != 0 ? data.airAcceleration : data.airDecceleration
+            ? direction.x != 0 ? data.AirAcceleration : data.AirDecceleration
             : direction.x != 0
                 ? data.acceleration
                 : data.decceleration;
