@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="new animations added">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="some fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/goIntoPipe.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/goIntoPipe.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerGoOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerGoOut.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerPipeGo.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerPipeGo.anim.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,14 +217,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00028" summary="objectSnapshot class added">
-      <option name="closed" value="true" />
-      <created>1716223331316</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1716223331316</updated>
     </task>
     <task id="LOCAL-00029" summary="methods for snapshots ready">
       <option name="closed" value="true" />
@@ -612,7 +602,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717259523075</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="some fixes">
+      <option name="closed" value="true" />
+      <created>1717259602707</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1717259602707</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +663,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main menu main logic finished" />
     <MESSAGE value="small fix" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="level 2 fixes" />
@@ -690,6 +687,7 @@
     <MESSAGE value="style fix" />
     <MESSAGE value="some fixes after merge" />
     <MESSAGE value="new animations added" />
-    <option name="LAST_COMMIT_MESSAGE" value="new animations added" />
+    <MESSAGE value="some fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes" />
   </component>
 </project>
