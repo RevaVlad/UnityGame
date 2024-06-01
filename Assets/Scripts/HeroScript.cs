@@ -243,7 +243,7 @@ public class HeroScript : MonoBehaviour
             OnDropLadder();
         }
 
-        anim.Play("PlayerPipeGo");
+        anim.Play("PlayerGoOut");
     }
 
     private bool TryGetLadder(out LadderScript ladder)
