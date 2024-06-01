@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Some style fixes">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PipeUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs.meta" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="SoundMixerManager.cs style fix">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_15_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_15_19__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +115,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -135,7 +131,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -230,6 +226,14 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
+    </task>
+    <task id="LOCAL-00024" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1716123021087</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716123021087</updated>
     </task>
     <task id="LOCAL-00025" summary="Player no longer appears in air">
       <option name="closed" value="true" />
@@ -615,15 +619,7 @@
       <option name="project" value="LOCAL" />
       <updated>1717015751303</updated>
     </task>
-    <task id="LOCAL-00073" summary="Some style fixes">
-      <option name="closed" value="true" />
-      <created>1717249357577</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1717249357577</updated>
-    </task>
-    <option name="localTasksCounter" value="74" />
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,7 +696,7 @@
     <MESSAGE value="PlayerRunData.cs style fix" />
     <MESSAGE value="SceneManager.cs style fix" />
     <MESSAGE value="SoundMixerManager.cs style fix" />
-    <MESSAGE value="Some style fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some style fixes" />
+    <MESSAGE value="New sprites" />
+    <option name="LAST_COMMIT_MESSAGE" value="New sprites" />
   </component>
 </project>
