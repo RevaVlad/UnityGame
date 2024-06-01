@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="simple animations changes">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerJump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerJump.anim" afterDir="false" />
-    </list>
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="take and drop ladder anims" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -213,15 +208,7 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-      <workItem from="1717240613214" duration="4614000" />
-    </task>
-    <task id="LOCAL-00026" summary="Bug fix, new pipe variants">
-      <option name="closed" value="true" />
-      <created>1716203791400</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1716203791400</updated>
+      <workItem from="1717240613214" duration="5379000" />
     </task>
     <task id="LOCAL-00027" summary="Quick fix">
       <option name="closed" value="true" />
@@ -607,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717252112583</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="take and drop ladder anims">
+      <option name="closed" value="true" />
+      <created>1717256431871</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1717256431871</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +665,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some additions" />
     <MESSAGE value="continue creating main menu" />
     <MESSAGE value="main menu main logic finished" />
     <MESSAGE value="small fix" />
@@ -695,6 +689,7 @@
     <MESSAGE value="SoundMixerManager.cs style fix" />
     <MESSAGE value="anim throw pypes changes" />
     <MESSAGE value="simple animations changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple animations changes" />
+    <MESSAGE value="take and drop ladder anims" />
+    <option name="LAST_COMMIT_MESSAGE" value="take and drop ladder anims" />
   </component>
 </project>
