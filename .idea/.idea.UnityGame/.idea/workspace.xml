@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="anim throw pypes changes">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="simple animations changes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/trainLevelAssets/player.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/trainLevelAssets/player.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerJump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerJump.anim" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -205,15 +213,7 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-      <workItem from="1717240613214" duration="915000" />
-    </task>
-    <task id="LOCAL-00025" summary="Player no longer appears in air">
-      <option name="closed" value="true" />
-      <created>1716123332055</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1716123332055</updated>
+      <workItem from="1717240613214" duration="4614000" />
     </task>
     <task id="LOCAL-00026" summary="Bug fix, new pipe variants">
       <option name="closed" value="true" />
@@ -599,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717240904289</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="simple animations changes">
+      <option name="closed" value="true" />
+      <created>1717252112583</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1717252112583</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +670,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="starting to add main menu logic" />
     <MESSAGE value="some additions" />
     <MESSAGE value="continue creating main menu" />
     <MESSAGE value="main menu main logic finished" />
@@ -687,6 +694,7 @@
     <MESSAGE value="SceneManager.cs style fix" />
     <MESSAGE value="SoundMixerManager.cs style fix" />
     <MESSAGE value="anim throw pypes changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="anim throw pypes changes" />
+    <MESSAGE value="simple animations changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple animations changes" />
   </component>
 </project>
