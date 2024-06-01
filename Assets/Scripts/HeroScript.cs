@@ -235,15 +235,14 @@ public class HeroScript : MonoBehaviour
         var enter = heldLadder.transform.Find("EnterPoint");
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
-        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
-        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
+            SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
+            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
+            anim.Play("PlayerPipeGo");
             transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;
             OnDropLadder();
         }
-
-        anim.Play("PlayerPipeGo");
     }
 
     private bool TryGetLadder(out LadderScript ladder)
