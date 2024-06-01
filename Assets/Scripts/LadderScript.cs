@@ -78,6 +78,15 @@ public class LadderScript : MonoBehaviour
         MoveNearbyObjects(right);
         MoveConnected(right);
 
+        yield return MoveLaddersHorizontalCoroutine();
+
+        rb.velocity = Vector2.zero;
+        MoveDirection = 0;
+        moveCoroutine = null;
+    }
+
+    private IEnumerator MoveLaddersHorizontalCoroutine()
+    {
         var gameObjectTransform = transform;
         var position = gameObjectTransform.position;
         var target = position + new Vector3(MoveDirection, 0, 0);
@@ -92,11 +101,8 @@ public class LadderScript : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        rb.velocity = Vector2.zero;
-        MoveDirection = 0;
         transform.position = target;
         rb.MovePosition(target);
-        moveCoroutine = null;
     }
 
     private void MoveConnected(bool right)
