@@ -56,8 +56,8 @@ public class LadderScript : MonoBehaviour
     {
         var laddersOnDirection =
             (right ? GetRightCollidingObjects() : GetLeftCollidingObjects())
-            .Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
-            .Select(obj => PipeUtils.GetPipeRoot(obj.transform));
+            .Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            .Select(obj => Utils.GetPipeRoot(obj.transform));
 
         foreach (var ladder in laddersOnDirection)
         {
@@ -78,6 +78,15 @@ public class LadderScript : MonoBehaviour
         MoveNearbyObjects(right);
         MoveConnected(right);
 
+        yield return MoveLaddersHorizontalCoroutine();
+
+        rb.velocity = Vector2.zero;
+        MoveDirection = 0;
+        moveCoroutine = null;
+    }
+
+    private IEnumerator MoveLaddersHorizontalCoroutine()
+    {
         var gameObjectTransform = transform;
         var position = gameObjectTransform.position;
         var target = position + new Vector3(MoveDirection, 0, 0);
@@ -92,11 +101,8 @@ public class LadderScript : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        rb.velocity = Vector2.zero;
-        MoveDirection = 0;
         transform.position = target;
         rb.MovePosition(target);
-        moveCoroutine = null;
     }
 
     private void MoveConnected(bool right)
@@ -117,18 +123,19 @@ public class LadderScript : MonoBehaviour
         var objectsAtDirection =
             right ? GetRightCollidingObjects() : GetLeftCollidingObjects();
 
-        if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
+        if (objectsAtDirection.Any(obj =>
+                obj.layer == LayerMask.NameToLayer(Utils.PlatformsLayerName) && !obj.CompareTag("Hidden")))
             return false;
 
-        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
-            .Select(obj => PipeUtils.GetPipeRoot(obj.transform)).All(ladder =>
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            .Select(obj => Utils.GetPipeRoot(obj.transform)).All(ladder =>
                 ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
 
     public bool CheckIfExitAvailable()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.Find("ExitPoint").transform.position, 0.1f,
-            LayerMask.GetMask("Platforms"));
+        var collider = Physics2D.OverlapCircleAll(transform.Find(Utils.PipeExitPointName).transform.position, 0.1f,
+            LayerMask.GetMask(Utils.PlatformsLayerName));
         return collider.Length == 0;
     }
 

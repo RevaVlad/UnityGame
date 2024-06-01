@@ -138,7 +138,7 @@ public class HeroScript : MonoBehaviour
         var speedDif = targetSpeed - rb.velocity.x;
 
         var currentAcceleration = !isGrounded
-            ? direction.x != 0 ? data.airAcceleration : data.airDecceleration
+            ? direction.x != 0 ? data.AirAcceleration : data.AirDecceleration
             : direction.x != 0
                 ? data.acceleration
                 : data.decceleration;
@@ -165,7 +165,7 @@ public class HeroScript : MonoBehaviour
     private void CheckGround()
     {
         var size = Physics2D.OverlapCircleNonAlloc(transform.position - Vector3.up * sizeY / 2, sizeX * .3f, results,
-            LayerMask.GetMask("Platforms", "Ladders"));
+            LayerMask.GetMask(Utils.PlatformsLayerName, Utils.LaddersLayerName));
         isGrounded = size > 0;
         if (isGrounded)
         {
@@ -216,6 +216,8 @@ public class HeroScript : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
+
+        anim.Play("PlayerRun");
     }
 
     private void OnMoveLeftWithLadder()
@@ -227,21 +229,24 @@ public class HeroScript : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
+
+        anim.Play("PlayerRun");
     }
 
     private void OnTravelThroughPipe()
     {
-        var enter = heldLadder.transform.Find("EnterPoint");
+        var enter = heldLadder.transform.Find(Utils.PipeEnterPointName);
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
+        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
+        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
-            SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
-            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
-            anim.Play("PlayerPipeGo");
-            transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;
+            transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
             OnDropLadder();
         }
+
+        anim.Play("PlayerPipeGo");
     }
 
     private bool TryGetLadder(out LadderScript ladder)
@@ -249,9 +254,9 @@ public class HeroScript : MonoBehaviour
         ladder = null;
         var position = transform.position;
         var collidedObj = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y),
-            0.01f, LayerMask.GetMask("Ladders"));
+            0.01f, LayerMask.GetMask(Utils.LaddersLayerName));
         if (collidedObj.Length == 0) return false;
-        ladder = PipeUtils.GetPipeRoot(collidedObj[0].transform).GetComponent<LadderScript>();
+        ladder = Utils.GetPipeRoot(collidedObj[0].transform).GetComponent<LadderScript>();
         return true;
     }
 

@@ -49,7 +49,7 @@ MonoBehaviour:
   layersToProcess:
   - Ladders
   - Platforms
-  collidingObjects: []
+  <CollidingObjects>k__BackingField: []
 --- !u!114 &8654290872305289822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491619187d4cb95439df2d3221849f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentlyStopping: 0
+  <CurrentlyStopping>k__BackingField: 0
 --- !u!68 &8918141352456392718
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 6130195368674252111, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 757943324, guid: 42a35dd8a592b9140b6ffdd7f60bbb73, type: 3}
+      objectReference: {fileID: 833437438, guid: 2df28ccc101e29f44bc58a4d5f1b8f6e, type: 3}
     - target: {fileID: 7176567490306479117, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3483744

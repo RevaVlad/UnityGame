@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layersToProcess: []
-  collidingObjects: []
+  <CollidingObjects>k__BackingField: []
 --- !u!114 &248162035634740527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491619187d4cb95439df2d3221849f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentlyStopping: 0
+  <CurrentlyStopping>k__BackingField: 0
 --- !u!68 &4915645053113660365
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -144,7 +144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391835960500620345, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391835960500620345, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391835960500620345, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4874173863687993739, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_Enabled
@@ -157,18 +165,18 @@ PrefabInstance:
     - target: {fileID: 6130195368674252111, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 898089217, guid: 42a35dd8a592b9140b6ffdd7f60bbb73, type: 3}
+      objectReference: {fileID: -582089871, guid: 2df28ccc101e29f44bc58a4d5f1b8f6e, type: 3}
     - target: {fileID: 7176567490306479117, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.34837407
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7176567490306479117, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.042700797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7176567490306479117, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0871
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7176567490306479117, guid: 0168617e2bbe4ba44ae49b6ee84a73de, type: 3}
       propertyPath: m_LocalRotation.w
