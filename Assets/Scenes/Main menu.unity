@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1179,12 +1178,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &677816639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 837786975745839796, guid: 3425d5da8f8e7ec4c93bf56a72ad64b0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 44b561e842adcbc47bb56cf6a0c9c97a, type: 3}
     - target: {fileID: 3334845276795014116, guid: 3425d5da8f8e7ec4c93bf56a72ad64b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7362984
@@ -3853,6 +3856,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 279367276091354557, guid: 47aec839cf5dbc74198c036bad822593, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655680026710083014, guid: 47aec839cf5dbc74198c036bad822593, type: 3}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5775907308243667911, guid: 47aec839cf5dbc74198c036bad822593, type: 3}

@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="new animations added">
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player 1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/goIntoPipe.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/goIntoPipe.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerGoOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerGoOut.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerPipeGo.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerPipeGo.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SceneManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/SceneManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundFXObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/SoundFXObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundMenuPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/SoundMenuPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/PipeSound.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/PipeSound.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/Pixel%20Dreamscape.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/Pixel%20Dreamscape.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/jump2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/jump2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/jump3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/jump3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/jumpSound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/jumpSound.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/menuSelection.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundsAndMusic/menuSelection.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/pipes_travel_sound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/pipes_travel_sound.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/rollback.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundsAndMusic/rollback.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/wallTiles.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Source/wallTiles.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +107,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "sprites-and-anims-aditing",
+    "git-widget-placeholder": "Pipes",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,7 +126,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -124,7 +142,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />

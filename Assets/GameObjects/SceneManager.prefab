@@ -130,11 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a987e19ca3a6cc340abc2dd389e0dab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   totalLevelCount: 6
-  flashingImage: {fileID: 5097956182568105055}
   rollbackSound:
-  - {fileID: 8300000, guid: 875f3524aee60124abd0a35172328545, type: 3}
+  - {fileID: 8300000, guid: 002233361cdefe841a11cbcf67a87ee9, type: 3}
 --- !u!114 &5588399708600349659
 MonoBehaviour:
   m_ObjectHideFlags: 0
