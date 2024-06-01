@@ -12,7 +12,7 @@ public class FallingProcessingScript : MonoBehaviour
         getObjectsScript.AddedObject.AddListener(OnAddingObject);
         getObjectsScript.DeletedObject.AddListener(OnDeletingObject);
 
-        parentScript = PipeUtils.GetPipeRoot(transform).GetComponent<LadderScript>();
+        parentScript = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
     }
 
     private void OnAddingObject(int newCount)
