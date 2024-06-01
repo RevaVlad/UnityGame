@@ -9,13 +9,23 @@ public class FallingProcessingScript : MonoBehaviour
     {
         var getObjectsScript = GetComponent<GetNearbyObjectsScript>();
 
-        getObjectsScript.AnyCollisionStarted.AddListener(OnAddingObject);
-        getObjectsScript.NoCollisions.AddListener(OnDeletingObject);
+        getObjectsScript.EnterCollider.AddListener(OnAddingObject);
+        getObjectsScript.ExitCollider.AddListener(OnDeletingObject);
 
         parentScript = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
     }
 
-    private void OnAddingObject() => parentScript.StopFall();
+    private void OnAddingObject()
+    {
+        CurrentlyStopping++;
+        if (CurrentlyStopping == 1)
+            parentScript.StopFall();  
+    }
 
-    private void OnDeletingObject() => parentScript.TryStartFall();
+    private void OnDeletingObject()
+    {
+        CurrentlyStopping--;
+        if (CurrentlyStopping == 0)
+            parentScript.TryStartFall();  
+    } 
 }
