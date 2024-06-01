@@ -3,6 +3,8 @@ using UnityEngine;
 
 public static class PipeUtils
 {
+    public const string LaddersLayerName = "Ladders";
+
     public static Transform GetPipeRoot(Transform obj)
     {
         while (!obj.CompareTag("PipeRoot"))

@@ -56,7 +56,7 @@ public class LadderScript : MonoBehaviour
     {
         var laddersOnDirection =
             (right ? GetRightCollidingObjects() : GetLeftCollidingObjects())
-            .Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
+            .Where(obj => obj.layer == LayerMask.NameToLayer(PipeUtils.LaddersLayerName))
             .Select(obj => PipeUtils.GetPipeRoot(obj.transform));
 
         foreach (var ladder in laddersOnDirection)
@@ -120,7 +120,7 @@ public class LadderScript : MonoBehaviour
         if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
             return false;
 
-        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(PipeUtils.LaddersLayerName))
             .Select(obj => PipeUtils.GetPipeRoot(obj.transform)).All(ladder =>
                 ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
