@@ -37,6 +37,7 @@ public class HeroScript : MonoBehaviour
     [SerializeField] private GameObject shakeManager;
     private static readonly int MoveX = Animator.StringToHash("moveX");
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
+    private static readonly int IsWithPipe = Animator.StringToHash("isWithPipe");
 
     private void SwapInputMap()
     {
@@ -187,6 +188,7 @@ public class HeroScript : MonoBehaviour
         heldLadder = ladder;
         rb.simulated = false;
         moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f)));
+        anim.SetBool(IsWithPipe, true);
         SwapInputMap();
     }
 
@@ -201,6 +203,7 @@ public class HeroScript : MonoBehaviour
         rb.simulated = true;
         if (moveToLadderCenter == null) return;
         StopCoroutine(moveToLadderCenter);
+        anim.SetBool(IsWithPipe, false);
         moveToLadderCenter = null;
     }
 
@@ -213,8 +216,7 @@ public class HeroScript : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
-
-        anim.Play("PlayerRun");
+        
     }
 
     private void OnMoveLeftWithLadder()
@@ -226,8 +228,6 @@ public class HeroScript : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
-
-        anim.Play("PlayerRun");
     }
 
     private void OnTravelThroughPipe()
@@ -235,15 +235,13 @@ public class HeroScript : MonoBehaviour
         var enter = heldLadder.transform.Find(Utils.PipeEnterPointName);
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
-        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
-        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
         {
+            SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
+            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
             transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
             OnDropLadder();
         }
-
-        anim.Play("PlayerPipeGo");
     }
 
     private bool TryGetLadder(out LadderScript ladder)
