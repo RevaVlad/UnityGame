@@ -56,8 +56,8 @@ public class LadderScript : MonoBehaviour
     {
         var laddersOnDirection =
             (right ? GetRightCollidingObjects() : GetLeftCollidingObjects())
-            .Where(obj => obj.layer == LayerMask.NameToLayer(PipeUtils.LaddersLayerName))
-            .Select(obj => PipeUtils.GetPipeRoot(obj.transform));
+            .Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            .Select(obj => Utils.GetPipeRoot(obj.transform));
 
         foreach (var ladder in laddersOnDirection)
         {
@@ -117,18 +117,19 @@ public class LadderScript : MonoBehaviour
         var objectsAtDirection =
             right ? GetRightCollidingObjects() : GetLeftCollidingObjects();
 
-        if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
+        if (objectsAtDirection.Any(obj =>
+                obj.layer == LayerMask.NameToLayer(Utils.PlatformsLayerName) && !obj.CompareTag("Hidden")))
             return false;
 
-        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(PipeUtils.LaddersLayerName))
-            .Select(obj => PipeUtils.GetPipeRoot(obj.transform)).All(ladder =>
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            .Select(obj => Utils.GetPipeRoot(obj.transform)).All(ladder =>
                 ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
     }
 
     public bool CheckIfExitAvailable()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.Find("ExitPoint").transform.position, 0.1f,
-            LayerMask.GetMask("Platforms"));
+        var collider = Physics2D.OverlapCircleAll(transform.Find(Utils.PipeExitPointName).transform.position, 0.1f,
+            LayerMask.GetMask(Utils.PlatformsLayerName));
         return collider.Length == 0;
     }
 

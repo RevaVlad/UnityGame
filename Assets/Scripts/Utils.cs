@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
 
-public static class PipeUtils
+public static class Utils
 {
     public const string LaddersLayerName = "Ladders";
+    public const string PlatformsLayerName = "Platforms";
+    public const string PipeEnterPointName = "EnterPoint";
+    public const string PipeExitPointName = "ExitPoint";
 
     public static Transform GetPipeRoot(Transform obj)
     {
