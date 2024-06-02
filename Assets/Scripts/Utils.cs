@@ -5,8 +5,10 @@ public static class Utils
 {
     public const string LaddersLayerName = "Ladders";
     public const string PlatformsLayerName = "Platforms";
+    public const string PlayerLayerName = "Player";
     public const string PipeEnterPointName = "EnterPoint";
     public const string PipeExitPointName = "ExitPoint";
+    public const string PipeTileForConnection = "EnterUp";
 
     public static Transform GetPipeRoot(Transform obj)
     {

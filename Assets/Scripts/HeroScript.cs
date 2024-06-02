@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -212,7 +213,7 @@ public class HeroScript : MonoBehaviour
 
     private void OnMoveRightWithLadder()
     {
-        if (isGrounded)
+        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
             heldLadder.MoveRight();
         if (!faceRight) return;
         transform.localScale *= new Vector2(-1, 1);
@@ -221,7 +222,7 @@ public class HeroScript : MonoBehaviour
 
     private void OnMoveLeftWithLadder()
     {
-        if (isGrounded)
+        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
             heldLadder.MoveLeft();
         if (faceRight) return;
         transform.localScale *= new Vector2(-1, 1);
