@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="training level fixes" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="exits added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +35,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/UnityGame/Assets/GameObjects/PlayerAssets/goIntoPipe.anim" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/prefabs/Finish.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
@@ -214,14 +215,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00041" summary="fix">
-      <option name="closed" value="true" />
-      <created>1716716047859</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1716716047859</updated>
     </task>
     <task id="LOCAL-00042" summary="bug fix">
       <option name="closed" value="true" />
@@ -607,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717352695676</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="exits added">
+      <option name="closed" value="true" />
+      <created>1717353679084</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1717353679084</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +672,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FallingProcessingScript.cs style fix" />
     <MESSAGE value="GetNearbyObjectsScript.cs style fix" />
     <MESSAGE value="HeroScript.cs style fix" />
     <MESSAGE value="LadderScript.cs style fix" />
@@ -696,6 +696,7 @@
     <MESSAGE value="chake changes nah" />
     <MESSAGE value="animations fixes" />
     <MESSAGE value="training level fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="training level fixes" />
+    <MESSAGE value="exits added" />
+    <option name="LAST_COMMIT_MESSAGE" value="exits added" />
   </component>
 </project>
