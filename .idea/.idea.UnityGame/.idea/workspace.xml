@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="exits added" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="some fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/waterMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/waterMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/prefabs/river pref.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/prefabs/river pref.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,14 +220,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00042" summary="bug fix">
-      <option name="closed" value="true" />
-      <created>1716716367515</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1716716367515</updated>
     </task>
     <task id="LOCAL-00043" summary="add some prefab and style fix">
       <option name="closed" value="true" />
@@ -608,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717353679084</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="some fixes">
+      <option name="closed" value="true" />
+      <created>1717354213258</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1717354213258</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GetNearbyObjectsScript.cs style fix" />
     <MESSAGE value="HeroScript.cs style fix" />
     <MESSAGE value="LadderScript.cs style fix" />
     <MESSAGE value="MainMenuManager.cs style fix" />
@@ -697,6 +701,7 @@
     <MESSAGE value="animations fixes" />
     <MESSAGE value="training level fixes" />
     <MESSAGE value="exits added" />
-    <option name="LAST_COMMIT_MESSAGE" value="exits added" />
+    <MESSAGE value="some fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes" />
   </component>
 </project>

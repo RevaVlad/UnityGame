@@ -66,8 +66,8 @@ Material:
     - _causticsPower: 8.65
     - _causticsScale: 9.47
     m_Colors:
-    - _CausticsColor: {r: 0, g: 0.92156863, b: 0.083453044, a: 0}
-    - _CausticsSpeed: {r: -0.2, g: 0.01, b: 0, a: 0}
+    - _CausticsColor: {r: 0.033212125, g: 0.4245283, b: 0, a: 0}
+    - _CausticsSpeed: {r: 0.16, g: 0.01, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

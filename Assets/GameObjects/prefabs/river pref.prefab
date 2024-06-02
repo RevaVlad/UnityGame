@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2551425416157989255}
   - component: {fileID: 2443305352034878860}
   - component: {fileID: 2418003098369982598}
+  - component: {fileID: 7745090568980142208}
+  - component: {fileID: 6550755388589062506}
   m_Layer: 0
   m_Name: Closed Sprite Shape
   m_TagString: Untagged
@@ -43,7 +45,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -72,8 +74,8 @@ SpriteShapeRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1961284623
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_MaskInteraction: 0
@@ -89,8 +91,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 3.6326156, y: 1.0418141, z: 0}
-    m_Extent: {x: 7.2791176, y: 0.29291934, z: 0}
+    m_Center: {x: 3.9966793, y: 0.98995304, z: 0}
+    m_Extent: {x: 8.252935, y: 0.31004694, z: 0}
   m_SpriteSortPoint: 0
 --- !u!114 &2418003098369982598
 MonoBehaviour:
@@ -107,73 +109,73 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -3.3962386, y: 0.99919623, z: 0}
-      leftTangent: {x: -1.0023363, y: 0.0010550618, z: 0}
-      rightTangent: {x: 0.108685255, y: -0.00011450052, z: 0}
+    - position: {x: -4, y: 0.95, z: 0}
+      leftTangent: {x: -0.6255951, y: -0.015844643, z: 0}
+      rightTangent: {x: 0.9290843, y: 0.023664355, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 0.68457305, y: 0.9988939, z: 0}
-      leftTangent: {x: -2.2402024, y: 0.000071406364, z: 0}
-      rightTangent: {x: 0.19294631, y: -0.0000064969063, z: 0}
+    - position: {x: -2, y: 1.05, z: 0}
+      leftTangent: {x: -0.43236375, y: 0.0000071525574, z: 0}
+      rightTangent: {x: 0.3914317, y: -0.000007987022, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 1.4071846, y: 1.0847335, z: 0}
-      leftTangent: {x: -0.2268033, y: 0.000000834465, z: 0}
-      rightTangent: {x: 0.31034362, y: -0.000009536743, z: 0}
+    - position: {x: 0, y: 0.95, z: 0}
+      leftTangent: {x: -0.692108, y: 0.000003695488, z: 0}
+      rightTangent: {x: 0.43126667, y: -0.0000086426735, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 2.4988718, y: 0.9991962, z: 0}
-      leftTangent: {x: -0.3391583, y: 0.0000141859055, z: 0}
-      rightTangent: {x: 0.3378353, y: -0.000011563301, z: 0}
+    - position: {x: 2.0000002, y: 1.05, z: 0}
+      leftTangent: {x: -0.65666807, y: 0.000002861023, z: 0}
+      rightTangent: {x: 0.6406927, y: -0.000012278557, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 3.3722215, y: 1.084734, z: 0}
-      leftTangent: {x: -0.3445735, y: 0.00000023841858, z: 0}
-      rightTangent: {x: 0.87334967, y: -0.00000047683716, z: 0}
+    - position: {x: 3.9938183, y: 0.95, z: 0}
+      leftTangent: {x: -0.6705539, y: 0, z: 0}
+      rightTangent: {x: 0.92899466, y: -0.000016510487, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 5.118921, y: 0.9991962, z: 0}
-      leftTangent: {x: -0.2927556, y: 0.0000094771385, z: 0}
-      rightTangent: {x: 0.53998375, y: -0.000019848347, z: 0}
+    - position: {x: 6.0000005, y: 1.05, z: 0}
+      leftTangent: {x: -0.7240577, y: -0.0000051259995, z: 0}
+      rightTangent: {x: 0.92191744, y: -0.00001180172, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 6.428945, y: 1.0847335, z: 0}
-      leftTangent: {x: -0.49445677, y: 0.00001347065, z: 0}
-      rightTangent: {x: 0.3226099, y: -0.000010609627, z: 0}
+    - position: {x: 8, y: 0.95, z: 0}
+      leftTangent: {x: -0.6998086, y: -0.00001013279, z: 0}
+      rightTangent: {x: 0.48783207, y: 0.00000047683716, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 9.267332, y: 0.9991962, z: 0}
-      leftTangent: {x: -0.2749424, y: 0.0000038146973, z: 0}
-      rightTangent: {x: 2.085885, y: -0.000058829784, z: 0}
+    - position: {x: 10, y: 1.05, z: 0}
+      leftTangent: {x: -0.75008106, y: 0.0000067949295, z: 0}
+      rightTangent: {x: 1.0147982, y: -0.00000834465, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 10.577357, y: 0.9991967, z: 0}
-      leftTangent: {x: -0.13266754, y: -0.00022423267, z: 0}
-      rightTangent: {x: 1.000598, y: 0.0016917586, z: 0}
+    - position: {x: 12.000001, y: 0.95, z: 0}
+      leftTangent: {x: -0.016554832, y: -0.000028014183, z: 0}
+      rightTangent: {x: 1.000598, y: 0.0016920567, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
@@ -196,6 +198,42 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment: []
+--- !u!95 &7745090568980142208
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2570553191355565561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 387abaddb79ffb34c8034c1494b68f7d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6550755388589062506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2570553191355565561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09113c64ef230c546ae58a3111c367c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShapeController: {fileID: 0}
+  animationSpeed: 1
+  amplitude: 0.1
 --- !u!1 &7739597101617908179
 GameObject:
   m_ObjectHideFlags: 0
