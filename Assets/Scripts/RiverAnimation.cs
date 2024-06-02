@@ -3,47 +3,43 @@ using UnityEngine.U2D;
 
 public class SpriteShapeAnimator : MonoBehaviour
 {
-    public SpriteShapeController spriteShapeController;
-    public float animationSpeed = 1.0f;
-    public float amplitude = 1.0f;
+    private SpriteShapeController _spriteShapeController;
+    [SerializeField] private float animationSpeed = 1.0f;
+    [SerializeField] private float amplitude = 1.0f;
 
-    private Spline spline;
-    private Vector3[] originalPositions;
+    private Spline _spline;
+    private Vector3[] _originalPositions;
 
-    void Start()
+    private void Start()
     {
-        if (spriteShapeController == null)
-        {
-            spriteShapeController = GetComponent<SpriteShapeController>();
-        }
+        if (_spriteShapeController == null)
+            _spriteShapeController = GetComponent<SpriteShapeController>();
 
-        spline = spriteShapeController.spline;
-        originalPositions = new Vector3[spline.GetPointCount()];
+        _spline = _spriteShapeController.spline;
+        _originalPositions = new Vector3[_spline.GetPointCount()];
 
-        for (var i = 0; i < spline.GetPointCount(); i++)
-        {
-            originalPositions[i] = spline.GetPosition(i);
-        }
+        for (var i = 0; i < _spline.GetPointCount(); i++) 
+            _originalPositions[i] = _spline.GetPosition(i);
     }
 
-    void Update()
+    private void Update()
     {
         AnimatePoints();
     }
 
-    void AnimatePoints()
+    private void AnimatePoints()
     {
-        for (var i = 0; i < spline.GetPointCount(); i++)
+        for (var i = 0; i < _spline.GetPointCount(); i++)
         {
-            var originalPosition = originalPositions[i];
+            var originalPosition = _originalPositions[i];
             var offsetX = Mathf.Sin(Time.time * animationSpeed + i) * amplitude;
             var offsetY = Mathf.Cos(Time.time * animationSpeed + i) * amplitude;
 
             var newPosition = new Vector3(originalPosition.x + offsetX, originalPosition.y + offsetY, originalPosition.z);
-            spline.SetPosition(i, newPosition);
+            _spline.SetPosition(i, newPosition);
         }
 
-        spriteShapeController.RefreshSpriteShape();
+        _spriteShapeController.RefreshSpriteShape();
     }
 }
 
