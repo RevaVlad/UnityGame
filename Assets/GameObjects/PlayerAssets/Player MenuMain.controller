@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player Menu
+  m_Name: Player MenuMain
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: moveX
@@ -53,8 +53,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerInit
-  m_Speed: 0.8
+  m_Name: Run
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -66,7 +66,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a11e0238825ac284c81c67b8ed8b14fc, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8725ea27b6e51d54d925f31e98066c97, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

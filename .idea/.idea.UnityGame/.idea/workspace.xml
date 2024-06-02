@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="pause fix">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="main menu style started">
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player Menu.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Player Menu.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerInit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerInit.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fall.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,14 +228,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00031" summary="pause menu, volume sliders added,">
-      <option name="closed" value="true" />
-      <created>1716286843549</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1716286843549</updated>
     </task>
     <task id="LOCAL-00032" summary="почти поднял прод">
       <option name="closed" value="true" />
@@ -617,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717275353945</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="main menu style started">
+      <option name="closed" value="true" />
+      <created>1717317179366</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1717317179366</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +674,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="small fix" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="level 2 fixes" />
     <MESSAGE value="level 2 more fixes" />
@@ -695,6 +698,7 @@
     <MESSAGE value="new animations added" />
     <MESSAGE value="style fix" />
     <MESSAGE value="pause fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="pause fix" />
+    <MESSAGE value="main menu style started" />
+    <option name="LAST_COMMIT_MESSAGE" value="main menu style started" />
   </component>
 </project>
