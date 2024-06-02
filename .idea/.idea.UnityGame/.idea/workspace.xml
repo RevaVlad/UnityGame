@@ -6,8 +6,48 @@
   <component name="ChangeListManager">
     <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix, with long pipes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/BlurManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/BlurManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/CameraShake.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/CameraShake.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Finish.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Finish.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/GroundTiles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/GroundTiles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Ladder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Ladder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/LadderWithPlatform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/LadderWithPlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Main Camera.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Main Camera.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTemplate.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTemplate.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Platform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Platform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SceneAnimations.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SceneAnimations.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SceneManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SceneManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Slim platform 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Slim platform 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundFXObject.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundFXObject.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundMenuPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundMenuPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundsAndMusic.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/SoundsAndMusic.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/background.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/background.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/newGroundTiles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/newGroundTiles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/river pref.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/river pref.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
