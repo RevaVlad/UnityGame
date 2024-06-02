@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="85% clearing" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="85% clearing">
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/background_Vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/background_Vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/filled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/filled.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/filled_vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/filled_vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/handle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider/handle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/background_background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/background_background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/background_vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/background_vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/filled_Vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/filled_Vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/filled_horizontal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/filled_horizontal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/handle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider2/handle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/Background_vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/Background_vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/background_horizontal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/background_horizontal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/filled_horizontal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/filled_horizontal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/filled_vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/filled_vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/handle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePixelUI/artwork/gray/Slider3/handle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +125,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
