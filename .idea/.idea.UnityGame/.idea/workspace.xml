@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Pipes prefab fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_18_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_18_51__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_29__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_50__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_21_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_21_26__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Z pipe short right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Z pipe short right.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="exits added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,20 +34,17 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/GroundTiles.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeTiles/Block.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeTiles/Block.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/PlayerAssets/goIntoPipe.anim" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/prefabs/Finish.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,13 +53,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundMixerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Utils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Sprites/Animations/PlayerGoOut.anim" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Sprites/Animations/PlayerInit.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/ProjectSettings/ShaderGraphSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -229,14 +215,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00041" summary="fix">
-      <option name="closed" value="true" />
-      <created>1716716047859</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1716716047859</updated>
     </task>
     <task id="LOCAL-00042" summary="bug fix">
       <option name="closed" value="true" />
@@ -606,23 +584,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717343238132</updated>
     </task>
-    <task id="LOCAL-00088" summary="Pipes prefab fixes">
+    <task id="LOCAL-00088" summary="animations fixes">
       <option name="closed" value="true" />
-      <created>1717348126772</created>
+      <created>1717351630117</created>
       <option name="number" value="00088" />
       <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
-      <updated>1717348126772</updated>
+      <updated>1717351630117</updated>
     </task>
-    <task id="LOCAL-00089" summary="Pipes prefab fixes">
+    <task id="LOCAL-00089" summary="training level fixes">
       <option name="closed" value="true" />
-      <created>1717348139343</created>
+      <created>1717352695676</created>
       <option name="number" value="00089" />
       <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1717348139343</updated>
+      <updated>1717352695676</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="exits added">
+      <option name="closed" value="true" />
+      <created>1717353679084</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1717353679084</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,8 +672,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="blur fixed" />
-    <MESSAGE value="FallingProcessingScript.cs style fix" />
     <MESSAGE value="GetNearbyObjectsScript.cs style fix" />
     <MESSAGE value="HeroScript.cs style fix" />
     <MESSAGE value="LadderScript.cs style fix" />
@@ -710,7 +694,9 @@
     <MESSAGE value="bug fix нахуй" />
     <MESSAGE value="second level fixes" />
     <MESSAGE value="chake changes nah" />
-    <MESSAGE value="Pipes prefab fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pipes prefab fixes" />
+    <MESSAGE value="animations fixes" />
+    <MESSAGE value="training level fixes" />
+    <MESSAGE value="exits added" />
+    <option name="LAST_COMMIT_MESSAGE" value="exits added" />
   </component>
 </project>
