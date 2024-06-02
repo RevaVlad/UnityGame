@@ -128,8 +128,8 @@ public class LadderScript : MonoBehaviour
             return false;
 
         return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
-            .Select(obj => Utils.GetPipeRoot(obj.transform)).All(ladder =>
-                ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
+            .Select(obj => Utils.GetPipeRoot(obj.transform).GetComponent<LadderScript>()).All(ladder =>
+                ladder.CheckIfMoveIsPossible(right) && (ladder.MoveDirection != 0 || !ladder.connected.Contains(this)));
     }
 
     public bool CheckIfExitAvailable()
