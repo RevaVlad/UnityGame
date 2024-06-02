@@ -20,13 +20,13 @@ public class SceneManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput sceneInput;
 
+    private Transform laddersContainer;
     private readonly List<AudioSource> pausedAudioSources = new();
 
     public void CreateObjectsSnapshot()
     {
         if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
         var sceneSnapshot = new List<ObjectSnapshot>();
-        var laddersContainer = GameObject.Find("LaddersContainer").transform;
         for (var i = 0; i < laddersContainer.childCount; i++)
         {
             var obj = laddersContainer.GetChild(i).gameObject;
@@ -51,9 +51,18 @@ public class SceneManager : MonoBehaviour
         flashingImage.SetActive(false);
     }
 
+    private void Start() =>
+        laddersContainer = GameObject.Find("LaddersContainer").transform;
+
     private void Update() => CheckFinishAndLoadNextLevel();
 
     public void OnRestartLevel() => LoadLastLevel();
+
+    private void StopPipesCoroutine()
+    {
+        for (var i = 0; i < laddersContainer.childCount; i++)
+            laddersContainer.GetChild(i).GetComponent<LadderScript>().StopMoveCoroutine();
+    }
 
     private void OnRestoreSnapshot()
     {
@@ -69,7 +78,7 @@ public class SceneManager : MonoBehaviour
     {
         flashingImage.SetActive(true);
         var flashCoroutine = StartCoroutine(FlashImage());
-
+        StopPipesCoroutine();
         PauseAllSounds();
 
         SoundFXManager.Instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
@@ -78,14 +87,11 @@ public class SceneManager : MonoBehaviour
         foreach (var objSnap in snapshot)
             objSnap.GameObject.transform.position = objSnap.Position;
 
-        var playerScript = player.GetComponent<HeroScript>();
-        playerScript.OnDropLadder();
-
+        player.GetComponent<HeroScript>().OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Enable();
 
         yield return StartCoroutine(BlurEffect(false));
         FindObjectsOfType<AudioSource>()[0].Pause();
-
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
         ResumeAllSounds();

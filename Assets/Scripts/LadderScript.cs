@@ -20,6 +20,11 @@ public class LadderScript : MonoBehaviour
     private Rigidbody2D rb;
 
 
+    private void Awake() =>
+        transform.SetParent(GameObject.Find("LaddersContainer") is null
+            ? new GameObject("LaddersContainer").transform
+            : GameObject.Find("LaddersContainer").transform);
+
     private void Start()
     {
         connected = new List<LadderScript>();
@@ -31,10 +36,6 @@ public class LadderScript : MonoBehaviour
             leftObjectsCollider.Add(child.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>());
             downObjectsColliders.Add(child.Find("DownCollider").GetComponent<FallingProcessingScript>());
         }
-
-        transform.SetParent(GameObject.Find("LaddersContainer") is null
-            ? new GameObject("LaddersContainer").transform
-            : GameObject.Find("LaddersContainer").transform);
     }
 
     public void ConnectLadders(Transform other)
@@ -68,6 +69,15 @@ public class LadderScript : MonoBehaviour
         }
     }
 
+    public void StopMoveCoroutine()
+    {
+        if (moveCoroutine is null) return;
+        StopCoroutine(moveCoroutine);
+        moveCoroutine = null;
+        MoveDirection = 0;
+        rb.velocity = Vector2.zero;
+    }
+
     private IEnumerator MoveHorizontalCoroutine(bool right, LadderScript startedBy)
     {
         if (MoveDirection != 0 || !CheckIfMoveIsPossible(right, startedBy))
@@ -80,9 +90,7 @@ public class LadderScript : MonoBehaviour
 
         yield return MoveLaddersHorizontalCoroutine();
 
-        rb.velocity = Vector2.zero;
-        MoveDirection = 0;
-        moveCoroutine = null;
+        StopMoveCoroutine();
     }
 
     private IEnumerator MoveLaddersHorizontalCoroutine()
@@ -137,14 +145,16 @@ public class LadderScript : MonoBehaviour
         var colliders = Physics2D.OverlapCircleAll(transform.Find(Utils.PipeExitPointName).transform.position, 0.1f,
             LayerMask.GetMask(Utils.PlatformsLayerName, Utils.LaddersLayerName));
         return !colliders.Any(collider => collider.gameObject.layer == LayerMask.GetMask(Utils.PlatformsLayerName) ||
-                                           LayerMask.GetMask(Utils.PlayerLayerName) != collider.excludeLayers);
+                                          LayerMask.GetMask(Utils.PlayerLayerName) != collider.excludeLayers);
     }
 
     [ContextMenu("MoveRight")]
-    public void MoveRight(LadderScript startedBy = null) => moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(true, startedBy ?? this));
+    public void MoveRight(LadderScript startedBy = null) =>
+        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(true, startedBy ?? this));
 
     [ContextMenu("MoveLeft")]
-    public void MoveLeft(LadderScript startedBy = null) => moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(false, startedBy ?? this));
+    public void MoveLeft(LadderScript startedBy = null) =>
+        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(false, startedBy ?? this));
 
     public void StopFall()
     {
