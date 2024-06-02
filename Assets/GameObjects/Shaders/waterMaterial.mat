@@ -66,13 +66,13 @@ Material:
     - _causticsPower: 8.65
     - _causticsScale: 9.47
     m_Colors:
-    - _CausticsColor: {r: 0.3137255, g: 1.6603774, b: 0.43075833, a: 0}
+    - _CausticsColor: {r: 0, g: 0.92156863, b: 0.083453044, a: 0}
     - _CausticsSpeed: {r: -0.2, g: 0.01, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _WaterColor: {r: 0, g: 0.045098983, b: 0.18867922, a: 0}
-    - _shoreColor: {r: 0, g: 0.09411765, b: 1, a: 0}
+    - _WaterColor: {r: 0.00877751, g: 0.078431375, b: 0, a: 0}
+    - _shoreColor: {r: 0.025684003, g: 0.2924528, b: 0.006897471, a: 0}
     - _waterOffset: {r: 0, g: 0.01, b: 0, a: 0}
     - _waterTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

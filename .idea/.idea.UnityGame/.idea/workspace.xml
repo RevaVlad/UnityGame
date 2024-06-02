@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="second level fixes" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="chake changes nah">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,14 +211,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00038" summary="playerInput and sceneInput disactivate added">
-      <option name="closed" value="true" />
-      <created>1716710822478</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1716710822478</updated>
     </task>
     <task id="LOCAL-00039" summary="добавлено мигание">
       <option name="closed" value="true" />
@@ -602,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717342526854</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="chake changes nah">
+      <option name="closed" value="true" />
+      <created>1717343238131</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1717343238132</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,6 +627,17 @@
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
                 </option>
               </RecentGroup>
             </list>
@@ -655,7 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="level 5 fixes" />
     <MESSAGE value="keyboard fixes" />
     <MESSAGE value="blur fixed" />
     <MESSAGE value="FallingProcessingScript.cs style fix" />
@@ -680,6 +692,7 @@
     <MESSAGE value="main menu fix" />
     <MESSAGE value="bug fix нахуй" />
     <MESSAGE value="second level fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="second level fixes" />
+    <MESSAGE value="chake changes nah" />
+    <option name="LAST_COMMIT_MESSAGE" value="chake changes nah" />
   </component>
 </project>
