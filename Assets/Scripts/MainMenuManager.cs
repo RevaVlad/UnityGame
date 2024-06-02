@@ -13,11 +13,21 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
+        DestroyAllDontDestroyOnLoadObjects();
         mainBackground = GameObject.Find("MainMenuBackground");
         settingsBackground = GameObject.Find("MainMenuSettingsBackground");
         settingsBackground.SetActive(false);
         if (!PlayerPrefs.HasKey("currentLevel"))
             GameObject.Find("ContinueButton").SetActive(false);
+    }
+
+    private static void DestroyAllDontDestroyOnLoadObjects()
+    {
+        var connect = new GameObject();
+        DontDestroyOnLoad(connect);
+
+        foreach (var root in connect.scene.GetRootGameObjects())
+            Destroy(root);
     }
 
     public void OnContinueGame() => SceneManager.LoadLastLevel();
