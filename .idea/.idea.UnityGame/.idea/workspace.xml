@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="style fix">
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PauseMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="pause fix">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerInit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Animations/PlayerInit.anim" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,14 +224,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00030" summary="snapshot feature ready">
-      <option name="closed" value="true" />
-      <created>1716228252944</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1716228252944</updated>
     </task>
     <task id="LOCAL-00031" summary="pause menu, volume sliders added,">
       <option name="closed" value="true" />
@@ -618,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717273848050</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="pause fix">
+      <option name="closed" value="true" />
+      <created>1717275353945</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1717275353945</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +670,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main menu main logic finished" />
     <MESSAGE value="small fix" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="level 2 fixes" />
@@ -696,6 +694,7 @@
     <MESSAGE value="some fixes after merge" />
     <MESSAGE value="new animations added" />
     <MESSAGE value="style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="style fix" />
+    <MESSAGE value="pause fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="pause fix" />
   </component>
 </project>
