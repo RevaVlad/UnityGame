@@ -84,10 +84,11 @@ public class SceneManager : MonoBehaviour
         playerInput.actions.FindActionMap("BasicInput").Enable();
 
         yield return StartCoroutine(BlurEffect(false));
+        FindObjectsOfType<AudioSource>()[0].Pause();
 
-        ResumeAllSounds();
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
+        ResumeAllSounds();
         sceneInput.ActivateInput();
     }
 
@@ -122,7 +123,7 @@ public class SceneManager : MonoBehaviour
         for (var i = 0; i < 20; i++)
         {
             depthOfField.focalLength.value += blurStep;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.01f);
         }
 
         if (!apply)
