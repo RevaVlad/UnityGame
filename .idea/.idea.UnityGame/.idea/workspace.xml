@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="30% clearing" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="55% clearing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,30 +219,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00048" summary="starting to add main menu logic">
-      <option name="closed" value="true" />
-      <created>1716753014401</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1716753014401</updated>
-    </task>
-    <task id="LOCAL-00049" summary="some additions">
-      <option name="closed" value="true" />
-      <created>1716753309044</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1716753309044</updated>
-    </task>
-    <task id="LOCAL-00050" summary="continue creating main menu">
-      <option name="closed" value="true" />
-      <created>1716758128260</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1716758128264</updated>
     </task>
     <task id="LOCAL-00051" summary="main menu main logic finished">
       <option name="closed" value="true" />
@@ -612,7 +588,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717364444912</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="35% clearing">
+      <option name="closed" value="true" />
+      <created>1717364609359</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1717364609359</updated>
+    </task>
+    <task id="LOCAL-00098" summary="45% clearing">
+      <option name="closed" value="true" />
+      <created>1717364745525</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1717364745525</updated>
+    </task>
+    <task id="LOCAL-00099" summary="55% clearing">
+      <option name="closed" value="true" />
+      <created>1717364968461</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1717364968461</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,9 +676,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PlayerRunData.cs style fix" />
-    <MESSAGE value="SceneManager.cs style fix" />
-    <MESSAGE value="SoundMixerManager.cs style fix" />
     <MESSAGE value="New sprites" />
     <MESSAGE value="some fixes after merge" />
     <MESSAGE value="new animations added" />
@@ -701,6 +698,9 @@
     <MESSAGE value="10% clearing" />
     <MESSAGE value="25% clearing" />
     <MESSAGE value="30% clearing" />
-    <option name="LAST_COMMIT_MESSAGE" value="30% clearing" />
+    <MESSAGE value="35% clearing" />
+    <MESSAGE value="45% clearing" />
+    <MESSAGE value="55% clearing" />
+    <option name="LAST_COMMIT_MESSAGE" value="55% clearing" />
   </component>
 </project>
