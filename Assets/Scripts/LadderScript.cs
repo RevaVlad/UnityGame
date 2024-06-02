@@ -134,9 +134,10 @@ public class LadderScript : MonoBehaviour
 
     public bool CheckIfExitAvailable()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.Find(Utils.PipeExitPointName).transform.position, 0.1f,
+        var colliders = Physics2D.OverlapCircleAll(transform.Find(Utils.PipeExitPointName).transform.position, 0.1f,
             LayerMask.GetMask(Utils.PlatformsLayerName, Utils.LaddersLayerName));
-        return collider.Length == 0;
+        return !colliders.Any(collider => collider.gameObject.layer == LayerMask.GetMask(Utils.PlatformsLayerName) ||
+                                           LayerMask.GetMask(Utils.PlayerLayerName) != collider.excludeLayers);
     }
 
     [ContextMenu("MoveRight")]

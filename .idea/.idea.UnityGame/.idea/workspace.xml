@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix + tilemap optimization">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix, with long pipes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,8 +56,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundMixerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Utils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -214,14 +215,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00034" summary="restart animation finished">
-      <option name="closed" value="true" />
-      <created>1716650673460</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1716650673460</updated>
     </task>
     <task id="LOCAL-00035" summary="some fixes">
       <option name="closed" value="true" />
@@ -607,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717329989849</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Bug fix, with long pipes">
+      <option name="closed" value="true" />
+      <created>1717333955451</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1717333955452</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +661,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="level 2 more fixes" />
     <MESSAGE value="level 3 fixes" />
     <MESSAGE value="level 4 fixes" />
     <MESSAGE value="level 4 more fixes" />
@@ -685,6 +685,7 @@
     <MESSAGE value="main menu style started" />
     <MESSAGE value="Player bug fix + level 5 fix" />
     <MESSAGE value="Bug fix + tilemap optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix + tilemap optimization" />
+    <MESSAGE value="Bug fix, with long pipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix, with long pipes" />
   </component>
 </project>
