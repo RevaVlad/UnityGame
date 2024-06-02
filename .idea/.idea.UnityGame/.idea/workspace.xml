@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="code style fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/playerParams.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/playerParams.asset" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="10% clearing">
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Source/wallTiles.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Source/wallTiles.aseprite.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +220,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00045" summary="main menu start">
-      <option name="closed" value="true" />
-      <created>1716739764472</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1716739764472</updated>
     </task>
     <task id="LOCAL-00046" summary="back to main menu button added">
       <option name="closed" value="true" />
@@ -614,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717362785126</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="10% clearing">
+      <option name="closed" value="true" />
+      <created>1717364132812</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1717364132812</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MainMenuManager.cs style fix" />
     <MESSAGE value="PauseManager.cs style fix" />
     <MESSAGE value="PipeUtils.cs style fix" />
     <MESSAGE value="PlayerRunData.cs style fix" />
@@ -703,6 +701,7 @@
     <MESSAGE value="some fixes" />
     <MESSAGE value="речка-реченька разливается, да в моря вливается" />
     <MESSAGE value="code style fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="code style fixes" />
+    <MESSAGE value="10% clearing" />
+    <option name="LAST_COMMIT_MESSAGE" value="10% clearing" />
   </component>
 </project>
