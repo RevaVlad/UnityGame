@@ -8299,7 +8299,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1111624517}
         m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-        m_MethodName: OnReturnOnMainMenuPress
+        m_MethodName: OnExitPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
