@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Player bug fix + level 5 fix">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix + tilemap optimization">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sheme.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" afterDir="false" />
     </list>
@@ -39,6 +38,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
@@ -214,14 +214,6 @@
       <workItem from="1717008872076" duration="6767000" />
       <workItem from="1717068794339" duration="613000" />
       <workItem from="1717132161775" duration="1134000" />
-    </task>
-    <task id="LOCAL-00033" summary="поднял прод спустя день, ура">
-      <option name="closed" value="true" />
-      <created>1716401614764</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1716401614764</updated>
     </task>
     <task id="LOCAL-00034" summary="restart animation finished">
       <option name="closed" value="true" />
@@ -607,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717325034614</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Bug fix + tilemap optimization">
+      <option name="closed" value="true" />
+      <created>1717329989849</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1717329989849</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +660,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="level 2 fixes" />
     <MESSAGE value="level 2 more fixes" />
     <MESSAGE value="level 3 fixes" />
     <MESSAGE value="level 4 fixes" />
@@ -685,6 +684,7 @@
     <MESSAGE value="pause fix" />
     <MESSAGE value="main menu style started" />
     <MESSAGE value="Player bug fix + level 5 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player bug fix + level 5 fix" />
+    <MESSAGE value="Bug fix + tilemap optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix + tilemap optimization" />
   </component>
 </project>
