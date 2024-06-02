@@ -35,7 +35,7 @@ public class MainMenuManager : MonoBehaviour
         MenusController.SwitchMenu(mainMenuCanvas, volumeSettingsCanvas, volumeSettingsFirst);
     }
 
-    public void OnReturnOnMainMenuPress() => UnityEngine.SceneManagement.SceneManager.LoadScene("Main menu");
+    public void OnExitPress() => Application.Quit();
 
     public void OnVolumeMenuBackPress()
     {
