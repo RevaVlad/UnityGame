@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 0">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 1, 2">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,8 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeVariants/G pipe.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
@@ -272,22 +273,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00060" summary="keyboard fixes">
-      <option name="closed" value="true" />
-      <created>1716920038390</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1716920038390</updated>
-    </task>
-    <task id="LOCAL-00061" summary="blur fixed">
-      <option name="closed" value="true" />
-      <created>1716920555332</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1716920555332</updated>
     </task>
     <task id="LOCAL-00062" summary="FallingProcessingScript.cs style fix">
       <option name="closed" value="true" />
@@ -665,7 +650,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717413571083</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Level 1">
+      <option name="closed" value="true" />
+      <created>1717414019746</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1717414019746</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Level 1, 2">
+      <option name="closed" value="true" />
+      <created>1717414472366</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1717414472366</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,8 +730,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fix нахуй" />
-    <MESSAGE value="second level fixes" />
     <MESSAGE value="chake changes nah" />
     <MESSAGE value="animations fixes" />
     <MESSAGE value="training level fixes" />
@@ -754,6 +753,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
     <MESSAGE value="Quick level 8 fix" />
     <MESSAGE value="Level 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 0" />
+    <MESSAGE value="Level 1" />
+    <MESSAGE value="Level 1, 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 1, 2" />
   </component>
 </project>
