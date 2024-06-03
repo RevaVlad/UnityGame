@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 1, 2">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 3,4">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,14 +271,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00062" summary="FallingProcessingScript.cs style fix">
-      <option name="closed" value="true" />
-      <created>1716923114964</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1716923114965</updated>
     </task>
     <task id="LOCAL-00063" summary="GetNearbyObjectsScript.cs style fix">
       <option name="closed" value="true" />
@@ -666,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717414472366</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Level 3,4">
+      <option name="closed" value="true" />
+      <created>1717417276469</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1717417276469</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +728,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chake changes nah" />
     <MESSAGE value="animations fixes" />
     <MESSAGE value="training level fixes" />
     <MESSAGE value="exits added" />
@@ -755,6 +752,7 @@
     <MESSAGE value="Level 0" />
     <MESSAGE value="Level 1" />
     <MESSAGE value="Level 1, 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 1, 2" />
+    <MESSAGE value="Level 3,4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 3,4" />
   </component>
 </project>
