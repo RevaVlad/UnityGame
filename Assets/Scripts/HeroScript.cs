@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -37,6 +38,9 @@ public class HeroScript : MonoBehaviour
     [SerializeField] private GameObject shakeManager;
     private static readonly int MoveX = Animator.StringToHash("moveX");
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
+    private static readonly int IsWithPipe = Animator.StringToHash("isWithPipe");
+    private static readonly int GoThrowPipe = Animator.StringToHash("goThrowPipes");
+    private SpriteRenderer spriteRenderer;
 
     private void SwapInputMap()
     {
@@ -60,6 +64,7 @@ public class HeroScript : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindActionMap("BasicInput").Enable();
         playerInput.actions.FindActionMap("LadderInput").Disable();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         var bounds = GetComponent<CapsuleCollider2D>().bounds;
         (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
@@ -137,7 +142,7 @@ public class HeroScript : MonoBehaviour
         var speedDif = targetSpeed - rb.velocity.x;
 
         var currentAcceleration = !isGrounded
-            ? direction.x != 0 ? data.airAcceleration : data.airDecceleration
+            ? direction.x != 0 ? data.AirAcceleration : data.AirDecceleration
             : direction.x != 0
                 ? data.acceleration
                 : data.decceleration;
@@ -164,7 +169,7 @@ public class HeroScript : MonoBehaviour
     private void CheckGround()
     {
         var size = Physics2D.OverlapCircleNonAlloc(transform.position - Vector3.up * sizeY / 2, sizeX * .3f, results,
-            LayerMask.GetMask("Platforms", "Ladders"));
+            LayerMask.GetMask(Utils.PlatformsLayerName, Utils.LaddersLayerName));
         isGrounded = size > 0;
         if (isGrounded)
         {
@@ -187,6 +192,7 @@ public class HeroScript : MonoBehaviour
         heldLadder = ladder;
         rb.simulated = false;
         moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f)));
+        anim.SetBool(IsWithPipe, true);
         SwapInputMap();
     }
 
@@ -201,49 +207,61 @@ public class HeroScript : MonoBehaviour
         rb.simulated = true;
         if (moveToLadderCenter == null) return;
         StopCoroutine(moveToLadderCenter);
+        anim.SetBool(IsWithPipe, false);
         moveToLadderCenter = null;
     }
 
     private void OnMoveRightWithLadder()
     {
-        if (isGrounded)
+        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
             heldLadder.MoveRight();
-        if (faceRight)
-        {
-            transform.localScale *= new Vector2(-1, 1);
-            faceRight = !faceRight;
-        }
-
-        anim.Play("PlayerRun");
+        if (!faceRight) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
     }
 
     private void OnMoveLeftWithLadder()
     {
-        if (isGrounded)
+        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
             heldLadder.MoveLeft();
-        if (!faceRight)
-        {
-            transform.localScale *= new Vector2(-1, 1);
-            faceRight = !faceRight;
-        }
-
-        anim.Play("PlayerRun");
+        if (faceRight) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
     }
 
     private void OnTravelThroughPipe()
     {
-        var enter = heldLadder.transform.Find("EnterPoint");
+        var enter = heldLadder.transform.Find(Utils.PipeEnterPointName);
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
-        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, gameObjectTransform, 1f);
-        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
-        {
-            transform.position = heldLadder.transform.Find("ExitPoint").position - (sizeY / 2) * Vector3.up;
-            OnDropLadder();
-        }
+            StartCoroutine(OnTravelAction());
+    }
 
-        anim.Play("PlayerPipeGo");
+    private IEnumerator OnTravelAction()
+    {
+        playerInput.actions.FindActionMap("LadderInput").Disable();
+        anim.SetBool(GoThrowPipe, true);
+        yield return new WaitUntil(() =>
+            anim.GetCurrentAnimatorStateInfo(0).IsName("goIntoPipe") &&
+            anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
+
+        SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
+        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
+        anim.SetBool(GoThrowPipe, false);
+        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
+        OnDropLadder();
+        playerInput.actions.FindActionMap("BasicInput").Disable();
+        yield return new WaitUntil(() =>
+            anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerGoOut") &&
+            anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
+
+        playerInput.actions.FindActionMap("BasicInput").Enable();
+    }
+
+    private void SwitchTransparency()
+    {
+        spriteRenderer.enabled = spriteRenderer.enabled != true;
     }
 
     private bool TryGetLadder(out LadderScript ladder)
@@ -251,9 +269,9 @@ public class HeroScript : MonoBehaviour
         ladder = null;
         var position = transform.position;
         var collidedObj = Physics2D.OverlapCircleAll(new Vector2(position.x, position.y),
-            0.01f, LayerMask.GetMask("Ladders"));
+            0.01f, LayerMask.GetMask(Utils.LaddersLayerName));
         if (collidedObj.Length == 0) return false;
-        ladder = PipeUtils.GetPipeRoot(collidedObj[0].transform).GetComponent<LadderScript>();
+        ladder = Utils.GetPipeRoot(collidedObj[0].transform).GetComponent<LadderScript>();
         return true;
     }
 

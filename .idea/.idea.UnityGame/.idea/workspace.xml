@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="UIControl.cs style fix" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Finish?">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/credits.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +21,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -35,21 +37,28 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/212694b2570944cdacf7aae5a98a556920a00/d7/dc94d149/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/ff/ce45c758/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a8e6a1dbefe4d238877afbceaa951631744c0/42/360cda47/VisualElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/58/50df41de/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/5a/c6dac61c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/6e/6dcfb54c/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9c/64e307e9/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9f/57c03411/WaitForEndOfFrame.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ab/2766bc6f/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d6/76e600dd/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/GameObjects/trainLevelAssets/Keyboard Black (2).png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeVariants/G pipe.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/PlayerControls.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerRunData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundMixerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/VideoPlayerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.11/Editor/Drawing/MaterialGraphEditWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -90,8 +99,32 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -107,7 +140,15 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -133,6 +174,26 @@
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -198,401 +259,408 @@
       <workItem from="1716819384684" duration="3625000" />
       <workItem from="1716955775418" duration="711000" />
       <workItem from="1717008872076" duration="8418000" />
-      <workItem from="1717070099221" duration="1031000" />
+      <workItem from="1717070099221" duration="411000" />
+      <workItem from="1717008872076" duration="6767000" />
+      <workItem from="1717068794339" duration="613000" />
+      <workItem from="1717132161775" duration="1134000" />
+      <workItem from="1717390386756" duration="829000" />
+      <workItem from="1717398483276" duration="1000" />
+      <workItem from="1717436268908" duration="1777000" />
+      <workItem from="1717442726800" duration="614000" />
     </task>
-    <task id="LOCAL-00025" summary="Player no longer appears in air">
+    <task id="LOCAL-00075" summary="some fixes after merge">
       <option name="closed" value="true" />
-      <created>1716123332055</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
+      <created>1717259165098</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
-      <updated>1716123332055</updated>
+      <updated>1717259165098</updated>
     </task>
-    <task id="LOCAL-00026" summary="Bug fix, new pipe variants">
+    <task id="LOCAL-00076" summary="new animations added">
       <option name="closed" value="true" />
-      <created>1716203791400</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
+      <created>1717259523075</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
-      <updated>1716203791400</updated>
+      <updated>1717259523075</updated>
     </task>
-    <task id="LOCAL-00027" summary="Quick fix">
+    <task id="LOCAL-00077" summary="style fix">
       <option name="closed" value="true" />
-      <created>1716204407323</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
+      <created>1717273507236</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
-      <updated>1716204407323</updated>
+      <updated>1717273507236</updated>
     </task>
-    <task id="LOCAL-00028" summary="objectSnapshot class added">
+    <task id="LOCAL-00078" summary="style fix">
       <option name="closed" value="true" />
-      <created>1716223331316</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
+      <created>1717273848050</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
-      <updated>1716223331316</updated>
+      <updated>1717273848050</updated>
     </task>
-    <task id="LOCAL-00029" summary="methods for snapshots ready">
+    <task id="LOCAL-00079" summary="pause fix">
       <option name="closed" value="true" />
-      <created>1716227407638</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
+      <created>1717275353945</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1716227407638</updated>
+      <updated>1717275353945</updated>
     </task>
-    <task id="LOCAL-00030" summary="snapshot feature ready">
+    <task id="LOCAL-00080" summary="main menu style started">
       <option name="closed" value="true" />
-      <created>1716228252944</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
+      <created>1717317179366</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
-      <updated>1716228252944</updated>
+      <updated>1717317179366</updated>
     </task>
-    <task id="LOCAL-00031" summary="pause menu, volume sliders added,">
+    <task id="LOCAL-00081" summary="Player bug fix + level 5 fix">
       <option name="closed" value="true" />
-      <created>1716286843549</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
+      <created>1717325034614</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
-      <updated>1716286843549</updated>
+      <updated>1717325034614</updated>
     </task>
-    <task id="LOCAL-00032" summary="почти поднял прод">
+    <task id="LOCAL-00082" summary="Bug fix + tilemap optimization">
       <option name="closed" value="true" />
-      <created>1716311164397</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
+      <created>1717329989849</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
-      <updated>1716311164397</updated>
+      <updated>1717329989849</updated>
     </task>
-    <task id="LOCAL-00033" summary="поднял прод спустя день, ура">
+    <task id="LOCAL-00083" summary="Bug fix, with long pipes">
       <option name="closed" value="true" />
-      <created>1716401614764</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
+      <created>1717333955451</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
-      <updated>1716401614764</updated>
+      <updated>1717333955452</updated>
     </task>
-    <task id="LOCAL-00034" summary="restart animation finished">
+    <task id="LOCAL-00084" summary="main menu fix">
       <option name="closed" value="true" />
-      <created>1716650673460</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
+      <created>1717340069383</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
-      <updated>1716650673460</updated>
+      <updated>1717340069383</updated>
     </task>
-    <task id="LOCAL-00035" summary="some fixes">
+    <task id="LOCAL-00085" summary="bug fix нахуй">
       <option name="closed" value="true" />
-      <created>1716652321696</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
+      <created>1717340856328</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
-      <updated>1716652321696</updated>
+      <updated>1717340856328</updated>
     </task>
-    <task id="LOCAL-00036" summary="bug fix">
+    <task id="LOCAL-00086" summary="second level fixes">
       <option name="closed" value="true" />
-      <created>1716655819634</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
+      <created>1717342526854</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
       <option name="project" value="LOCAL" />
-      <updated>1716655819636</updated>
+      <updated>1717342526854</updated>
     </task>
-    <task id="LOCAL-00037" summary="blur effect added on restore">
+    <task id="LOCAL-00087" summary="chake changes nah">
       <option name="closed" value="true" />
-      <created>1716709437281</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
+      <created>1717343238131</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
       <option name="project" value="LOCAL" />
-      <updated>1716709437281</updated>
+      <updated>1717343238132</updated>
     </task>
-    <task id="LOCAL-00038" summary="playerInput and sceneInput disactivate added">
+    <task id="LOCAL-00088" summary="animations fixes">
       <option name="closed" value="true" />
-      <created>1716710822478</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
+      <created>1717351630117</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
-      <updated>1716710822478</updated>
+      <updated>1717351630117</updated>
     </task>
-    <task id="LOCAL-00039" summary="добавлено мигание">
+    <task id="LOCAL-00089" summary="training level fixes">
       <option name="closed" value="true" />
-      <created>1716712915679</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
+      <created>1717352695676</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1716712915679</updated>
+      <updated>1717352695676</updated>
     </task>
-    <task id="LOCAL-00040" summary="add sound for rollback">
+    <task id="LOCAL-00090" summary="exits added">
       <option name="closed" value="true" />
-      <created>1716715952245</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
+      <created>1717353679084</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
-      <updated>1716715952245</updated>
+      <updated>1717353679084</updated>
     </task>
-    <task id="LOCAL-00041" summary="fix">
+    <task id="LOCAL-00091" summary="some fixes">
       <option name="closed" value="true" />
-      <created>1716716047859</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
+      <created>1717354213258</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
       <option name="project" value="LOCAL" />
-      <updated>1716716047859</updated>
+      <updated>1717354213258</updated>
     </task>
-    <task id="LOCAL-00042" summary="bug fix">
+    <task id="LOCAL-00092" summary="речка-реченька разливается, да в моря вливается">
       <option name="closed" value="true" />
-      <created>1716716367515</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
+      <created>1717361143252</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
       <option name="project" value="LOCAL" />
-      <updated>1716716367515</updated>
+      <updated>1717361143252</updated>
     </task>
-    <task id="LOCAL-00043" summary="add some prefab and style fix">
+    <task id="LOCAL-00093" summary="code style fixes">
       <option name="closed" value="true" />
-      <created>1716737409567</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
+      <created>1717362785126</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
       <option name="project" value="LOCAL" />
-      <updated>1716737409567</updated>
+      <updated>1717362785126</updated>
     </task>
-    <task id="LOCAL-00044" summary="style fix and level2 fix">
+    <task id="LOCAL-00094" summary="10% clearing">
       <option name="closed" value="true" />
-      <created>1716737830612</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
+      <created>1717364132812</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
       <option name="project" value="LOCAL" />
-      <updated>1716737830612</updated>
+      <updated>1717364132812</updated>
     </task>
-    <task id="LOCAL-00045" summary="main menu start">
+    <task id="LOCAL-00095" summary="25% clearing">
       <option name="closed" value="true" />
-      <created>1716739764472</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
+      <created>1717364399614</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
       <option name="project" value="LOCAL" />
-      <updated>1716739764472</updated>
+      <updated>1717364399614</updated>
     </task>
-    <task id="LOCAL-00046" summary="back to main menu button added">
+    <task id="LOCAL-00096" summary="30% clearing">
       <option name="closed" value="true" />
-      <created>1716741425892</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
+      <created>1717364444912</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
       <option name="project" value="LOCAL" />
-      <updated>1716741425892</updated>
+      <updated>1717364444912</updated>
     </task>
-    <task id="LOCAL-00047" summary="active buttons added">
+    <task id="LOCAL-00097" summary="35% clearing">
       <option name="closed" value="true" />
-      <created>1716748791069</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
+      <created>1717364609359</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
       <option name="project" value="LOCAL" />
-      <updated>1716748791069</updated>
+      <updated>1717364609359</updated>
     </task>
-    <task id="LOCAL-00048" summary="starting to add main menu logic">
+    <task id="LOCAL-00098" summary="45% clearing">
       <option name="closed" value="true" />
-      <created>1716753014401</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
+      <created>1717364745525</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
       <option name="project" value="LOCAL" />
-      <updated>1716753014401</updated>
+      <updated>1717364745525</updated>
     </task>
-    <task id="LOCAL-00049" summary="some additions">
+    <task id="LOCAL-00099" summary="55% clearing">
       <option name="closed" value="true" />
-      <created>1716753309044</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
+      <created>1717364968461</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
       <option name="project" value="LOCAL" />
-      <updated>1716753309044</updated>
+      <updated>1717364968461</updated>
     </task>
-    <task id="LOCAL-00050" summary="continue creating main menu">
+    <task id="LOCAL-00100" summary="65% clearing">
       <option name="closed" value="true" />
-      <created>1716758128260</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
+      <created>1717365075316</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
       <option name="project" value="LOCAL" />
-      <updated>1716758128264</updated>
+      <updated>1717365075316</updated>
     </task>
-    <task id="LOCAL-00051" summary="main menu main logic finished">
+    <task id="LOCAL-00101" summary="75% clearing">
       <option name="closed" value="true" />
-      <created>1716823266857</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
+      <created>1717365165282</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
       <option name="project" value="LOCAL" />
-      <updated>1716823266858</updated>
+      <updated>1717365165283</updated>
     </task>
-    <task id="LOCAL-00052" summary="small fix">
+    <task id="LOCAL-00102" summary="85% clearing">
       <option name="closed" value="true" />
-      <created>1716826087029</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
+      <created>1717365319962</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1716826087029</updated>
+      <updated>1717365319962</updated>
     </task>
-    <task id="LOCAL-00053" summary="bug fix">
+    <task id="LOCAL-00103" summary="start add starting cutscene">
       <option name="closed" value="true" />
-      <created>1716829399350</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
+      <created>1717368144861</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
-      <updated>1716829399350</updated>
+      <updated>1717368144861</updated>
     </task>
-    <task id="LOCAL-00054" summary="level 2 fixes">
+    <task id="LOCAL-00104" summary="anim fixes, some credits added">
       <option name="closed" value="true" />
-      <created>1716831806599</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
+      <created>1717390536772</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
       <option name="project" value="LOCAL" />
-      <updated>1716831806600</updated>
+      <updated>1717390536772</updated>
     </task>
-    <task id="LOCAL-00055" summary="level 2 more fixes">
+    <task id="LOCAL-00105" summary="credits fixes and more added">
       <option name="closed" value="true" />
-      <created>1716831828681</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
+      <created>1717394625975</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
       <option name="project" value="LOCAL" />
-      <updated>1716831828681</updated>
+      <updated>1717394625975</updated>
     </task>
-    <task id="LOCAL-00056" summary="level 3 fixes">
+    <task id="LOCAL-00106" summary="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1716832397481</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
+      <created>1717411414537</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
       <option name="project" value="LOCAL" />
-      <updated>1716832397481</updated>
+      <updated>1717411414537</updated>
     </task>
-    <task id="LOCAL-00057" summary="level 4 fixes">
+    <task id="LOCAL-00107" summary="Quick level 8 fix">
       <option name="closed" value="true" />
-      <created>1716832880943</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
+      <created>1717412173436</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
       <option name="project" value="LOCAL" />
-      <updated>1716832880943</updated>
+      <updated>1717412173436</updated>
     </task>
-    <task id="LOCAL-00058" summary="level 4 more fixes">
+    <task id="LOCAL-00108" summary="Level 0">
       <option name="closed" value="true" />
-      <created>1716832942550</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
+      <created>1717413571083</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
       <option name="project" value="LOCAL" />
-      <updated>1716832942550</updated>
+      <updated>1717413571083</updated>
     </task>
-    <task id="LOCAL-00059" summary="level 5 fixes">
+    <task id="LOCAL-00109" summary="Level 1">
       <option name="closed" value="true" />
-      <created>1716833946152</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
+      <created>1717414019746</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
       <option name="project" value="LOCAL" />
-      <updated>1716833946153</updated>
+      <updated>1717414019746</updated>
     </task>
-    <task id="LOCAL-00060" summary="keyboard fixes">
+    <task id="LOCAL-00110" summary="Level 1, 2">
       <option name="closed" value="true" />
-      <created>1716920038390</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
+      <created>1717414472366</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
       <option name="project" value="LOCAL" />
-      <updated>1716920038390</updated>
+      <updated>1717414472366</updated>
     </task>
-    <task id="LOCAL-00061" summary="blur fixed">
+    <task id="LOCAL-00111" summary="Level 3,4">
       <option name="closed" value="true" />
-      <created>1716920555332</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
+      <created>1717417276469</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
       <option name="project" value="LOCAL" />
-      <updated>1716920555332</updated>
+      <updated>1717417276469</updated>
     </task>
-    <task id="LOCAL-00062" summary="FallingProcessingScript.cs style fix">
+    <task id="LOCAL-00112" summary="Level 5">
       <option name="closed" value="true" />
-      <created>1716923114964</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
+      <created>1717417635667</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
       <option name="project" value="LOCAL" />
-      <updated>1716923114965</updated>
+      <updated>1717417635667</updated>
     </task>
-    <task id="LOCAL-00063" summary="GetNearbyObjectsScript.cs style fix">
+    <task id="LOCAL-00113" summary="Level 5 fix">
       <option name="closed" value="true" />
-      <created>1716923679467</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
+      <created>1717418084148</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
       <option name="project" value="LOCAL" />
-      <updated>1716923679467</updated>
+      <updated>1717418084148</updated>
     </task>
-    <task id="LOCAL-00064" summary="HeroScript.cs style fix">
+    <task id="LOCAL-00114" summary="Level 5 fix">
       <option name="closed" value="true" />
-      <created>1717010806418</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
+      <created>1717418099853</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
       <option name="project" value="LOCAL" />
-      <updated>1717010806419</updated>
+      <updated>1717418099854</updated>
     </task>
-    <task id="LOCAL-00065" summary="LadderScript.cs style fix">
+    <task id="LOCAL-00115" summary="Level 3 fix, 6">
       <option name="closed" value="true" />
-      <created>1717014004962</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
+      <created>1717418667604</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
       <option name="project" value="LOCAL" />
-      <updated>1717014004962</updated>
+      <updated>1717418667604</updated>
     </task>
-    <task id="LOCAL-00066" summary="MainMenuManager.cs style fix">
+    <task id="LOCAL-00116" summary="Level 7">
       <option name="closed" value="true" />
-      <created>1717014199927</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
+      <created>1717418806615</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
       <option name="project" value="LOCAL" />
-      <updated>1717014199927</updated>
+      <updated>1717418806615</updated>
     </task>
-    <task id="LOCAL-00067" summary="PauseManager.cs style fix">
+    <task id="LOCAL-00117" summary="Level 8">
       <option name="closed" value="true" />
-      <created>1717014351096</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
+      <created>1717419039991</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
       <option name="project" value="LOCAL" />
-      <updated>1717014351097</updated>
+      <updated>1717419039991</updated>
     </task>
-    <task id="LOCAL-00068" summary="PipeUtils.cs style fix">
+    <task id="LOCAL-00118" summary="some fixes">
       <option name="closed" value="true" />
-      <created>1717014459565</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
+      <created>1717439579184</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
       <option name="project" value="LOCAL" />
-      <updated>1717014459565</updated>
+      <updated>1717439579184</updated>
     </task>
-    <task id="LOCAL-00069" summary="PlayerRunData.cs style fix">
+    <task id="LOCAL-00119" summary="end cutscene">
       <option name="closed" value="true" />
-      <created>1717014873580</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
+      <created>1717439807586</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
       <option name="project" value="LOCAL" />
-      <updated>1717014873580</updated>
+      <updated>1717439807586</updated>
     </task>
-    <task id="LOCAL-00070" summary="SceneManager.cs style fix">
+    <task id="LOCAL-00120" summary="fixes">
       <option name="closed" value="true" />
-      <created>1717015148033</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
+      <created>1717442566795</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
       <option name="project" value="LOCAL" />
-      <updated>1717015148033</updated>
+      <updated>1717442566795</updated>
     </task>
-    <task id="LOCAL-00071" summary="SceneManager.cs style fix">
+    <task id="LOCAL-00121" summary="video add">
       <option name="closed" value="true" />
-      <created>1717015544355</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
+      <created>1717442772371</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
       <option name="project" value="LOCAL" />
-      <updated>1717015544355</updated>
+      <updated>1717442772371</updated>
     </task>
-    <task id="LOCAL-00072" summary="SoundMixerManager.cs style fix">
+    <task id="LOCAL-00122" summary="Finish?">
       <option name="closed" value="true" />
-      <created>1717015751303</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
+      <created>1717444266547</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
       <option name="project" value="LOCAL" />
-      <updated>1717015751303</updated>
+      <updated>1717444266547</updated>
     </task>
-    <task id="LOCAL-00073" summary="UIControl.cs style fix">
+    <task id="LOCAL-00123" summary="Finish?">
       <option name="closed" value="true" />
-      <created>1717070553801</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
+      <created>1717444295256</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
       <option name="project" value="LOCAL" />
-      <updated>1717070553801</updated>
+      <updated>1717444295256</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,56 +688,55 @@
             </list>
           </value>
         </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Pipes" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="starting to add main menu logic" />
-    <MESSAGE value="some additions" />
-    <MESSAGE value="continue creating main menu" />
-    <MESSAGE value="main menu main logic finished" />
-    <MESSAGE value="small fix" />
-    <MESSAGE value="bug fix" />
-    <MESSAGE value="level 2 fixes" />
-    <MESSAGE value="level 2 more fixes" />
-    <MESSAGE value="level 3 fixes" />
-    <MESSAGE value="level 4 fixes" />
-    <MESSAGE value="level 4 more fixes" />
-    <MESSAGE value="level 5 fixes" />
-    <MESSAGE value="keyboard fixes" />
-    <MESSAGE value="blur fixed" />
-    <MESSAGE value="FallingProcessingScript.cs style fix" />
-    <MESSAGE value="GetNearbyObjectsScript.cs style fix" />
-    <MESSAGE value="HeroScript.cs style fix" />
-    <MESSAGE value="LadderScript.cs style fix" />
-    <MESSAGE value="MainMenuManager.cs style fix" />
-    <MESSAGE value="PauseManager.cs style fix" />
-    <MESSAGE value="PipeUtils.cs style fix" />
-    <MESSAGE value="PlayerRunData.cs style fix" />
-    <MESSAGE value="SceneManager.cs style fix" />
-    <MESSAGE value="SoundMixerManager.cs style fix" />
-    <MESSAGE value="UIControl.cs style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="UIControl.cs style fix" />
+    <MESSAGE value="45% clearing" />
+    <MESSAGE value="55% clearing" />
+    <MESSAGE value="65% clearing" />
+    <MESSAGE value="75% clearing" />
+    <MESSAGE value="85% clearing" />
+    <MESSAGE value="start add starting cutscene" />
+    <MESSAGE value="anim fixes, some credits added" />
+    <MESSAGE value="credits fixes and more added" />
+    <MESSAGE value="New level 8" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
+    <MESSAGE value="Quick level 8 fix" />
+    <MESSAGE value="Level 0" />
+    <MESSAGE value="Level 1" />
+    <MESSAGE value="Level 1, 2" />
+    <MESSAGE value="Level 3,4" />
+    <MESSAGE value="Level 5" />
+    <MESSAGE value="Level 5 fix" />
+    <MESSAGE value="Level 3 fix, 6" />
+    <MESSAGE value="Level 7" />
+    <MESSAGE value="Level 8" />
+    <MESSAGE value="some fixes" />
+    <MESSAGE value="end cutscene" />
+    <MESSAGE value="fixes" />
+    <MESSAGE value="video add" />
+    <MESSAGE value="Finish?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish?" />
   </component>
 </project>

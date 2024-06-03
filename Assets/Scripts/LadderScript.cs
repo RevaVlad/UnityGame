@@ -20,6 +20,11 @@ public class LadderScript : MonoBehaviour
     private Rigidbody2D rb;
 
 
+    private void Awake() =>
+        transform.SetParent(GameObject.Find("LaddersContainer") is null
+            ? new GameObject("LaddersContainer").transform
+            : GameObject.Find("LaddersContainer").transform);
+
     private void Start()
     {
         connected = new List<LadderScript>();
@@ -31,10 +36,6 @@ public class LadderScript : MonoBehaviour
             leftObjectsCollider.Add(child.Find("LeftCollider").GetComponent<GetNearbyObjectsScript>());
             downObjectsColliders.Add(child.Find("DownCollider").GetComponent<FallingProcessingScript>());
         }
-
-        transform.SetParent(GameObject.Find("LaddersContainer") is null
-            ? new GameObject("LaddersContainer").transform
-            : GameObject.Find("LaddersContainer").transform);
     }
 
     public void ConnectLadders(Transform other)
@@ -52,32 +53,48 @@ public class LadderScript : MonoBehaviour
     private List<GameObject> GetLeftCollidingObjects() =>
         leftObjectsCollider.SelectMany(collider => collider.CollidingObjects).ToList();
 
-    private void MoveNearbyObjects(bool right)
+    private void MoveNearbyObjects(bool right, LadderScript startedBy)
     {
         var laddersOnDirection =
             (right ? GetRightCollidingObjects() : GetLeftCollidingObjects())
-            .Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
-            .Select(obj => PipeUtils.GetPipeRoot(obj.transform));
+            .Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            .Select(obj => Utils.GetPipeRoot(obj.transform));
 
         foreach (var ladder in laddersOnDirection)
         {
             var script = ladder.GetComponent<LadderScript>();
             if (connected.Contains(script)) continue;
-            if (right) script.MoveRight();
-            else script.MoveLeft();
+            if (right) script.MoveRight(startedBy);
+            else script.MoveLeft(startedBy);
         }
     }
 
-    private IEnumerator MoveHorizontalCoroutine(bool right)
+    public void StopMoveCoroutine()
     {
-        if (MoveDirection != 0 || !CheckIfMoveIsPossible(right))
+        if (moveCoroutine is null) return;
+        StopCoroutine(moveCoroutine);
+        moveCoroutine = null;
+        MoveDirection = 0;
+        rb.velocity = Vector2.zero;
+    }
+
+    private IEnumerator MoveHorizontalCoroutine(bool right, LadderScript startedBy)
+    {
+        if (MoveDirection != 0 || !CheckIfMoveIsPossible(right, startedBy))
             yield break;
 
         MoveDirection = right ? 1 : -1;
 
-        MoveNearbyObjects(right);
-        MoveConnected(right);
+        MoveNearbyObjects(right, startedBy);
+        MoveConnected(right, startedBy);
 
+        yield return MoveLaddersHorizontalCoroutine();
+
+        StopMoveCoroutine();
+    }
+
+    private IEnumerator MoveLaddersHorizontalCoroutine()
+    {
         var gameObjectTransform = transform;
         var position = gameObjectTransform.position;
         var target = position + new Vector3(MoveDirection, 0, 0);
@@ -92,51 +109,52 @@ public class LadderScript : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        rb.velocity = Vector2.zero;
-        MoveDirection = 0;
         transform.position = target;
         rb.MovePosition(target);
-        moveCoroutine = null;
     }
 
-    private void MoveConnected(bool right)
+    private void MoveConnected(bool right, LadderScript startedBy)
     {
         var temp = connected.ToArray();
         foreach (var connectedObject in temp)
         {
             if (connectedObject is null) continue;
-            if (!connectedObject.CheckIfMoveIsPossible(right)) continue;
-            if (right) connectedObject.MoveRight();
-            else connectedObject.MoveLeft();
+            if (!connectedObject.CheckIfMoveIsPossible(right, startedBy)) continue;
+            if (right) connectedObject.MoveRight(startedBy);
+            else connectedObject.MoveLeft(startedBy);
         }
     }
 
-    private bool CheckIfMoveIsPossible(bool right)
+    private bool CheckIfMoveIsPossible(bool right, LadderScript startedBy)
     {
         if (isFalling) return false;
         var objectsAtDirection =
             right ? GetRightCollidingObjects() : GetLeftCollidingObjects();
 
-        if (objectsAtDirection.Any(obj => obj.layer == LayerMask.NameToLayer("Platforms") && !obj.CompareTag("Hidden")))
+        if (objectsAtDirection.Any(obj =>
+                obj.layer == LayerMask.NameToLayer(Utils.PlatformsLayerName) && !obj.CompareTag("Hidden")))
             return false;
 
-        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer("Ladders"))
-            .Select(obj => PipeUtils.GetPipeRoot(obj.transform)).All(ladder =>
-                ladder.GetComponent<LadderScript>().CheckIfMoveIsPossible(right));
+        return objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            .Select(obj => Utils.GetPipeRoot(obj.transform).GetComponent<LadderScript>()).All(ladder =>
+                ladder.CheckIfMoveIsPossible(right, startedBy) && !ladder.connected.Contains(startedBy));
     }
 
     public bool CheckIfExitAvailable()
     {
-        var collider = Physics2D.OverlapCircleAll(transform.Find("ExitPoint").transform.position, 0.1f,
-            LayerMask.GetMask("Platforms"));
-        return collider.Length == 0;
+        var colliders = Physics2D.OverlapCircleAll(transform.Find(Utils.PipeExitPointName).transform.position, 0.1f,
+            LayerMask.GetMask(Utils.PlatformsLayerName, Utils.LaddersLayerName));
+        return !colliders.Any(collider => collider.gameObject.layer == LayerMask.GetMask(Utils.PlatformsLayerName) ||
+                                          LayerMask.GetMask(Utils.PlayerLayerName) != collider.excludeLayers);
     }
 
     [ContextMenu("MoveRight")]
-    public void MoveRight() => moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(true));
+    public void MoveRight(LadderScript startedBy = null) =>
+        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(true, startedBy ?? this));
 
     [ContextMenu("MoveLeft")]
-    public void MoveLeft() => moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(false));
+    public void MoveLeft(LadderScript startedBy = null) =>
+        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(false, startedBy ?? this));
 
     public void StopFall()
     {

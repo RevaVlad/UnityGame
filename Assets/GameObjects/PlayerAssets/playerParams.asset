@@ -19,9 +19,7 @@ MonoBehaviour:
   decceleration: 94.3
   airAccelerationRation: 0.3
   airDeccelerationRation: 1
-  airAcceleration: 19.440002
-  airDecceleration: 94.3
-  jumpForce: 120
+  jumpForce: 123
   coyoteTime: 0.12
   bufferTime: 0.2
   jumpCutMultiplier: 8

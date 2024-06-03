@@ -12,8 +12,9 @@ public class PlayerRunData : ScriptableObject
 
     [Space(10)] public float airAccelerationRation;
     public float airDeccelerationRation;
-    [HideInInspector] public float airAcceleration;
-    [HideInInspector] public float airDecceleration;
+
+    public float AirAcceleration => acceleration * airAccelerationRation;
+    public float AirDecceleration => decceleration * airDeccelerationRation;
 
     [Header("Jump")] public float jumpForce;
     public float coyoteTime;
@@ -22,10 +23,4 @@ public class PlayerRunData : ScriptableObject
     public float momentumLossAtJump;
     public float gravityScaleWhenFalling;
     public float normalGravityScale;
-
-    private void OnValidate()
-    {
-        airAcceleration = acceleration * airAccelerationRation;
-        airDecceleration = decceleration * airDeccelerationRation;
-    }
 }

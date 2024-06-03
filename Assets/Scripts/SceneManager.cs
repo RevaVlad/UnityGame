@@ -10,7 +10,7 @@ using UnityEngine.Rendering;
 public class SceneManager : MonoBehaviour
 {
     private GameObject player;
-    [SerializeField] private int totalLevelCount = 6;
+    [SerializeField] private int totalLevelCount = 8;
     private GameObject flashingImage;
     [SerializeField] private AudioClip[] rollbackSound;
 
@@ -20,13 +20,13 @@ public class SceneManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput sceneInput;
 
+    private Transform laddersContainer;
     private readonly List<AudioSource> pausedAudioSources = new();
 
     public void CreateObjectsSnapshot()
     {
         if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
         var sceneSnapshot = new List<ObjectSnapshot>();
-        var laddersContainer = GameObject.Find("LaddersContainer").transform;
         for (var i = 0; i < laddersContainer.childCount; i++)
         {
             var obj = laddersContainer.GetChild(i).gameObject;
@@ -41,6 +41,8 @@ public class SceneManager : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         player = GameObject.Find("Player");
         playerInput = player.GetComponent<PlayerInput>();
         sceneInput = GetComponent<PlayerInput>();
@@ -51,9 +53,18 @@ public class SceneManager : MonoBehaviour
         flashingImage.SetActive(false);
     }
 
+    private void Start() =>
+        laddersContainer = GameObject.Find("LaddersContainer").transform;
+
     private void Update() => CheckFinishAndLoadNextLevel();
 
     public void OnRestartLevel() => LoadLastLevel();
+
+    private void StopPipesCoroutine()
+    {
+        for (var i = 0; i < laddersContainer.childCount; i++)
+            laddersContainer.GetChild(i).GetComponent<LadderScript>().StopMoveCoroutine();
+    }
 
     private void OnRestoreSnapshot()
     {
@@ -69,7 +80,7 @@ public class SceneManager : MonoBehaviour
     {
         flashingImage.SetActive(true);
         var flashCoroutine = StartCoroutine(FlashImage());
-
+        StopPipesCoroutine();
         PauseAllSounds();
 
         SoundFXManager.Instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);
@@ -78,16 +89,14 @@ public class SceneManager : MonoBehaviour
         foreach (var objSnap in snapshot)
             objSnap.GameObject.transform.position = objSnap.Position;
 
-        var playerScript = player.GetComponent<HeroScript>();
-        playerScript.OnDropLadder();
-
+        player.GetComponent<HeroScript>().OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Enable();
 
         yield return StartCoroutine(BlurEffect(false));
-
-        ResumeAllSounds();
+        FindObjectsOfType<AudioSource>()[0].Pause();
         StopCoroutine(flashCoroutine);
         flashingImage.SetActive(false);
+        ResumeAllSounds();
         sceneInput.ActivateInput();
     }
 
@@ -122,7 +131,7 @@ public class SceneManager : MonoBehaviour
         for (var i = 0; i < 20; i++)
         {
             depthOfField.focalLength.value += blurStep;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.01f);
         }
 
         if (!apply)
