@@ -13,6 +13,7 @@ public class VideoPlayerScript : MonoBehaviour
         rawImage.color = new Color(rawImage.color.r, rawImage.color.g, rawImage.color.b, 0f);
 
         videoPlayer = GetComponent<VideoPlayer>();
+        videoPlayer.loopPointReached += OnVideoEnd;
         StartCoroutine(PlayVideo());
     }
 
@@ -27,5 +28,11 @@ public class VideoPlayerScript : MonoBehaviour
         rawImage.texture = videoPlayer.texture;
         rawImage.color = new Color(rawImage.color.r, rawImage.color.g, rawImage.color.b, 1f);
         videoPlayer.Play();
+    }
+
+    private void OnVideoEnd(VideoPlayer vp)
+    {
+        SceneManager.SaveLevelNumber(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("level0");
     }
 }

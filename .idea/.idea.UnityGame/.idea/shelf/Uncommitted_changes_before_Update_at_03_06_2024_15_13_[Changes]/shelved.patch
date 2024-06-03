@@ -1,0 +1,1126 @@
+Index: Assets/Fonts/LiberationSans.ttf.meta
+===================================================================
+diff --git a/Assets/Fonts/LiberationSans.ttf.meta b/Assets/Fonts/LiberationSans.ttf.meta
+deleted file mode 100644
+--- a/Assets/Fonts/LiberationSans.ttf.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,19 +0,0 @@
+-fileFormatVersion: 2
+-guid: e3265ab4bf004d28a9537516768c1c75
+-timeCreated: 1484171297
+-licenseType: Pro
+-TrueTypeFontImporter:
+-  serializedVersion: 2
+-  fontSize: 16
+-  forceTextureCase: -2
+-  characterSpacing: 1
+-  characterPadding: 0
+-  includeFontData: 1
+-  use2xBehaviour: 0
+-  fontNames: []
+-  fallbackFontReferences: []
+-  customCharacters: 
+-  fontRenderingMode: 0
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Fonts/minecraft.ttf.meta
+===================================================================
+diff --git a/Assets/Fonts/minecraft.ttf.meta b/Assets/Fonts/minecraft.ttf.meta
+deleted file mode 100644
+--- a/Assets/Fonts/minecraft.ttf.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,21 +0,0 @@
+-fileFormatVersion: 2
+-guid: bb457e12523638a4183dd0039bcaeb03
+-TrueTypeFontImporter:
+-  externalObjects: {}
+-  serializedVersion: 4
+-  fontSize: 16
+-  forceTextureCase: -2
+-  characterSpacing: 0
+-  characterPadding: 1
+-  includeFontData: 1
+-  fontNames:
+-  - Minecraft Rus
+-  fallbackFontReferences: []
+-  customCharacters: 
+-  fontRenderingMode: 0
+-  ascentCalculationMode: 1
+-  useLegacyBoundsCalculation: 0
+-  shouldRoundAdvanceValue: 1
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/photo_2023-08-01_15-13-15.jpg.meta
+===================================================================
+diff --git a/Assets/Credits/photo_2023-08-01_15-13-15.jpg.meta b/Assets/Credits/photo_2023-08-01_15-13-15.jpg.meta
+deleted file mode 100644
+--- a/Assets/Credits/photo_2023-08-01_15-13-15.jpg.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,127 +0,0 @@
+-fileFormatVersion: 2
+-guid: 8b0884c22972be9469053acf988557fe
+-TextureImporter:
+-  internalIDToNameTable: []
+-  externalObjects: {}
+-  serializedVersion: 13
+-  mipmaps:
+-    mipMapMode: 0
+-    enableMipMap: 0
+-    sRGBTexture: 1
+-    linearTexture: 0
+-    fadeOut: 0
+-    borderMipMap: 0
+-    mipMapsPreserveCoverage: 0
+-    alphaTestReferenceValue: 0.5
+-    mipMapFadeDistanceStart: 1
+-    mipMapFadeDistanceEnd: 3
+-  bumpmap:
+-    convertToNormalMap: 0
+-    externalNormalMap: 0
+-    heightScale: 0.25
+-    normalMapFilter: 0
+-    flipGreenChannel: 0
+-  isReadable: 0
+-  streamingMipmaps: 0
+-  streamingMipmapsPriority: 0
+-  vTOnly: 0
+-  ignoreMipmapLimit: 0
+-  grayScaleToAlpha: 0
+-  generateCubemap: 6
+-  cubemapConvolution: 0
+-  seamlessCubemap: 0
+-  textureFormat: 1
+-  maxTextureSize: 2048
+-  textureSettings:
+-    serializedVersion: 2
+-    filterMode: 0
+-    aniso: 1
+-    mipBias: 0
+-    wrapU: 1
+-    wrapV: 1
+-    wrapW: 1
+-  nPOTScale: 0
+-  lightmap: 0
+-  compressionQuality: 50
+-  spriteMode: 1
+-  spriteExtrude: 1
+-  spriteMeshType: 1
+-  alignment: 0
+-  spritePivot: {x: 0.5, y: 0.5}
+-  spritePixelsToUnits: 4
+-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+-  spriteGenerateFallbackPhysicsShape: 1
+-  alphaUsage: 1
+-  alphaIsTransparency: 1
+-  spriteTessellationDetail: -1
+-  textureType: 8
+-  textureShape: 1
+-  singleChannelComponent: 0
+-  flipbookRows: 1
+-  flipbookColumns: 1
+-  maxTextureSizeSet: 0
+-  compressionQualitySet: 0
+-  textureFormatSet: 0
+-  ignorePngGamma: 0
+-  applyGammaDecoding: 0
+-  swizzle: 50462976
+-  cookieLightType: 0
+-  platformSettings:
+-  - serializedVersion: 3
+-    buildTarget: DefaultTexturePlatform
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 0
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  - serializedVersion: 3
+-    buildTarget: Standalone
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 1
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  - serializedVersion: 3
+-    buildTarget: WebGL
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 1
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  spriteSheet:
+-    serializedVersion: 2
+-    sprites: []
+-    outline: []
+-    physicsShape: []
+-    bones: []
+-    spriteID: 5e97eb03825dee720800000000000000
+-    internalID: 0
+-    vertices: []
+-    indices: 
+-    edges: []
+-    weights: []
+-    secondaryTextures: []
+-    nameFileIdTable: {}
+-  mipmapLimitGroupName: 
+-  pSDRemoveMatte: 0
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/photo_2024-03-29_19-54-11.jpg.meta
+===================================================================
+diff --git a/Assets/Credits/photo_2024-03-29_19-54-11.jpg.meta b/Assets/Credits/photo_2024-03-29_19-54-11.jpg.meta
+deleted file mode 100644
+--- a/Assets/Credits/photo_2024-03-29_19-54-11.jpg.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,127 +0,0 @@
+-fileFormatVersion: 2
+-guid: 5c7c11270eb26b3479dc45e822110542
+-TextureImporter:
+-  internalIDToNameTable: []
+-  externalObjects: {}
+-  serializedVersion: 13
+-  mipmaps:
+-    mipMapMode: 0
+-    enableMipMap: 0
+-    sRGBTexture: 1
+-    linearTexture: 0
+-    fadeOut: 0
+-    borderMipMap: 0
+-    mipMapsPreserveCoverage: 0
+-    alphaTestReferenceValue: 0.5
+-    mipMapFadeDistanceStart: 1
+-    mipMapFadeDistanceEnd: 3
+-  bumpmap:
+-    convertToNormalMap: 0
+-    externalNormalMap: 0
+-    heightScale: 0.25
+-    normalMapFilter: 0
+-    flipGreenChannel: 0
+-  isReadable: 0
+-  streamingMipmaps: 0
+-  streamingMipmapsPriority: 0
+-  vTOnly: 0
+-  ignoreMipmapLimit: 0
+-  grayScaleToAlpha: 0
+-  generateCubemap: 6
+-  cubemapConvolution: 0
+-  seamlessCubemap: 0
+-  textureFormat: 1
+-  maxTextureSize: 2048
+-  textureSettings:
+-    serializedVersion: 2
+-    filterMode: 1
+-    aniso: 1
+-    mipBias: 0
+-    wrapU: 0
+-    wrapV: 0
+-    wrapW: 0
+-  nPOTScale: 0
+-  lightmap: 0
+-  compressionQuality: 50
+-  spriteMode: 1
+-  spriteExtrude: 1
+-  spriteMeshType: 1
+-  alignment: 0
+-  spritePivot: {x: 0.5, y: 0.5}
+-  spritePixelsToUnits: 4
+-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+-  spriteGenerateFallbackPhysicsShape: 1
+-  alphaUsage: 1
+-  alphaIsTransparency: 1
+-  spriteTessellationDetail: -1
+-  textureType: 8
+-  textureShape: 1
+-  singleChannelComponent: 0
+-  flipbookRows: 1
+-  flipbookColumns: 1
+-  maxTextureSizeSet: 0
+-  compressionQualitySet: 0
+-  textureFormatSet: 0
+-  ignorePngGamma: 0
+-  applyGammaDecoding: 0
+-  swizzle: 50462976
+-  cookieLightType: 0
+-  platformSettings:
+-  - serializedVersion: 3
+-    buildTarget: DefaultTexturePlatform
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 0
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  - serializedVersion: 3
+-    buildTarget: Standalone
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 1
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  - serializedVersion: 3
+-    buildTarget: WebGL
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 1
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  spriteSheet:
+-    serializedVersion: 2
+-    sprites: []
+-    outline: []
+-    physicsShape: []
+-    bones: []
+-    spriteID: 5e97eb03825dee720800000000000000
+-    internalID: 0
+-    vertices: []
+-    indices: 
+-    edges: []
+-    weights: []
+-    secondaryTextures: []
+-    nameFileIdTable: {}
+-  mipmapLimitGroupName: 
+-  pSDRemoveMatte: 0
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/GameObject.controller.meta
+===================================================================
+diff --git a/Assets/Credits/GameObject.controller.meta b/Assets/Credits/GameObject.controller.meta
+deleted file mode 100644
+--- a/Assets/Credits/GameObject.controller.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: 4008eec7f082a874d86f76020be3482d
+-NativeFormatImporter:
+-  externalObjects: {}
+-  mainObjectFileID: 9100000
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits.meta
+===================================================================
+diff --git a/Assets/Credits.meta b/Assets/Credits.meta
+deleted file mode 100644
+--- a/Assets/Credits.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: eb179d78dadd4e047b3763eb1fa7912c
+-folderAsset: yes
+-DefaultImporter:
+-  externalObjects: {}
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/New Animation.anim.meta
+===================================================================
+diff --git a/Assets/Credits/New Animation.anim.meta b/Assets/Credits/New Animation.anim.meta
+deleted file mode 100644
+--- a/Assets/Credits/New Animation.anim.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: f7ca5db5dde0fdb408d8eb879ee48638
+-NativeFormatImporter:
+-  externalObjects: {}
+-  mainObjectFileID: 7400000
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/photo_2024-05-24_22-30-15.jpg.meta
+===================================================================
+diff --git a/Assets/Credits/photo_2024-05-24_22-30-15.jpg.meta b/Assets/Credits/photo_2024-05-24_22-30-15.jpg.meta
+deleted file mode 100644
+--- a/Assets/Credits/photo_2024-05-24_22-30-15.jpg.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,127 +0,0 @@
+-fileFormatVersion: 2
+-guid: 99e0a3752e7201248a27b8d7cad2b0dd
+-TextureImporter:
+-  internalIDToNameTable: []
+-  externalObjects: {}
+-  serializedVersion: 13
+-  mipmaps:
+-    mipMapMode: 0
+-    enableMipMap: 0
+-    sRGBTexture: 1
+-    linearTexture: 0
+-    fadeOut: 0
+-    borderMipMap: 0
+-    mipMapsPreserveCoverage: 0
+-    alphaTestReferenceValue: 0.5
+-    mipMapFadeDistanceStart: 1
+-    mipMapFadeDistanceEnd: 3
+-  bumpmap:
+-    convertToNormalMap: 0
+-    externalNormalMap: 0
+-    heightScale: 0.25
+-    normalMapFilter: 0
+-    flipGreenChannel: 0
+-  isReadable: 0
+-  streamingMipmaps: 0
+-  streamingMipmapsPriority: 0
+-  vTOnly: 0
+-  ignoreMipmapLimit: 0
+-  grayScaleToAlpha: 0
+-  generateCubemap: 6
+-  cubemapConvolution: 0
+-  seamlessCubemap: 0
+-  textureFormat: 1
+-  maxTextureSize: 2048
+-  textureSettings:
+-    serializedVersion: 2
+-    filterMode: 1
+-    aniso: 1
+-    mipBias: 0
+-    wrapU: 0
+-    wrapV: 0
+-    wrapW: 0
+-  nPOTScale: 0
+-  lightmap: 0
+-  compressionQuality: 50
+-  spriteMode: 1
+-  spriteExtrude: 1
+-  spriteMeshType: 1
+-  alignment: 0
+-  spritePivot: {x: 0.5, y: 0.5}
+-  spritePixelsToUnits: 4
+-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+-  spriteGenerateFallbackPhysicsShape: 1
+-  alphaUsage: 1
+-  alphaIsTransparency: 1
+-  spriteTessellationDetail: -1
+-  textureType: 8
+-  textureShape: 1
+-  singleChannelComponent: 0
+-  flipbookRows: 1
+-  flipbookColumns: 1
+-  maxTextureSizeSet: 0
+-  compressionQualitySet: 0
+-  textureFormatSet: 0
+-  ignorePngGamma: 0
+-  applyGammaDecoding: 0
+-  swizzle: 50462976
+-  cookieLightType: 0
+-  platformSettings:
+-  - serializedVersion: 3
+-    buildTarget: DefaultTexturePlatform
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 0
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  - serializedVersion: 3
+-    buildTarget: Standalone
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 1
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  - serializedVersion: 3
+-    buildTarget: WebGL
+-    maxTextureSize: 2048
+-    resizeAlgorithm: 0
+-    textureFormat: -1
+-    textureCompression: 1
+-    compressionQuality: 50
+-    crunchedCompression: 0
+-    allowsAlphaSplitting: 0
+-    overridden: 0
+-    ignorePlatformSupport: 0
+-    androidETC2FallbackOverride: 0
+-    forceMaximumCompressionQuality_BC6H_BC7: 0
+-  spriteSheet:
+-    serializedVersion: 2
+-    sprites: []
+-    outline: []
+-    physicsShape: []
+-    bones: []
+-    spriteID: 5e97eb03825dee720800000000000000
+-    internalID: 0
+-    vertices: []
+-    indices: 
+-    edges: []
+-    weights: []
+-    secondaryTextures: []
+-    nameFileIdTable: {}
+-  mipmapLimitGroupName: 
+-  pSDRemoveMatte: 0
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/GameObject.controller
+===================================================================
+diff --git a/Assets/Credits/GameObject.controller b/Assets/Credits/GameObject.controller
+deleted file mode 100644
+--- a/Assets/Credits/GameObject.controller	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,72 +0,0 @@
+-%YAML 1.1
+-%TAG !u! tag:unity3d.com,2011:
+---- !u!1102 &-5839370938184088323
+-AnimatorState:
+-  serializedVersion: 6
+-  m_ObjectHideFlags: 1
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_Name: New Animation
+-  m_Speed: 1
+-  m_CycleOffset: 0
+-  m_Transitions: []
+-  m_StateMachineBehaviours: []
+-  m_Position: {x: 50, y: 50, z: 0}
+-  m_IKOnFeet: 0
+-  m_WriteDefaultValues: 1
+-  m_Mirror: 0
+-  m_SpeedParameterActive: 0
+-  m_MirrorParameterActive: 0
+-  m_CycleOffsetParameterActive: 0
+-  m_TimeParameterActive: 0
+-  m_Motion: {fileID: 7400000, guid: f7ca5db5dde0fdb408d8eb879ee48638, type: 2}
+-  m_Tag: 
+-  m_SpeedParameter: 
+-  m_MirrorParameter: 
+-  m_CycleOffsetParameter: 
+-  m_TimeParameter: 
+---- !u!91 &9100000
+-AnimatorController:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_Name: GameObject
+-  serializedVersion: 5
+-  m_AnimatorParameters: []
+-  m_AnimatorLayers:
+-  - serializedVersion: 5
+-    m_Name: Base Layer
+-    m_StateMachine: {fileID: 7524335351929000054}
+-    m_Mask: {fileID: 0}
+-    m_Motions: []
+-    m_Behaviours: []
+-    m_BlendingMode: 0
+-    m_SyncedLayerIndex: -1
+-    m_DefaultWeight: 0
+-    m_IKPass: 0
+-    m_SyncedLayerAffectsTiming: 0
+-    m_Controller: {fileID: 9100000}
+---- !u!1107 &7524335351929000054
+-AnimatorStateMachine:
+-  serializedVersion: 6
+-  m_ObjectHideFlags: 1
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_Name: Base Layer
+-  m_ChildStates:
+-  - serializedVersion: 1
+-    m_State: {fileID: -5839370938184088323}
+-    m_Position: {x: 30, y: 260, z: 0}
+-  m_ChildStateMachines: []
+-  m_AnyStateTransitions: []
+-  m_EntryTransitions: []
+-  m_StateMachineTransitions: {}
+-  m_StateMachineBehaviours: []
+-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+-  m_EntryPosition: {x: 50, y: 120, z: 0}
+-  m_ExitPosition: {x: 800, y: 120, z: 0}
+-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+-  m_DefaultState: {fileID: -5839370938184088323}
+Index: Assets/Cutscenes.meta
+===================================================================
+diff --git a/Assets/Cutscenes.meta b/Assets/Cutscenes.meta
+deleted file mode 100644
+--- a/Assets/Cutscenes.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: 178c3be4f528cf249bb8f30a4a83e483
+-folderAsset: yes
+-DefaultImporter:
+-  externalObjects: {}
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Cutscenes/startCutscene.mp4.meta
+===================================================================
+diff --git a/Assets/Cutscenes/startCutscene.mp4.meta b/Assets/Cutscenes/startCutscene.mp4.meta
+deleted file mode 100644
+--- a/Assets/Cutscenes/startCutscene.mp4.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,18 +0,0 @@
+-fileFormatVersion: 2
+-guid: cfac60c7d2e3be74a8818017715056b5
+-VideoClipImporter:
+-  externalObjects: {}
+-  serializedVersion: 2
+-  frameRange: 0
+-  startFrame: -1
+-  endFrame: -1
+-  colorSpace: 0
+-  deinterlace: 0
+-  encodeAlpha: 0
+-  flipVertical: 0
+-  flipHorizontal: 0
+-  importAudio: 1
+-  targetSettings: {}
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Fonts/LiberationSans - OFL.txt
+===================================================================
+diff --git a/Assets/Fonts/LiberationSans - OFL.txt b/Assets/Fonts/LiberationSans - OFL.txt
+deleted file mode 100644
+--- a/Assets/Fonts/LiberationSans - OFL.txt	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,46 +0,0 @@
+-Digitized data copyright (c) 2010 Google Corporation
+-	with Reserved Font Arimo, Tinos and Cousine.
+-Copyright (c) 2012 Red Hat, Inc.
+-	with Reserved Font Name Liberation.
+-
+-This Font Software is licensed under the SIL Open Font License, Version 1.1.
+-This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+-
+------------------------------------------------------------
+-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+------------------------------------------------------------
+-
+-PREAMBLE
+-The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.
+-
+-The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.
+-
+-DEFINITIONS
+-"Font Software" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.
+-
+-"Reserved Font Name" refers to any names specified as such after the copyright statement(s).
+-
+-"Original Version" refers to the collection of Font Software components as distributed by the Copyright Holder(s).
+-
+-"Modified Version" refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.
+-
+-"Author" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.
+-
+-PERMISSION & CONDITIONS
+-Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:
+-
+-1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.
+-
+-2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.
+-
+-3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.
+-
+-4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.
+-
+-5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.
+-
+-TERMINATION
+-This license becomes null and void if any of the above conditions are not met.
+-
+-DISCLAIMER
+-THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+\ No newline at end of file
+Index: Assets/Fonts/LiberationSans - OFL.txt.meta
+===================================================================
+diff --git a/Assets/Fonts/LiberationSans - OFL.txt.meta b/Assets/Fonts/LiberationSans - OFL.txt.meta
+deleted file mode 100644
+--- a/Assets/Fonts/LiberationSans - OFL.txt.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: 6e59c59b81ab47f9b6ec5781fa725d2c
+-timeCreated: 1484171296
+-licenseType: Pro
+-TextScriptImporter:
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Credits/New Animation.anim
+===================================================================
+diff --git a/Assets/Credits/New Animation.anim b/Assets/Credits/New Animation.anim
+deleted file mode 100644
+--- a/Assets/Credits/New Animation.anim	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,191 +0,0 @@
+-%YAML 1.1
+-%TAG !u! tag:unity3d.com,2011:
+---- !u!74 &7400000
+-AnimationClip:
+-  m_ObjectHideFlags: 0
+-  m_CorrespondingSourceObject: {fileID: 0}
+-  m_PrefabInstance: {fileID: 0}
+-  m_PrefabAsset: {fileID: 0}
+-  m_Name: New Animation
+-  serializedVersion: 7
+-  m_Legacy: 0
+-  m_Compressed: 0
+-  m_UseHighQualityCurve: 1
+-  m_RotationCurves: []
+-  m_CompressedRotationCurves: []
+-  m_EulerCurves: []
+-  m_PositionCurves: []
+-  m_ScaleCurves: []
+-  m_FloatCurves:
+-  - serializedVersion: 2
+-    curve:
+-      serializedVersion: 2
+-      m_Curve:
+-      - serializedVersion: 3
+-        time: 0
+-        value: -1540
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      - serializedVersion: 3
+-        time: 50
+-        value: 5100
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      m_PreInfinity: 2
+-      m_PostInfinity: 2
+-      m_RotationOrder: 4
+-    attribute: m_AnchoredPosition.y
+-    path: 
+-    classID: 224
+-    script: {fileID: 0}
+-    flags: 0
+-  - serializedVersion: 2
+-    curve:
+-      serializedVersion: 2
+-      m_Curve:
+-      - serializedVersion: 3
+-        time: 0
+-        value: -317
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      - serializedVersion: 3
+-        time: 50
+-        value: -317
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      m_PreInfinity: 2
+-      m_PostInfinity: 2
+-      m_RotationOrder: 4
+-    attribute: m_AnchoredPosition.x
+-    path: 
+-    classID: 224
+-    script: {fileID: 0}
+-    flags: 0
+-  m_PPtrCurves: []
+-  m_SampleRate: 10
+-  m_WrapMode: 0
+-  m_Bounds:
+-    m_Center: {x: 0, y: 0, z: 0}
+-    m_Extent: {x: 0, y: 0, z: 0}
+-  m_ClipBindingConstant:
+-    genericBindings:
+-    - serializedVersion: 2
+-      path: 0
+-      attribute: 538195251
+-      script: {fileID: 0}
+-      typeID: 224
+-      customType: 28
+-      isPPtrCurve: 0
+-      isIntCurve: 0
+-      isSerializeReferenceCurve: 0
+-    - serializedVersion: 2
+-      path: 0
+-      attribute: 1460864421
+-      script: {fileID: 0}
+-      typeID: 224
+-      customType: 28
+-      isPPtrCurve: 0
+-      isIntCurve: 0
+-      isSerializeReferenceCurve: 0
+-    pptrCurveMapping: []
+-  m_AnimationClipSettings:
+-    serializedVersion: 2
+-    m_AdditiveReferencePoseClip: {fileID: 0}
+-    m_AdditiveReferencePoseTime: 0
+-    m_StartTime: 0
+-    m_StopTime: 50
+-    m_OrientationOffsetY: 0
+-    m_Level: 0
+-    m_CycleOffset: 0
+-    m_HasAdditiveReferencePose: 0
+-    m_LoopTime: 0
+-    m_LoopBlend: 0
+-    m_LoopBlendOrientation: 0
+-    m_LoopBlendPositionY: 0
+-    m_LoopBlendPositionXZ: 0
+-    m_KeepOriginalOrientation: 0
+-    m_KeepOriginalPositionY: 1
+-    m_KeepOriginalPositionXZ: 0
+-    m_HeightFromFeet: 0
+-    m_Mirror: 0
+-  m_EditorCurves:
+-  - serializedVersion: 2
+-    curve:
+-      serializedVersion: 2
+-      m_Curve:
+-      - serializedVersion: 3
+-        time: 0
+-        value: -1540
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      - serializedVersion: 3
+-        time: 50
+-        value: 5100
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      m_PreInfinity: 2
+-      m_PostInfinity: 2
+-      m_RotationOrder: 4
+-    attribute: m_AnchoredPosition.y
+-    path: 
+-    classID: 224
+-    script: {fileID: 0}
+-    flags: 0
+-  - serializedVersion: 2
+-    curve:
+-      serializedVersion: 2
+-      m_Curve:
+-      - serializedVersion: 3
+-        time: 0
+-        value: -317
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      - serializedVersion: 3
+-        time: 50
+-        value: -317
+-        inSlope: 0
+-        outSlope: 0
+-        tangentMode: 136
+-        weightedMode: 0
+-        inWeight: 0.33333334
+-        outWeight: 0.33333334
+-      m_PreInfinity: 2
+-      m_PostInfinity: 2
+-      m_RotationOrder: 4
+-    attribute: m_AnchoredPosition.x
+-    path: 
+-    classID: 224
+-    script: {fileID: 0}
+-    flags: 0
+-  m_EulerEditorCurves: []
+-  m_HasGenericRootTransform: 0
+-  m_HasMotionFloatCurves: 0
+-  m_Events: []
+Index: Assets/Fonts.meta
+===================================================================
+diff --git a/Assets/Fonts.meta b/Assets/Fonts.meta
+deleted file mode 100644
+--- a/Assets/Fonts.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,8 +0,0 @@
+-fileFormatVersion: 2
+-guid: 6ab70aee4d56447429c680537fbf93ed
+-folderAsset: yes
+-DefaultImporter:
+-  externalObjects: {}
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: Assets/Fonts/minecraft - Copy.ttf.meta
+===================================================================
+diff --git a/Assets/Fonts/minecraft - Copy.ttf.meta b/Assets/Fonts/minecraft - Copy.ttf.meta
+deleted file mode 100644
+--- a/Assets/Fonts/minecraft - Copy.ttf.meta	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ /dev/null	(revision adedacabdc87075408005e2199f0606fdbd70217)
+@@ -1,21 +0,0 @@
+-fileFormatVersion: 2
+-guid: 09f473b0fa3957d459d4b22b5cef5105
+-TrueTypeFontImporter:
+-  externalObjects: {}
+-  serializedVersion: 4
+-  fontSize: 16
+-  forceTextureCase: -2
+-  characterSpacing: 0
+-  characterPadding: 1
+-  includeFontData: 1
+-  fontNames:
+-  - Minecraft Rus
+-  fallbackFontReferences: []
+-  customCharacters: 
+-  fontRenderingMode: 0
+-  ascentCalculationMode: 1
+-  useLegacyBoundsCalculation: 0
+-  shouldRoundAdvanceValue: 1
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
+Index: .idea/.idea.UnityGame/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3f4cd37a-e45d-49e8-94da-113dd1a63788\" name=\"Changes\" comment=\"anim fixes, some credits added\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_55__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_55__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"PlayerFixes\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;RevaVlad&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"d32db9f1-3199-4bab-a20a-f5034e8866b6\" />\r\n        <option name=\"url\" value=\"https://github.com/RevaVlad/UnityGame.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"mock://C:/UnityGame/Assets/Scenes/credits.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/PlayerRunData.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SoundMixerManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/Utils.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/VideoPlayerScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"false\" />\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fdtjYlzBl2re9F4PrBZvwVDdZQ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;Pipes&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;rider.external.source.directories&quot;: [\r\n      &quot;C:\\\\Users\\\\Михаил\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\DecompilerCache&quot;,\r\n      &quot;C:\\\\Users\\\\Михаил\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\SourcesCache&quot;,\r\n      &quot;C:\\\\Users\\\\Михаил\\\\AppData\\\\Local\\\\Symbols\\\\src&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Attach to Unity Editor.Attach to Unity Editor\">\r\n    <configuration name=\"Standalone Player\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"$PROJECT_DIR$/../UnityGameBuild\\Heads Up.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"C:\\Users\\grigo\\Desktop\\UnityGameBuild\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.24f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath D:\\Challenge\\UnityGame -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.23f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath D:\\Challenge\\UnityGame -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.24f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath D:\\Challenge\\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.23f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath D:\\Challenge\\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3f4cd37a-e45d-49e8-94da-113dd1a63788\" name=\"Changes\" comment=\"Reworked connections\" />\r\n      <created>1714142925231</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714142925231</updated>\r\n      <workItem from=\"1714142929641\" duration=\"2726000\" />\r\n      <workItem from=\"1714253096600\" duration=\"956000\" />\r\n      <workItem from=\"1714305515619\" duration=\"3670000\" />\r\n      <workItem from=\"1715277760744\" duration=\"7107000\" />\r\n      <workItem from=\"1715315163496\" duration=\"7159000\" />\r\n      <workItem from=\"1715697980304\" duration=\"1401000\" />\r\n      <workItem from=\"1715878064081\" duration=\"5952000\" />\r\n      <workItem from=\"1715885429807\" duration=\"232000\" />\r\n      <workItem from=\"1716021661127\" duration=\"3382000\" />\r\n      <workItem from=\"1716040588171\" duration=\"281000\" />\r\n      <workItem from=\"1716101828590\" duration=\"11261000\" />\r\n      <workItem from=\"1716132186320\" duration=\"1347000\" />\r\n      <workItem from=\"1716198341081\" duration=\"5639000\" />\r\n      <workItem from=\"1716205664112\" duration=\"566000\" />\r\n      <workItem from=\"1716209174238\" duration=\"1944000\" />\r\n      <workItem from=\"1716221523575\" duration=\"7875000\" />\r\n      <workItem from=\"1716264012164\" duration=\"2486000\" />\r\n      <workItem from=\"1716281201525\" duration=\"5422000\" />\r\n      <workItem from=\"1716318353966\" duration=\"25000\" />\r\n      <workItem from=\"1716387717106\" duration=\"7006000\" />\r\n      <workItem from=\"1716484978459\" duration=\"627000\" />\r\n      <workItem from=\"1716487606713\" duration=\"2176000\" />\r\n      <workItem from=\"1716706456605\" duration=\"10352000\" />\r\n      <workItem from=\"1716736287517\" duration=\"11593000\" />\r\n      <workItem from=\"1716819384684\" duration=\"3625000\" />\r\n      <workItem from=\"1716955775418\" duration=\"711000\" />\r\n      <workItem from=\"1717008872076\" duration=\"8418000\" />\r\n      <workItem from=\"1717070099221\" duration=\"411000\" />\r\n      <workItem from=\"1717008872076\" duration=\"6767000\" />\r\n      <workItem from=\"1717068794339\" duration=\"613000\" />\r\n      <workItem from=\"1717132161775\" duration=\"1134000\" />\r\n      <workItem from=\"1717390386756\" duration=\"798000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00056\" summary=\"level 3 fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716832397481</created>\r\n      <option name=\"number\" value=\"00056\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00056\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716832397481</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00057\" summary=\"level 4 fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716832880943</created>\r\n      <option name=\"number\" value=\"00057\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00057\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716832880943</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00058\" summary=\"level 4 more fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716832942550</created>\r\n      <option name=\"number\" value=\"00058\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00058\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716832942550</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00059\" summary=\"level 5 fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716833946152</created>\r\n      <option name=\"number\" value=\"00059\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00059\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716833946153</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00060\" summary=\"keyboard fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716920038390</created>\r\n      <option name=\"number\" value=\"00060\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00060\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716920038390</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00061\" summary=\"blur fixed\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716920555332</created>\r\n      <option name=\"number\" value=\"00061\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00061\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716920555332</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00062\" summary=\"FallingProcessingScript.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716923114964</created>\r\n      <option name=\"number\" value=\"00062\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00062\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716923114965</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00063\" summary=\"GetNearbyObjectsScript.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716923679467</created>\r\n      <option name=\"number\" value=\"00063\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00063\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716923679467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00064\" summary=\"HeroScript.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717010806418</created>\r\n      <option name=\"number\" value=\"00064\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00064\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717010806419</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00065\" summary=\"LadderScript.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717014004962</created>\r\n      <option name=\"number\" value=\"00065\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00065\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717014004962</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00066\" summary=\"MainMenuManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717014199927</created>\r\n      <option name=\"number\" value=\"00066\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00066\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717014199927</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00067\" summary=\"PauseManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717014351096</created>\r\n      <option name=\"number\" value=\"00067\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00067\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717014351097</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00068\" summary=\"PipeUtils.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717014459565</created>\r\n      <option name=\"number\" value=\"00068\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00068\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717014459565</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00069\" summary=\"PlayerRunData.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717014873580</created>\r\n      <option name=\"number\" value=\"00069\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00069\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717014873580</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00070\" summary=\"SceneManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717015148033</created>\r\n      <option name=\"number\" value=\"00070\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00070\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717015148033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00071\" summary=\"SceneManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717015544355</created>\r\n      <option name=\"number\" value=\"00071\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00071\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717015544355</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00072\" summary=\"SoundMixerManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717015751303</created>\r\n      <option name=\"number\" value=\"00072\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00072\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717015751303</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00073\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717252988661</created>\r\n      <option name=\"number\" value=\"00073\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00073\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717252988661</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00074\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717254365611</created>\r\n      <option name=\"number\" value=\"00074\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00074\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717254365611</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00075\" summary=\"some fixes after merge\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717259165098</created>\r\n      <option name=\"number\" value=\"00075\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00075\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717259165098</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00076\" summary=\"new animations added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717259523075</created>\r\n      <option name=\"number\" value=\"00076\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00076\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717259523075</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00077\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717273507236</created>\r\n      <option name=\"number\" value=\"00077\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00077\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717273507236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00078\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717273848050</created>\r\n      <option name=\"number\" value=\"00078\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00078\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717273848050</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00079\" summary=\"pause fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717275353945</created>\r\n      <option name=\"number\" value=\"00079\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00079\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717275353945</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00080\" summary=\"main menu style started\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717317179366</created>\r\n      <option name=\"number\" value=\"00080\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00080\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717317179366</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00081\" summary=\"Player bug fix + level 5 fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717325034614</created>\r\n      <option name=\"number\" value=\"00081\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00081\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717325034614</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00082\" summary=\"Bug fix + tilemap optimization\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717329989849</created>\r\n      <option name=\"number\" value=\"00082\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00082\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717329989849</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00083\" summary=\"Bug fix, with long pipes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717333955451</created>\r\n      <option name=\"number\" value=\"00083\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00083\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717333955452</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00084\" summary=\"main menu fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717340069383</created>\r\n      <option name=\"number\" value=\"00084\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00084\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717340069383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00085\" summary=\"bug fix нахуй\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717340856328</created>\r\n      <option name=\"number\" value=\"00085\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00085\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717340856328</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00086\" summary=\"second level fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717342526854</created>\r\n      <option name=\"number\" value=\"00086\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00086\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717342526854</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00087\" summary=\"chake changes nah\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717343238131</created>\r\n      <option name=\"number\" value=\"00087\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00087\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717343238132</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00088\" summary=\"animations fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717351630117</created>\r\n      <option name=\"number\" value=\"00088\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00088\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717351630117</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00089\" summary=\"training level fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717352695676</created>\r\n      <option name=\"number\" value=\"00089\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00089\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717352695676</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00090\" summary=\"exits added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717353679084</created>\r\n      <option name=\"number\" value=\"00090\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00090\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717353679084</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00091\" summary=\"some fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717354213258</created>\r\n      <option name=\"number\" value=\"00091\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00091\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717354213258</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00092\" summary=\"речка-реченька разливается, да в моря вливается\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717361143252</created>\r\n      <option name=\"number\" value=\"00092\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00092\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717361143252</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00093\" summary=\"code style fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717362785126</created>\r\n      <option name=\"number\" value=\"00093\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00093\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717362785126</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00094\" summary=\"10% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364132812</created>\r\n      <option name=\"number\" value=\"00094\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00094\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364132812</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00095\" summary=\"25% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364399614</created>\r\n      <option name=\"number\" value=\"00095\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00095\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364399614</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00096\" summary=\"30% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364444912</created>\r\n      <option name=\"number\" value=\"00096\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00096\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364444912</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00097\" summary=\"35% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364609359</created>\r\n      <option name=\"number\" value=\"00097\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00097\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364609359</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00098\" summary=\"45% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364745525</created>\r\n      <option name=\"number\" value=\"00098\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00098\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364745525</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00099\" summary=\"55% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364968461</created>\r\n      <option name=\"number\" value=\"00099\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00099\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364968461</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00100\" summary=\"65% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717365075316</created>\r\n      <option name=\"number\" value=\"00100\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00100\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717365075316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00101\" summary=\"75% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717365165282</created>\r\n      <option name=\"number\" value=\"00101\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00101\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717365165283</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00102\" summary=\"85% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717365319962</created>\r\n      <option name=\"number\" value=\"00102\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00102\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717365319962</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00103\" summary=\"start add starting cutscene\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717368144861</created>\r\n      <option name=\"number\" value=\"00103\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00103\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717368144861</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00104\" summary=\"anim fixes, some credits added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717390536772</created>\r\n      <option name=\"number\" value=\"00104\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00104\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717390536772</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"105\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"false\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"Both\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"Pipes\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"User\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"*\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Pipes\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"main menu style started\" />\r\n    <MESSAGE value=\"Player bug fix + level 5 fix\" />\r\n    <MESSAGE value=\"Bug fix + tilemap optimization\" />\r\n    <MESSAGE value=\"Bug fix, with long pipes\" />\r\n    <MESSAGE value=\"main menu fix\" />\r\n    <MESSAGE value=\"bug fix нахуй\" />\r\n    <MESSAGE value=\"second level fixes\" />\r\n    <MESSAGE value=\"chake changes nah\" />\r\n    <MESSAGE value=\"animations fixes\" />\r\n    <MESSAGE value=\"training level fixes\" />\r\n    <MESSAGE value=\"exits added\" />\r\n    <MESSAGE value=\"some fixes\" />\r\n    <MESSAGE value=\"речка-реченька разливается, да в моря вливается\" />\r\n    <MESSAGE value=\"code style fixes\" />\r\n    <MESSAGE value=\"10% clearing\" />\r\n    <MESSAGE value=\"25% clearing\" />\r\n    <MESSAGE value=\"30% clearing\" />\r\n    <MESSAGE value=\"35% clearing\" />\r\n    <MESSAGE value=\"45% clearing\" />\r\n    <MESSAGE value=\"55% clearing\" />\r\n    <MESSAGE value=\"65% clearing\" />\r\n    <MESSAGE value=\"75% clearing\" />\r\n    <MESSAGE value=\"85% clearing\" />\r\n    <MESSAGE value=\"start add starting cutscene\" />\r\n    <MESSAGE value=\"anim fixes, some credits added\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"anim fixes, some credits added\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.UnityGame/.idea/workspace.xml b/.idea/.idea.UnityGame/.idea/workspace.xml
+--- a/.idea/.idea.UnityGame/.idea/workspace.xml	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ b/.idea/.idea.UnityGame/.idea/workspace.xml	(date 1717409598812)
+@@ -4,12 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="anim fixes, some credits added">
+-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_55__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="credits fixes and more added" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -101,6 +96,14 @@
+ }</component>
+   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
++      <option name="EXE_PATH" value="$USER_HOME$/Downloads/UnityGame\Heads Up.exe" />
++      <option name="PROGRAM_PARAMETERS" value="" />
++      <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
++      <option name="PASS_PARENT_ENVS" value="1" />
++      <option name="USE_EXTERNAL_CONSOLE" value="0" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+       <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
+       <option name="PROGRAM_PARAMETERS" value="" />
+       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
+@@ -117,8 +120,24 @@
+       <method v="2" />
+     </configuration>
+     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
++      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
++      <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
++      <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
++      <option name="PASS_PARENT_ENVS" value="1" />
++      <option name="USE_EXTERNAL_CONSOLE" value="0" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Unity.exe" />
+       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
++      <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
++      <option name="PASS_PARENT_ENVS" value="1" />
++      <option name="USE_EXTERNAL_CONSOLE" value="0" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
++      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
++      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+       <option name="PASS_PARENT_ENVS" value="1" />
+       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+@@ -138,6 +157,16 @@
+       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
+       <option name="PASS_PARENT_ENVS" value="1" />
+       <option name="USE_EXTERNAL_CONSOLE" value="0" />
++      <method v="2" />
++    </configuration>
++    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
++      <option name="allowRunningInParallel" value="false" />
++      <option name="listenPortForConnections" value="false" />
++      <option name="pid" />
++      <option name="projectPathOnTarget" />
++      <option name="selectedOptions">
++        <list />
++      </option>
+       <method v="2" />
+     </configuration>
+     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+@@ -180,6 +209,16 @@
+       </option>
+       <method v="2" />
+     </configuration>
++    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
++      <option name="allowRunningInParallel" value="false" />
++      <option name="listenPortForConnections" value="false" />
++      <option name="pid" />
++      <option name="projectPathOnTarget" />
++      <option name="selectedOptions">
++        <list />
++      </option>
++      <method v="2" />
++    </configuration>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -220,15 +259,8 @@
+       <workItem from="1717008872076" duration="6767000" />
+       <workItem from="1717068794339" duration="613000" />
+       <workItem from="1717132161775" duration="1134000" />
+-      <workItem from="1717390386756" duration="798000" />
+-    </task>
+-    <task id="LOCAL-00056" summary="level 3 fixes">
+-      <option name="closed" value="true" />
+-      <created>1716832397481</created>
+-      <option name="number" value="00056" />
+-      <option name="presentableId" value="LOCAL-00056" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1716832397481</updated>
++      <workItem from="1717390386756" duration="829000" />
++      <workItem from="1717398483276" duration="1000" />
+     </task>
+     <task id="LOCAL-00057" summary="level 4 fixes">
+       <option name="closed" value="true" />
+@@ -614,7 +646,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1717390536772</updated>
+     </task>
+-    <option name="localTasksCounter" value="105" />
++    <task id="LOCAL-00105" summary="credits fixes and more added">
++      <option name="closed" value="true" />
++      <created>1717394625975</created>
++      <option name="number" value="00105" />
++      <option name="presentableId" value="LOCAL-00105" />
++      <option name="project" value="LOCAL" />
++      <updated>1717394625975</updated>
++    </task>
++    <option name="localTasksCounter" value="106" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -678,7 +718,6 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="main menu style started" />
+     <MESSAGE value="Player bug fix + level 5 fix" />
+     <MESSAGE value="Bug fix + tilemap optimization" />
+     <MESSAGE value="Bug fix, with long pipes" />
+@@ -703,6 +742,7 @@
+     <MESSAGE value="85% clearing" />
+     <MESSAGE value="start add starting cutscene" />
+     <MESSAGE value="anim fixes, some credits added" />
+-    <option name="LAST_COMMIT_MESSAGE" value="anim fixes, some credits added" />
++    <MESSAGE value="credits fixes and more added" />
++    <option name="LAST_COMMIT_MESSAGE" value="credits fixes and more added" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: ProjectSettings/EditorBuildSettings.asset
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>%YAML 1.1\r\n%TAG !u! tag:unity3d.com,2011:\r\n--- !u!1045 &1\r\nEditorBuildSettings:\r\n  m_ObjectHideFlags: 0\r\n  serializedVersion: 2\r\n  m_Scenes:\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level1.unity\r\n    guid: 44ffd224da2544840808ebb68630f5bc\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level2.unity\r\n    guid: f930dc2b53e64c34f88030fd8d425975\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level999.unity\r\n    guid: 927d8d562bc0c7c4e92985b892a16011\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level2.unity\r\n    guid: 6509d8b9d6419eb43ab705cbaf95c98f\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level3.unity\r\n    guid: 44efa97d0c12ff04a80175131e33c1f6\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level4.unity\r\n    guid: d66158bba12311641bd97066f690f421\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level3.unity\r\n    guid: bae54fd678224d74fbcab38da458dee5\r\n  - enabled: 1\r\n    path: Assets/Scenes/Main menu.unity\r\n    guid: e43fdb1e21edd1c47a68b630c973d8f3\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level0.unity\r\n    guid: d50d7372056ffae43a9227cc4448daa9\r\n  - enabled: 1\r\n    path: Assets/Scenes/Level5.unity\r\n    guid: 2a1aea62efc19d24188fd514d5fd3f41\r\n  m_configObjects: {}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ProjectSettings/EditorBuildSettings.asset b/ProjectSettings/EditorBuildSettings.asset
+--- a/ProjectSettings/EditorBuildSettings.asset	(revision adedacabdc87075408005e2199f0606fdbd70217)
++++ b/ProjectSettings/EditorBuildSettings.asset	(date 1717398788503)
+@@ -6,11 +6,14 @@
+   serializedVersion: 2
+   m_Scenes:
+   - enabled: 1
++    path: Assets/Scenes/Main menu.unity
++    guid: e43fdb1e21edd1c47a68b630c973d8f3
++  - enabled: 1
+     path: Assets/Scenes/Level1.unity
+     guid: 44ffd224da2544840808ebb68630f5bc
+   - enabled: 1
+     path: Assets/Scenes/Level2.unity
+-    guid: f930dc2b53e64c34f88030fd8d425975
++    guid: 6509d8b9d6419eb43ab705cbaf95c98f
+   - enabled: 1
+     path: Assets/Scenes/Level999.unity
+     guid: 927d8d562bc0c7c4e92985b892a16011
+@@ -19,16 +22,13 @@
+     guid: 6509d8b9d6419eb43ab705cbaf95c98f
+   - enabled: 1
+     path: Assets/Scenes/Level3.unity
+-    guid: 44efa97d0c12ff04a80175131e33c1f6
++    guid: bae54fd678224d74fbcab38da458dee5
+   - enabled: 1
+     path: Assets/Scenes/Level4.unity
+-    guid: d66158bba12311641bd97066f690f421
++    guid: 18c2948cfcb1b404ea54f66bfe1f49d9
+   - enabled: 1
+     path: Assets/Scenes/Level3.unity
+     guid: bae54fd678224d74fbcab38da458dee5
+-  - enabled: 1
+-    path: Assets/Scenes/Main menu.unity
+-    guid: e43fdb1e21edd1c47a68b630c973d8f3
+   - enabled: 1
+     path: Assets/Scenes/Level0.unity
+     guid: d50d7372056ffae43a9227cc4448daa9
