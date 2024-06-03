@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_14_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_14_16__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_1_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_1_47__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_4_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_4_23__Changes_.xml" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 8">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level999.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level999.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="PlayerFixes" />
+        <entry key="$PROJECT_DIR$" value="Pipes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +36,20 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/UnityGame/Assets/Scenes/credits.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/Credits/photo_2024-05-24_22-30-15.jpg.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeVariants/G pipe.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level7.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,12 +64,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundMixerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VideoPlayerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Sprites/NewGroundTiles/NewGround.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,7 +92,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Pipes",
+    "git-widget-placeholder": "Level-bounds-sprite-fix",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,15 +103,15 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\grigo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\grigo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\grigo\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Михаил\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/UnityGame\Heads Up.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -121,7 +127,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -145,7 +151,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -270,94 +276,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00058" summary="level 4 more fixes">
-      <option name="closed" value="true" />
-      <created>1716832942550</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1716832942550</updated>
-    </task>
-    <task id="LOCAL-00059" summary="level 5 fixes">
-      <option name="closed" value="true" />
-      <created>1716833946152</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1716833946153</updated>
-    </task>
-    <task id="LOCAL-00060" summary="keyboard fixes">
-      <option name="closed" value="true" />
-      <created>1716920038390</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1716920038390</updated>
-    </task>
-    <task id="LOCAL-00061" summary="blur fixed">
-      <option name="closed" value="true" />
-      <created>1716920555332</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1716920555332</updated>
-    </task>
-    <task id="LOCAL-00062" summary="FallingProcessingScript.cs style fix">
-      <option name="closed" value="true" />
-      <created>1716923114964</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1716923114965</updated>
-    </task>
-    <task id="LOCAL-00063" summary="GetNearbyObjectsScript.cs style fix">
-      <option name="closed" value="true" />
-      <created>1716923679467</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1716923679467</updated>
-    </task>
-    <task id="LOCAL-00064" summary="HeroScript.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717010806418</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1717010806419</updated>
-    </task>
-    <task id="LOCAL-00065" summary="LadderScript.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014004962</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014004962</updated>
-    </task>
-    <task id="LOCAL-00066" summary="MainMenuManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014199927</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014199927</updated>
-    </task>
-    <task id="LOCAL-00067" summary="PauseManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014351096</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014351097</updated>
-    </task>
-    <task id="LOCAL-00068" summary="PipeUtils.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014459565</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014459565</updated>
     </task>
     <task id="LOCAL-00069" summary="PlayerRunData.cs style fix">
       <option name="closed" value="true" />
@@ -663,7 +581,95 @@
       <option name="project" value="LOCAL" />
       <updated>1717411414537</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Quick level 8 fix">
+      <option name="closed" value="true" />
+      <created>1717412173436</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1717412173436</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Level 0">
+      <option name="closed" value="true" />
+      <created>1717413571083</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1717413571083</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Level 1">
+      <option name="closed" value="true" />
+      <created>1717414019746</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1717414019746</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Level 1, 2">
+      <option name="closed" value="true" />
+      <created>1717414472366</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1717414472366</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Level 3,4">
+      <option name="closed" value="true" />
+      <created>1717417276469</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1717417276469</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Level 5">
+      <option name="closed" value="true" />
+      <created>1717417635667</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1717417635667</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Level 5 fix">
+      <option name="closed" value="true" />
+      <created>1717418084148</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1717418084148</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Level 5 fix">
+      <option name="closed" value="true" />
+      <created>1717418099853</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1717418099854</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Level 3 fix, 6">
+      <option name="closed" value="true" />
+      <created>1717418667604</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1717418667604</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Level 7">
+      <option name="closed" value="true" />
+      <created>1717418806615</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1717418806615</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Level 8">
+      <option name="closed" value="true" />
+      <created>1717419039991</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1717419039991</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +720,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Pipes" />
+                        <option value="Level-bounds-sprite-fix" />
                       </list>
                     </value>
                   </entry>
@@ -727,16 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bug fix, with long pipes" />
-    <MESSAGE value="main menu fix" />
-    <MESSAGE value="bug fix нахуй" />
-    <MESSAGE value="second level fixes" />
-    <MESSAGE value="chake changes nah" />
-    <MESSAGE value="animations fixes" />
-    <MESSAGE value="training level fixes" />
-    <MESSAGE value="exits added" />
-    <MESSAGE value="some fixes" />
-    <MESSAGE value="речка-реченька разливается, да в моря вливается" />
     <MESSAGE value="code style fixes" />
     <MESSAGE value="10% clearing" />
     <MESSAGE value="25% clearing" />
@@ -752,6 +748,16 @@
     <MESSAGE value="credits fixes and more added" />
     <MESSAGE value="New level 8" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
+    <MESSAGE value="Quick level 8 fix" />
+    <MESSAGE value="Level 0" />
+    <MESSAGE value="Level 1" />
+    <MESSAGE value="Level 1, 2" />
+    <MESSAGE value="Level 3,4" />
+    <MESSAGE value="Level 5" />
+    <MESSAGE value="Level 5 fix" />
+    <MESSAGE value="Level 3 fix, 6" />
+    <MESSAGE value="Level 7" />
+    <MESSAGE value="Level 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 8" />
   </component>
 </project>
