@@ -5,29 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 8">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_18_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_18_04__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_14_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_14_16__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_59__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_1_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_1_47__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_4_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_4_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2023-08-01_15-13-15.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2023-08-01_15-13-15.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-03-29_19-54-11.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-03-29_19-54-11.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-05-24_22-30-15.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-05-24_22-30-15.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/README.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/prefabs/Finish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/prefabs/Finish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartCutscene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIControl.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIControl.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
