@@ -1509,7 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb40fd130cf9af348b9f52ae307c43d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 40
+  moveSpeed: 50
   connected: []
   <MoveDirection>k__BackingField: 0
   isFalling: 1
