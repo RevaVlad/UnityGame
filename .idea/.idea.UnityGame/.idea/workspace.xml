@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 5 fix">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 8">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,8 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level7.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
@@ -275,30 +276,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00066" summary="MainMenuManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014199927</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014199927</updated>
-    </task>
-    <task id="LOCAL-00067" summary="PauseManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014351096</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014351097</updated>
-    </task>
-    <task id="LOCAL-00068" summary="PipeUtils.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014459565</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014459565</updated>
     </task>
     <task id="LOCAL-00069" summary="PlayerRunData.cs style fix">
       <option name="closed" value="true" />
@@ -668,7 +645,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717418099854</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Level 3 fix, 6">
+      <option name="closed" value="true" />
+      <created>1717418667604</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1717418667604</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Level 7">
+      <option name="closed" value="true" />
+      <created>1717418806615</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1717418806615</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Level 8">
+      <option name="closed" value="true" />
+      <created>1717419039991</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1717419039991</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,9 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="exits added" />
-    <MESSAGE value="some fixes" />
-    <MESSAGE value="речка-реченька разливается, да в моря вливается" />
     <MESSAGE value="code style fixes" />
     <MESSAGE value="10% clearing" />
     <MESSAGE value="25% clearing" />
@@ -757,6 +755,9 @@
     <MESSAGE value="Level 3,4" />
     <MESSAGE value="Level 5" />
     <MESSAGE value="Level 5 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 5 fix" />
+    <MESSAGE value="Level 3 fix, 6" />
+    <MESSAGE value="Level 7" />
+    <MESSAGE value="Level 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 8" />
   </component>
 </project>
