@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rawImage: {fileID: 778145407}
-  sceneName: Level0
+  sceneName: credits
 --- !u!4 &436695497
 Transform:
   m_ObjectHideFlags: 0
@@ -319,7 +319,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436695494}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: cfac60c7d2e3be74a8818017715056b5, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3e5bb68d9b83fd744a34a94d57830955, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

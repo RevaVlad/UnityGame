@@ -10,7 +10,7 @@ using UnityEngine.Rendering;
 public class SceneManager : MonoBehaviour
 {
     private GameObject player;
-    [SerializeField] private int totalLevelCount = 6;
+    [SerializeField] private int totalLevelCount = 8;
     private GameObject flashingImage;
     [SerializeField] private AudioClip[] rollbackSound;
 
