@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 40
   connected: []
-  moveDirection: 0
+  <MoveDirection>k__BackingField: 0
   isFalling: 1
 --- !u!50 &383985049845981304
 Rigidbody2D:
