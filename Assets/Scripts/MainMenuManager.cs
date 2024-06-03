@@ -34,8 +34,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnNewGame()
     {
-        SceneManager.SaveLevelNumber(0);
-        OnContinueGame();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("StartCutscene");
     }
 
     public void OnSettingsPress()
