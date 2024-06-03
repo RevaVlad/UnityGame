@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="end cutscene" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +109,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Новая папка\Heads Up.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -275,14 +275,6 @@
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
       <workItem from="1717436268908" duration="1777000" />
-    </task>
-    <task id="LOCAL-00071" summary="SceneManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015544355</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015544355</updated>
     </task>
     <task id="LOCAL-00072" summary="SoundMixerManager.cs style fix">
       <option name="closed" value="true" />
@@ -668,7 +660,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717439807586</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1717442566795</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1717442566795</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -720,7 +720,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="25% clearing" />
     <MESSAGE value="30% clearing" />
     <MESSAGE value="35% clearing" />
     <MESSAGE value="45% clearing" />
@@ -745,6 +744,7 @@
     <MESSAGE value="Level 8" />
     <MESSAGE value="some fixes" />
     <MESSAGE value="end cutscene" />
-    <option name="LAST_COMMIT_MESSAGE" value="end cutscene" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
