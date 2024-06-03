@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &59316768 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 247223631370886441, guid: 34182c4f2e2936249aecfdacbdf96589, type: 3}
-  m_PrefabInstance: {fileID: 1284492727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &282775003
 PrefabInstance:
   m_ObjectHideFlags: 0
