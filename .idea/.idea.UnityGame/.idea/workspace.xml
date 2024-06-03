@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="credits fixes and more added" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2023-08-01_15-13-15.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2023-08-01_15-13-15.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-03-29_19-54-11.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-03-29_19-54-11.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-05-24_22-30-15.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Credits/photo_2024-05-24_22-30-15.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,14 +267,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00057" summary="level 4 fixes">
-      <option name="closed" value="true" />
-      <created>1716832880943</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1716832880943</updated>
     </task>
     <task id="LOCAL-00058" summary="level 4 more fixes">
       <option name="closed" value="true" />
@@ -654,7 +652,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717394625975</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1717411414537</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1717411414537</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,8 +724,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Player bug fix + level 5 fix" />
-    <MESSAGE value="Bug fix + tilemap optimization" />
     <MESSAGE value="Bug fix, with long pipes" />
     <MESSAGE value="main menu fix" />
     <MESSAGE value="bug fix нахуй" />
@@ -743,6 +747,8 @@
     <MESSAGE value="start add starting cutscene" />
     <MESSAGE value="anim fixes, some credits added" />
     <MESSAGE value="credits fixes and more added" />
-    <option name="LAST_COMMIT_MESSAGE" value="credits fixes and more added" />
+    <MESSAGE value="New level 8" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
   </component>
 </project>
