@@ -5901,7 +5901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8033466778949497799, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: m_Lens.FieldOfView
