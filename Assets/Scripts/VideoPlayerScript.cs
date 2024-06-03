@@ -7,6 +7,7 @@ public class VideoPlayerScript : MonoBehaviour
 {
     [SerializeField] private RawImage rawImage;
     private VideoPlayer videoPlayer;
+    [SerializeField] private string sceneName;
 
     private void Start()
     {
@@ -33,6 +34,6 @@ public class VideoPlayerScript : MonoBehaviour
     private void OnVideoEnd(VideoPlayer vp)
     {
         SceneManager.SaveLevelNumber(0);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("level0");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }
