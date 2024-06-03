@@ -23,7 +23,7 @@ public class MainMenuManager : MonoBehaviour
             GameObject.Find("ContinueButton").SetActive(false);
     }
 
-    private static void DestroyAllDontDestroyOnLoadObjects()
+    public static void DestroyAllDontDestroyOnLoadObjects()
     {
         var connect = new GameObject();
         DontDestroyOnLoad(connect);

@@ -11,6 +11,7 @@ public class VideoPlayerScript : MonoBehaviour
 
     private void Start()
     {
+        MainMenuManager.DestroyAllDontDestroyOnLoadObjects();
         rawImage.color = new Color(rawImage.color.r, rawImage.color.g, rawImage.color.b, 0f);
 
         videoPlayer = GetComponent<VideoPlayer>();
