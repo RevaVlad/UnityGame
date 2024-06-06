@@ -232,6 +232,8 @@ public class HeroScript : MonoBehaviour
     {
         if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
             heldLadder.MoveRight();
+        else
+            PlaySomethingBadHappened(true);
         if (!faceRight) return;
         transform.localScale *= new Vector2(-1, 1);
         faceRight = !faceRight;
@@ -241,6 +243,8 @@ public class HeroScript : MonoBehaviour
     {
         if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
             heldLadder.MoveLeft();
+        else
+            PlaySomethingBadHappened(true);
         if (faceRight) return;
         transform.localScale *= new Vector2(-1, 1);
         faceRight = !faceRight;
@@ -253,6 +257,8 @@ public class HeroScript : MonoBehaviour
         var distance = enter.position - gameObjectTransform.position;
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
             startedTravelPipe.Invoke(heldLadder);
+        else
+            PlaySomethingBadHappened(true);
     }
     
     private void TravelPipeHandler(LadderScript ladder) => StartCoroutine(OnTravelAction());
@@ -266,7 +272,6 @@ public class HeroScript : MonoBehaviour
             anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
 
         SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
-        shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
         anim.SetBool(GoThrowPipe, false);
         transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
         OnDropLadder();
@@ -295,6 +300,13 @@ public class HeroScript : MonoBehaviour
     }
 
     #endregion
+
+    private void PlaySomethingBadHappened(bool shakeCamera)
+    {
+        if (shakeManager)
+            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
+        // Play bad sound
+    }
 
     private IEnumerator MoveToPoint(Transform target, float speed, Vector3 targetOffset)
     {
