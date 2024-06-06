@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="New animations in tutorial">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level changes (first half)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -252,15 +254,7 @@
       <workItem from="1717398483276" duration="1000" />
       <workItem from="1717436268908" duration="1777000" />
       <workItem from="1717442726800" duration="614000" />
-      <workItem from="1717693219976" duration="1783000" />
-    </task>
-    <task id="LOCAL-00077" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717273507236</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1717273507236</updated>
+      <workItem from="1717693219976" duration="2243000" />
     </task>
     <task id="LOCAL-00078" summary="style fix">
       <option name="closed" value="true" />
@@ -646,7 +640,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717692778867</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Level changes (first half)">
+      <option name="closed" value="true" />
+      <created>1717697230189</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1717697230190</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,7 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="65% clearing" />
     <MESSAGE value="75% clearing" />
     <MESSAGE value="85% clearing" />
     <MESSAGE value="start add starting cutscene" />
@@ -723,6 +724,7 @@
     <MESSAGE value="Finish?" />
     <MESSAGE value="New animations in tutorial + scripts sorted in folders" />
     <MESSAGE value="New animations in tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="New animations in tutorial" />
+    <MESSAGE value="Level changes (first half)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level changes (first half)" />
   </component>
 </project>
