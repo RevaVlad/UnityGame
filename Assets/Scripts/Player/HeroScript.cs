@@ -2,11 +2,14 @@ using System.Collections;
 using System.Linq;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class HeroScript : MonoBehaviour
 {
     public PlayerRunData data;
+    [SerializeField] public UnityEvent<LadderScript> tookLadder;
+    [SerializeField] public UnityEvent<LadderScript> droppedLadder;
 
     private bool faceRight;
     private Animator anim;
@@ -65,6 +68,9 @@ public class HeroScript : MonoBehaviour
         playerInput.actions.FindActionMap("BasicInput").Enable();
         playerInput.actions.FindActionMap("LadderInput").Disable();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        tookLadder.AddListener(TakeLadder);
+        droppedLadder.AddListener(HandleDroppingLadder);
 
         var bounds = GetComponent<CapsuleCollider2D>().bounds;
         (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
@@ -185,7 +191,11 @@ public class HeroScript : MonoBehaviour
     private void OnTakeLadder()
     {
         if (!TryGetLadder(out var ladder)) return;
+        tookLadder.Invoke(ladder);
+    }
 
+    private void TakeLadder(LadderScript ladder)
+    {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().CreateObjectsSnapshot();
         transform.SetParent(ladder.transform);
         isPlayerOnLadder = true;
@@ -200,6 +210,11 @@ public class HeroScript : MonoBehaviour
     {
         if (!isPlayerOnLadder)
             return;
+        droppedLadder.Invoke(heldLadder);
+    }
+
+    private void HandleDroppingLadder(LadderScript ladder)
+    {
         SwapInputMap();
         transform.SetParent(null);
         isPlayerOnLadder = false;
@@ -237,7 +252,7 @@ public class HeroScript : MonoBehaviour
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
             StartCoroutine(OnTravelAction());
     }
-
+    
     private IEnumerator OnTravelAction()
     {
         playerInput.actions.FindActionMap("LadderInput").Disable();
