@@ -10,6 +10,7 @@ public class HeroScript : MonoBehaviour
     public PlayerRunData data;
     [SerializeField] public UnityEvent<LadderScript> tookLadder;
     [SerializeField] public UnityEvent<LadderScript> droppedLadder;
+    [SerializeField] public UnityEvent<LadderScript> startedTravelPipe;
 
     private bool faceRight;
     private Animator anim;
@@ -71,6 +72,7 @@ public class HeroScript : MonoBehaviour
 
         tookLadder.AddListener(TakeLadder);
         droppedLadder.AddListener(HandleDroppingLadder);
+        startedTravelPipe.AddListener(TravelPipeHandler);
 
         var bounds = GetComponent<CapsuleCollider2D>().bounds;
         (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
@@ -250,8 +252,10 @@ public class HeroScript : MonoBehaviour
         var gameObjectTransform = transform;
         var distance = enter.position - gameObjectTransform.position;
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
-            StartCoroutine(OnTravelAction());
+            startedTravelPipe.Invoke(heldLadder);
     }
+    
+    private void TravelPipeHandler(LadderScript ladder) => StartCoroutine(OnTravelAction());
     
     private IEnumerator OnTravelAction()
     {
