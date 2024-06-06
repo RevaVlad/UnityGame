@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="New animations in tutorial + scripts sorted in folders">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AnimationsScripts/Tutorial.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/TransparencyControlScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/TransparencyControlScript.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_0_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_0_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_1_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_1_04__Changes_.xml" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="New animations in tutorial">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Smooth.physicsMaterial2D" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PlayerAssets/Smooth.physicsMaterial2D.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,14 +252,7 @@
       <workItem from="1717398483276" duration="1000" />
       <workItem from="1717436268908" duration="1777000" />
       <workItem from="1717442726800" duration="614000" />
-    </task>
-    <task id="LOCAL-00076" summary="new animations added">
-      <option name="closed" value="true" />
-      <created>1717259523075</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1717259523075</updated>
+      <workItem from="1717693219976" duration="1783000" />
     </task>
     <task id="LOCAL-00077" summary="style fix">
       <option name="closed" value="true" />
@@ -653,7 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717682295085</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="New animations in tutorial">
+      <option name="closed" value="true" />
+      <created>1717692778867</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1717692778867</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,7 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="55% clearing" />
     <MESSAGE value="65% clearing" />
     <MESSAGE value="75% clearing" />
     <MESSAGE value="85% clearing" />
@@ -730,6 +722,7 @@
     <MESSAGE value="video add" />
     <MESSAGE value="Finish?" />
     <MESSAGE value="New animations in tutorial + scripts sorted in folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="New animations in tutorial + scripts sorted in folders" />
+    <MESSAGE value="New animations in tutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="New animations in tutorial" />
   </component>
 </project>
