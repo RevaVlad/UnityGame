@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Temporary connection animation">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Connection animation">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe1 New.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe1 New.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ladders/ConnectionNodeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ladders/ConnectionNodeScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/TransparencyControlScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/TransparencyControlScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +37,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -261,15 +255,7 @@
       <workItem from="1717701996857" duration="581000" />
       <workItem from="1717742283095" duration="1688000" />
       <workItem from="1717764904599" duration="585000" />
-      <workItem from="1717767049215" duration="8312000" />
-    </task>
-    <task id="LOCAL-00083" summary="Bug fix, with long pipes">
-      <option name="closed" value="true" />
-      <created>1717333955451</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1717333955452</updated>
+      <workItem from="1717767049215" duration="9775000" />
     </task>
     <task id="LOCAL-00084" summary="main menu fix">
       <option name="closed" value="true" />
@@ -655,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717743822423</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Connection animation">
+      <option name="closed" value="true" />
+      <created>1717781570975</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1717781570975</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New level 8" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
     <MESSAGE value="Quick level 8 fix" />
     <MESSAGE value="Level 0" />
@@ -732,6 +725,7 @@
     <MESSAGE value="Added shake on bad actions" />
     <MESSAGE value="Gamepad controls" />
     <MESSAGE value="Temporary connection animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temporary connection animation" />
+    <MESSAGE value="Connection animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connection animation" />
   </component>
 </project>
