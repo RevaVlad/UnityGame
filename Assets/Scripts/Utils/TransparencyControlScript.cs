@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TransparencyControlScript : MonoBehaviour
 {
+    private Coroutine _currentAnimation = null;
     [SerializeField] public bool startTransparent = false;
     [SerializeField] private float appearTime = .3f;
     [SerializeField] private float disappearTime = .3f;
@@ -15,18 +16,27 @@ public class TransparencyControlScript : MonoBehaviour
     {
         _materials = GetComponentsInChildren<SpriteRenderer>().Select(rend => rend.material).ToArray();
         
+        
         if (startTransparent)
             foreach (var material in _materials)
                 SetAlpha(material, 0);
     }
 
-    public void Appear() => StartCoroutine(InterpolateTransparencyCoroutine(0, 1, appearTime));
-
-    public void Disappear() => StartCoroutine(InterpolateTransparencyCoroutine(1, 0, disappearTime));
-    
-    private IEnumerator InterpolateTransparencyCoroutine(float start, float end, float duration)
+    public void Appear()
     {
-            
+        if (_currentAnimation is not null) StopCoroutine(_currentAnimation);
+        StartCoroutine(InterpolateTransparencyCoroutine(1, appearTime));
+    }
+
+    public void Disappear()
+    {
+        if (_currentAnimation is not null) StopCoroutine(_currentAnimation);
+        StartCoroutine(InterpolateTransparencyCoroutine(0, disappearTime));
+    }
+
+    private IEnumerator InterpolateTransparencyCoroutine(float end, float duration)
+    {
+        var start = _materials.First().color.a;
         var timePassed = 0f;
         while (timePassed < duration)
         {
@@ -36,6 +46,8 @@ public class TransparencyControlScript : MonoBehaviour
                 SetAlpha(material, newAlpha);
             yield return new WaitForFixedUpdate();
         }
+
+        _currentAnimation = null;
     }
 
     private void SetAlpha(Material material, float newValue)

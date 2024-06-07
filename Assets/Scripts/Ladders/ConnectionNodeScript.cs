@@ -4,34 +4,37 @@ using UnityEngine;
 public class ConnectionNodeScript : MonoBehaviour
 {
     private TransparencyControlScript _animation;
+    private LadderScript thisPipe;
 
     private void Awake()
-    {
-        _animation = GetComponentsInChildren<TransparencyControlScript>().FirstOrDefault();
+    { 
+        _animation = GetComponent<TransparencyControlScript>();
+        thisPipe = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
     }
     
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.layer != LayerMask.NameToLayer(Utils.LaddersLayerName)) return;
-        var thisRoot = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
-        var root = Utils.GetPipeRoot(other.transform).GetComponent<LadderScript>();
-        if (!root.GetBases().Contains(other.transform.name))
+        
+        var otherRoot = Utils.GetPipeRoot(other.transform).GetComponent<LadderScript>();
+        if (otherRoot != thisPipe && otherRoot.GetBases().Contains(other.transform.name))
         {
-            thisRoot.DestroyConnection(root.transform);
-            _animation.Disappear();
+            _animation.Appear();
+            thisPipe.ConnectLadders(otherRoot.transform);
         }
         else
         {
-            thisRoot.ConnectLadders(root.transform);
-            _animation.Appear();
+            _animation.Disappear();
+            thisPipe.DestroyConnection(otherRoot.transform);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.layer != LayerMask.NameToLayer(Utils.LaddersLayerName)) return;
-        var root = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
-        root.DestroyConnection(Utils.GetPipeRoot(other.transform));
+        var otherRoot = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
+        
         _animation.Disappear();
+        otherRoot.DestroyConnection(Utils.GetPipeRoot(other.transform));
     }
 }

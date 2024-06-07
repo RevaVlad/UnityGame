@@ -188,7 +188,7 @@ MonoBehaviour:
   layersToProcess:
   - Ladders
   - Platforms
-  collidingObjects: []
+  <CollidingObjects>k__BackingField: []
 --- !u!1 &2520342699023275308
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   layersToProcess:
   - Ladders
   - Platforms
-  collidingObjects: []
+  <CollidingObjects>k__BackingField: []
 --- !u!1 &5345487189360281236
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,8 +455,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 40
-  connected: {fileID: 0}
-  _moveDirection: 0
+  connected:
+  - {fileID: 0}
+  <MoveDirection>k__BackingField: 0
   isFalling: 1
 --- !u!50 &7118752688493322217
 Rigidbody2D:
@@ -566,7 +567,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6338988241013844538
