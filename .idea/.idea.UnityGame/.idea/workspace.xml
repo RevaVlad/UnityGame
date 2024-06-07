@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Added shake on bad actions" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Gamepad controls">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeColliders/ConnectionNode.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe1 New.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/Pipe1 New.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ladders/ConnectionNodeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ladders/ConnectionNodeScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +43,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/Shaders/UniversalRP.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/PlayerControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
@@ -83,7 +91,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../UnityGameBuild\Heads Up.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Games/PiperMan\Through the pipes.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -251,14 +259,8 @@
       <workItem from="1717436268908" duration="1777000" />
       <workItem from="1717442726800" duration="614000" />
       <workItem from="1717693219976" duration="4970000" />
-    </task>
-    <task id="LOCAL-00081" summary="Player bug fix + level 5 fix">
-      <option name="closed" value="true" />
-      <created>1717325034614</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1717325034614</updated>
+      <workItem from="1717701996857" duration="581000" />
+      <workItem from="1717742283095" duration="1407000" />
     </task>
     <task id="LOCAL-00082" summary="Bug fix + tilemap optimization">
       <option name="closed" value="true" />
@@ -644,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717700827675</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Gamepad controls">
+      <option name="closed" value="true" />
+      <created>1717702067255</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1717702067255</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +706,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="anim fixes, some credits added" />
     <MESSAGE value="credits fixes and more added" />
     <MESSAGE value="New level 8" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml" />
@@ -721,6 +730,7 @@
     <MESSAGE value="Level changes (second half)" />
     <MESSAGE value="Little fixes" />
     <MESSAGE value="Added shake on bad actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added shake on bad actions" />
+    <MESSAGE value="Gamepad controls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gamepad controls" />
   </component>
 </project>

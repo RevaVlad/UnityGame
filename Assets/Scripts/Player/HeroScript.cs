@@ -218,10 +218,10 @@ public class HeroScript : MonoBehaviour
     private void HandleDroppingLadder(LadderScript ladder)
     {
         SwapInputMap();
+        rb.simulated = true;
         transform.SetParent(null);
         isPlayerOnLadder = false;
         heldLadder = null;
-        rb.simulated = true;
         if (moveToLadderCenter == null) return;
         StopCoroutine(moveToLadderCenter);
         anim.SetBool(IsWithPipe, false);
@@ -273,7 +273,7 @@ public class HeroScript : MonoBehaviour
 
         SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
         anim.SetBool(GoThrowPipe, false);
-        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2) * Vector3.up;
+        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2 - .02f) * Vector3.up;
         OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Disable();
         yield return new WaitUntil(() =>

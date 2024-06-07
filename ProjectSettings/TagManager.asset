@@ -57,3 +57,6 @@ TagManager:
   - name: InfrontOfPlayer
     uniqueID: 3718628675
     locked: 0
+  - name: Effects
+    uniqueID: 1786919833
+    locked: 0
