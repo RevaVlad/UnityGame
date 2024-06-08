@@ -8,14 +8,12 @@ public class GetNearbyObjectsScript : MonoBehaviour
     [SerializeField] private string[] layersToProcess;
     private int[] layersToProcessInt;
     [field: SerializeField] public List<GameObject> CollidingObjects { get; private set; } = new();
-    public UnityEvent EnterCollider { get; private set; }
-    public UnityEvent ExitCollider { get; private set; }
+    public UnityEvent<string> EnterCollider { get;} = new();
+    public UnityEvent<string> ExitCollider { get;} = new();
 
     private void Awake()
     {
         layersToProcessInt = layersToProcess.Select(LayerMask.NameToLayer).ToArray();
-        EnterCollider = new UnityEvent();
-        ExitCollider = new UnityEvent();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,7 +21,7 @@ public class GetNearbyObjectsScript : MonoBehaviour
         var otherGameObject = other.gameObject;
         if (!layersToProcessInt.Contains(otherGameObject.layer)) return;
         CollidingObjects.Add(otherGameObject);
-        EnterCollider.Invoke();
+        EnterCollider.Invoke(LayerMask.LayerToName(otherGameObject.layer));
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -31,6 +29,6 @@ public class GetNearbyObjectsScript : MonoBehaviour
         var otherGameObject = other.gameObject;
         if (!layersToProcessInt.Contains(otherGameObject.layer)) return;
         CollidingObjects.Remove(otherGameObject);
-        ExitCollider.Invoke();
+        ExitCollider.Invoke(LayerMask.LayerToName(otherGameObject.layer));
     }
 }

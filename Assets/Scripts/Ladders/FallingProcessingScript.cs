@@ -2,30 +2,36 @@ using UnityEngine;
 
 public class FallingProcessingScript : MonoBehaviour
 {
-    private LadderScript parentScript;
-    [field: SerializeField] public int CurrentlyStopping { get; private set; }
+    private LadderScript _parentScript;
+    private GetNearbyObjectsScript _colliderHandler;
+    private int _laddersStoppingCount;
+    
+    public int CurrentlyStoppingCount => _colliderHandler.CollidingObjects.Count;
+    public bool AnyLaddersStopping => _laddersStoppingCount > 0;
 
     private void Start()
     {
-        var getObjectsScript = GetComponent<GetNearbyObjectsScript>();
+        _colliderHandler = GetComponent<GetNearbyObjectsScript>();
 
-        getObjectsScript.EnterCollider.AddListener(OnAddingObject);
-        getObjectsScript.ExitCollider.AddListener(OnDeletingObject);
+        _colliderHandler.EnterCollider.AddListener(OnAddingObject);
+        _colliderHandler.ExitCollider.AddListener(OnDeletingObject);
 
-        parentScript = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
+        _parentScript = Utils.GetPipeRoot(transform).GetComponent<LadderScript>();
     }
 
-    private void OnAddingObject()
+    private void OnAddingObject(string layer)
     {
-        CurrentlyStopping++;
-        if (CurrentlyStopping == 1)
-            parentScript.StopFall();  
+        if (CurrentlyStoppingCount == 1)
+            _parentScript.StopFall();
+        if (layer == Utils.LaddersLayerName)
+            _laddersStoppingCount++;
     }
 
-    private void OnDeletingObject()
+    private void OnDeletingObject(string layer)
     {
-        CurrentlyStopping--;
-        if (CurrentlyStopping == 0)
-            parentScript.TryStartFall();  
+        if (CurrentlyStoppingCount == 0)
+            _parentScript.TryStartFall();  
+        if (layer == Utils.LaddersLayerName)
+            _laddersStoppingCount--;
     } 
 }
