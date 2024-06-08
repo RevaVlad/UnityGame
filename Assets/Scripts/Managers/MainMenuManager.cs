@@ -13,8 +13,6 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         DestroyAllDontDestroyOnLoadObjects();
         mainBackground = GameObject.Find("MainMenuBackground");
         settingsBackground = GameObject.Find("MainMenuSettingsBackground");

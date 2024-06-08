@@ -41,8 +41,6 @@ public class SceneManager : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         player = GameObject.Find("Player");
         playerInput = player.GetComponent<PlayerInput>();
         sceneInput = GetComponent<PlayerInput>();
