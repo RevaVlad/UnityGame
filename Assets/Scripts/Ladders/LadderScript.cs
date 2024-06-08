@@ -60,7 +60,7 @@ public class LadderScript : MonoBehaviour
     private List<GameObject> GetLeftCollidingObjects() =>
         leftObjectsCollider.SelectMany(collider => collider.CollidingObjects).ToList();
 
-    private void MoveNearbyLadders(bool right)
+    private void MoveNearbyLadders(bool right, LadderScript startedBy)
     {
         var laddersOnDirection =
             (right ? GetRightCollidingObjects() : GetLeftCollidingObjects())
@@ -70,36 +70,36 @@ public class LadderScript : MonoBehaviour
         foreach (var ladder in laddersOnDirection)
         {
             var script = ladder.GetComponent<LadderScript>();
-            if (right) script.MoveRight(MoveSource.Left);
-            else script.MoveLeft(MoveSource.Right);
+            if (right) script.MoveRight(MoveSource.Left, startedBy);
+            else script.MoveLeft(MoveSource.Right, startedBy);
         }
     }
 
-    private void MoveConnected(bool right)
+    private void MoveConnected(bool right, LadderScript startedBy)
     {
         var temp = connected.ToArray();
         foreach (var connectedObject in temp)
         {
             if (connectedObject is null) continue;
-            if (!connectedObject.CheckIfMoveIsPossible(right, MoveSource.Down)) continue;
-            if (right) connectedObject.MoveRight(MoveSource.Down);
-            else connectedObject.MoveLeft(MoveSource.Down);
+            if (!connectedObject.CheckIfMoveIsPossible(right, MoveSource.Down, startedBy)) continue;
+            if (right) connectedObject.MoveRight(MoveSource.Down, startedBy);
+            else connectedObject.MoveLeft(MoveSource.Down, startedBy);
         }
     }
 
-    private IEnumerator MoveHorizontalCoroutine(bool right, MoveSource cameFrom)
+    private IEnumerator MoveHorizontalCoroutine(bool right, MoveSource cameFrom, LadderScript startedBy)
     {
         if (MoveDirection != 0) yield break;
         MoveDirection = (right) ? 1 : -1;
 
-        if (!CheckIfMoveIsPossible(right, cameFrom))
+        if (!CheckIfMoveIsPossible(right, cameFrom, startedBy))
         {
             MoveDirection = 0;
             yield break;
         }
 
-        MoveNearbyLadders(right);
-        MoveConnected(right);
+        MoveNearbyLadders(right, startedBy);
+        MoveConnected(right, startedBy);
 
         yield return MoveLaddersHorizontalCoroutine();
 
@@ -135,7 +135,7 @@ public class LadderScript : MonoBehaviour
         rb.MovePosition(target);
     }
 
-    private bool CheckIfMoveIsPossible(bool right, MoveSource cameFrom)
+    private bool CheckIfMoveIsPossible(bool right, MoveSource cameFrom, LadderScript startedBy)
     {
         if (isFalling) return false;
         var objectsAtDirection =
@@ -151,7 +151,9 @@ public class LadderScript : MonoBehaviour
         if (cameFrom == MoveSource.Down && laddersAtDirection.Any(ladder => ladder.MoveDirection == 0))
             return false;
 
-        return laddersAtDirection.All(ladder => ladder.CheckIfMoveIsPossible(right, cameFrom));
+        return laddersAtDirection.All(ladder =>
+            ladder.MoveDirection != 0 || !ladder.connected.Contains(startedBy) &&
+            ladder.CheckIfMoveIsPossible(right, cameFrom, startedBy));
     }
 
     public bool CheckIfExitAvailable()
@@ -163,12 +165,12 @@ public class LadderScript : MonoBehaviour
     }
 
     [ContextMenu("MoveRight")]
-    public void MoveRight(MoveSource cameFrom = MoveSource.Player) =>
-        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(true, cameFrom));
+    public void MoveRight(MoveSource cameFrom = MoveSource.Player, LadderScript startedBy = null) =>
+        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(true, cameFrom, startedBy ? startedBy : this));
 
     [ContextMenu("MoveLeft")]
-    public void MoveLeft(MoveSource cameFrom = MoveSource.Player) =>
-        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(false, cameFrom));
+    public void MoveLeft(MoveSource cameFrom = MoveSource.Player, LadderScript startedBy = null) =>
+        moveCoroutine ??= StartCoroutine(MoveHorizontalCoroutine(false, cameFrom, startedBy ? startedBy : this));
 
     public void StopFall()
     {
