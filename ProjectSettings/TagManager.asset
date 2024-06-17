@@ -8,6 +8,8 @@ TagManager:
   - Hidden
   - SlimPlatform
   - PipeRoot
+  - LevelEditor
+  - PrefabImage
   layers:
   - Default
   - TransparentFX

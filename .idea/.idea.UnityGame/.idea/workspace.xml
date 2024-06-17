@@ -4,103 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 8">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/FolloByMouse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/FolloByMouse.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/LevelEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/LevelEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/UsualPrefabMoving.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/UsualPrefabMoving.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_18_04_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_18_04__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_05_2024_21_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_05_2024_21_20__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_15_19_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_15_19__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_18_28_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_18_28__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_21_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_21_08__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_22_51_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2024_22_51__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_18_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_18_51__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_29_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_29__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_37_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_19_37__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_1_19_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_1_19__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_03_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_03__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_10_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_10__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_22_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_22__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_50_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_20_50__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_21_26_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_21_26__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_22_08_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_22_08_[Changes]/tiles 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_22_08__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_23_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_23_06__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_23_31_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2024_23_31__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_0_20_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_0_20__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_0_23_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_0_23__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_14_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_14_16__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_13__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_57_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_57__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_59_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_59__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_17_59_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_17_59__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_18_05_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_18_05__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_19_28_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_19_28__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_1_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_1_47__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_23_04_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_23_04__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_23_11_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_23_11__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_23_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_23_14__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_03_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_03__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_55_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_2_55__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_3_05__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_4_23_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_4_23__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_0_50_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_0_50__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_0_56_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_0_56__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_1_04_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_1_04__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_06_06_2024_18_56_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_06_06_2024_18_56__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2024_10_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2024_10_16__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_30_05_2024_2_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_30_05_2024_2_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Fonts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Fonts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Fonts/LiberationSans - OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Fonts/LiberationSans - OFL.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Fonts/LiberationSans.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Fonts/LiberationSans.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/EnterUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeTiles/EnterUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/OneBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/PipeVariants/OneBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UsersLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UsersLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserEditor/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserEditor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserEditor/LevelEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,32 +68,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "users-editor",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;users-editor&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Михаил\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Михаил\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Downloads/UnityGame\Heads Up.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Through the pipes v2.0(directiors cut)\Through the pipes.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -345,54 +258,7 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00069" summary="PlayerRunData.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717014873580</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1717014873580</updated>
-    </task>
-    <task id="LOCAL-00070" summary="SceneManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015148033</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015148033</updated>
-    </task>
-    <task id="LOCAL-00071" summary="SceneManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015544355</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015544355</updated>
-    </task>
-    <task id="LOCAL-00072" summary="SoundMixerManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015751303</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015751303</updated>
-    </task>
-    <task id="LOCAL-00073" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717252988661</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1717252988661</updated>
-    </task>
-    <task id="LOCAL-00074" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717254365611</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1717254365611</updated>
+      <workItem from="1718639482927" duration="3654000" />
     </task>
     <task id="LOCAL-00075" summary="some fixes after merge">
       <option name="closed" value="true" />
@@ -738,7 +604,55 @@
       <option name="project" value="LOCAL" />
       <updated>1717419039991</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="editor first prototype, without delete and moving existing prefabs">
+      <option name="closed" value="true" />
+      <created>1718639145301</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639145301</updated>
+    </task>
+    <task id="LOCAL-00119" summary="prefabs of selected items added">
+      <option name="closed" value="true" />
+      <created>1718639199349</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639199349</updated>
+    </task>
+    <task id="LOCAL-00120" summary="prefabs of selected items added">
+      <option name="closed" value="true" />
+      <created>1718639201163</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639201163</updated>
+    </task>
+    <task id="LOCAL-00121" summary="prefabs of selected items added">
+      <option name="closed" value="true" />
+      <created>1718639202908</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639202908</updated>
+    </task>
+    <task id="LOCAL-00122" summary="prefabs of selected items added">
+      <option name="closed" value="true" />
+      <created>1718639215258</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639215258</updated>
+    </task>
+    <task id="LOCAL-00123" summary="prefabs added">
+      <option name="closed" value="true" />
+      <created>1718639279111</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1718639279111</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -802,9 +716,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="code style fixes" />
-    <MESSAGE value="10% clearing" />
-    <MESSAGE value="25% clearing" />
     <MESSAGE value="30% clearing" />
     <MESSAGE value="35% clearing" />
     <MESSAGE value="45% clearing" />
@@ -827,6 +738,9 @@
     <MESSAGE value="Level 3 fix, 6" />
     <MESSAGE value="Level 7" />
     <MESSAGE value="Level 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 8" />
+    <MESSAGE value="editor first prototype, without delete and moving existing prefabs" />
+    <MESSAGE value="prefabs of selected items added" />
+    <MESSAGE value="prefabs added" />
+    <option name="LAST_COMMIT_MESSAGE" value="prefabs added" />
   </component>
 </project>

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8241474479994530766}
   - component: {fileID: 536110417333517451}
   - component: {fileID: 510905139489589683}
+  - component: {fileID: 1008816754571872853}
   m_Layer: 3
   m_Name: OneBlock
   m_TagString: PipeRoot
@@ -79,6 +80,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1008816754571872853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097668400851247947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5979ebac3f6acb94a868e41a8449e4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
 --- !u!1 &2863944918801388958
 GameObject:
   m_ObjectHideFlags: 0

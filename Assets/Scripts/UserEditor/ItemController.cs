@@ -8,12 +8,19 @@ public class ItemController : MonoBehaviour
     [SerializeField] private int quantity;
     [SerializeField] private Text quantityText;
     public bool Clicked;
-    private LevelEditor editor;
+    public bool wasUpdated;
+    private LevelEditor _editor;
     
     void Start()
     {
         quantityText.text = $"{quantity}";
-        editor = GameObject.FindGameObjectWithTag("LevelEditor").GetComponent<LevelEditor>();
+        _editor = GameObject.FindGameObjectWithTag("LevelEditor").GetComponent<LevelEditor>();
+    }
+
+    public void IncreaseQuantity()
+    {
+        quantity++;
+        quantityText.text = $"{quantity}";
     }
 
     public void ButtonClicked()
@@ -23,12 +30,12 @@ public class ItemController : MonoBehaviour
             var screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             var worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
             Clicked = true;
-            Instantiate(editor.SelectedPefabsImages[ID],
+            Instantiate(_editor.SelectedPefabsImages[ID],
                 new Vector3((float)Math.Round(worldPosition.x), (float)Math.Round(worldPosition.y), 0),
                 Quaternion.identity);
             quantity--;
             quantityText.text = $"{quantity}";
-            editor.CurrentButtonPressed = ID;
+            _editor.CurrentButtonPressed = ID;
         }
     }
     
