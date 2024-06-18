@@ -26,4 +26,4 @@ MonoBehaviour:
   momentumLossAtJump: 40
   gravityScaleWhenFalling: 3
   normalGravityScale: 1.5
-  moveBuffer: 0.2
+  moveBuffer: 0.12
