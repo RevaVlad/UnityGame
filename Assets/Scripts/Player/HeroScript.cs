@@ -194,7 +194,8 @@ public class HeroScript : MonoBehaviour
             if (timePassedSinceJump > .2) isJumping = false;
         }
 
-        anim.SetBool(IsGrounded, isGrounded);
+        anim.SetBool(IsGrounded,
+            !isPlayerOnLadder ? isGrounded : heldLadder.GetBases().Contains(Utils.PipeTileForConnection));
     }
 
     #region LaddersControls
@@ -212,7 +213,7 @@ public class HeroScript : MonoBehaviour
         isPlayerOnLadder = true;
         heldLadder = ladder;
         rb.simulated = false;
-        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f)));
+        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f + 0.1f)));
         anim.SetBool(IsWithPipe, true);
         SwapInputMap();
     }
