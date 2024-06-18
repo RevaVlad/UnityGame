@@ -22,6 +22,7 @@ public class SceneManager : MonoBehaviour
     private PlayerInput sceneInput;
 
     private Transform laddersContainer;
+    private Transform breakBlockContainer;
     private readonly List<AudioSource> pausedAudioSources = new();
 
     public void CreateObjectsSnapshot()
@@ -29,6 +30,7 @@ public class SceneManager : MonoBehaviour
         if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
         var sceneSnapshot = new List<ObjectSnapshot>();
         CreateLaddersSnapshot(sceneSnapshot);
+        CreateBreakBlockSnapshot(sceneSnapshot);
         var playerPosition = player.transform.position;
         sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));
         sceneSnapshots.Push(sceneSnapshot);
@@ -46,7 +48,12 @@ public class SceneManager : MonoBehaviour
 
     private void CreateBreakBlockSnapshot(ICollection<ObjectSnapshot> sceneSnapshot)
     {
-        
+        if (breakBlockContainer == null) return;
+        for (var i = 0; i < breakBlockContainer.childCount; i++)
+        {
+            var obj = breakBlockContainer.GetChild(i).gameObject;
+            sceneSnapshot.Add(new ObjectSnapshot(obj, obj.GetComponent<BreakableBlockScript>().IsBroken));
+        }
     }
 
     public void ClearSceneSnapshots() => sceneSnapshots.Clear();
@@ -64,8 +71,11 @@ public class SceneManager : MonoBehaviour
         rollbackTrigger = GameObject.Find("ActivateRollback");
     }
 
-    private void Start() =>
+    private void Start()
+    {
         laddersContainer = GameObject.Find("LaddersContainer").transform;
+        breakBlockContainer = GameObject.Find("BreakBlockContainer").transform;
+    }
 
     private void Update() => CheckFinishAndLoadNextLevel();
 
@@ -99,7 +109,10 @@ public class SceneManager : MonoBehaviour
         yield return StartCoroutine(BlurEffect(true));
 
         foreach (var objSnap in snapshot)
-            objSnap.GameObject.transform.position = objSnap.Position;
+            if (objSnap.GameObject.name.StartsWith("BreakableBlock") && !objSnap.IsBroken)
+                objSnap.GameObject.GetComponent<BreakableBlockScript>().UndoBreak();
+            else if (!objSnap.GameObject.name.StartsWith("BreakableBlock"))
+                objSnap.GameObject.transform.position = objSnap.Position;
 
         player.GetComponent<HeroScript>().OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Enable();

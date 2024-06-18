@@ -1,0 +1,193 @@
+Index: Assets/Scripts/Managers/SceneManager.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Collections;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing Unity.VisualScripting;\r\nusing UnityEngine;\r\nusing UnityEngine.InputSystem;\r\nusing UnityEngine.Rendering;\r\n\r\n\r\npublic class SceneManager : MonoBehaviour\r\n{\r\n    private GameObject player;\r\n    [SerializeField] private int totalLevelCount = 8;\r\n    private GameObject flashingImage;\r\n    [SerializeField] private AudioClip[] rollbackSound;\r\n\r\n    private readonly Stack<List<ObjectSnapshot>> sceneSnapshots = new();\r\n    private GameObject blurManager;\r\n    private GameObject rollbackTrigger;\r\n\r\n    private PlayerInput playerInput;\r\n    private PlayerInput sceneInput;\r\n\r\n    private Transform laddersContainer;\r\n    private readonly List<AudioSource> pausedAudioSources = new();\r\n\r\n    public void CreateObjectsSnapshot()\r\n    {\r\n        if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();\r\n        var sceneSnapshot = new List<ObjectSnapshot>();\r\n        CreateLaddersSnapshot(sceneSnapshot);\r\n        var playerPosition = player.transform.position;\r\n        sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));\r\n        sceneSnapshots.Push(sceneSnapshot);\r\n    }\r\n\r\n    private void CreateLaddersSnapshot(ICollection<ObjectSnapshot> sceneSnapshot)\r\n    {\r\n        for (var i = 0; i < laddersContainer.childCount; i++)\r\n        {\r\n            var obj = laddersContainer.GetChild(i).gameObject;\r\n            var position = obj.transform.position;\r\n            sceneSnapshot.Add(new ObjectSnapshot(obj, new Vector3(position.x, position.y)));\r\n        }\r\n    }\r\n\r\n    private void CreateBreakBlockSnapshot(ICollection<ObjectSnapshot> sceneSnapshot)\r\n    {\r\n        \r\n    }\r\n\r\n    public void ClearSceneSnapshots() => sceneSnapshots.Clear();\r\n\r\n    private void Awake()\r\n    {\r\n        player = GameObject.Find(\"Player\");\r\n        playerInput = player.GetComponent<PlayerInput>();\r\n        sceneInput = GetComponent<PlayerInput>();\r\n        GameObject.Find(\"loadLevel\").GetComponent<Animator>().enabled = true;\r\n        blurManager = GameObject.Find(\"BlurManager\");\r\n        blurManager.SetActive(false);\r\n        flashingImage = gameObject.transform.Find(\"rollback\").gameObject;\r\n        flashingImage.SetActive(false);\r\n        rollbackTrigger = GameObject.Find(\"ActivateRollback\");\r\n    }\r\n\r\n    private void Start() =>\r\n        laddersContainer = GameObject.Find(\"LaddersContainer\").transform;\r\n\r\n    private void Update() => CheckFinishAndLoadNextLevel();\r\n\r\n    public void OnRestartLevel() => LoadLastLevel();\r\n\r\n    private void StopPipesCoroutine()\r\n    {\r\n        for (var i = 0; i < laddersContainer.childCount; i++)\r\n            laddersContainer.GetChild(i).GetComponent<LadderScript>().StopMoveCoroutine();\r\n    }\r\n\r\n    private void OnRestoreSnapshot()\r\n    {\r\n        if (!sceneSnapshots.TryPop(out var snapshot) ||\r\n            (rollbackTrigger != null && !rollbackTrigger.GetComponent<ActivateRollbackTrigger>().IsRollbackActive))\r\n            return;\r\n        sceneInput.DeactivateInput();\r\n        playerInput.actions.FindActionMap(\"LadderInput\").Disable();\r\n        playerInput.actions.FindActionMap(\"BasicInput\").Disable();\r\n        StartCoroutine(RestoreSnapshotAnimation(snapshot));\r\n    }\r\n\r\n    private IEnumerator RestoreSnapshotAnimation(List<ObjectSnapshot> snapshot)\r\n    {\r\n        flashingImage.SetActive(true);\r\n        var flashCoroutine = StartCoroutine(FlashImage());\r\n        StopPipesCoroutine();\r\n        PauseAllSounds();\r\n\r\n        SoundFXManager.Instance.PlaySoundFXClip(rollbackSound, transform, 1.2f);\r\n        yield return StartCoroutine(BlurEffect(true));\r\n\r\n        foreach (var objSnap in snapshot)\r\n            objSnap.GameObject.transform.position = objSnap.Position;\r\n\r\n        player.GetComponent<HeroScript>().OnDropLadder();\r\n        playerInput.actions.FindActionMap(\"BasicInput\").Enable();\r\n\r\n        yield return StartCoroutine(BlurEffect(false));\r\n        FindObjectsOfType<AudioSource>()[0].Pause();\r\n        StopCoroutine(flashCoroutine);\r\n        flashingImage.SetActive(false);\r\n        ResumeAllSounds();\r\n        sceneInput.ActivateInput();\r\n    }\r\n\r\n    private void PauseAllSounds()\r\n    {\r\n        var allAudioSources = FindObjectsOfType<AudioSource>();\r\n        foreach (var audioSource in allAudioSources)\r\n        {\r\n            if (!audioSource.isPlaying) continue;\r\n            audioSource.Pause();\r\n            pausedAudioSources.Add(audioSource);\r\n        }\r\n    }\r\n\r\n    private void ResumeAllSounds()\r\n    {\r\n        foreach (var audioSource in pausedAudioSources.Where(audioSource => !audioSource.IsDestroyed()))\r\n            audioSource.UnPause();\r\n        pausedAudioSources.Clear();\r\n    }\r\n\r\n    private IEnumerator BlurEffect(bool apply)\r\n    {\r\n        if (apply)\r\n            blurManager.SetActive(true);\r\n\r\n        var blurManagerVolume = blurManager.GetComponent<Volume>();\r\n        if (!blurManagerVolume.profile.TryGet(out UnityEngine.Rendering.Universal.DepthOfField depthOfField))\r\n            yield break;\r\n\r\n        var blurStep = apply ? 7f : -7f;\r\n        for (var i = 0; i < 20; i++)\r\n        {\r\n            depthOfField.focalLength.value += blurStep;\r\n            yield return new WaitForSeconds(0.01f);\r\n        }\r\n\r\n        if (!apply)\r\n            blurManager.SetActive(false);\r\n    }\r\n\r\n    private IEnumerator FlashImage()\r\n    {\r\n        while (true)\r\n        {\r\n            flashingImage.SetActive(!flashingImage.activeSelf);\r\n            yield return new WaitForSeconds(0.1f);\r\n        }\r\n    }\r\n\r\n    public static void SaveLevelNumber(int levelNumber) => PlayerPrefs.SetInt(\"currentLevel\", levelNumber);\r\n\r\n    private static int GetCurrentSceneNumber(string sceneName) => int.Parse(sceneName.Split(\"Level\")[1]);\r\n\r\n    private static string GetCurrentSceneName() => UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;\r\n\r\n    private void CheckFinishAndLoadNextLevel()\r\n    {\r\n        var collider = Physics2D.OverlapCircleAll(player.transform.position, 0.2f, LayerMask.GetMask(\"Finish\"));\r\n        if (collider.Length == 0)\r\n            return;\r\n\r\n        var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());\r\n        if (currentLevelNumber >= totalLevelCount) return;\r\n        SaveLevelNumber(currentLevelNumber + 1);\r\n        LoadLastLevel();\r\n    }\r\n\r\n    public static void LoadLastLevel()\r\n    {\r\n        var lastLevel = PlayerPrefs.GetInt(\"currentLevel\", 1);\r\n        SaveLevelNumber(lastLevel);\r\n        UnityEngine.SceneManagement.SceneManager.LoadScene($\"Level{lastLevel}\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/Managers/SceneManager.cs b/Assets/Scripts/Managers/SceneManager.cs
+--- a/Assets/Scripts/Managers/SceneManager.cs	(revision 26e07be32a8ef3b09b15df17be5ccc583d134cf3)
++++ b/Assets/Scripts/Managers/SceneManager.cs	(date 1718742148633)
+@@ -22,6 +22,7 @@
+     private PlayerInput sceneInput;
+ 
+     private Transform laddersContainer;
++    private Transform breakBlockContainer;
+     private readonly List<AudioSource> pausedAudioSources = new();
+ 
+     public void CreateObjectsSnapshot()
+@@ -29,6 +30,7 @@
+         if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
+         var sceneSnapshot = new List<ObjectSnapshot>();
+         CreateLaddersSnapshot(sceneSnapshot);
++        CreateBreakBlockSnapshot(sceneSnapshot);
+         var playerPosition = player.transform.position;
+         sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));
+         sceneSnapshots.Push(sceneSnapshot);
+@@ -46,7 +48,9 @@
+ 
+     private void CreateBreakBlockSnapshot(ICollection<ObjectSnapshot> sceneSnapshot)
+     {
+-        
++        if (breakBlockContainer == null) return;
++        for (var i = 0; i < breakBlockContainer.childCount; i++)
++            sceneSnapshot.Add(new ObjectSnapshot(breakBlockContainer.GetChild(i).gameObject));
+     }
+ 
+     public void ClearSceneSnapshots() => sceneSnapshots.Clear();
+@@ -64,8 +68,11 @@
+         rollbackTrigger = GameObject.Find("ActivateRollback");
+     }
+ 
+-    private void Start() =>
++    private void Start()
++    {
+         laddersContainer = GameObject.Find("LaddersContainer").transform;
++        breakBlockContainer = GameObject.Find("BreakBlockContainer").transform;
++    }
+ 
+     private void Update() => CheckFinishAndLoadNextLevel();
+ 
+@@ -99,8 +106,12 @@
+         yield return StartCoroutine(BlurEffect(true));
+ 
+         foreach (var objSnap in snapshot)
+-            objSnap.GameObject.transform.position = objSnap.Position;
+-
++            if (objSnap.GameObject.name.StartsWith("BreakableBlock") &&
++                !objSnap.GameObject.GetComponent<BreakableBlockScript>().IsBroken)
++                objSnap.GameObject.GetComponent<BreakableBlockScript>().UndoBreak();
++            else if (!objSnap.GameObject.name.StartsWith("BreakableBlock"))
++                objSnap.GameObject.transform.position = objSnap.Position;
++        
+         player.GetComponent<HeroScript>().OnDropLadder();
+         playerInput.actions.FindActionMap("BasicInput").Enable();
+ 
+Index: Assets/Scripts/Platforms/BreakableBlockScript.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Collections;\r\nusing System.Linq;\r\nusing Unity.VisualScripting;\r\nusing UnityEngine;\r\n\r\n[SelectionBase]\r\npublic class BreakableBlockScript : MonoBehaviour\r\n{\r\n    [SerializeField] private bool isBroken;\r\n    [SerializeField] private GameObject[] _children;\r\n    private Coroutine _breakingCoroutine;\r\n    [SerializeField] private AudioClip[] stoneCrashSound;\r\n\r\n    private static readonly int isBrokenAnim = Animator.StringToHash(\"isBrokenAnim\");\r\n\r\n    private void Awake() =>\r\n        transform.SetParent(GameObject.Find(\"BreakBlockContainer\") is null\r\n            ? new GameObject(\"BreakBlockContainer\").transform\r\n            : GameObject.Find(\"BreakBlockContainer\").transform);\r\n\r\n    private void Start()\r\n    {\r\n        _children = (from Transform child in transform select child.GameObject()).ToArray();\r\n        _breakingCoroutine = null;\r\n\r\n        foreach (var colliderHandler in GetComponentsInChildren<BreakableBlockCollider>())\r\n        {\r\n            colliderHandler.onBreakingBlock.AddListener(Break);\r\n        }\r\n    }\r\n\r\n    private void Break()\r\n    {\r\n        _breakingCoroutine ??= StartCoroutine(BreakCoroutine());\r\n    }\r\n\r\n    private IEnumerator BreakCoroutine()\r\n    {\r\n        isBroken = true;\r\n        foreach (var animator in GetComponentsInChildren<Animator>())\r\n        {\r\n            animator.SetBool(isBrokenAnim, true);\r\n        }\r\n\r\n        SoundFXManager.Instance.PlaySoundFXClip(stoneCrashSound, transform, 1.2f);\r\n        yield return new WaitForSeconds(1);\r\n        foreach (var child in _children)\r\n            child.SetActive(false);\r\n        _breakingCoroutine = null;\r\n    }\r\n\r\n    [ContextMenu(\"Undo break\")]\r\n    public void UndoBreak()\r\n    {\r\n        isBroken = false;\r\n        if (_breakingCoroutine is not null)\r\n            StopCoroutine(_breakingCoroutine);\r\n        foreach (var animator in GetComponentsInChildren<Animator>())\r\n        {\r\n            animator.SetBool(isBrokenAnim, false);\r\n        }\r\n\r\n        foreach (var child in _children)\r\n            child.SetActive(true);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/Platforms/BreakableBlockScript.cs b/Assets/Scripts/Platforms/BreakableBlockScript.cs
+--- a/Assets/Scripts/Platforms/BreakableBlockScript.cs	(revision 26e07be32a8ef3b09b15df17be5ccc583d134cf3)
++++ b/Assets/Scripts/Platforms/BreakableBlockScript.cs	(date 1718742148634)
+@@ -6,7 +6,7 @@
+ [SelectionBase]
+ public class BreakableBlockScript : MonoBehaviour
+ {
+-    [SerializeField] private bool isBroken;
++    public bool IsBroken { get; private set; }
+     [SerializeField] private GameObject[] _children;
+     private Coroutine _breakingCoroutine;
+     [SerializeField] private AudioClip[] stoneCrashSound;
+@@ -36,7 +36,7 @@
+ 
+     private IEnumerator BreakCoroutine()
+     {
+-        isBroken = true;
++        IsBroken = true;
+         foreach (var animator in GetComponentsInChildren<Animator>())
+         {
+             animator.SetBool(isBrokenAnim, true);
+@@ -52,7 +52,7 @@
+     [ContextMenu("Undo break")]
+     public void UndoBreak()
+     {
+-        isBroken = false;
++        IsBroken = false;
+         if (_breakingCoroutine is not null)
+             StopCoroutine(_breakingCoroutine);
+         foreach (var animator in GetComponentsInChildren<Animator>())
+Index: Assets/Scripts/Utils/ObjectSnapshot.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using UnityEngine;\r\n\r\npublic class ObjectSnapshot\r\n{\r\n    public GameObject GameObject { get; }\r\n    public Vector3 Position { get; }\r\n\r\n    public ObjectSnapshot(GameObject gameObject, Vector3 position)\r\n    {\r\n        GameObject = gameObject;\r\n        Position = position;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/Utils/ObjectSnapshot.cs b/Assets/Scripts/Utils/ObjectSnapshot.cs
+--- a/Assets/Scripts/Utils/ObjectSnapshot.cs	(revision 26e07be32a8ef3b09b15df17be5ccc583d134cf3)
++++ b/Assets/Scripts/Utils/ObjectSnapshot.cs	(date 1718742148634)
+@@ -10,4 +10,6 @@
+         GameObject = gameObject;
+         Position = position;
+     }
++
++    public ObjectSnapshot(GameObject gameObject) => GameObject = gameObject;
+ }
+\ No newline at end of file
+Index: Packages/packages-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"dependencies\": {\r\n    \"com.unity.2d.animation\": {\r\n      \"version\": \"9.1.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.common\": \"8.0.2\",\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.collections\": \"1.1.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\",\r\n        \"com.unity.modules.uielements\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.aseprite\": {\r\n      \"version\": \"1.1.2\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.2d.common\": \"6.0.6\",\r\n        \"com.unity.mathematics\": \"1.2.6\",\r\n        \"com.unity.modules.animation\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.common\": {\r\n      \"version\": \"8.0.2\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.mathematics\": \"1.1.0\",\r\n        \"com.unity.modules.uielements\": \"1.0.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\",\r\n        \"com.unity.burst\": \"1.7.3\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.pixel-perfect\": {\r\n      \"version\": \"5.0.3\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.psdimporter\": {\r\n      \"version\": \"8.0.4\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.animation\": \"9.1.0\",\r\n        \"com.unity.2d.common\": \"8.0.2\",\r\n        \"com.unity.2d.sprite\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.sprite\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.2d.spriteshape\": {\r\n      \"version\": \"9.0.3\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.mathematics\": \"1.1.0\",\r\n        \"com.unity.2d.common\": \"8.0.2\",\r\n        \"com.unity.modules.physics2d\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.tilemap\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.tilemap\": \"1.0.0\",\r\n        \"com.unity.modules.uielements\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.2d.tilemap.extras\": {\r\n      \"version\": \"3.1.2\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.tilemap\": \"1.0.0\",\r\n        \"com.unity.2d.tilemap\": \"1.0.0\",\r\n        \"com.unity.ugui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.burst\": {\r\n      \"version\": \"1.8.13\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.mathematics\": \"1.2.1\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.cinemachine\": {\r\n      \"version\": \"2.10.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.test-framework\": \"1.1.31\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.collab-proxy\": {\r\n      \"version\": \"2.3.1\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.collections\": {\r\n      \"version\": \"1.2.4\",\r\n      \"depth\": 2,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.burst\": \"1.6.6\",\r\n        \"com.unity.test-framework\": \"1.1.31\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.ext.nunit\": {\r\n      \"version\": \"1.0.6\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.feature.2d\": {\r\n      \"version\": \"2.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.animation\": \"9.1.0\",\r\n        \"com.unity.2d.pixel-perfect\": \"5.0.3\",\r\n        \"com.unity.2d.psdimporter\": \"8.0.4\",\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.2d.spriteshape\": \"9.0.2\",\r\n        \"com.unity.2d.tilemap\": \"1.0.0\",\r\n        \"com.unity.2d.tilemap.extras\": \"3.1.2\",\r\n        \"com.unity.2d.aseprite\": \"1.1.2\"\r\n      }\r\n    },\r\n    \"com.unity.ide.rider\": {\r\n      \"version\": \"3.0.28\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ext.nunit\": \"1.0.6\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.ide.visualstudio\": {\r\n      \"version\": \"2.0.22\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.test-framework\": \"1.1.9\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.inputsystem\": {\r\n      \"version\": \"1.7.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.uielements\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.mathematics\": {\r\n      \"version\": \"1.2.6\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.postprocessing\": {\r\n      \"version\": \"3.4.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.render-pipelines.core\": {\r\n      \"version\": \"14.0.10\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.ugui\": \"1.0.0\",\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.terrain\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.render-pipelines.universal\": {\r\n      \"version\": \"14.0.11\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.mathematics\": \"1.2.1\",\r\n        \"com.unity.burst\": \"1.8.9\",\r\n        \"com.unity.render-pipelines.core\": \"14.0.10\",\r\n        \"com.unity.shadergraph\": \"14.0.10\",\r\n        \"com.unity.render-pipelines.universal-config\": \"14.0.9\"\r\n      }\r\n    },\r\n    \"com.unity.render-pipelines.universal-config\": {\r\n      \"version\": \"14.0.9\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.render-pipelines.core\": \"14.0.9\"\r\n      }\r\n    },\r\n    \"com.unity.searcher\": {\r\n      \"version\": \"4.9.2\",\r\n      \"depth\": 2,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.shadergraph\": {\r\n      \"version\": \"14.0.10\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.render-pipelines.core\": \"14.0.10\",\r\n        \"com.unity.searcher\": \"4.9.2\"\r\n      }\r\n    },\r\n    \"com.unity.test-framework\": {\r\n      \"version\": \"1.1.33\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ext.nunit\": \"1.0.6\",\r\n        \"com.unity.modules.imgui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.textmeshpro\": {\r\n      \"version\": \"3.0.6\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ugui\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.timeline\": {\r\n      \"version\": \"1.7.6\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.director\": \"1.0.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\",\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.particlesystem\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.ugui\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.ui\": \"1.0.0\",\r\n        \"com.unity.modules.imgui\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.visualscripting\": {\r\n      \"version\": \"1.9.4\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ugui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.modules.ai\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.androidjni\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.animation\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.assetbundle\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.audio\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.cloth\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.director\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.imageconversion\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.imgui\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.jsonserialize\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.particlesystem\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.physics\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.physics2d\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.screencapture\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.imageconversion\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.subsystems\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.terrain\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.terrainphysics\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.terrain\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.tilemap\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics2d\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.ui\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.uielements\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.ui\": \"1.0.0\",\r\n        \"com.unity.modules.imgui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.umbra\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.unityanalytics\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequest\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.unitywebrequestassetbundle\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.assetbundle\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequestaudio\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.audio\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequesttexture\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.imageconversion\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequestwww\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequestassetbundle\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequestaudio\": \"1.0.0\",\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.assetbundle\": \"1.0.0\",\r\n        \"com.unity.modules.imageconversion\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.vehicles\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.video\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.ui\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.vr\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\",\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.xr\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.wind\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.xr\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\",\r\n        \"com.unity.modules.subsystems\": \"1.0.0\"\r\n      }\r\n    }\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Packages/packages-lock.json b/Packages/packages-lock.json
+--- a/Packages/packages-lock.json	(revision 26e07be32a8ef3b09b15df17be5ccc583d134cf3)
++++ b/Packages/packages-lock.json	(date 1718742148635)
+@@ -14,7 +14,7 @@
+       "url": "https://packages.unity.com"
+     },
+     "com.unity.2d.aseprite": {
+-      "version": "1.1.2",
++      "version": "1.1.3",
+       "depth": 1,
+       "source": "registry",
+       "dependencies": {
+@@ -149,7 +149,7 @@
+         "com.unity.2d.spriteshape": "9.0.2",
+         "com.unity.2d.tilemap": "1.0.0",
+         "com.unity.2d.tilemap.extras": "3.1.2",
+-        "com.unity.2d.aseprite": "1.1.2"
++        "com.unity.2d.aseprite": "1.1.3"
+       }
+     },
+     "com.unity.ide.rider": {
+@@ -196,7 +196,7 @@
+       "url": "https://packages.unity.com"
+     },
+     "com.unity.render-pipelines.core": {
+-      "version": "14.0.10",
++      "version": "14.0.11",
+       "depth": 1,
+       "source": "builtin",
+       "dependencies": {
+@@ -213,17 +213,17 @@
+       "dependencies": {
+         "com.unity.mathematics": "1.2.1",
+         "com.unity.burst": "1.8.9",
+-        "com.unity.render-pipelines.core": "14.0.10",
+-        "com.unity.shadergraph": "14.0.10",
++        "com.unity.render-pipelines.core": "14.0.11",
++        "com.unity.shadergraph": "14.0.11",
+         "com.unity.render-pipelines.universal-config": "14.0.9"
+       }
+     },
+     "com.unity.render-pipelines.universal-config": {
+-      "version": "14.0.9",
++      "version": "14.0.10",
+       "depth": 1,
+       "source": "builtin",
+       "dependencies": {
+-        "com.unity.render-pipelines.core": "14.0.9"
++        "com.unity.render-pipelines.core": "14.0.10"
+       }
+     },
+     "com.unity.searcher": {
+@@ -234,11 +234,11 @@
+       "url": "https://packages.unity.com"
+     },
+     "com.unity.shadergraph": {
+-      "version": "14.0.10",
++      "version": "14.0.11",
+       "depth": 1,
+       "source": "builtin",
+       "dependencies": {
+-        "com.unity.render-pipelines.core": "14.0.10",
++        "com.unity.render-pipelines.core": "14.0.11",
+         "com.unity.searcher": "4.9.2"
+       }
+     },

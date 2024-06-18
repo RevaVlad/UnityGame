@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="stone crash sound">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="preparing for rollback breakable platforms">
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/BreakableTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/BreakableTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/static.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/static.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level9.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ObjectSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ObjectSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +56,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ab/2766bc6f/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d6/76e600dd/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fb232611617147bf9097969c164ef5431528c0/57/a7fc05f0/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -276,14 +289,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00073" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717252988661</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1717252988661</updated>
     </task>
     <task id="LOCAL-00074" summary="style fix">
       <option name="closed" value="true" />
@@ -669,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718718436360</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="preparing for rollback breakable platforms">
+      <option name="closed" value="true" />
+      <created>1718740869680</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1718740869680</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,7 +746,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="45% clearing" />
     <MESSAGE value="55% clearing" />
     <MESSAGE value="65% clearing" />
     <MESSAGE value="75% clearing" />
@@ -758,6 +770,7 @@
     <MESSAGE value="added rollback activation" />
     <MESSAGE value="style fix" />
     <MESSAGE value="stone crash sound" />
-    <option name="LAST_COMMIT_MESSAGE" value="stone crash sound" />
+    <MESSAGE value="preparing for rollback breakable platforms" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparing for rollback breakable platforms" />
   </component>
 </project>
