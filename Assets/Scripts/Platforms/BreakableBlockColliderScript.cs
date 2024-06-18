@@ -2,22 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class BreakableBlockCollider : MonoBehaviour
 {
     [SerializeField] public UnityEvent onBreakingBlock;
+    private List<(LadderScript ladder, string colldingTile)> _collidingLadders = new ();
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void FixedUpdate()
+    {
+        foreach (var (ladder, collidingTile) in _collidingLadders)
+        {
+            if (ladder.GetBases().Contains(collidingTile))
+                onBreakingBlock.Invoke();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         var otherGameObject = other.gameObject;
-        if (otherGameObject.layer != LayerMask.NameToLayer(Utils.LaddersLayerName)) return;
-        
-        var ladder = Utils.GetPipeRoot(otherGameObject.transform).GetComponent<LadderScript>();
-        if (ladder.GetBases().Contains(otherGameObject.name))
-        {
-            onBreakingBlock.Invoke();
-        }
+        if (otherGameObject.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            _collidingLadders.Add((Utils.GetPipeRoot(otherGameObject.transform).GetComponent<LadderScript>(), otherGameObject.name));
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        var otherGameObject = other.gameObject;
+        if (otherGameObject.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+            _collidingLadders =
+                _collidingLadders.Where(ladderAndTile => ladderAndTile.colldingTile != other.gameObject.name).ToList();
     }
 }
