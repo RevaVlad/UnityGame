@@ -13,6 +13,11 @@ public class BreakableBlockScript : MonoBehaviour
 
     private static readonly int isBrokenAnim = Animator.StringToHash("isBrokenAnim");
 
+    private void Awake() =>
+        transform.SetParent(GameObject.Find("BreakBlockContainer") is null
+            ? new GameObject("BreakBlockContainer").transform
+            : GameObject.Find("BreakBlockContainer").transform);
+
     private void Start()
     {
         _children = (from Transform child in transform select child.GameObject()).ToArray();

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="style fix">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundMixerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundMixerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="stone crash sound">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Breakable-tiles" />
+        <entry key="$PROJECT_DIR$" value="Pipes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -733,7 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="35% clearing" />
     <MESSAGE value="45% clearing" />
     <MESSAGE value="55% clearing" />
     <MESSAGE value="65% clearing" />
@@ -758,6 +757,7 @@
     <MESSAGE value="starting adding rollback activation" />
     <MESSAGE value="added rollback activation" />
     <MESSAGE value="style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="style fix" />
+    <MESSAGE value="stone crash sound" />
+    <option name="LAST_COMMIT_MESSAGE" value="stone crash sound" />
   </component>
 </project>

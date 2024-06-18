@@ -28,16 +28,25 @@ public class SceneManager : MonoBehaviour
     {
         if (sceneSnapshots.Count == 100) sceneSnapshots.Clear();
         var sceneSnapshot = new List<ObjectSnapshot>();
+        CreateLaddersSnapshot(sceneSnapshot);
+        var playerPosition = player.transform.position;
+        sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));
+        sceneSnapshots.Push(sceneSnapshot);
+    }
+
+    private void CreateLaddersSnapshot(ICollection<ObjectSnapshot> sceneSnapshot)
+    {
         for (var i = 0; i < laddersContainer.childCount; i++)
         {
             var obj = laddersContainer.GetChild(i).gameObject;
             var position = obj.transform.position;
             sceneSnapshot.Add(new ObjectSnapshot(obj, new Vector3(position.x, position.y)));
         }
+    }
 
-        var playerPosition = player.transform.position;
-        sceneSnapshot.Add(new ObjectSnapshot(player, new Vector3(playerPosition.x, playerPosition.y)));
-        sceneSnapshots.Push(sceneSnapshot);
+    private void CreateBreakBlockSnapshot(ICollection<ObjectSnapshot> sceneSnapshot)
+    {
+        
     }
 
     public void ClearSceneSnapshots() => sceneSnapshots.Clear();
