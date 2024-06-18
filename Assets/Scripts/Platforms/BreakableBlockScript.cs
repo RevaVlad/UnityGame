@@ -10,6 +10,7 @@ public class BreakableBlockScript : MonoBehaviour
     [SerializeField] private GameObject[] _children;
     private Coroutine _breakingCoroutine;
     [SerializeField] private AudioClip[] stoneCrashSound;
+    private TransparencyControlScript outlinesControl;
 
     private static readonly int isBrokenAnim = Animator.StringToHash("isBrokenAnim");
 
@@ -17,6 +18,7 @@ public class BreakableBlockScript : MonoBehaviour
     {
         _children = (from Transform child in transform select child.GameObject()).ToArray();
         _breakingCoroutine = null;
+        outlinesControl = GetComponentInChildren<TransparencyControlScript>();
 
         foreach (var colliderHandler in GetComponentsInChildren<BreakableBlockCollider>())
         {
@@ -32,6 +34,7 @@ public class BreakableBlockScript : MonoBehaviour
     private IEnumerator BreakCoroutine()
     {
         isBroken = true;
+        outlinesControl.Disappear();
         foreach (var animator in GetComponentsInChildren<Animator>())
         {
             animator.SetBool(isBrokenAnim, true);
@@ -48,6 +51,7 @@ public class BreakableBlockScript : MonoBehaviour
     public void UndoBreak()
     {
         isBroken = false;
+        outlinesControl.Appear();
         if (_breakingCoroutine is not null)
             StopCoroutine(_breakingCoroutine);
         foreach (var animator in GetComponentsInChildren<Animator>())
