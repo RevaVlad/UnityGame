@@ -1,0 +1,17 @@
+Index: Assets/Scenes/Level4.unity.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>fileFormatVersion: 2\r\nguid: 6509d8b9d6419eb43ab705cbaf95c98f\r\nDefaultImporter:\r\n  externalObjects: {}\r\n  userData: \r\n  assetBundleName: \r\n  assetBundleVariant: \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/Level4.unity.meta b/Assets/Scenes/Level4.unity.meta
+--- a/Assets/Scenes/Level4.unity.meta	(revision 4dc167bdfab56eefbfa02ad2d39e224d381ebed5)
++++ b/Assets/Scenes/Level4.unity.meta	(date 1718735668637)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 6509d8b9d6419eb43ab705cbaf95c98f
++guid: 59d3039d5e6038b41bced459e3afb77c
+ DefaultImporter:
+   externalObjects: {}
+   userData: 
