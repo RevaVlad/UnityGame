@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix: rewind mid animation">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ladders/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ladders/LadderScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="deny sound added (cherry pick)">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Grinik767 &lt;grigorikiseleff@yandex.ru&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="Breakable-tiles" />
@@ -48,6 +50,7 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/BreakableBlocks/static.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/BreakableBlocks/static.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/PlayerAssets/playerParams.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/prefabs/SceneManager.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level10.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level10.unity" root0="SKIP_HIGHLIGHTING" />
@@ -75,11 +78,6 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,6 +85,15 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Utils/ObjectSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Utils/ObjectSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
@@ -315,38 +322,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00073" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717252988661</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1717252988661</updated>
-    </task>
-    <task id="LOCAL-00074" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717254365611</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1717254365611</updated>
-    </task>
-    <task id="LOCAL-00075" summary="some fixes after merge">
-      <option name="closed" value="true" />
-      <created>1717259165098</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1717259165098</updated>
-    </task>
-    <task id="LOCAL-00076" summary="new animations added">
-      <option name="closed" value="true" />
-      <created>1717259523075</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1717259523075</updated>
     </task>
     <task id="LOCAL-00077" summary="style fix">
       <option name="closed" value="true" />
@@ -708,7 +683,39 @@
       <option name="project" value="LOCAL" />
       <updated>1718759142513</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Bug fix: Coroutine continues after rewind (bad fix)">
+      <option name="closed" value="true" />
+      <created>1718759584222</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1718759584222</updated>
+    </task>
+    <task id="LOCAL-00123" summary="deny sound added (cherry pick)">
+      <option name="closed" value="true" />
+      <created>1718759807752</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1718759807752</updated>
+    </task>
+    <task id="LOCAL-00124" summary="deny sound added (cherry pick)">
+      <option name="closed" value="true" />
+      <created>1718759839768</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1718759839769</updated>
+    </task>
+    <task id="LOCAL-00125" summary="deny sound added (cherry pick)">
+      <option name="closed" value="true" />
+      <created>1718759977374</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1718759977374</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -772,9 +779,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="35% clearing" />
-    <MESSAGE value="45% clearing" />
-    <MESSAGE value="55% clearing" />
     <MESSAGE value="65% clearing" />
     <MESSAGE value="75% clearing" />
     <MESSAGE value="85% clearing" />
@@ -797,6 +801,9 @@
     <MESSAGE value="Rollback with breakable (broken animation)" />
     <MESSAGE value="Finally working cracked tiles" />
     <MESSAGE value="Bug fix: rewind mid animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix: rewind mid animation" />
+    <MESSAGE value="deny sound added" />
+    <MESSAGE value="Bug fix: Coroutine continues after rewind (bad fix)" />
+    <MESSAGE value="deny sound added (cherry pick)" />
+    <option name="LAST_COMMIT_MESSAGE" value="deny sound added (cherry pick)" />
   </component>
 </project>

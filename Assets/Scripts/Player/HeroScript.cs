@@ -11,10 +11,11 @@ public class HeroScript : MonoBehaviour
     [SerializeField] public UnityEvent<LadderScript> tookLadder;
     [SerializeField] public UnityEvent<LadderScript> droppedLadder;
     [SerializeField] public UnityEvent<LadderScript> startedTravelPipe;
+    [SerializeField] private AudioClip[] denyMoveSound;
 
     private bool faceRight;
     private Animator anim;
-    
+
     private float timePassedSinceOnGround;
     private float timePassedSinceJump;
     public float timePassedSinceMoveLadder;
@@ -43,6 +44,8 @@ public class HeroScript : MonoBehaviour
     #endregion
 
     [SerializeField] private GameObject shakeManager;
+    private bool isShaking;
+
     private static readonly int MoveX = Animator.StringToHash("moveX");
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
     private static readonly int IsWithPipe = Animator.StringToHash("isWithPipe");
@@ -212,7 +215,7 @@ public class HeroScript : MonoBehaviour
         isPlayerOnLadder = true;
         heldLadder = ladder;
         rb.simulated = false;
-        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f)));
+        moveToLadderCenter = StartCoroutine(MoveToPoint(ladder.transform, 1.5f, Vector3.up * (sizeY / 2 - .5f + 0.1f)));
         anim.SetBool(IsWithPipe, true);
         SwapInputMap();
     }
@@ -239,23 +242,22 @@ public class HeroScript : MonoBehaviour
 
     private void CheckMoveLadderBuffer()
     {
-        if (timePassedSinceMoveLadder < data.bufferTime && memorizedDirection != 0 && heldLadder.MoveDirection == 0)
-        {
-            if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
-                if (memorizedDirection > 0)
-                    heldLadder.MoveRight();
-                else
-                    heldLadder.MoveLeft();
+        if (!(timePassedSinceMoveLadder < data.bufferTime) || memorizedDirection == 0 ||
+            heldLadder.MoveDirection != 0) return;
+        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
+            if (memorizedDirection > 0)
+                heldLadder.MoveRight();
             else
-                PlaySomethingBadHappened(true);
-            
-            if (!faceRight) return;
-            transform.localScale *= new Vector2(-1, 1);
-            faceRight = !faceRight;
-            memorizedDirection = 0;
-        }
+                heldLadder.MoveLeft();
+        else
+            PlaySomethingBadHappened();
+
+        if (!faceRight) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
+        memorizedDirection = 0;
     }
-    
+
     private void OnMoveRightWithLadder()
     {
         memorizedDirection = 1;
@@ -276,11 +278,11 @@ public class HeroScript : MonoBehaviour
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
             startedTravelPipe.Invoke(heldLadder);
         else
-            PlaySomethingBadHappened(true);
+            PlaySomethingBadHappened();
     }
-    
+
     private void TravelPipeHandler(LadderScript ladder) => StartCoroutine(OnTravelAction());
-    
+
     private IEnumerator OnTravelAction()
     {
         playerInput.actions.FindActionMap("LadderInput").Disable();
@@ -291,7 +293,8 @@ public class HeroScript : MonoBehaviour
 
         SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
         anim.SetBool(GoThrowPipe, false);
-        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2 - .02f) * Vector3.up;
+        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position -
+                             (sizeY / 2 - .02f) * Vector3.up;
         OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Disable();
         yield return new WaitUntil(() =>
@@ -319,11 +322,22 @@ public class HeroScript : MonoBehaviour
 
     #endregion
 
-    private void PlaySomethingBadHappened(bool shakeCamera)
+    private void PlaySomethingBadHappened(bool shakeCamera = true)
     {
-        if (shakeManager)
-            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
-        // Play bad sound
+        if (shakeCamera && !isShaking)
+        {
+            isShaking = true;
+            shakeManager.transform.GetComponent<CameraShakeManager>()
+                .CameraShake(GetComponent<CinemachineImpulseSource>());
+            StartCoroutine(StopShaking());
+        }
+        SoundFXManager.Instance.PlaySoundFXClip(denyMoveSound, transform, 2f);
+    }
+
+    private IEnumerator StopShaking()
+    {
+        yield return new WaitForSeconds(.5f);
+        isShaking = false;
     }
 
     private IEnumerator MoveToPoint(Transform target, float speed, Vector3 targetOffset)

@@ -78,8 +78,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 482643206e9b599498ad5e1e3810112f, type: 2}
-  timePassedSinceOnGround: 0
-  timePassedSinceJump: 0
+  tookLadder:
+    m_PersistentCalls:
+      m_Calls: []
+  droppedLadder:
+    m_PersistentCalls:
+      m_Calls: []
+  startedTravelPipe:
+    m_PersistentCalls:
+      m_Calls: []
+  denyMoveSound:
+  - {fileID: 8300000, guid: 77857708816e81a4fbc2f30b8f3c91a4, type: 3}
   isGrounded: 0
   sizeY: 0
   sizeX: 0
