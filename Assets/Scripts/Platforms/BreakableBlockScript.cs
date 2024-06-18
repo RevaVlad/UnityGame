@@ -9,6 +9,8 @@ public class BreakableBlockScript : MonoBehaviour
     [SerializeField] public bool isBroken;
     [SerializeField] private GameObject[] _children;
     private Coroutine _breakingCoroutine;
+    
+    private static readonly int isBrokenAnim = Animator.StringToHash("isBrokenAnim");
 
     void Start()
     {
@@ -18,7 +20,6 @@ public class BreakableBlockScript : MonoBehaviour
         foreach (var colliderHandler in GetComponentsInChildren<BreakableBlockCollider>())
         {
             colliderHandler.onBreakingBlock.AddListener(Break);
-            Debug.Log("New listener");
         }
     }
 
@@ -29,10 +30,12 @@ public class BreakableBlockScript : MonoBehaviour
     
     private IEnumerator BreakCoroutine()
     {
-        Debug.Log("Break coroutine started");
         isBroken = true;
-        // StartAnimation
-        yield return new WaitForSeconds(2); // Wait for animation to end
+        foreach (var animator in GetComponentsInChildren<Animator>())
+        {
+            animator.SetBool(isBrokenAnim, true);
+        }
+        yield return new WaitForSeconds(1);
         foreach (var child in _children)
             child.SetActive(false);
         _breakingCoroutine = null;
@@ -43,7 +46,11 @@ public class BreakableBlockScript : MonoBehaviour
     {
         isBroken = false;
         if (_breakingCoroutine is not null)
-            StopCoroutine(_breakingCoroutine); // Change animation to idle
+            StopCoroutine(_breakingCoroutine);
+        foreach (var animator in GetComponentsInChildren<Animator>())
+        {
+            animator.SetBool(isBrokenAnim, false);
+        }
         foreach (var child in _children)
             child.SetActive(true);
     }
