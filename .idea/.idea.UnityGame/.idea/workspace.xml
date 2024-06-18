@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="added rollback activation">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="style fix">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +50,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/ab/2766bc6f/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d6/76e600dd/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fb232611617147bf9097969c164ef5431528c0/57/a7fc05f0/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/grigo/Desktop/UnityGame/Assets/Scripts/Player/HeroScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -270,14 +277,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00072" summary="SoundMixerManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015751303</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015751303</updated>
     </task>
     <task id="LOCAL-00073" summary="style fix">
       <option name="closed" value="true" />
@@ -663,7 +662,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718709485308</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="style fix">
+      <option name="closed" value="true" />
+      <created>1718718436360</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1718718436360</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,7 +734,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="30% clearing" />
     <MESSAGE value="35% clearing" />
     <MESSAGE value="45% clearing" />
     <MESSAGE value="55% clearing" />
@@ -752,6 +758,7 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="starting adding rollback activation" />
     <MESSAGE value="added rollback activation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added rollback activation" />
+    <MESSAGE value="style fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="style fix" />
   </component>
 </project>

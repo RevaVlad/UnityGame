@@ -11,6 +11,7 @@ public class HeroScript : MonoBehaviour
     [SerializeField] public UnityEvent<LadderScript> tookLadder;
     [SerializeField] public UnityEvent<LadderScript> droppedLadder;
     [SerializeField] public UnityEvent<LadderScript> startedTravelPipe;
+    [SerializeField] private AudioClip[] denyMoveSound;
 
     private bool faceRight;
     private Animator anim;
@@ -44,7 +45,7 @@ public class HeroScript : MonoBehaviour
 
     [SerializeField] private GameObject shakeManager;
     private bool isShaking;
-    
+
     private static readonly int MoveX = Animator.StringToHash("moveX");
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
     private static readonly int IsWithPipe = Animator.StringToHash("isWithPipe");
@@ -324,14 +325,12 @@ public class HeroScript : MonoBehaviour
 
     private void PlaySomethingBadHappened(bool shakeCamera = true)
     {
-        if (shakeCamera && !isShaking)
-        {
-            isShaking = true;
-            shakeManager.transform.GetComponent<CameraShakeManager>()
-                .CameraShake(GetComponent<CinemachineImpulseSource>());
-            StartCoroutine(StopShaking());
-        }
-        // Play bad sound
+        if (!shakeCamera || isShaking) return;
+        isShaking = true;
+        shakeManager.transform.GetComponent<CameraShakeManager>()
+            .CameraShake(GetComponent<CinemachineImpulseSource>());
+        StartCoroutine(StopShaking());
+        SoundFXManager.Instance.PlaySoundFXClip(denyMoveSound, transform, 1.2f);
     }
 
     private IEnumerator StopShaking()
