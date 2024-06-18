@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &105371554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 59859857753243450, guid: ab8599073aaecfa4899f692ca92c5516, type: 3}
+  m_PrefabInstance: {fileID: 624923169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &230804475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3794006488881712991, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
@@ -7772,7 +7777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6466279274105948302, guid: ab8599073aaecfa4899f692ca92c5516, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.4851248
       objectReference: {fileID: 0}
     - target: {fileID: 6466279274105948302, guid: ab8599073aaecfa4899f692ca92c5516, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8134,6 +8139,18 @@ PrefabInstance:
     - target: {fileID: 6039834811024524176, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: field of view
       value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _Pipe
+      value: 
+      objectReference: {fileID: 105371554}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _PipeSprite
+      value: 
+      objectReference: {fileID: 5075263981757567924, guid: 260dfdef2a803574190dfb06d14a7544, type: 3}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _position.y
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: m_Name
