@@ -9,6 +9,8 @@ public static class Utils
     public const string PipeEnterPointName = "EnterPoint";
     public const string PipeExitPointName = "ExitPoint";
     public const string PipeTileForConnection = "EnterUp";
+    public const float TransparencyAppearTime = .3f;
+    public const float TransparencyDisappearTime = .3f;
 
     public static Transform GetPipeRoot(Transform obj)
     {
