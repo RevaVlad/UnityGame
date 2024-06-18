@@ -43,6 +43,8 @@ public class HeroScript : MonoBehaviour
     #endregion
 
     [SerializeField] private GameObject shakeManager;
+    private bool isShaking;
+    
     private static readonly int MoveX = Animator.StringToHash("moveX");
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
     private static readonly int IsWithPipe = Animator.StringToHash("isWithPipe");
@@ -322,10 +324,20 @@ public class HeroScript : MonoBehaviour
 
     private void PlaySomethingBadHappened(bool shakeCamera = true)
     {
-        if (shakeCamera)
+        if (shakeCamera && !isShaking)
+        {
+            isShaking = true;
             shakeManager.transform.GetComponent<CameraShakeManager>()
                 .CameraShake(GetComponent<CinemachineImpulseSource>());
+            StartCoroutine(StopShaking());
+        }
         // Play bad sound
+    }
+
+    private IEnumerator StopShaking()
+    {
+        yield return new WaitForSeconds(.5f);
+        isShaking = false;
     }
 
     private IEnumerator MoveToPoint(Transform target, float speed, Vector3 targetOffset)
