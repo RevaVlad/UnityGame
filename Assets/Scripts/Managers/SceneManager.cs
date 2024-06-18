@@ -16,6 +16,7 @@ public class SceneManager : MonoBehaviour
 
     private readonly Stack<List<ObjectSnapshot>> sceneSnapshots = new();
     private GameObject blurManager;
+    private GameObject rollbackTrigger;
 
     private PlayerInput playerInput;
     private PlayerInput sceneInput;
@@ -39,6 +40,8 @@ public class SceneManager : MonoBehaviour
         sceneSnapshots.Push(sceneSnapshot);
     }
 
+    public void ClearSceneSnapshots() => sceneSnapshots.Clear();
+
     private void Awake()
     {
         player = GameObject.Find("Player");
@@ -49,6 +52,7 @@ public class SceneManager : MonoBehaviour
         blurManager.SetActive(false);
         flashingImage = gameObject.transform.Find("rollback").gameObject;
         flashingImage.SetActive(false);
+        rollbackTrigger = GameObject.Find("ActivateRollback");
     }
 
     private void Start() =>
@@ -66,7 +70,8 @@ public class SceneManager : MonoBehaviour
 
     private void OnRestoreSnapshot()
     {
-        if (!sceneSnapshots.TryPop(out var snapshot))
+        if (!sceneSnapshots.TryPop(out var snapshot) ||
+            (rollbackTrigger != null && !rollbackTrigger.GetComponent<ActivateRollbackTrigger>().IsRollbackActive))
             return;
         sceneInput.DeactivateInput();
         playerInput.actions.FindActionMap("LadderInput").Disable();

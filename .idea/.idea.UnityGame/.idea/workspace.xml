@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ActivateRollbackTrigger.cs" afterDir="false" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="starting adding rollback activation">
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ActivateRollbackTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ActivateRollbackTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,14 +278,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00070" summary="SceneManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015148033</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015148033</updated>
     </task>
     <task id="LOCAL-00071" summary="SceneManager.cs style fix">
       <option name="closed" value="true" />
@@ -670,7 +663,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718705688373</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="starting adding rollback activation">
+      <option name="closed" value="true" />
+      <created>1718707160390</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1718707160390</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -734,7 +735,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="10% clearing" />
     <MESSAGE value="25% clearing" />
     <MESSAGE value="30% clearing" />
     <MESSAGE value="35% clearing" />
@@ -759,6 +759,7 @@
     <MESSAGE value="Level 7" />
     <MESSAGE value="Level 8" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="starting adding rollback activation" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting adding rollback activation" />
   </component>
 </project>
