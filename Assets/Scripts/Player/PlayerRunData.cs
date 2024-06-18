@@ -23,4 +23,6 @@ public class PlayerRunData : ScriptableObject
     public float momentumLossAtJump;
     public float gravityScaleWhenFalling;
     public float normalGravityScale;
+    
+    [Header("Platforms")] public float moveBuffer;
 }

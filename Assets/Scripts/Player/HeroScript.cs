@@ -14,8 +14,11 @@ public class HeroScript : MonoBehaviour
 
     private bool faceRight;
     private Animator anim;
-    [SerializeField] private float timePassedSinceOnGround;
-    [SerializeField] private float timePassedSinceJump;
+    
+    private float timePassedSinceOnGround;
+    private float timePassedSinceJump;
+    private float timePassedSinceMoveLadder;
+    private int memorizedDirection;
 
     [SerializeField] private bool isGrounded;
     private bool isJumping = true;
@@ -82,6 +85,7 @@ public class HeroScript : MonoBehaviour
     {
         timePassedSinceOnGround += Time.deltaTime;
         timePassedSinceJump += Time.deltaTime;
+        timePassedSinceMoveLadder += Time.deltaTime;
 
         rb.gravityScale = rb.velocity.y < 0 ? data.gravityScaleWhenFalling : data.normalGravityScale;
         CheckGround();
@@ -90,10 +94,15 @@ public class HeroScript : MonoBehaviour
     private void FixedUpdate()
     {
         if (isPlayerOnLadder)
-            return;
-        CheckJumpBuffer();
-        Run();
-        ApplyFriction();
+        {
+            CheckMoveLadderBuffer();
+        }
+        else
+        {
+            CheckJumpBuffer();
+            Run();
+            ApplyFriction();
+        }
     }
 
     #region Jump
@@ -228,26 +237,35 @@ public class HeroScript : MonoBehaviour
         moveToLadderCenter = null;
     }
 
+    private void CheckMoveLadderBuffer()
+    {
+        if (timePassedSinceMoveLadder < data.bufferTime && memorizedDirection !=0 && heldLadder.MoveDirection == 0)
+        {
+            if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
+                if (memorizedDirection > 0)
+                    heldLadder.MoveRight();
+                else
+                    heldLadder.MoveLeft();
+            else
+                PlaySomethingBadHappened(true);
+            
+            if (!faceRight) return;
+            transform.localScale *= new Vector2(-1, 1);
+            faceRight = !faceRight;
+            memorizedDirection = 0;
+        }
+    }
+    
     private void OnMoveRightWithLadder()
     {
-        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
-            heldLadder.MoveRight();
-        else
-            PlaySomethingBadHappened(true);
-        if (!faceRight) return;
-        transform.localScale *= new Vector2(-1, 1);
-        faceRight = !faceRight;
+        memorizedDirection = 1;
+        timePassedSinceMoveLadder = 0;
     }
 
     private void OnMoveLeftWithLadder()
     {
-        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
-            heldLadder.MoveLeft();
-        else
-            PlaySomethingBadHappened(true);
-        if (faceRight) return;
-        transform.localScale *= new Vector2(-1, 1);
-        faceRight = !faceRight;
+        memorizedDirection = -1;
+        timePassedSinceMoveLadder = 0;
     }
 
     private void OnTravelThroughPipe()
