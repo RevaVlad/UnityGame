@@ -38,7 +38,7 @@ public class BreakableBlockScript : MonoBehaviour
         _breakingCoroutine = null;
     }
 
-    [ContextMenu("Undo brea")]
+    [ContextMenu("Undo break")]
     public void UndoBreak()
     {
         isBroken = false;
