@@ -35,7 +35,7 @@ public class BreakableBlockScript : MonoBehaviour
         {
             animator.SetBool(isBrokenAnim, true);
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.7f);
         foreach (var child in _children)
             child.SetActive(false);
         _breakingCoroutine = null;

@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a987e19ca3a6cc340abc2dd389e0dab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLevelCount: 8
+  totalLevelCount: 100
   rollbackSound:
   - {fileID: 8300000, guid: 002233361cdefe841a11cbcf67a87ee9, type: 3}
 --- !u!114 &5588399708600349659
