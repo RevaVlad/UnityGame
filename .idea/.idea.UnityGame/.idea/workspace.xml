@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 8">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_13__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_57__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_03_06_2024_15_59__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +94,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Pipes",
+    "git-widget-placeholder": "Breakable-tiles",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
