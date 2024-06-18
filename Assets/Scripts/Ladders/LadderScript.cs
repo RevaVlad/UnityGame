@@ -201,4 +201,10 @@ public class LadderScript : MonoBehaviour
         var bases = possibleBase.Where(obj => Math.Abs(obj.position.y - min) < .5).Select(obj => obj.name).ToArray();
         return bases;
     }
+
+    [ContextMenu("Check bases")]
+    private void DeleteThis()
+    {
+        Debug.Log(GetBases().FirstOrDefault());
+    }
 }

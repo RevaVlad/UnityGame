@@ -625,6 +625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBroken: 0
   _children: []
+  stoneCrashSound:
+  - {fileID: 8300000, guid: cc4a0ec0c92d7984fadb390a9a18d80e, type: 3}
 --- !u!1 &8097916644388982684
 GameObject:
   m_ObjectHideFlags: 0

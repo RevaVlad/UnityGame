@@ -6,13 +6,14 @@ using UnityEngine;
 [SelectionBase]
 public class BreakableBlockScript : MonoBehaviour
 {
-    [SerializeField] public bool isBroken;
+    [SerializeField] private bool isBroken;
     [SerializeField] private GameObject[] _children;
     private Coroutine _breakingCoroutine;
-    
+    [SerializeField] private AudioClip[] stoneCrashSound;
+
     private static readonly int isBrokenAnim = Animator.StringToHash("isBrokenAnim");
 
-    void Start()
+    private void Start()
     {
         _children = (from Transform child in transform select child.GameObject()).ToArray();
         _breakingCoroutine = null;
@@ -35,6 +36,8 @@ public class BreakableBlockScript : MonoBehaviour
         {
             animator.SetBool(isBrokenAnim, true);
         }
+
+        SoundFXManager.Instance.PlaySoundFXClip(stoneCrashSound, transform, 1.2f);
         yield return new WaitForSeconds(.7f);
         foreach (var child in _children)
             child.SetActive(false);
@@ -51,6 +54,7 @@ public class BreakableBlockScript : MonoBehaviour
         {
             animator.SetBool(isBrokenAnim, false);
         }
+
         foreach (var child in _children)
             child.SetActive(true);
     }
