@@ -14,7 +14,7 @@ public class HeroScript : MonoBehaviour
 
     private bool faceRight;
     private Animator anim;
-    
+
     private float timePassedSinceOnGround;
     private float timePassedSinceJump;
     private float timePassedSinceMoveLadder;
@@ -240,23 +240,22 @@ public class HeroScript : MonoBehaviour
 
     private void CheckMoveLadderBuffer()
     {
-        if (timePassedSinceMoveLadder < data.bufferTime && memorizedDirection !=0 && heldLadder.MoveDirection == 0)
-        {
-            if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
-                if (memorizedDirection > 0)
-                    heldLadder.MoveRight();
-                else
-                    heldLadder.MoveLeft();
+        if (!(timePassedSinceMoveLadder < data.bufferTime) || memorizedDirection == 0 ||
+            heldLadder.MoveDirection != 0) return;
+        if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
+            if (memorizedDirection > 0)
+                heldLadder.MoveRight();
             else
-                PlaySomethingBadHappened(true);
-            
-            if (!faceRight) return;
-            transform.localScale *= new Vector2(-1, 1);
-            faceRight = !faceRight;
-            memorizedDirection = 0;
-        }
+                heldLadder.MoveLeft();
+        else
+            PlaySomethingBadHappened();
+
+        if (!faceRight) return;
+        transform.localScale *= new Vector2(-1, 1);
+        faceRight = !faceRight;
+        memorizedDirection = 0;
     }
-    
+
     private void OnMoveRightWithLadder()
     {
         memorizedDirection = 1;
@@ -277,11 +276,11 @@ public class HeroScript : MonoBehaviour
         if (distance.magnitude < .2 && heldLadder.MoveDirection == 0 && heldLadder.CheckIfExitAvailable())
             startedTravelPipe.Invoke(heldLadder);
         else
-            PlaySomethingBadHappened(true);
+            PlaySomethingBadHappened();
     }
-    
+
     private void TravelPipeHandler(LadderScript ladder) => StartCoroutine(OnTravelAction());
-    
+
     private IEnumerator OnTravelAction()
     {
         playerInput.actions.FindActionMap("LadderInput").Disable();
@@ -292,7 +291,8 @@ public class HeroScript : MonoBehaviour
 
         SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
         anim.SetBool(GoThrowPipe, false);
-        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position - (sizeY / 2 - .02f) * Vector3.up;
+        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position -
+                             (sizeY / 2 - .02f) * Vector3.up;
         OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Disable();
         yield return new WaitUntil(() =>
@@ -320,10 +320,11 @@ public class HeroScript : MonoBehaviour
 
     #endregion
 
-    private void PlaySomethingBadHappened(bool shakeCamera)
+    private void PlaySomethingBadHappened(bool shakeCamera = true)
     {
-        if (shakeManager)
-            shakeManager.transform.GetComponent<CameraShakeManager>().CameraShake(GetComponent<CinemachineImpulseSource>());
+        if (shakeCamera)
+            shakeManager.transform.GetComponent<CameraShakeManager>()
+                .CameraShake(GetComponent<CinemachineImpulseSource>());
         // Play bad sound
     }
 
