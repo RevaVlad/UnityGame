@@ -74,7 +74,9 @@ public class SceneManager : MonoBehaviour
     private void Start()
     {
         laddersContainer = GameObject.Find("LaddersContainer").transform;
-        breakBlockContainer = GameObject.Find("BreakBlockContainer") ? GameObject.Find("BreakBlockContainer").transform : null;
+        breakBlockContainer = GameObject.Find("BreakBlockContainer")
+            ? GameObject.Find("BreakBlockContainer").transform
+            : null;
     }
 
     private void Update() => CheckFinishAndLoadNextLevel();
@@ -90,7 +92,8 @@ public class SceneManager : MonoBehaviour
 
     private void OnRestoreSnapshot()
     {
-        if (!sceneSnapshots.TryPop(out var snapshot))
+        if (!sceneSnapshots.TryPop(out var snapshot) ||
+            (rollbackTrigger != null && !rollbackTrigger.GetComponent<ActivateRollbackTrigger>().IsRollbackActive))
             return;
         sceneInput.DeactivateInput();
         playerInput.actions.FindActionMap("LadderInput").Disable();
