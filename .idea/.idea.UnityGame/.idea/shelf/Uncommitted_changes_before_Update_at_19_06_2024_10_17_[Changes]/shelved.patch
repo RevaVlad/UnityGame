@@ -1,0 +1,437 @@
+Index: Assets/Scenes/Level12.unity
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/Level12.unity b/Assets/Scenes/Level12.unity
+--- a/Assets/Scenes/Level12.unity	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/Assets/Scenes/Level12.unity	(date 1718774165937)
+@@ -635,6 +635,11 @@
+   m_CorrespondingSourceObject: {fileID: 3030540259644317676, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+   m_PrefabInstance: {fileID: 1251838715}
+   m_PrefabAsset: {fileID: 0}
++--- !u!1 &1377211446 stripped
++GameObject:
++  m_CorrespondingSourceObject: {fileID: 1097668400851247947, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
++  m_PrefabInstance: {fileID: 1589165247}
++  m_PrefabAsset: {fileID: 0}
+ --- !u!1001 &1589165247
+ PrefabInstance:
+   m_ObjectHideFlags: 0
+@@ -653,7 +658,7 @@
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: -0.5
++      value: -0.48512495
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.z
+@@ -11128,6 +11133,18 @@
+     - target: {fileID: 6039834811024524176, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: field of view
+       value: 50
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _Pipe
++      value: 
++      objectReference: {fileID: 1377211446}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.x
++      value: -5
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.y
++      value: -0.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: m_Name
+Index: Packages/packages-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"dependencies\": {\r\n    \"com.unity.2d.animation\": {\r\n      \"version\": \"9.1.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.common\": \"8.0.2\",\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.collections\": \"1.1.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\",\r\n        \"com.unity.modules.uielements\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.aseprite\": {\r\n      \"version\": \"1.1.3\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.2d.common\": \"6.0.6\",\r\n        \"com.unity.mathematics\": \"1.2.6\",\r\n        \"com.unity.modules.animation\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.common\": {\r\n      \"version\": \"8.0.2\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.mathematics\": \"1.1.0\",\r\n        \"com.unity.modules.uielements\": \"1.0.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\",\r\n        \"com.unity.burst\": \"1.7.3\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.pixel-perfect\": {\r\n      \"version\": \"5.0.3\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.psdimporter\": {\r\n      \"version\": \"8.0.4\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.animation\": \"9.1.0\",\r\n        \"com.unity.2d.common\": \"8.0.2\",\r\n        \"com.unity.2d.sprite\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.sprite\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.2d.spriteshape\": {\r\n      \"version\": \"9.0.3\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.mathematics\": \"1.1.0\",\r\n        \"com.unity.2d.common\": \"8.0.2\",\r\n        \"com.unity.modules.physics2d\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.2d.tilemap\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.tilemap\": \"1.0.0\",\r\n        \"com.unity.modules.uielements\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.2d.tilemap.extras\": {\r\n      \"version\": \"3.1.2\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.tilemap\": \"1.0.0\",\r\n        \"com.unity.2d.tilemap\": \"1.0.0\",\r\n        \"com.unity.ugui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.burst\": {\r\n      \"version\": \"1.8.13\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.mathematics\": \"1.2.1\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.cinemachine\": {\r\n      \"version\": \"2.10.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.test-framework\": \"1.1.31\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.collab-proxy\": {\r\n      \"version\": \"2.3.1\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.collections\": {\r\n      \"version\": \"1.2.4\",\r\n      \"depth\": 2,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.burst\": \"1.6.6\",\r\n        \"com.unity.test-framework\": \"1.1.31\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.ext.nunit\": {\r\n      \"version\": \"1.0.6\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.feature.2d\": {\r\n      \"version\": \"2.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.2d.animation\": \"9.1.0\",\r\n        \"com.unity.2d.pixel-perfect\": \"5.0.3\",\r\n        \"com.unity.2d.psdimporter\": \"8.0.4\",\r\n        \"com.unity.2d.sprite\": \"1.0.0\",\r\n        \"com.unity.2d.spriteshape\": \"9.0.2\",\r\n        \"com.unity.2d.tilemap\": \"1.0.0\",\r\n        \"com.unity.2d.tilemap.extras\": \"3.1.2\",\r\n        \"com.unity.2d.aseprite\": \"1.1.3\"\r\n      }\r\n    },\r\n    \"com.unity.ide.rider\": {\r\n      \"version\": \"3.0.28\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ext.nunit\": \"1.0.6\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.ide.visualstudio\": {\r\n      \"version\": \"2.0.22\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.test-framework\": \"1.1.9\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.inputsystem\": {\r\n      \"version\": \"1.7.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.uielements\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.mathematics\": {\r\n      \"version\": \"1.2.6\",\r\n      \"depth\": 1,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.postprocessing\": {\r\n      \"version\": \"3.4.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.render-pipelines.core\": {\r\n      \"version\": \"14.0.11\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.ugui\": \"1.0.0\",\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.terrain\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.render-pipelines.universal\": {\r\n      \"version\": \"14.0.11\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.mathematics\": \"1.2.1\",\r\n        \"com.unity.burst\": \"1.8.9\",\r\n        \"com.unity.render-pipelines.core\": \"14.0.11\",\r\n        \"com.unity.shadergraph\": \"14.0.11\",\r\n        \"com.unity.render-pipelines.universal-config\": \"14.0.9\"\r\n      }\r\n    },\r\n    \"com.unity.render-pipelines.universal-config\": {\r\n      \"version\": \"14.0.10\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.render-pipelines.core\": \"14.0.10\"\r\n      }\r\n    },\r\n    \"com.unity.searcher\": {\r\n      \"version\": \"4.9.2\",\r\n      \"depth\": 2,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {},\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.shadergraph\": {\r\n      \"version\": \"14.0.11\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.render-pipelines.core\": \"14.0.11\",\r\n        \"com.unity.searcher\": \"4.9.2\"\r\n      }\r\n    },\r\n    \"com.unity.test-framework\": {\r\n      \"version\": \"1.1.33\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ext.nunit\": \"1.0.6\",\r\n        \"com.unity.modules.imgui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.textmeshpro\": {\r\n      \"version\": \"3.0.6\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ugui\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.timeline\": {\r\n      \"version\": \"1.7.6\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.director\": \"1.0.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\",\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.particlesystem\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.ugui\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.ui\": \"1.0.0\",\r\n        \"com.unity.modules.imgui\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.visualscripting\": {\r\n      \"version\": \"1.9.4\",\r\n      \"depth\": 0,\r\n      \"source\": \"registry\",\r\n      \"dependencies\": {\r\n        \"com.unity.ugui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      },\r\n      \"url\": \"https://packages.unity.com\"\r\n    },\r\n    \"com.unity.modules.ai\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.androidjni\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.animation\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.assetbundle\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.audio\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.cloth\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.director\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.animation\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.imageconversion\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.imgui\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.jsonserialize\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.particlesystem\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.physics\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.physics2d\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.screencapture\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.imageconversion\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.subsystems\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 1,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.terrain\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.terrainphysics\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.terrain\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.tilemap\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics2d\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.ui\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.uielements\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.ui\": \"1.0.0\",\r\n        \"com.unity.modules.imgui\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.umbra\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.unityanalytics\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequest\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.unitywebrequestassetbundle\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.assetbundle\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequestaudio\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.audio\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequesttexture\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.imageconversion\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.unitywebrequestwww\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequestassetbundle\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequestaudio\": \"1.0.0\",\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.assetbundle\": \"1.0.0\",\r\n        \"com.unity.modules.imageconversion\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.vehicles\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.video\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.audio\": \"1.0.0\",\r\n        \"com.unity.modules.ui\": \"1.0.0\",\r\n        \"com.unity.modules.unitywebrequest\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.vr\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\",\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.xr\": \"1.0.0\"\r\n      }\r\n    },\r\n    \"com.unity.modules.wind\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {}\r\n    },\r\n    \"com.unity.modules.xr\": {\r\n      \"version\": \"1.0.0\",\r\n      \"depth\": 0,\r\n      \"source\": \"builtin\",\r\n      \"dependencies\": {\r\n        \"com.unity.modules.physics\": \"1.0.0\",\r\n        \"com.unity.modules.jsonserialize\": \"1.0.0\",\r\n        \"com.unity.modules.subsystems\": \"1.0.0\"\r\n      }\r\n    }\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Packages/packages-lock.json b/Packages/packages-lock.json
+--- a/Packages/packages-lock.json	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/Packages/packages-lock.json	(date 1718773479583)
+@@ -14,7 +14,7 @@
+       "url": "https://packages.unity.com"
+     },
+     "com.unity.2d.aseprite": {
+-      "version": "1.1.3",
++      "version": "1.1.2",
+       "depth": 1,
+       "source": "registry",
+       "dependencies": {
+@@ -149,7 +149,7 @@
+         "com.unity.2d.spriteshape": "9.0.2",
+         "com.unity.2d.tilemap": "1.0.0",
+         "com.unity.2d.tilemap.extras": "3.1.2",
+-        "com.unity.2d.aseprite": "1.1.3"
++        "com.unity.2d.aseprite": "1.1.2"
+       }
+     },
+     "com.unity.ide.rider": {
+@@ -196,7 +196,7 @@
+       "url": "https://packages.unity.com"
+     },
+     "com.unity.render-pipelines.core": {
+-      "version": "14.0.11",
++      "version": "14.0.10",
+       "depth": 1,
+       "source": "builtin",
+       "dependencies": {
+@@ -213,17 +213,17 @@
+       "dependencies": {
+         "com.unity.mathematics": "1.2.1",
+         "com.unity.burst": "1.8.9",
+-        "com.unity.render-pipelines.core": "14.0.11",
+-        "com.unity.shadergraph": "14.0.11",
++        "com.unity.render-pipelines.core": "14.0.10",
++        "com.unity.shadergraph": "14.0.10",
+         "com.unity.render-pipelines.universal-config": "14.0.9"
+       }
+     },
+     "com.unity.render-pipelines.universal-config": {
+-      "version": "14.0.10",
++      "version": "14.0.9",
+       "depth": 1,
+       "source": "builtin",
+       "dependencies": {
+-        "com.unity.render-pipelines.core": "14.0.10"
++        "com.unity.render-pipelines.core": "14.0.9"
+       }
+     },
+     "com.unity.searcher": {
+@@ -234,11 +234,11 @@
+       "url": "https://packages.unity.com"
+     },
+     "com.unity.shadergraph": {
+-      "version": "14.0.11",
++      "version": "14.0.10",
+       "depth": 1,
+       "source": "builtin",
+       "dependencies": {
+-        "com.unity.render-pipelines.core": "14.0.11",
++        "com.unity.render-pipelines.core": "14.0.10",
+         "com.unity.searcher": "4.9.2"
+       }
+     },
+Index: Assets/Scenes/Level11.unity
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/Level11.unity b/Assets/Scenes/Level11.unity
+--- a/Assets/Scenes/Level11.unity	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/Assets/Scenes/Level11.unity	(date 1718773979857)
+@@ -543,6 +543,11 @@
+     m_AddedGameObjects: []
+     m_AddedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: f65217cfdccba8548bfe2cfe0942efab, type: 3}
++--- !u!1 &667591367 stripped
++GameObject:
++  m_CorrespondingSourceObject: {fileID: 5336196036006618885, guid: 8eab09f743e7b8944b230067f273e4c8, type: 3}
++  m_PrefabInstance: {fileID: 2061196816}
++  m_PrefabAsset: {fileID: 0}
+ --- !u!1001 &971325604
+ PrefabInstance:
+   m_ObjectHideFlags: 0
+@@ -11046,6 +11051,22 @@
+     - target: {fileID: 6039834811024524176, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: field of view
+       value: 50
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _Pipe
++      value: 
++      objectReference: {fileID: 667591367}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _PipeSprite
++      value: 
++      objectReference: {fileID: 5780754699357951033, guid: cc035e39e25b1b54ab81fc698c4f340f, type: 3}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.x
++      value: -4
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.y
++      value: -0.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: m_Name
+@@ -11259,7 +11280,7 @@
+       objectReference: {fileID: 0}
+     - target: {fileID: 2630029554402712702, guid: 8eab09f743e7b8944b230067f273e4c8, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: 3.5
++      value: 3.5148752
+       objectReference: {fileID: 0}
+     - target: {fileID: 2630029554402712702, guid: 8eab09f743e7b8944b230067f273e4c8, type: 3}
+       propertyPath: m_LocalPosition.z
+Index: Assets/Scenes/Level9.unity
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/Level9.unity b/Assets/Scenes/Level9.unity
+--- a/Assets/Scenes/Level9.unity	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/Assets/Scenes/Level9.unity	(date 1718773814872)
+@@ -386,6 +386,11 @@
+     m_AddedGameObjects: []
+     m_AddedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: 9608aa756fb5b674d9d590950a57ff78, type: 3}
++--- !u!1 &793566636 stripped
++GameObject:
++  m_CorrespondingSourceObject: {fileID: 1097668400851247947, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
++  m_PrefabInstance: {fileID: 2050914009}
++  m_PrefabAsset: {fileID: 0}
+ --- !u!1 &1018366704
+ GameObject:
+   m_ObjectHideFlags: 0
+@@ -10952,6 +10957,18 @@
+     - target: {fileID: 6039834811024524176, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: field of view
+       value: 50
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _Pipe
++      value: 
++      objectReference: {fileID: 793566636}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.x
++      value: -1
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.y
++      value: -0.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: m_Name
+@@ -11147,7 +11164,7 @@
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: 0.5
++      value: 0.51487505
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.z
+Index: Assets/Scenes/Level10.unity
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/Level10.unity b/Assets/Scenes/Level10.unity
+--- a/Assets/Scenes/Level10.unity	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/Assets/Scenes/Level10.unity	(date 1718773910110)
+@@ -319,6 +319,11 @@
+     m_AddedGameObjects: []
+     m_AddedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: 9608aa756fb5b674d9d590950a57ff78, type: 3}
++--- !u!1 &944755290 stripped
++GameObject:
++  m_CorrespondingSourceObject: {fileID: 1097668400851247947, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
++  m_PrefabInstance: {fileID: 1589165247}
++  m_PrefabAsset: {fileID: 0}
+ --- !u!1001 &1589165247
+ PrefabInstance:
+   m_ObjectHideFlags: 0
+@@ -337,7 +342,7 @@
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: -0.5
++      value: -0.48512495
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.z
+@@ -10778,6 +10783,18 @@
+     - target: {fileID: 6039834811024524176, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: field of view
+       value: 45
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _Pipe
++      value: 
++      objectReference: {fileID: 944755290}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.x
++      value: -2
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.y
++      value: -0.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: m_Name
+Index: .idea/.idea.UnityGame/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3f4cd37a-e45d-49e8-94da-113dd1a63788\" name=\"Changes\" comment=\"Level 8\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Packages/packages-lock.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Packages/packages-lock.json\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Pipes\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;RevaVlad&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"d32db9f1-3199-4bab-a20a-f5034e8866b6\" />\r\n        <option name=\"url\" value=\"https://github.com/RevaVlad/UnityGame.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/GameObjects/Credits/photo_2024-05-24_22-30-15.jpg.meta\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeColliders/ConnectionNode.prefab\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/GameObjects/PipeVariants/G pipe.prefab\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level1.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level7.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Scenes/Level8.unity\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/ConnectionNodeScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/FallingProcessingScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/GetNearbyObjectsScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/HeroScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/LadderScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/MenusController.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/PauseManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/PlayerRunData.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SceneManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/SoundMixerManager.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/Utils.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/VideoPlayerScript.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"mock://D:/Challenge/UnityGame/Assets/Sprites/NewGroundTiles/NewGround.prefab\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs\" root0=\"SKIP_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"false\" />\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fdtjYlzBl2re9F4PrBZvwVDdZQ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"New-levels\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"rider.external.source.directories\": [\r\n      \"C:\\\\Users\\\\Михаил\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\DecompilerCache\",\r\n      \"C:\\\\Users\\\\Михаил\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2023.2\\\\resharper-host\\\\SourcesCache\",\r\n      \"C:\\\\Users\\\\Михаил\\\\AppData\\\\Local\\\\Symbols\\\\src\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Attach to Unity Editor.Attach to Unity Editor\">\r\n    <configuration name=\"Standalone Player\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"$USER_HOME$/Downloads/UnityGame\\Heads Up.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"C:\\Users\\grigo\\Desktop\\UnityGameBuild\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Standalone Player\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"$PROJECT_DIR$/../UnityGameBuild\\Heads Up.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"C:\\Users\\grigo\\Desktop\\UnityGameBuild\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.24f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath D:\\Challenge\\UnityGame -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.24f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath D:\\Challenge\\UnityGame -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.23f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath D:\\Challenge\\UnityGame -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.24f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath D:\\Challenge\\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.24f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath D:\\Challenge\\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Unit Tests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.23f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath D:\\Challenge\\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"D:\\Challenge\\UnityGame\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3f4cd37a-e45d-49e8-94da-113dd1a63788\" name=\"Changes\" comment=\"Reworked connections\" />\r\n      <created>1714142925231</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714142925231</updated>\r\n      <workItem from=\"1714142929641\" duration=\"2726000\" />\r\n      <workItem from=\"1714253096600\" duration=\"956000\" />\r\n      <workItem from=\"1714305515619\" duration=\"3670000\" />\r\n      <workItem from=\"1715277760744\" duration=\"7107000\" />\r\n      <workItem from=\"1715315163496\" duration=\"7159000\" />\r\n      <workItem from=\"1715697980304\" duration=\"1401000\" />\r\n      <workItem from=\"1715878064081\" duration=\"5952000\" />\r\n      <workItem from=\"1715885429807\" duration=\"232000\" />\r\n      <workItem from=\"1716021661127\" duration=\"3382000\" />\r\n      <workItem from=\"1716040588171\" duration=\"281000\" />\r\n      <workItem from=\"1716101828590\" duration=\"11261000\" />\r\n      <workItem from=\"1716132186320\" duration=\"1347000\" />\r\n      <workItem from=\"1716198341081\" duration=\"5639000\" />\r\n      <workItem from=\"1716205664112\" duration=\"566000\" />\r\n      <workItem from=\"1716209174238\" duration=\"1944000\" />\r\n      <workItem from=\"1716221523575\" duration=\"7875000\" />\r\n      <workItem from=\"1716264012164\" duration=\"2486000\" />\r\n      <workItem from=\"1716281201525\" duration=\"5422000\" />\r\n      <workItem from=\"1716318353966\" duration=\"25000\" />\r\n      <workItem from=\"1716387717106\" duration=\"7006000\" />\r\n      <workItem from=\"1716484978459\" duration=\"627000\" />\r\n      <workItem from=\"1716487606713\" duration=\"2176000\" />\r\n      <workItem from=\"1716706456605\" duration=\"10352000\" />\r\n      <workItem from=\"1716736287517\" duration=\"11593000\" />\r\n      <workItem from=\"1716819384684\" duration=\"3625000\" />\r\n      <workItem from=\"1716955775418\" duration=\"711000\" />\r\n      <workItem from=\"1717008872076\" duration=\"8418000\" />\r\n      <workItem from=\"1717070099221\" duration=\"411000\" />\r\n      <workItem from=\"1717008872076\" duration=\"6767000\" />\r\n      <workItem from=\"1717068794339\" duration=\"613000\" />\r\n      <workItem from=\"1717132161775\" duration=\"1134000\" />\r\n      <workItem from=\"1717390386756\" duration=\"829000\" />\r\n      <workItem from=\"1717398483276\" duration=\"1000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00069\" summary=\"PlayerRunData.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717014873580</created>\r\n      <option name=\"number\" value=\"00069\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00069\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717014873580</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00070\" summary=\"SceneManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717015148033</created>\r\n      <option name=\"number\" value=\"00070\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00070\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717015148033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00071\" summary=\"SceneManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717015544355</created>\r\n      <option name=\"number\" value=\"00071\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00071\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717015544355</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00072\" summary=\"SoundMixerManager.cs style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717015751303</created>\r\n      <option name=\"number\" value=\"00072\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00072\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717015751303</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00073\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717252988661</created>\r\n      <option name=\"number\" value=\"00073\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00073\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717252988661</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00074\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717254365611</created>\r\n      <option name=\"number\" value=\"00074\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00074\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717254365611</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00075\" summary=\"some fixes after merge\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717259165098</created>\r\n      <option name=\"number\" value=\"00075\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00075\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717259165098</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00076\" summary=\"new animations added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717259523075</created>\r\n      <option name=\"number\" value=\"00076\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00076\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717259523075</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00077\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717273507236</created>\r\n      <option name=\"number\" value=\"00077\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00077\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717273507236</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00078\" summary=\"style fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717273848050</created>\r\n      <option name=\"number\" value=\"00078\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00078\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717273848050</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00079\" summary=\"pause fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717275353945</created>\r\n      <option name=\"number\" value=\"00079\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00079\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717275353945</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00080\" summary=\"main menu style started\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717317179366</created>\r\n      <option name=\"number\" value=\"00080\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00080\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717317179366</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00081\" summary=\"Player bug fix + level 5 fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717325034614</created>\r\n      <option name=\"number\" value=\"00081\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00081\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717325034614</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00082\" summary=\"Bug fix + tilemap optimization\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717329989849</created>\r\n      <option name=\"number\" value=\"00082\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00082\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717329989849</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00083\" summary=\"Bug fix, with long pipes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717333955451</created>\r\n      <option name=\"number\" value=\"00083\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00083\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717333955452</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00084\" summary=\"main menu fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717340069383</created>\r\n      <option name=\"number\" value=\"00084\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00084\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717340069383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00085\" summary=\"bug fix нахуй\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717340856328</created>\r\n      <option name=\"number\" value=\"00085\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00085\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717340856328</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00086\" summary=\"second level fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717342526854</created>\r\n      <option name=\"number\" value=\"00086\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00086\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717342526854</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00087\" summary=\"chake changes nah\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717343238131</created>\r\n      <option name=\"number\" value=\"00087\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00087\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717343238132</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00088\" summary=\"animations fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717351630117</created>\r\n      <option name=\"number\" value=\"00088\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00088\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717351630117</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00089\" summary=\"training level fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717352695676</created>\r\n      <option name=\"number\" value=\"00089\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00089\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717352695676</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00090\" summary=\"exits added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717353679084</created>\r\n      <option name=\"number\" value=\"00090\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00090\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717353679084</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00091\" summary=\"some fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717354213258</created>\r\n      <option name=\"number\" value=\"00091\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00091\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717354213258</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00092\" summary=\"речка-реченька разливается, да в моря вливается\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717361143252</created>\r\n      <option name=\"number\" value=\"00092\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00092\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717361143252</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00093\" summary=\"code style fixes\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717362785126</created>\r\n      <option name=\"number\" value=\"00093\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00093\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717362785126</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00094\" summary=\"10% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364132812</created>\r\n      <option name=\"number\" value=\"00094\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00094\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364132812</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00095\" summary=\"25% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364399614</created>\r\n      <option name=\"number\" value=\"00095\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00095\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364399614</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00096\" summary=\"30% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364444912</created>\r\n      <option name=\"number\" value=\"00096\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00096\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364444912</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00097\" summary=\"35% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364609359</created>\r\n      <option name=\"number\" value=\"00097\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00097\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364609359</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00098\" summary=\"45% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364745525</created>\r\n      <option name=\"number\" value=\"00098\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00098\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364745525</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00099\" summary=\"55% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717364968461</created>\r\n      <option name=\"number\" value=\"00099\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00099\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717364968461</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00100\" summary=\"65% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717365075316</created>\r\n      <option name=\"number\" value=\"00100\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00100\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717365075316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00101\" summary=\"75% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717365165282</created>\r\n      <option name=\"number\" value=\"00101\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00101\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717365165283</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00102\" summary=\"85% clearing\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717365319962</created>\r\n      <option name=\"number\" value=\"00102\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00102\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717365319962</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00103\" summary=\"start add starting cutscene\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717368144861</created>\r\n      <option name=\"number\" value=\"00103\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00103\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717368144861</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00104\" summary=\"anim fixes, some credits added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717390536772</created>\r\n      <option name=\"number\" value=\"00104\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00104\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717390536772</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00105\" summary=\"credits fixes and more added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717394625975</created>\r\n      <option name=\"number\" value=\"00105\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00105\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717394625975</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00106\" summary=\"Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717411414537</created>\r\n      <option name=\"number\" value=\"00106\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00106\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717411414537</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00107\" summary=\"Quick level 8 fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717412173436</created>\r\n      <option name=\"number\" value=\"00107\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00107\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717412173436</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00108\" summary=\"Level 0\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717413571083</created>\r\n      <option name=\"number\" value=\"00108\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00108\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717413571083</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00109\" summary=\"Level 1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717414019746</created>\r\n      <option name=\"number\" value=\"00109\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00109\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717414019746</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00110\" summary=\"Level 1, 2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717414472366</created>\r\n      <option name=\"number\" value=\"00110\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00110\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717414472366</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00111\" summary=\"Level 3,4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717417276469</created>\r\n      <option name=\"number\" value=\"00111\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00111\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717417276469</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00112\" summary=\"Level 5\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717417635667</created>\r\n      <option name=\"number\" value=\"00112\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00112\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717417635667</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00113\" summary=\"Level 5 fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717418084148</created>\r\n      <option name=\"number\" value=\"00113\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00113\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717418084148</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00114\" summary=\"Level 5 fix\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717418099853</created>\r\n      <option name=\"number\" value=\"00114\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00114\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717418099854</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00115\" summary=\"Level 3 fix, 6\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717418667604</created>\r\n      <option name=\"number\" value=\"00115\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00115\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717418667604</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00116\" summary=\"Level 7\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717418806615</created>\r\n      <option name=\"number\" value=\"00116\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00116\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717418806615</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00117\" summary=\"Level 8\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717419039991</created>\r\n      <option name=\"number\" value=\"00117\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00117\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717419039991</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"118\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"false\" />\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"Both\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"origin/Pipes\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"Pipes\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"User\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"*\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Level-bounds-sprite-fix\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"code style fixes\" />\r\n    <MESSAGE value=\"10% clearing\" />\r\n    <MESSAGE value=\"25% clearing\" />\r\n    <MESSAGE value=\"30% clearing\" />\r\n    <MESSAGE value=\"35% clearing\" />\r\n    <MESSAGE value=\"45% clearing\" />\r\n    <MESSAGE value=\"55% clearing\" />\r\n    <MESSAGE value=\"65% clearing\" />\r\n    <MESSAGE value=\"75% clearing\" />\r\n    <MESSAGE value=\"85% clearing\" />\r\n    <MESSAGE value=\"start add starting cutscene\" />\r\n    <MESSAGE value=\"anim fixes, some credits added\" />\r\n    <MESSAGE value=\"credits fixes and more added\" />\r\n    <MESSAGE value=\"New level 8\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/Pipes' into Pipes&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.UnityGame/.idea/workspace.xml\" />\r\n    <MESSAGE value=\"Quick level 8 fix\" />\r\n    <MESSAGE value=\"Level 0\" />\r\n    <MESSAGE value=\"Level 1\" />\r\n    <MESSAGE value=\"Level 1, 2\" />\r\n    <MESSAGE value=\"Level 3,4\" />\r\n    <MESSAGE value=\"Level 5\" />\r\n    <MESSAGE value=\"Level 5 fix\" />\r\n    <MESSAGE value=\"Level 3 fix, 6\" />\r\n    <MESSAGE value=\"Level 7\" />\r\n    <MESSAGE value=\"Level 8\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Level 8\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"DotNet Breakpoints\">\r\n          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs</url>\r\n          <line>107</line>\r\n          <properties documentPath=\"C:\\Users\\grigo\\Desktop\\UnityGame\\Assets\\Scripts\\Player\\HeroScript.cs\" initialLine=\"107\" containingFunctionPresentation=\"Method 'FixedUpdate'\">\r\n            <startOffsets>\r\n              <option value=\"3373\" />\r\n            </startOffsets>\r\n            <endOffsets>\r\n              <option value=\"3374\" />\r\n            </endOffsets>\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.UnityGame/.idea/workspace.xml b/.idea/.idea.UnityGame/.idea/workspace.xml
+--- a/.idea/.idea.UnityGame/.idea/workspace.xml	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/.idea/.idea.UnityGame/.idea/workspace.xml	(date 1718774237135)
+@@ -5,8 +5,32 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 8">
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Changes1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Changes2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Changes2.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_06_2024_23_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_06_2024_23_30__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_06_2024_23_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_06_2024_23_35__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_06_2024_9_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_06_2024_9_40__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_19_06_2024_2_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_19_06_2024_2_10__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_19_06_2024_9_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_19_06_2024_9_43__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_19_06_2024_9_49__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Merge_at_19_06_2024_9_49__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_06_06_2024_18_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_06_06_2024_18_56__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2024_10_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2024_10_16__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_13_49__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_13_49__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_15_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_15_13__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_20_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_20_31__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_20_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_2024_20_35__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_1_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_1_54__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_5_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_5_14__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_9_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_9_31__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level10.unity" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level11.unity" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level12.unity" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level9.unity" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -88,29 +112,29 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "New-levels",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;New-levels&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "rider.external.source.directories": [
+-      "C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+-      "C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+-      "C:\\Users\\Михаил\\AppData\\Local\\Symbols\\src"
++  &quot;keyToStringList&quot;: {
++    &quot;rider.external.source.directories&quot;: [
++      &quot;C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
++      &quot;C:\\Users\\Михаил\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
++      &quot;C:\\Users\\Михаил\\AppData\\Local\\Symbols\\src&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+       <option name="EXE_PATH" value="$USER_HOME$/Downloads/UnityGame\Heads Up.exe" />
+@@ -773,14 +797,7 @@
+         <line-breakpoint enabled="true" type="DotNet Breakpoints">
+           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs</url>
+           <line>107</line>
+-          <properties documentPath="C:\Users\grigo\Desktop\UnityGame\Assets\Scripts\Player\HeroScript.cs" initialLine="107" containingFunctionPresentation="Method 'FixedUpdate'">
+-            <startOffsets>
+-              <option value="3373" />
+-            </startOffsets>
+-            <endOffsets>
+-              <option value="3374" />
+-            </endOffsets>
+-          </properties>
++          <properties documentPath="C:\Users\grigo\Desktop\UnityGame\Assets\Scripts\Player\HeroScript.cs" initialLine="107" containingFunctionPresentation="Method 'FixedUpdate'" />
+           <option name="timeStamp" value="1" />
+         </line-breakpoint>
+       </breakpoints>
+Index: Assets/Scenes/Level8.unity
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scenes/Level8.unity b/Assets/Scenes/Level8.unity
+--- a/Assets/Scenes/Level8.unity	(revision 8afd0363de0955a3848046a28c475efe9edda0ad)
++++ b/Assets/Scenes/Level8.unity	(date 1718773736247)
+@@ -629,6 +629,11 @@
+     m_AddedGameObjects: []
+     m_AddedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: 2b21baf6e116da946a362eeefa9437c3, type: 3}
++--- !u!1 &1628737954 stripped
++GameObject:
++  m_CorrespondingSourceObject: {fileID: 1097668400851247947, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
++  m_PrefabInstance: {fileID: 2050914009}
++  m_PrefabAsset: {fileID: 0}
+ --- !u!1001 &1778107912
+ PrefabInstance:
+   m_ObjectHideFlags: 0
+@@ -10820,6 +10825,18 @@
+     - target: {fileID: 6039834811024524176, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: field of view
+       value: 35
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _Pipe
++      value: 
++      objectReference: {fileID: 1628737954}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.x
++      value: 3
++      objectReference: {fileID: 0}
++    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
++      propertyPath: _position.y
++      value: 0.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+       propertyPath: m_Name
+@@ -10947,13 +10964,17 @@
+       propertyPath: m_Name
+       value: OneBlock (1)
+       objectReference: {fileID: 0}
++    - target: {fileID: 1395367947155341295, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
++      propertyPath: m_LocalPosition.x
++      value: 0
++      objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.x
+       value: 4
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: 0.5
++      value: 0.51487505
+       objectReference: {fileID: 0}
+     - target: {fileID: 8241474479994530766, guid: 7ac6fc1270ce0c146b5fcfd35dec030e, type: 3}
+       propertyPath: m_LocalPosition.z

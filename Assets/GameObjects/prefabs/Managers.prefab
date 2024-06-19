@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Pipe: {fileID: 0}
   _PipeSprite: {fileID: 246060478997730791, guid: 400f280f2a9427845aec1a979af7d81e, type: 3}
-  _position: {x: 2, y: -3.5, z: 0}
+  _position: {x: -5, y: -0.5, z: 0}
   moveDuration: 1
 --- !u!1 &7508589179038147833
 GameObject:
@@ -101,23 +101,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762553416263707900, guid: 4256f71dbf7f558419516492d99339a0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.9499999
       objectReference: {fileID: 0}
     - target: {fileID: 8762553416263707900, guid: 4256f71dbf7f558419516492d99339a0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8570496
+      value: 0.9893299
       objectReference: {fileID: 0}
     - target: {fileID: 8762553416263707900, guid: 4256f71dbf7f558419516492d99339a0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6610798
+      value: 0.9499999
       objectReference: {fileID: 0}
     - target: {fileID: 8762553416263707900, guid: 4256f71dbf7f558419516492d99339a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.8
+      value: 3.93
       objectReference: {fileID: 0}
     - target: {fileID: 8762553416263707900, guid: 4256f71dbf7f558419516492d99339a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8762553416263707900, guid: 4256f71dbf7f558419516492d99339a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -282,6 +282,10 @@ PrefabInstance:
       value: PauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8136471497779677159, guid: fa7f2dc53d192794394e7356517efa67, type: 3}
+      propertyPath: m_Navigation.m_SelectOnLeft
+      value: 
+      objectReference: {fileID: 5441953015963308929}
+    - target: {fileID: 8136471497779677159, guid: fa7f2dc53d192794394e7356517efa67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -339,6 +343,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 520853994562592686, guid: fa7f2dc53d192794394e7356517efa67, type: 3}
   m_PrefabInstance: {fileID: 689618939467435250}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5441953015963308929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4762477075993812851, guid: fa7f2dc53d192794394e7356517efa67, type: 3}
+  m_PrefabInstance: {fileID: 689618939467435250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7334618236581121898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7808055009162265496, guid: fa7f2dc53d192794394e7356517efa67, type: 3}
@@ -389,11 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630979184452102168, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3630979184452102168, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3630979184452102168, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_LocalPosition.z
@@ -433,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7237910483024488669, guid: b332517f845c7f64eb458502251a1982, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 53
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -517,11 +532,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4309555214625675829, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4309555214625675829, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4309555214625675829, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -561,7 +576,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7156344331918464398, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
       propertyPath: totalLevelCount
-      value: 8
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821271437080973647, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821271437080973647, guid: 945845dc801c2cd4d99a0a472c00034b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -583,11 +606,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3084479209650161608, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3084479209650161608, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3084479209650161608, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -623,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4423316161727437977, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: field of view
-      value: 53
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4906714855751679421, guid: 91a0a12afa97cdf4baeeb962bcf68ed3, type: 3}
       propertyPath: m_Name
