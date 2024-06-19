@@ -9094,6 +9094,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4138093443965874946, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138093443965874946, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935186666557233345, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935186666557233345, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: _Pipe
       value: 
