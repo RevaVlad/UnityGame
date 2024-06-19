@@ -183,7 +183,7 @@ public class SceneManager : MonoBehaviour
 
     private void CheckFinishAndLoadNextLevel()
     {
-        var collider = Physics2D.OverlapCircleAll(player.transform.position, 0.2f, LayerMask.GetMask("Finish"));
+        var collider = Physics2D.OverlapCircleAll(player.transform.position, 0.5f, LayerMask.GetMask("Finish"));
         if (collider.Length == 0)
             return;
 
