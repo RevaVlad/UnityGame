@@ -38,7 +38,6 @@ public class BreakableBlockScript : MonoBehaviour
     
     private IEnumerator BreakCoroutine()
     {
-        Debug.Log("Break");
         IsBroken = true;
         outlinesControl.Disappear();
         foreach (var animator in GetComponentsInChildren<Animator>())
@@ -56,7 +55,6 @@ public class BreakableBlockScript : MonoBehaviour
     [ContextMenu("Undo break")]
     public void UndoBreak()
     {
-        Debug.Log("Undo");
         IsBroken = false;
         
         if (_breakingCoroutine is not null)
