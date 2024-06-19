@@ -6,7 +6,7 @@ using UnityEngine;
 [SelectionBase]
 public class BreakableBlockScript : MonoBehaviour
 {
-    [SerializeField] public bool IsBroken { get; set; }
+    public bool IsBroken { get; set; }
     [SerializeField] private GameObject[] _children;
     private Coroutine _breakingCoroutine;
     [SerializeField] private AudioClip[] stoneCrashSound;
@@ -55,20 +55,26 @@ public class BreakableBlockScript : MonoBehaviour
     [ContextMenu("Undo break")]
     public void UndoBreak()
     {
-        IsBroken = false;
-        
         if (_breakingCoroutine is not null)
+        {
             StopCoroutine(_breakingCoroutine);
+            _breakingCoroutine = null;
+        }
+        
+        IsBroken = false;
         
         foreach (var child in _children)
             child.SetActive(true);
         
         foreach (var animator in GetComponentsInChildren<Animator>())
-        {
             animator.SetBool(isBrokenAnim, false);
-        }
         
         outlinesControl.Appear();
+    }
 
+    [ContextMenu("GetStatus")]
+    public void Status()
+    {
+        Debug.Log(IsBroken);
     }
 }

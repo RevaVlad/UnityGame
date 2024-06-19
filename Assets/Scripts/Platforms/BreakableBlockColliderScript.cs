@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class BreakableBlockCollider : MonoBehaviour
 {
     [SerializeField] public UnityEvent onBreakingBlock;
-    private List<(LadderScript ladder, string colldingTile)> _collidingLadders = new ();
+    [SerializeField] private List<(LadderScript ladder, string colldingTile)> _collidingLadders = new ();
 
     private void FixedUpdate()
     {
