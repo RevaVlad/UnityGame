@@ -74,7 +74,7 @@ public class SceneManager : MonoBehaviour
     private void Start()
     {
         laddersContainer = GameObject.Find("LaddersContainer").transform;
-        breakBlockContainer = GameObject.Find("BreakBlockContainer").transform;
+        breakBlockContainer = GameObject.Find("BreakBlockContainer") ? GameObject.Find("BreakBlockContainer").transform : null;
     }
 
     private void Update() => CheckFinishAndLoadNextLevel();
