@@ -113,6 +113,7 @@ public class LadderScript : MonoBehaviour
         moveCoroutine = null;
         MoveDirection = 0;
         rb.velocity = Vector2.zero;
+        
     }
 
     private IEnumerator MoveLaddersHorizontalCoroutine()

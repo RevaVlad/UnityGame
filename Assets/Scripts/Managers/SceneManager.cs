@@ -83,6 +83,7 @@ public class SceneManager : MonoBehaviour
 
     private void StopPipesCoroutine()
     {
+        player.GetComponent<HeroScript>().timePassedSinceMoveLadder += .3f;
         for (var i = 0; i < laddersContainer.childCount; i++)
             laddersContainer.GetChild(i).GetComponent<LadderScript>().StopMoveCoroutine();
     }

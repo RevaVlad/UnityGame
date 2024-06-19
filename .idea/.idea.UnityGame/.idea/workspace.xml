@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Finally working cracked tiles">
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Bug fix: rewind mid animation">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockColliderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockColliderScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ladders/LadderScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ladders/LadderScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HeroScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Managers/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Managers/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Managers/UIControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockColliderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockColliderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockColliderScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Platforms/BreakableBlockColliderScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -313,14 +315,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00072" summary="SoundMixerManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015751303</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015751303</updated>
     </task>
     <task id="LOCAL-00073" summary="style fix">
       <option name="closed" value="true" />
@@ -706,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718757614762</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Bug fix: rewind mid animation">
+      <option name="closed" value="true" />
+      <created>1718759142513</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1718759142513</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,7 +772,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="30% clearing" />
     <MESSAGE value="35% clearing" />
     <MESSAGE value="45% clearing" />
     <MESSAGE value="55% clearing" />
@@ -795,6 +796,7 @@
     <MESSAGE value="Level11" />
     <MESSAGE value="Rollback with breakable (broken animation)" />
     <MESSAGE value="Finally working cracked tiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally working cracked tiles" />
+    <MESSAGE value="Bug fix: rewind mid animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix: rewind mid animation" />
   </component>
 </project>

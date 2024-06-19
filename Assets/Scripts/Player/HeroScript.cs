@@ -17,7 +17,7 @@ public class HeroScript : MonoBehaviour
     
     private float timePassedSinceOnGround;
     private float timePassedSinceJump;
-    private float timePassedSinceMoveLadder;
+    public float timePassedSinceMoveLadder;
     private int memorizedDirection;
 
     [SerializeField] private bool isGrounded;
@@ -239,7 +239,7 @@ public class HeroScript : MonoBehaviour
 
     private void CheckMoveLadderBuffer()
     {
-        if (timePassedSinceMoveLadder < data.bufferTime && memorizedDirection !=0 && heldLadder.MoveDirection == 0)
+        if (timePassedSinceMoveLadder < data.bufferTime && memorizedDirection != 0 && heldLadder.MoveDirection == 0)
         {
             if (heldLadder.GetBases().Contains(Utils.PipeTileForConnection))
                 if (memorizedDirection > 0)
