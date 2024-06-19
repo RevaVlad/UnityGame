@@ -6,13 +6,18 @@ using UnityEngine;
 [SelectionBase]
 public class BreakableBlockScript : MonoBehaviour
 {
-    [SerializeField] private bool isBroken;
+    [SerializeField] public bool IsBroken { get; set; }
     [SerializeField] private GameObject[] _children;
     private Coroutine _breakingCoroutine;
     [SerializeField] private AudioClip[] stoneCrashSound;
     private TransparencyControlScript outlinesControl;
 
     private static readonly int isBrokenAnim = Animator.StringToHash("isBrokenAnim");
+    
+    private void Awake() =>
+        transform.SetParent(GameObject.Find("BreakBlockContainer") is null
+            ? new GameObject("BreakBlockContainer").transform
+            : GameObject.Find("BreakBlockContainer").transform);
 
     private void Start()
     {
@@ -33,7 +38,8 @@ public class BreakableBlockScript : MonoBehaviour
     
     private IEnumerator BreakCoroutine()
     {
-        isBroken = true;
+        Debug.Log("Break");
+        IsBroken = true;
         outlinesControl.Disappear();
         foreach (var animator in GetComponentsInChildren<Animator>())
         {
@@ -50,16 +56,21 @@ public class BreakableBlockScript : MonoBehaviour
     [ContextMenu("Undo break")]
     public void UndoBreak()
     {
-        isBroken = false;
-        outlinesControl.Appear();
+        Debug.Log("Undo");
+        IsBroken = false;
+        
         if (_breakingCoroutine is not null)
             StopCoroutine(_breakingCoroutine);
+        
+        foreach (var child in _children)
+            child.SetActive(true);
+        
         foreach (var animator in GetComponentsInChildren<Animator>())
         {
             animator.SetBool(isBrokenAnim, false);
         }
+        
+        outlinesControl.Appear();
 
-        foreach (var child in _children)
-            child.SetActive(true);
     }
 }

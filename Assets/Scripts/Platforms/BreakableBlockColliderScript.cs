@@ -13,10 +13,18 @@ public class BreakableBlockCollider : MonoBehaviour
 
     private void FixedUpdate()
     {
+        var anyLadderOnTop = false;
         foreach (var (ladder, collidingTile) in _collidingLadders)
-        {
             if (ladder.GetBases().Contains(collidingTile))
-                onBreakingBlock.Invoke();
+            {
+                anyLadderOnTop = true;
+                break;
+            }
+
+        if (anyLadderOnTop)
+        {
+            _collidingLadders.Clear();
+            onBreakingBlock.Invoke();
         }
     }
 
