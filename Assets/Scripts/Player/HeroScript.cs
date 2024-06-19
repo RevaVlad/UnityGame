@@ -324,13 +324,11 @@ public class HeroScript : MonoBehaviour
 
     private void PlaySomethingBadHappened(bool shakeCamera = true)
     {
-        if (shakeCamera && !isShaking)
-        {
-            isShaking = true;
-            shakeManager.transform.GetComponent<CameraShakeManager>()
-                .CameraShake(GetComponent<CinemachineImpulseSource>());
-            StartCoroutine(StopShaking());
-        }
+        if (!shakeCamera || isShaking) return;
+        isShaking = true;
+        shakeManager.transform.GetComponent<CameraShakeManager>()
+            .CameraShake(GetComponent<CinemachineImpulseSource>());
+        StartCoroutine(StopShaking());
         SoundFXManager.Instance.PlaySoundFXClip(denyMoveSound, transform, 2f);
     }
 
