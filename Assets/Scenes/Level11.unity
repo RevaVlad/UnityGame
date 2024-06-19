@@ -543,6 +543,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f65217cfdccba8548bfe2cfe0942efab, type: 3}
+--- !u!1 &667591367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5336196036006618885, guid: 8eab09f743e7b8944b230067f273e4c8, type: 3}
+  m_PrefabInstance: {fileID: 2061196816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &971325604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11047,6 +11052,22 @@ PrefabInstance:
       propertyPath: field of view
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _Pipe
+      value: 
+      objectReference: {fileID: 667591367}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _PipeSprite
+      value: 
+      objectReference: {fileID: 5780754699357951033, guid: cc035e39e25b1b54ab81fc698c4f340f, type: 3}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _position.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _position.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -11259,7 +11280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2630029554402712702, guid: 8eab09f743e7b8944b230067f273e4c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 3.5148752
       objectReference: {fileID: 0}
     - target: {fileID: 2630029554402712702, guid: 8eab09f743e7b8944b230067f273e4c8, type: 3}
       propertyPath: m_LocalPosition.z
