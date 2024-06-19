@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Fixes" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_11_52_[Changes]/shelved.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_10_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_10_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_11_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2024_11_03__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,18 +44,19 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/0a/7b99e5d0/Void.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level12.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level2.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Managers/SoundMixerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/GameObjects/BreakableBlocks/BreakableBlock.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level0.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level1.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/UnityGame/Assets/Scenes/Level8.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platforms/BreakableBlockScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.13/Runtime/BurstCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/InputAnalytics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DynamicBitfield.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Challenge/UnityGame/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/23/af09c285/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -252,14 +263,6 @@
       <workItem from="1717132161775" duration="1134000" />
       <workItem from="1717390386756" duration="829000" />
       <workItem from="1717398483276" duration="1000" />
-    </task>
-    <task id="LOCAL-00070" summary="SceneManager.cs style fix">
-      <option name="closed" value="true" />
-      <created>1717015148033</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1717015148033</updated>
     </task>
     <task id="LOCAL-00071" summary="SceneManager.cs style fix">
       <option name="closed" value="true" />
@@ -645,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718779455622</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1718780405031</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1718780405032</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +725,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="10% clearing" />
     <MESSAGE value="25% clearing" />
     <MESSAGE value="30% clearing" />
     <MESSAGE value="35% clearing" />
@@ -739,6 +749,7 @@
     <MESSAGE value="Level 7" />
     <MESSAGE value="Level 8" />
     <MESSAGE value="Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
