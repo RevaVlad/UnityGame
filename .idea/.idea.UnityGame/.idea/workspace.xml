@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 12 fix">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGame/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 12 fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/0a/7b99e5d0/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/GameObjects/prefabs/Player.prefab.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level12.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level12.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scenes/Level5.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Challenge/UnityGame/Assets/Scripts/Ladders/LadderScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,7 +95,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Through the pipes v2.0(directiors cut)\Through the pipes.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Games/Through the pipes/Through the pipes.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -112,7 +111,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Challenge\UnityGame -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -136,7 +135,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Programs\unity\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Challenge\UnityGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Challenge\UnityGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -263,22 +262,6 @@
       <workItem from="1717398483276" duration="1000" />
       <workItem from="1718968031350" duration="2000" />
       <workItem from="1718968120387" duration="5572000" />
-    </task>
-    <task id="LOCAL-00074" summary="style fix">
-      <option name="closed" value="true" />
-      <created>1717254365611</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1717254365611</updated>
-    </task>
-    <task id="LOCAL-00075" summary="some fixes after merge">
-      <option name="closed" value="true" />
-      <created>1717259165098</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1717259165098</updated>
     </task>
     <task id="LOCAL-00076" summary="new animations added">
       <option name="closed" value="true" />
@@ -656,7 +639,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718979568256</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Level 12 fix">
+      <option name="closed" value="true" />
+      <created>1718980101009</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1718980101009</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Level 12 fix">
+      <option name="closed" value="true" />
+      <created>1718980138146</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1718980138146</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
