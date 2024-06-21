@@ -11320,6 +11320,10 @@ PrefabInstance:
       propertyPath: _Pipe
       value: 
       objectReference: {fileID: 1377211446}
+    - target: {fileID: 6582304876075429197, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
+      propertyPath: _position.x
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 7508589179038147833, guid: b18efa052cfa7314c8262e811fae5388, type: 3}
       propertyPath: m_Name
       value: Managers
