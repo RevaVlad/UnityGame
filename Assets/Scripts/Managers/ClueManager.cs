@@ -14,7 +14,8 @@ public class ClueManager : MonoBehaviour
         var spriteRenderers = _Pipe.GetComponentsInChildren<SpriteRenderer>();
         
         foreach (var spriteRenderer in spriteRenderers)
-            spriteRenderer.color = Color.red;
+            if (spriteRenderer.transform.name != "Player")
+                spriteRenderer.color = Color.red;
         
         var spawnedObject = Instantiate(_PipeSprite, _Pipe.transform.position, Quaternion.identity);
         StartCoroutine(MoveToPosition(spawnedObject, _position, moveDuration));
