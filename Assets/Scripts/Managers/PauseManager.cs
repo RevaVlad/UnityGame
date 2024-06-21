@@ -14,7 +14,7 @@ public class PauseManager : MonoBehaviour
     private PlayerInput sceneInput;
     private InputSystemUIInputModule uiInput;
 
-    private bool isPaused;
+    public bool isPaused;
     private InputActionMap previousActionMap;
 
     private void Start()
@@ -39,9 +39,9 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = true;
         sceneInput.DeactivateInput();
-        previousActionMap = playerInput.actions.FindActionMap(playerInput.actions.FindActionMap("BasicInput").enabled
-            ? "BasicInput"
-            : "LadderInput");
+        previousActionMap = playerInput.actions.FindActionMap(playerInput.actions.FindActionMap("LadderInput").enabled
+            ? "LadderInput"
+            : "BasicInput");
         playerInput.actions.FindActionMap("LadderInput").Disable();
         playerInput.actions.FindActionMap("BasicInput").Disable();
         uiInput.actionsAsset.Enable();

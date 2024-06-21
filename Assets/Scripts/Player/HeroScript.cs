@@ -323,8 +323,8 @@ public class HeroScript : MonoBehaviour
         yield return new WaitUntil(() =>
             anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerGoOut") &&
             anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-
-        playerInput.actions.FindActionMap("BasicInput").Enable();
+        if (!GameObject.Find("PauseMenu").GetComponent<PauseManager>().isPaused)
+            playerInput.actions.FindActionMap("BasicInput").Enable();
     }
 
     private void SwitchTransparency()
