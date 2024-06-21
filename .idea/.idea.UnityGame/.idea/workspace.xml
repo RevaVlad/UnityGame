@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 12 fix" />
+    <list default="true" id="3f4cd37a-e45d-49e8-94da-113dd1a63788" name="Changes" comment="Level 12 fix">
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Shaders/water render texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ActivateRollbackTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ActivateRollbackTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +102,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Games/Through the pipes/Through the pipes.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Games/Through the pipes/Through the pipes.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\grigo\Desktop\UnityGameBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />

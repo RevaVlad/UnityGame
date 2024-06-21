@@ -13,6 +13,7 @@ public class ActivateRollbackTrigger : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (!IsRollbackActive)
             sceneManager.ClearSceneSnapshots();
-        IsRollbackActive = !IsRollbackActive;
+        IsRollbackActive = true;
+        Destroy(gameObject);
     }
 }
