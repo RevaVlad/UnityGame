@@ -8,16 +8,22 @@ public class ClueManager : MonoBehaviour
     [SerializeField] private GameObject _PipeSprite;
     [SerializeField] private Vector3 _position;
     [SerializeField] private float moveDuration = 2.0f;
+    private bool isAnimActiveNow;
 
     public void UseClue()
     {
-        var spriteRenderers = _Pipe.GetComponentsInChildren<SpriteRenderer>();
+        if (!isAnimActiveNow)
+        {
+            isAnimActiveNow = true;
+            var spriteRenderers = _Pipe.GetComponentsInChildren<SpriteRenderer>();
         
-        foreach (var spriteRenderer in spriteRenderers)
-            spriteRenderer.color = Color.red;
+            foreach (var spriteRenderer in spriteRenderers)
+                if (spriteRenderer.transform.name != "Player")
+                    spriteRenderer.color = Color.red;
         
-        var spawnedObject = Instantiate(_PipeSprite, _Pipe.transform.position, Quaternion.identity);
-        StartCoroutine(MoveToPosition(spawnedObject, _position, moveDuration));
+            var spawnedObject = Instantiate(_PipeSprite, _Pipe.transform.position, Quaternion.identity);
+            StartCoroutine(MoveToPosition(spawnedObject, _position, moveDuration));  
+        }
     }
 
     private IEnumerator MoveToPosition(GameObject obj, Vector3 target, float duration)
@@ -45,5 +51,6 @@ public class ClueManager : MonoBehaviour
         
         foreach (var spriteRenderer in _Pipe.GetComponentsInChildren<SpriteRenderer>())
             spriteRenderer.color = Color.white;
+        isAnimActiveNow = false;
     }
 }
