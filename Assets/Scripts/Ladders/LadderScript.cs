@@ -149,7 +149,7 @@ public class LadderScript : MonoBehaviour
             objectsAtDirection.Where(obj => obj.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
                 .Select(obj => Utils.GetPipeRoot(obj.transform).GetComponent<LadderScript>()).ToArray();
 
-        if (cameFrom == MoveSource.Down && laddersAtDirection.Any(ladder => ladder.MoveDirection == 0))
+        if (cameFrom == MoveSource.Down && laddersAtDirection.Where(ladder => !connected.Contains(ladder)).Any(ladder => ladder.MoveDirection == 0))
             return false;
 
         return laddersAtDirection.All(ladder =>
