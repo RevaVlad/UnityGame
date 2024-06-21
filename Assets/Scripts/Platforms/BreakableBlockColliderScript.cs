@@ -35,7 +35,7 @@ public class BreakableBlockCollider : MonoBehaviour
             _collidingLadders.Add((Utils.GetPipeRoot(otherGameObject.transform).GetComponent<LadderScript>(), otherGameObject.name));
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         var otherGameObject = other.gameObject;
         if (otherGameObject.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
