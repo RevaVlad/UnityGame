@@ -127,13 +127,8 @@ public class HeroScript : MonoBehaviour
             Physics2D.OverlapCollider(smallerCollider, new ContactFilter2D {layerMask = LayerMask.GetMask(Utils.LaddersLayerName), useLayerMask = true},
                 resultsOfDeathCollision);
             
-            if (resultsOfDeathCollision.Any(x => x is not null)) 
-                Debug.Log(resultsOfDeathCollision[0].gameObject.name);
             if (resultsOfDeathCollision.All(x => x is not null && !x.isTrigger && x.excludeLayers != LayerMask.GetMask(Utils.PlayerLayerName)))
-            {
                 _sceneManager.OnRestartLevel();
-                Debug.Log("Player in pipe");
-            }
         }
     }
 
