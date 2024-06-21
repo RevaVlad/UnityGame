@@ -10,7 +10,6 @@ using UnityEngine.Rendering;
 public class SceneManager : MonoBehaviour
 {
     private GameObject player;
-    [SerializeField] private int totalLevelCount = 8;
     private GameObject flashingImage;
     [SerializeField] private AudioClip[] rollbackSound;
 
@@ -78,8 +77,6 @@ public class SceneManager : MonoBehaviour
             ? GameObject.Find("BreakBlockContainer").transform
             : null;
     }
-
-    private void Update() => CheckFinishAndLoadNextLevel();
 
     public void OnRestartLevel() => LoadLastLevel();
 
@@ -181,22 +178,14 @@ public class SceneManager : MonoBehaviour
 
     private static string GetCurrentSceneName() => UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
-    private void CheckFinishAndLoadNextLevel()
+    public static void LoadNextLevel()
     {
-        var collider = Physics2D.OverlapCircleAll(player.transform.position, 0.5f, LayerMask.GetMask("Finish"));
-        if (collider.Length == 0)
-            return;
-
         var currentLevelNumber = GetCurrentSceneNumber(GetCurrentSceneName());
-        if (currentLevelNumber >= totalLevelCount) return;
+        if (currentLevelNumber >= Utils.TotalLevelCount) return;
         SaveLevelNumber(currentLevelNumber + 1);
         LoadLastLevel();
     }
 
-    public static void LoadLastLevel()
-    {
-        var lastLevel = PlayerPrefs.GetInt("currentLevel", 1);
-        SaveLevelNumber(lastLevel);
-        UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{lastLevel}");
-    }
+    public static void LoadLastLevel() =>
+        UnityEngine.SceneManagement.SceneManager.LoadScene($"Level{PlayerPrefs.GetInt("currentLevel", 1)}");
 }

@@ -11,6 +11,7 @@ public static class Utils
     public const string PipeTileForConnection = "EnterUp";
     public const float TransparencyAppearTime = .3f;
     public const float TransparencyDisappearTime = .3f;
+    public const int TotalLevelCount = 13;
 
     public static Transform GetPipeRoot(Transform obj)
     {
