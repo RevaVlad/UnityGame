@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Linq;
 using Cinemachine;
+using JetBrains.Annotations;
+using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -35,6 +38,7 @@ public class HeroScript : MonoBehaviour
     private LadderScript heldLadder;
     private Coroutine moveToLadderCenter;
     private readonly Collider2D[] results = new Collider2D[1];
+    [ItemCanBeNull] private readonly Collider2D[] resultsOfDeathCollision = { null };
 
     # region Sounds
 
@@ -44,6 +48,8 @@ public class HeroScript : MonoBehaviour
     #endregion
 
     [SerializeField] private GameObject shakeManager;
+    private SceneManager _sceneManager;
+    private CircleCollider2D smallerCollider;
     private bool isShaking;
 
     private static readonly int MoveX = Animator.StringToHash("moveX");
@@ -70,6 +76,7 @@ public class HeroScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        smallerCollider = GetComponent<CircleCollider2D>();
 
         playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindActionMap("BasicInput").Enable();
@@ -82,6 +89,11 @@ public class HeroScript : MonoBehaviour
 
         var bounds = GetComponent<CapsuleCollider2D>().bounds;
         (sizeX, sizeY) = (bounds.size.x, bounds.size.y);
+    }
+
+    private void Start()
+    {
+        _sceneManager = GameObject.Find("Managers").GetComponentInChildren<SceneManager>();
     }
 
     private void Update()
@@ -105,6 +117,23 @@ public class HeroScript : MonoBehaviour
             CheckJumpBuffer();
             Run();
             ApplyFriction();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer(Utils.LaddersLayerName))
+        {
+            Physics2D.OverlapCollider(smallerCollider, new ContactFilter2D {layerMask = LayerMask.GetMask(Utils.LaddersLayerName), useLayerMask = true},
+                resultsOfDeathCollision);
+            
+            if (resultsOfDeathCollision.Any(x => x is not null)) 
+                Debug.Log(resultsOfDeathCollision[0].gameObject.name);
+            if (resultsOfDeathCollision.All(x => x is not null && !x.isTrigger && x.excludeLayers != LayerMask.GetMask(Utils.PlayerLayerName)))
+            {
+                _sceneManager.OnRestartLevel();
+                Debug.Log("Player in pipe");
+            }
         }
     }
 
@@ -293,8 +322,7 @@ public class HeroScript : MonoBehaviour
 
         SoundFXManager.Instance.PlaySoundFXClip(pipeSound, transform, 1f);
         anim.SetBool(GoThrowPipe, false);
-        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position -
-                             (sizeY / 2 - .02f) * Vector3.up;
+        transform.position = heldLadder.transform.Find(Utils.PipeExitPointName).position;
         OnDropLadder();
         playerInput.actions.FindActionMap("BasicInput").Disable();
         yield return new WaitUntil(() =>

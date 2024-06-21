@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7038761771217100583}
   - component: {fileID: 4826970683907849151}
   - component: {fileID: 9101841592551925866}
+  - component: {fileID: 2913351009270337161}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5921602135724034575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.5, z: 0}
+  m_LocalPosition: {x: 2, y: -5.5, z: 0}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -89,6 +90,7 @@ MonoBehaviour:
       m_Calls: []
   denyMoveSound:
   - {fileID: 8300000, guid: 77857708816e81a4fbc2f30b8f3c91a4, type: 3}
+  timePassedSinceMoveLadder: 0
   isGrounded: 0
   sizeY: 0
   sizeX: 0
@@ -345,3 +347,38 @@ MonoBehaviour:
   m_UseImpactDirection: 0
   m_ScaleImpactWithMass: 0
   m_ScaleImpactWithSpeed: 0
+--- !u!58 &2913351009270337161
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921602135724034575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.15875615
