@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u044B\u0445\u043E\u0434"
+  m_Text: Quit
 --- !u!1 &558514204881146114
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0413\u0440\u043E\u043C\u043A\u043E\u0441\u0442\u044C"
+  m_Text: Volume
 --- !u!1 &1086697964489043654
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u043D\u044E"
+  m_Text: Menu
 --- !u!1 &2563157781873795067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1139,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+  m_Text: Continue
 --- !u!1 &2736079179581516371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0417\u0432\u0443\u043A\u0438"
+  m_Text: SFX
 --- !u!1 &2936081734893517293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1297,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0437\u0430\u0434"
+  m_Text: Back
 --- !u!1 &3147340589612635608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1376,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u043A"
+  m_Text: 'Restart
+
+    level'
 --- !u!1 &3282656423708152240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1918,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0443\u0437\u044B\u043A\u0430"
+  m_Text: Music
 --- !u!1 &3781644907654957122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,7 +2112,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+  m_Text: Settings
 --- !u!1 &4648432933837302433
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,8 +2183,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.000039101, y: -0.00002861}
+  m_SizeDelta: {x: 128.975, y: 128.975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6210109293331201444
 CanvasRenderer:
@@ -2889,7 +2891,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+  m_Text: Settings
 --- !u!1 &6530998050398829350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,7 +3177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041E\u0431\u0449\u0430\u044F"
+  m_Text: Master
 --- !u!1 &7531274054380664306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,8 +3290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: 400}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 666.492, y: 366.49}
+  m_SizeDelta: {x: 217.016, y: 217.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &422084899957049242
 CanvasRenderer:
@@ -3466,6 +3468,7 @@ MonoBehaviour:
   settingsMenuCanvas: {fileID: 8332462191021700594}
   mainMenuFirst: {fileID: 3344010195724087955}
   settingsMenuFirst: {fileID: 6530998050398829350}
+  isPaused: 0
 --- !u!1 &8142484103020793466
 GameObject:
   m_ObjectHideFlags: 0
